@@ -1,7 +1,27 @@
 {
-  "name": "root",
+  "name": "react-artifact",
   "private": true,
+  "author": "Julian Low",
+  "license": "MIT",
+  "hoist": true,
+  "stream": true,
+  "workspaces": [
+    "packages/*",
+    "examples/*"
+  ],
+  "scripts": {
+    "docz": "docz",
+    "build": "npx lerna run build",
+    "test": "jest --config config/jest.config.js",
+    "coverage": ""
+  },
+  "peerDependencies": {
+    "react": "16.8.6",
+    "react-dom": "16.8.6"
+  },
   "devDependencies": {
+    "@types/jest": "^26.0.9",
+    "jest": "^26.2.2",
     "lerna": "^3.22.1"
   }
 }
