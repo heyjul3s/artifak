@@ -1,3 +1,4 @@
+import * as React from 'react';
 import { StyledComponent } from 'styled-components';
 
 type TStyledReactComponent = StyledComponent<
@@ -36,19 +37,3 @@ export function createStyledComponent<StyledComponentProps>(
 
   return component;
 }
-
-// * original createComponent with arrow functions
-// export const createComp: <StyledSystemProps>(
-//   styles: StyledSystemProps,
-//   displayName: string,
-//   StyledReactComponent: TStyledReactComponent
-// ) => React.FC<StyledSystemProps> = (styles, displayName, StyledReactComponent) => {
-//   const component = (props) => (
-//     <StyledReactComponent {...styles} {...props}>
-//       {props.children}
-//     </StyledReactComponent>
-//   );
-
-//   component.displayName = displayName;
-//   return component;
-// };
