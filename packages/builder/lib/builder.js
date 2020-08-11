@@ -4,6 +4,7 @@ const path = require('path');
 const resolve = require('@rollup/plugin-node-resolve').default;
 const babel = require('@rollup/plugin-babel').default;
 const typescript = require('rollup-plugin-typescript2');
+const commonjs = require('@rollup/plugin-commonjs');
 
 const currentWorkingPath = process.cwd();
 
@@ -17,18 +18,27 @@ const {
 const tsConfigPath = path.join(currentWorkingPath, 'tsconfig.json');
 const inputPath = path.join(currentWorkingPath, src);
 const fileName = name.replace('@react-artifact/', '');
+const extensions = ['.js', '.jsx', '.ts', '.tsx'];
 
 const inputOptions = {
   input: inputPath,
   external: ['react'],
   plugins: [
-    resolve(),
+    resolve({
+      extensions,
+    }),
+    commonjs(),
+    babel({
+      extensions,
+      presets: [
+        '@babel/preset-env',
+        '@babel/preset-react',
+        '@babel/preset-typescript',
+      ],
+      babelHelpers: 'bundled',
+    }),
     typescript({
       tsconfig: tsConfigPath,
-    }),
-    babel({
-      presets: ['@babel/preset-env', '@babel/preset-react'],
-      babelHelpers: 'bundled',
     }),
   ],
 };
