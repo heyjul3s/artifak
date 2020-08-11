@@ -1,9 +1,9 @@
 {
   "extends": "../../tsconfig.json",
-  "allowSyntheticDefaultImports": true,
   "compilerOptions": {
     "outDir": "dist",
     "rootDir": "."
   },
+  "exclude": ["dist", "node_modules"],
   "references": []
 }
