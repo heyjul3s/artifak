@@ -10,9 +10,13 @@
     "examples/*"
   ],
   "scripts": {
-    "docz": "docz",
+    "docz-dev": "docz dev --config config/docz.js",
+    "docz-build": "docz build--config config/docz.js",
+    "docz-serve": "docz build && docz serve",
     "build": "npx lerna run build",
     "test": "jest --config config/jest.config.js",
+    "test-changed": "test -o",
+    "test-watch": "test --watchAll",
     "coverage": ""
   },
   "peerDependencies": {
