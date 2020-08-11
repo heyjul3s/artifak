@@ -1,0 +1,10 @@
+{
+  "extends": "../../tsconfig.json",
+  "allowSyntheticDefaultImports": true,
+  "compilerOptions": {
+    "outDir": "dist",
+    "rootDir": "lib"
+  },
+  "sourceMap": true,
+  "references": []
+}

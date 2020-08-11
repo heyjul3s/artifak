@@ -1,0 +1,14 @@
+{
+  "files": [],
+  "references": [
+    {
+      "path": "packages/artifact"
+    },
+    {
+      "path": "packages/block"
+    },
+    {
+      "path": "packages/grid"
+    }
+  ]
+}
