@@ -3,7 +3,7 @@
   "allowSyntheticDefaultImports": true,
   "compilerOptions": {
     "outDir": "dist",
-    "rootDir": "lib"
+    "rootDir": "."
   },
   "sourceMap": true,
   "references": []
