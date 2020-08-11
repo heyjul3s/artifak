@@ -5,7 +5,9 @@
   "author": "heyjul3s <julian.cy.low@gmail.com>",
   "homepage": "https://github.com/heyjul3s/fried-rice#readme",
   "license": "ISC",
-  "main": "lib/block.js",
+  "main": "dist/block.cjs.js",
+  "module": "dist/block.esm.js",
+  "src": "lib/block.tsx",
   "directories": {
     "lib": "lib",
     "test": "__tests__"
@@ -29,9 +31,13 @@
   },
   "devDependencies": {
     "@react-artifact/builder": "^1.0.0",
-    "react": "^16.13.1"
+    "@types/react": "^16.9.45",
+    "@types/react-dom": "^16.9.8",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "typescript": "^3.9.7"
   },
   "peerDependencies": {
-    "react": "16.8.x"
+    "react": "^16.13.1"
   }
 }

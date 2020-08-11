@@ -5,7 +5,9 @@
   "author": "heyjul3s <julian.cy.low@gmail.com>",
   "homepage": "https://github.com/heyjul3s/fried-rice#readme",
   "license": "ISC",
-  "main": "lib/artifact.js",
+  "main": "dist/artifact.cjs.js",
+  "module": "dist/artifact.esm.js",
+  "src": "lib/artifact.tsx",
   "directories": {
     "lib": "lib",
     "test": "__tests__"
@@ -32,6 +34,7 @@
     "@react-artifact/grid": "^1.0.0"
   },
   "devDependencies": {
-    "@react-artifact/builder": "^1.0.0"
+    "@react-artifact/builder": "^1.0.0",
+    "typescript": "^3.9.7"
   }
 }
