@@ -31,6 +31,7 @@
   },
   "devDependencies": {
     "@react-artifact/builder": "^1.0.0",
+    "@react-artifact/component-generator": "^1.0.0",
     "@types/react": "^16.9.45",
     "@types/react-dom": "^16.9.8",
     "react": "^16.13.1",
