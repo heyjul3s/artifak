@@ -14,15 +14,25 @@
     "test": "jest --config config/jest.config.js",
     "test-changed": "test -o",
     "test-watch": "test --watchAll",
-    "coverage": ""
+    "coverage": "",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
   },
   "peerDependencies": {
     "react": "16.8.6",
     "react-dom": "16.8.6"
   },
   "devDependencies": {
+    "@babel/core": "^7.11.1",
+    "@storybook/addon-actions": "^6.0.3",
+    "@storybook/addon-essentials": "^6.0.3",
+    "@storybook/addon-links": "^6.0.3",
+    "@storybook/react": "^6.0.3",
     "@types/jest": "^26.0.9",
+    "babel-loader": "^8.1.0",
     "jest": "^26.3.0",
-    "lerna": "^3.22.1"
-  }
+    "lerna": "^3.22.1",
+    "react-is": "^16.13.1"
+  },
+  "dependencies": {}
 }
