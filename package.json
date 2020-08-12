@@ -10,9 +10,6 @@
     "examples/*"
   ],
   "scripts": {
-    "docz-dev": "docz dev --config config/doczrc.js",
-    "docz-build": "docz build --config config/doczrc.js",
-    "docz-serve": "docz build && docz serve",
     "build": "npx lerna run build",
     "test": "jest --config config/jest.config.js",
     "test-changed": "test -o",
@@ -25,7 +22,6 @@
   },
   "devDependencies": {
     "@types/jest": "^26.0.9",
-    "docz": "^2.3.1",
     "jest": "^26.3.0",
     "lerna": "^3.22.1"
   }
