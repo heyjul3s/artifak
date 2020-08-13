@@ -17,14 +17,8 @@ import {
 // TODO: variants?
 // TODO: types
 
-const setGridColumnsAndRows = (
-  columnWidth,
-  columnLength,
-  rowLength,
-  rowHeight
-) => ({
+const setGridColumnsAndRows = (columnWidth, columnLength) => ({
   ...gridTemplateColumns(columnWidth, columnLength),
-  ...gridTemplateRows(rowLength, rowHeight),
 });
 
 const gridTemplateColumns = (
@@ -50,18 +44,11 @@ const setRepeatableColumnLength = (columnLength: number): object => ({
   gridTemplateColumns: `repeat(${columnLength}, 1fr)`,
 });
 
-const gridTemplateRows = (rowLength, rowHeight) =>
-  rowLength && rowHeight ? setGridTemplateRows(rowLength, rowHeight) : {};
-
-const setGridTemplateRows = (rowLength, rowHeight) => ({
-  gridTemplateRows: `repeat(${rowLength}, ${rowHeight})`,
-});
-
 export const StyledGrid = styled('div')<TGridProps>(
-  ({ columnWidth, columnLength, rowHeight, rowLength, gap = '1.5rem' }) => ({
+  ({ columnWidth, columnLength, gap = '1.5rem' }) => ({
     display: 'grid',
     gridGap: `${gap}`,
-    ...setGridColumnsAndRows(columnWidth, columnLength, rowHeight, rowLength),
+    ...setGridColumnsAndRows(columnWidth, columnLength),
   }),
 
   compose(
@@ -75,7 +62,7 @@ export const StyledGrid = styled('div')<TGridProps>(
   )
 );
 
-type TSomeGrid = {
+type TGrid = {
   columnLength: number;
   rowLength: number;
   columnWidth: string;
@@ -85,21 +72,12 @@ type TSomeGrid = {
 
 export const Grid = forwardRef(
   (
-    {
-      columnLength,
-      columnWidth,
-      rowLength,
-      rowHeight,
-      gap,
-      ...props
-    }: TSomeGrid,
+    { columnLength, columnWidth, rowLength, rowHeight, gap, ...props }: TGrid,
     ref
   ) => (
     <StyledGrid
-      columnWidth={columnWidth}
       columnLength={columnLength}
-      rowLength={rowLength}
-      rowHeight={rowHeight}
+      columnWidth={columnWidth}
       ref={ref}
       {...props}
     />

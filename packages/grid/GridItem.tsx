@@ -16,21 +16,21 @@ import {
   space,
 } from 'styled-system';
 
-export const StyledGridItem = styled.div<TGridItemProps>(
+export const StyledGridItem = styled('div')<TGridItemProps>(
   compose(
+    alignSelf,
     gridArea,
     gridRow,
     gridColumn,
-    alignSelf,
     justifySelf,
-    space,
     maxHeight,
     maxWidth,
     minHeight,
-    minWidth
+    minWidth,
+    space
   )
 );
 
 export const GridItem = forwardRef((props, ref) => (
-  <StyledGridItem ref={ref} {...props} />
+  <StyledGridItem {...props} ref={ref} />
 ));
