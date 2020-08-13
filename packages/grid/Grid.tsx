@@ -15,18 +15,17 @@ import {
 
 // TODO: themes?
 // TODO: variants?
+// TODO: types
 
 const setGridColumnsAndRows = (
   columnWidth,
   columnLength,
   rowLength,
   rowHeight
-) => {
-  return {
-    ...gridTemplateColumns(columnWidth, columnLength),
-    ...gridTemplateRows(rowLength, rowHeight),
-  };
-};
+) => ({
+  ...gridTemplateColumns(columnWidth, columnLength),
+  ...gridTemplateRows(rowLength, rowHeight),
+});
 
 const gridTemplateColumns = (
   columnWidth: string,
@@ -79,9 +78,9 @@ export const StyledGrid = styled('div')<TGridProps>(
 type TSomeGrid = {
   columnLength: number;
   rowLength: number;
-  columnWidth: number;
-  rowHeight: number;
-  gap: number;
+  columnWidth: string;
+  rowHeight: string;
+  gap: string;
 };
 
 export const Grid = forwardRef(
