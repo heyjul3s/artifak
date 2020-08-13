@@ -34,5 +34,7 @@
     "lerna": "^3.22.1",
     "react-is": "^16.13.1"
   },
-  "dependencies": {}
+  "dependencies": {
+    "@changesets/cli": "^2.10.0"
+  }
 }
