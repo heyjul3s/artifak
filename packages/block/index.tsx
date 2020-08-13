@@ -1,3 +1,15 @@
-import React from 'react';
-const Button = ({ children }) => <button>{children}</button>;
-export { Button };
+import styled from 'styled-components';
+
+import {
+  compose,
+  space,
+  layout,
+  display,
+  typography,
+  color,
+  flexbox,
+} from 'styled-system';
+
+export const Block = styled('div')(
+  compose(space, layout, display, typography, color, flexbox)
+);
