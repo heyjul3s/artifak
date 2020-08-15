@@ -2,14 +2,11 @@ import styled from 'styled-components';
 import { borderRadius, compose, color, space, typography } from 'styled-system';
 import { createStyledSystemComponents } from '@react-artifact/component-generator';
 
-// TODO: works with variant
-// TODO: additional add on prop types and props
-
-const TypographySystemComponent = styled('div')(
-  compose(borderRadius, color, space, typography)
-);
-
 export function createTypographyComponents<TS, TC>(systemComponentStyles) {
+  const TypographySystemComponent = styled('div')(
+    compose(borderRadius, color, space, typography)
+  );
+
   return createStyledSystemComponents<TS, TC>(
     TypographySystemComponent,
     systemComponentStyles
