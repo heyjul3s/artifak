@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import { borderRadius, compose, color, space, typography } from 'styled-system';
-import { createStyledSystemComponents } from './generator';
+import { createStyledSystemComponents } from '@react-artifact/component-generator';
 
 // TODO: works with variant
 // TODO: additional add on prop types and props
@@ -37,7 +37,7 @@ export function fluidTypeSizing(
   );
 }
 
-enum FontWeightKeys {
+enum EFontWeightKeys {
   THIN = 'thin',
   EXTRA_LIGHT = 'extraLight',
   LIGHT = 'light',
@@ -49,13 +49,13 @@ enum FontWeightKeys {
   BLACK = 'black',
 }
 
-type FontWeight = {
-  [key in FontWeightKeys]: number;
+type TFontWeight = {
+  [key in EFontWeightKeys]: number;
 };
 
-export const fontWeight = Object.keys(FontWeightKeys).reduce((acc, key, i) => {
+export const fontWeight = Object.keys(EFontWeightKeys).reduce((acc, key, i) => {
   const index = i === 0 ? 1 : i;
   acc[key] = index * 100;
 
   return acc;
-}, {} as FontWeight);
+}, {} as TFontWeight);
