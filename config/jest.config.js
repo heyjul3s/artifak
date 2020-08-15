@@ -1,7 +1,7 @@
 module.exports = {
   rootDir: '../',
-  collectCoverage: true,
   collectCoverageFrom: ['../packages/**/*.{js,jsx,ts,tsx}'],
+  collectCoverage: true,
   coverageThreshold: {
     global: {
       branches: 90,
@@ -19,5 +19,17 @@ module.exports = {
   transform: {
     '^.+\\.[jt]sx?$': 'babel-jest',
     '^.+\\.(tsx|ts)?$': 'ts-jest'
-  }
+  },
+  // TODO: setup linting
+  // projects: [
+  //   {
+  //     displayName: 'test'
+  //   },
+  //   {
+  //     displayName: 'lint',
+  //     runner: 'jest-runner-eslint',
+  //     testMatch: ['<rootDir>/**/*.{js, jsx, ts, tsx}']
+  //   }
+  // ],
+  prettierPath: '<rootDir>/config/prettier.config.js'
 };
