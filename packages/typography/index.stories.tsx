@@ -2,7 +2,7 @@ import React from 'react';
 import {
   createTypographyComponents,
   lineHeightByPercentage,
-  fluidTypeSizing,
+  fluidSizing,
   fontWeight,
 } from '.';
 import { TTypographyProps } from './typings';
@@ -11,7 +11,7 @@ const lineHeight = lineHeightByPercentage();
 
 const typographyStyles = {
   H1: {
-    fontSize: fluidTypeSizing(48, 96, 300, 1200),
+    fontSize: fluidSizing(48, 96, 300, 1200),
     fontWeight: fontWeight.bold,
     margin: '0 0 0.25em',
     lineHeight: lineHeightByPercentage(115),
