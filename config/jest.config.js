@@ -1,6 +1,6 @@
 module.exports = {
   rootDir: '../',
-  collectCoverageFrom: ['../packages/**/*.{js,jsx,ts,tsx}'],
+  collectCoverageFrom: ['packages/**/*.{js,jsx,ts,tsx}'],
   collectCoverage: true,
   coverageThreshold: {
     global: {
