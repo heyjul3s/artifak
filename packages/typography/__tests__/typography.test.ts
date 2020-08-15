@@ -6,4 +6,10 @@ describe('@react-artifact/typography', () => {
       expect(lineHeightByPercentage()).toEqual(1.45);
     });
   });
+
+  describe('fluidSizing', () => {
+    it('should', () => {
+      /** */
+    });
+  });
 });

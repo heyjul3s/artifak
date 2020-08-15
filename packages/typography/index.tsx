@@ -19,7 +19,7 @@ export function lineHeightByPercentage(
   return multiplyByPercentage / 100;
 }
 
-export function fluidTypeSizing(
+export function fluidSizing(
   minFontSize: number,
   maxFontSize: number,
   minViewportWidth: number,
