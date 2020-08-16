@@ -1,9 +1,9 @@
 {
   "name": "@react-artifact/typography",
   "version": "1.0.0",
-  "description": "Now I’m the model of a modern major general / The venerated Virginian veteran whose men are all / Lining up, to put me up on a pedestal / Writin’ letters to relatives / Embellishin’ my elegance and eloquence / But the elephant is in the room / The truth is in ya face when ya hear the British cannons go / BOOM",
+  "description": "Typography utilities to assist in scaffolding your React project's Typography components",
   "keywords": [],
-  "author": "heyjul3s <julian.cy.low@gmail.com>",
+  "author": "Julian Low <julian.cy.low@gmail.com>",
   "license": "ISC",
   "main": "dist/typography.cjs.js",
   "module": "dist/typography.esm.js",
