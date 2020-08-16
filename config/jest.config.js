@@ -2,6 +2,7 @@ module.exports = {
   rootDir: '../',
   collectCoverageFrom: [
     'packages/**/*.{js,jsx,ts,tsx}',
+    '!packages/**/dist/*.{esm,cjs}.js',
     '!packages/**/*.d.{ts,tsx}',
     '!packages/**/*.stories.{js,jsx,ts,tsx}'
   ],
@@ -14,7 +15,6 @@ module.exports = {
       statements: 90
     }
   },
-  modulePathIgnorePatterns: ['<rootDir>packages/dist'],
   moduleNameMapper: {
     '\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$':
       '<rootDir>/__mocks__/fileMock.js',
