@@ -17,6 +17,14 @@ import {
   SpaceProps,
 } from 'styled-system';
 
+export type TGrid = {
+  columnLength: number;
+  rowLength: number;
+  columnWidth: string;
+  rowHeight: string;
+  gap: string;
+};
+
 export type TGridProps =
   | AlignContentProps
   | AlignItemsProps

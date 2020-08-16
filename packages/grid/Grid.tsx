@@ -1,6 +1,6 @@
 import React, { forwardRef } from 'react';
 import styled from 'styled-components';
-import { TGridProps } from './typings';
+import { TGrid, TGridProps } from './typings';
 
 import {
   compose,
@@ -13,15 +13,11 @@ import {
   space,
 } from 'styled-system';
 
-// TODO: themes?
-// TODO: variants?
-// TODO: types
-
-const setGridColumnsAndRows = (columnWidth, columnLength) => ({
+export const setGridColumnsAndRows = (columnWidth, columnLength) => ({
   ...gridTemplateColumns(columnWidth, columnLength),
 });
 
-const gridTemplateColumns = (
+export const gridTemplateColumns = (
   columnWidth: string,
   columnLength: number
 ): object => {
@@ -36,11 +32,11 @@ const gridTemplateColumns = (
   return {};
 };
 
-const setRepeatableColumnWidth = (columnWidth: string): object => ({
+export const setRepeatableColumnWidth = (columnWidth: string): object => ({
   gridTemplateColumns: `repeat(auto-fit, minmax(${columnWidth}, 1fr))`,
 });
 
-const setRepeatableColumnLength = (columnLength: number): object => ({
+export const setRepeatableColumnLength = (columnLength: number): object => ({
   gridTemplateColumns: `repeat(${columnLength}, 1fr)`,
 });
 
@@ -61,14 +57,6 @@ export const StyledGrid = styled('div')<TGridProps>(
     justifyContent
   )
 );
-
-type TGrid = {
-  columnLength: number;
-  rowLength: number;
-  columnWidth: string;
-  rowHeight: string;
-  gap: string;
-};
 
 export const Grid = forwardRef(
   (
