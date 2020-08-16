@@ -2,7 +2,7 @@
   "name": "@react-artifact/grid",
   "version": "1.0.0",
   "description": "> TODO: description",
-  "author": "heyjul3s <julian.cy.low@gmail.com>",
+  "author": "Julian Low <julian.cy.low@gmail.com>",
   "homepage": "https://github.com/heyjul3s/fried-rice#readme",
   "license": "ISC",
   "main": "dist/grid.cjs.js",
@@ -20,14 +20,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/heyjul3s/fried-rice.git"
+    "url": "git+https://github.com/heyjul3s/react-artifact.git"
   },
   "scripts": {
     "build": "builder",
     "test": "echo \"Error: run tests from root\" && exit 1"
   },
   "bugs": {
-    "url": "https://github.com/heyjul3s/fried-rice/issues"
+    "url": "https://github.com/heyjul3s/react-artifact/issues"
   },
   "devDependencies": {
     "@react-artifact/builder": "^1.0.0",
