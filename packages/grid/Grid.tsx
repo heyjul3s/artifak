@@ -1,6 +1,6 @@
 import React, { forwardRef } from 'react';
 import styled from 'styled-components';
-import { TGrid, TGridProps } from './typings';
+import { TGridStyles, TGrid, TGridProps } from './typings';
 
 import {
   compose,
@@ -13,13 +13,19 @@ import {
   space,
 } from 'styled-system';
 
-export const setGridColumnsAndRows = (columnWidth, columnLength) => ({
+export const setGridStyles = ({
+  columnWidth = void 0,
+  columnLength = void 0,
+  gap = '1.5rem',
+}: TGridStyles) => ({
+  display: 'grid',
+  gridGap: `${gap}`,
   ...gridTemplateColumns(columnWidth, columnLength),
 });
 
 export const gridTemplateColumns = (
-  columnWidth: string,
-  columnLength: number
+  columnWidth: string | undefined = void 0,
+  columnLength: number | undefined = void 0
 ): object => {
   if (columnWidth) {
     return setRepeatableColumnWidth(columnWidth);
@@ -41,11 +47,7 @@ export const setRepeatableColumnLength = (columnLength: number): object => ({
 });
 
 export const StyledGrid = styled('div')<TGridProps>(
-  ({ columnWidth, columnLength, gap = '1.5rem' }) => ({
-    display: 'grid',
-    gridGap: `${gap}`,
-    ...setGridColumnsAndRows(columnWidth, columnLength),
-  }),
+  setGridStyles,
 
   compose(
     display,

@@ -17,6 +17,12 @@ import {
   SpaceProps,
 } from 'styled-system';
 
+export type TGridStyles = Partial<{
+  columnWidth: string | undefined;
+  columnLength: number | undefined;
+  gap: string;
+}>;
+
 export type TGrid = {
   columnLength: number;
   rowLength: number;
