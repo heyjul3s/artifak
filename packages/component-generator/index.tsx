@@ -15,7 +15,8 @@ export function createStyledSystemComponents<SCS, SSC>(
 ) {
   return Object.entries(systemComponentStyles).reduce((acc, entry) => {
     const [key, styles] = entry;
-    acc[key] = createStyledComponent(styles, key, styledSystemComponent);
+    acc[key] = createStyledComponent(styles, styledSystemComponent);
+    acc[key].displayName = key;
 
     return acc;
   }, {} as SSC);
@@ -24,7 +25,6 @@ export function createStyledSystemComponents<SCS, SSC>(
 // TODO: add "as" prop to optionally create as other HTML element for when using inheritance?
 export function createStyledComponent<StyledComponentProps>(
   styles,
-  displayName,
   StyledReactComponent
 ): React.FC<StyledComponentProps> {
   const component: React.FC<StyledComponentProps> = (props) => (
@@ -32,8 +32,6 @@ export function createStyledComponent<StyledComponentProps>(
       {props.children}
     </StyledReactComponent>
   );
-
-  component.displayName = displayName;
 
   return component;
 }
