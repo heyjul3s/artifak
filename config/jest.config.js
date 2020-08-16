@@ -3,6 +3,8 @@ module.exports = {
   collectCoverageFrom: [
     'packages/**/*.{js,jsx,ts,tsx}',
     '!packages/**/dist/*.{esm,cjs}.js',
+    '!packages/artifact/**/*.{js,jsx,ts,tsx}',
+    '!packages/builder/**/*.{js,jsx,ts,tsx}',
     '!packages/**/*.d.{ts,tsx}',
     '!packages/**/*.stories.{js,jsx,ts,tsx}'
   ],
