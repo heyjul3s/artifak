@@ -2,7 +2,7 @@ module.exports = {
   rootDir: '../',
   collectCoverageFrom: [
     'packages/**/*.{js,jsx,ts,tsx}',
-    '!packages/**/dist/*.{esm,cjs}.js',
+    '!packages/**/dist/**/*.{js,jsx,ts,tsx}',
     '!packages/artifact/**/*.{js,jsx,ts,tsx}',
     '!packages/builder/**/*.{js,jsx,ts,tsx}',
     '!packages/**/*.d.{ts,tsx}',
@@ -27,6 +27,14 @@ module.exports = {
     '^.+\\.[jt]sx?$': 'babel-jest',
     '^.+\\.(tsx|ts)?$': 'ts-jest'
   },
+  modulePathIgnorePatterns: [
+    '<rootDir>/packages/block/dist',
+    '<rootDir>/packages/artifact/dist',
+    '<rootDir>/packages/builder/dist',
+    '<rootDir>/packages/component-generator/dist',
+    '<rootDir>/packages/grid/dist',
+    '<rootDir>/packages/typography/dist'
+  ],
   // TODO: setup linting
   // projects: [
   //   {
