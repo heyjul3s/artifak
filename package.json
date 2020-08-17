@@ -43,6 +43,7 @@
     "jest-styled-components": "^7.0.2",
     "lerna": "^3.22.1",
     "react-is": "^16.13.1",
+    "react-test-renderer": "^16.13.1",
     "ts-jest": "^26.2.0",
     "typescript": "^3.9.7"
   },
