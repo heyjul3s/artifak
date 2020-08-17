@@ -1,10 +1,7 @@
 import isPlainObject from 'lodash.isplainobject';
 import styled from 'styled-components';
 import { borderRadius, compose, color, space, typography } from 'styled-system';
-import {
-  createStyledSystemComponents,
-  // createComponents,
-} from '@react-artifact/component-generator';
+import { createComponents } from '@react-artifact/component-generator';
 
 export const TypographySystemComponent = styled('div')(
   compose(borderRadius, color, space, typography)
@@ -15,7 +12,7 @@ export function createTypographyComponents<TS, TC>(systemComponentStyles) {
     isPlainObject(systemComponentStyles) &&
     Object.keys(systemComponentStyles).length
   ) {
-    return createStyledSystemComponents<TS, TC>(
+    return createComponents<TS, TC>(
       TypographySystemComponent,
       systemComponentStyles
     );
