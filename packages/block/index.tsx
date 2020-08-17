@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import isPlainObject from 'lodash.isplainobject';
 
-import { createStyledSystemComponents } from '@react-artifact/component-generator';
+import { createComponents } from '@react-artifact/component-generator';
 
 import {
   compose,
@@ -22,7 +22,7 @@ export function createBlockComponents<TS, TC>(systemComponentStyles) {
     isPlainObject(systemComponentStyles) &&
     Object.keys(systemComponentStyles).length
   ) {
-    return createStyledSystemComponents<TS, TC>(Block, systemComponentStyles);
+    return createComponents<TS, TC>(Block, systemComponentStyles);
   } else {
     return Block;
   }

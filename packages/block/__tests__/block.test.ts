@@ -1,5 +1,5 @@
 import { createBlockComponents, Block } from '../';
-import { mockBlockStyles } from '../__mocks__/block.mocks';
+import { mockBlockStyles } from '../__mocks__/block.mock';
 
 describe('@react-artifact/block', () => {
   describe('createBlockComponents - generates Block React components based on styles object argument provided', () => {
