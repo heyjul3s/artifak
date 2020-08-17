@@ -1,4 +1,7 @@
+import React from 'react';
 import { setGridStyles, gridTemplateColumns } from '../Grid';
+import { Grid, GridItem } from '../';
+import renderer from 'react-test-renderer';
 
 describe('@react-artifact/grid', () => {
   describe('setGridStyles', () => {
@@ -58,6 +61,24 @@ describe('@react-artifact/grid', () => {
     it('should return an object with column length CSS grid rule', () => {
       const expected = { gridTemplateColumns: 'repeat(6, 1fr)' };
       expect(gridTemplateColumns(void 0, 6)).toEqual(expected);
+    });
+  });
+
+  describe('Grid', () => {
+    it('should render', () => {
+      const tree = renderer
+        .create(
+          <Grid>
+            <GridItem>1</GridItem>
+            <GridItem>2</GridItem>
+            <GridItem>3</GridItem>
+            <GridItem>4</GridItem>
+            <GridItem>5</GridItem>
+            <GridItem>6</GridItem>
+          </Grid>
+        )
+        .toJSON();
+      expect(tree).toMatchSnapshot();
     });
   });
 });

@@ -60,16 +60,13 @@ export const StyledGrid = styled('div')<TGridProps>(
   )
 );
 
-export const Grid = forwardRef(
-  (
-    { columnLength, columnWidth, rowLength, rowHeight, gap, ...props }: TGrid,
-    ref
-  ) => (
-    <StyledGrid
-      columnLength={columnLength}
-      columnWidth={columnWidth}
-      ref={ref}
-      {...props}
-    />
-  )
-);
+export const Grid = forwardRef((props: any, ref) => (
+  <StyledGrid
+    columnLength={props.columnLength}
+    columnWidth={props.columnWidth}
+    ref={ref}
+    {...props}
+  >
+    {props.children}
+  </StyledGrid>
+));

@@ -1,0 +1,38 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`@react-artifact/grid Grid should render 1`] = `
+<div
+  className="sc-AxjAm bdEBNB"
+>
+  <div
+    className="sc-AxirZ ktnnZK"
+  >
+    1
+  </div>
+  <div
+    className="sc-AxirZ ktnnZK"
+  >
+    2
+  </div>
+  <div
+    className="sc-AxirZ ktnnZK"
+  >
+    3
+  </div>
+  <div
+    className="sc-AxirZ ktnnZK"
+  >
+    4
+  </div>
+  <div
+    className="sc-AxirZ ktnnZK"
+  >
+    5
+  </div>
+  <div
+    className="sc-AxirZ ktnnZK"
+  >
+    6
+  </div>
+</div>
+`;
