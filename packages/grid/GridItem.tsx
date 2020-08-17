@@ -31,6 +31,8 @@ export const StyledGridItem = styled('div')<TGridItemProps>(
   )
 );
 
-export const GridItem = forwardRef((props, ref) => (
-  <StyledGridItem {...props} ref={ref} />
+export const GridItem = forwardRef((props: any, ref) => (
+  <StyledGridItem {...props} ref={ref}>
+    {props.children}
+  </StyledGridItem>
 ));

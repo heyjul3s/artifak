@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`GridItem should render correctly 1`] = `
+<div
+  className="sc-AxjAm StDqN"
+>
+  Hello World
+</div>
+`;
+
+exports[`StyledGridItem should render correctly 1`] = `
+<div
+  className="sc-AxjAm StDqN"
+>
+  Hello World
+</div>
+`;
