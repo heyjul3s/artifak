@@ -12,17 +12,21 @@ import {
   color,
   flexbox,
 } from 'styled-system';
+import { BlockSystem } from './typings';
 
 export const Block = styled('div')(
   compose(space, layout, display, typography, color, flexbox)
 );
 
-export function createBlockComponents<TS, TC>(systemComponentStyles) {
+export function createBlockComponents<ST>(systemComponentStyles: ST) {
   if (
     isPlainObject(systemComponentStyles) &&
     Object.keys(systemComponentStyles).length
   ) {
-    return createComponents<TS, TC>(Block, systemComponentStyles);
+    return createComponents<ST, { [key in keyof ST]: React.FC<BlockSystem> }>(
+      Block,
+      systemComponentStyles
+    );
   } else {
     return Block;
   }
