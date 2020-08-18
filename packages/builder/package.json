@@ -1,8 +1,8 @@
 {
-  "name": "@react-artifact/builder",
+  "name": "@artifak/builder",
   "version": "1.0.0",
   "description": "> TODO: description",
-  "author": "heyjul3s <julian.cy.low@gmail.com>",
+  "author": "Julian Low <julian.cy.low@gmail.com>",
   "homepage": "https://github.com/heyjul3s/fried-rice#readme",
   "license": "ISC",
   "main": "lib/builder.js",
@@ -21,13 +21,13 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/heyjul3s/fried-rice.git"
+    "url": "git+https://github.com/heyjul3s/artifak.git"
   },
   "scripts": {
     "test": "echo \"Error: run tests from root\" && exit 1"
   },
   "bugs": {
-    "url": "https://github.com/heyjul3s/fried-rice/issues"
+    "url": "https://github.com/heyjul3s/artifak/issues"
   },
   "dependencies": {
     "@babel/core": "^7.11.1",

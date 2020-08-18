@@ -1,12 +1,12 @@
 {
-  "name": "@react-artifact/artifact",
+  "name": "@artifak/artifact",
   "version": "1.0.0",
   "description": "> TODO: description",
-  "author": "heyjul3s <julian.cy.low@gmail.com>",
-  "homepage": "https://github.com/heyjul3s/fried-rice#readme",
+  "author": "Julian Low <julian.cy.low@gmail.com>",
+  "homepage": "https://github.com/heyjul3s/artifak#readme",
   "license": "ISC",
-  "main": "dist/artifact.cjs.js",
-  "module": "dist/artifact.esm.js",
+  "main": "dist/artifak.cjs.js",
+  "module": "dist/artifak.esm.js",
   "src": "index.tsx",
   "directories": {
     "lib": "lib",
@@ -20,14 +20,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/heyjul3s/fried-rice.git"
+    "url": "git+https://github.com/heyjul3s/artifak.git"
   },
   "scripts": {
     "build": "builder",
     "test": "echo \"Error: run tests from root\" && exit 1"
   },
   "bugs": {
-    "url": "https://github.com/heyjul3s/fried-rice/issues"
+    "url": "https://github.com/heyjul3s/artifak/issues"
   },
   "dependencies": {
     "@react-artifact/block": "^1.0.0",

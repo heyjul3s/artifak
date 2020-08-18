@@ -1,4 +1,4 @@
-# `@react-artifact/artifact`
+# `@artifak`
 
 > TODO: description
 
