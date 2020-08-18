@@ -1,27 +1,20 @@
 import React from 'react';
-import {
-  createTypographyComponents,
-  lineHeightInDecimals,
-  fluidSizing,
-  fontWeight,
-} from '.';
-import { TTypographyProps } from './typings';
-
-const lineHeight = lineHeightInDecimals();
+import { createTypographyComponents, fluidSizing, fontWeight } from '.';
+import { TypographySystem } from './typings';
 
 const typographyStyles = {
   H1: {
     fontSize: fluidSizing(48, 96, 300, 1200),
     fontWeight: fontWeight.bold,
     margin: '0 0 0.25em',
-    lineHeight: lineHeightInDecimals(115),
+    lineHeight: 1.5,
     as: 'h1',
   },
 
   H2: {
     fontSize: [37, 39, 41, 43],
     fontWeight: fontWeight.bold,
-    lineHeight,
+    lineHeight: 1.5,
     marginTop: 0,
     as: 'h2',
   },
@@ -29,14 +22,14 @@ const typographyStyles = {
   H3: {
     fontSize: [27, 28, 30, 32],
     fontWeight: fontWeight.bold,
-    lineHeight,
+    lineHeight: 1.5,
     as: 'h3',
   },
 
   H4: {
     fontSize: [18, 20, 22, 24],
     fontWeight: fontWeight.bold,
-    lineHeight,
+    lineHeight: 1.5,
     marginTop: 0,
     as: 'h4',
   },
@@ -44,7 +37,7 @@ const typographyStyles = {
   H5: {
     fontWeight: fontWeight.bold,
     fontSize: [16, 17, 19, 21],
-    lineHeight,
+    lineHeight: 1.5,
     marginTop: 0,
     as: 'h5',
   },
@@ -52,7 +45,7 @@ const typographyStyles = {
   H6: {
     fontWeight: fontWeight.bold,
     fontSize: [16, 17, 19, 21],
-    lineHeight,
+    lineHeight: 1.5,
     marginTop: 0,
     as: 'h6',
   },
@@ -67,14 +60,14 @@ const typographyStyles = {
   SmallLead: {
     fontWeight: fontWeight.semiBold,
     fontSize: [17, 18, 19, 21],
-    lineHeight,
+    lineHeight: 1.5,
     as: 'p',
   },
 
   Paragraph: {
     fontSize: [16, 20],
     fontWeight: 300,
-    lineHeight,
+    lineHeight: 1.5,
     marginTop: 0,
     as: 'p',
   },
@@ -82,16 +75,10 @@ const typographyStyles = {
   SmallParagraph: {
     fontSize: [12, 14],
     fontWeight: fontWeight.regular,
-    lineHeight,
+    lineHeight: 1.5,
     marginTop: 0,
     as: 'p',
   },
-};
-
-type TypeComponentKeys = keyof typeof typographyStyles;
-
-type TypeProps = {
-  [key in TypeComponentKeys]: React.FC<TTypographyProps>;
 };
 
 const {
@@ -105,9 +92,7 @@ const {
   SmallLead,
   Paragraph,
   SmallParagraph,
-} = createTypographyComponents<typeof typographyStyles, TypeProps>(
-  typographyStyles
-);
+} = createTypographyComponents<typeof typographyStyles>(typographyStyles);
 
 export const Type = () => {
   return (

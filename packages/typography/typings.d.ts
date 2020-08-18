@@ -5,7 +5,7 @@ import {
   SpaceProps,
 } from 'styled-system';
 
-export type TTypographyProps =
+export type TypographySystem =
   | BorderRadiusProps
   | ColorProps
   | TextProps

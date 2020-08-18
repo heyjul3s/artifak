@@ -2,29 +2,27 @@ import isPlainObject from 'lodash.isplainobject';
 import styled from 'styled-components';
 import { borderRadius, compose, color, space, typography } from 'styled-system';
 import { createComponents } from '@artifak/component-generator';
+import { TypographySystem } from './typings';
 
-export const TypographySystemComponent = styled('div')(
+export const Typography = styled('div')(
   compose(borderRadius, color, space, typography)
 );
 
-export function createTypographyComponents<TS, TC>(systemComponentStyles) {
+// ST = typeof styles
+// SC = rendered FCs
+// TODO: return type
+export function createTypographyComponents<ST>(systemComponentStyles: ST) {
   if (
     isPlainObject(systemComponentStyles) &&
     Object.keys(systemComponentStyles).length
   ) {
-    return createComponents<TS, TC>(
-      TypographySystemComponent,
-      systemComponentStyles
-    );
+    return createComponents<
+      ST,
+      { [key in keyof ST]: React.FC<TypographySystem> }
+    >(Typography, systemComponentStyles);
   } else {
-    return TypographySystemComponent;
+    return Typography;
   }
-}
-
-export function lineHeightInDecimals(
-  multiplyByPercentage: number = 145
-): number {
-  return multiplyByPercentage / 100;
 }
 
 export function fluidSizing(

@@ -1,6 +1,6 @@
 import { StyledComponent } from 'styled-components';
 
-export type TStyledReactComponent = StyledComponent<
+export type StyledReactComponent = StyledComponent<
   keyof JSX.IntrinsicElements | React.ComponentType<any>,
   any,
   any,
