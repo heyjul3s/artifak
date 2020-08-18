@@ -1,11 +1,11 @@
-# `@react-artifact/grid`
+# `@artifak/grid`
 
 > TODO: description
 
 ## Usage
 
 ```
-const grid = require('@react-artifact/grid');
+const grid = require('@artifak/grid');
 
 // TODO: DEMONSTRATE API
 ```

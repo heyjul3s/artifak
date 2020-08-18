@@ -7,7 +7,7 @@ import {
 
 import { mockTypographyStyles } from '../__mocks__/typography.mock';
 
-describe('@react-artifact/typography', () => {
+describe('@artifak/typography', () => {
   describe('createTypographyComponents - generates typography React components based on styles object argument provided', () => {
     it('should return the base Typography system component when provided with an invalid argument', () => {
       const expected = TypographySystemComponent;

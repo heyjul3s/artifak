@@ -1,11 +1,11 @@
-# `@react-artifact/component-generator`
+# `@artifak/component-generator`
 
 > TODO: description
 
 ## Usage
 
 ```
-const componentGenerator = require('@react-artifact/component-generator');
+const componentGenerator = require('@artifak/component-generator');
 
 // TODO: DEMONSTRATE API
 ```

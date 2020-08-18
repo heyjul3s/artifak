@@ -3,7 +3,7 @@ import { setGridStyles, gridTemplateColumns } from '../Grid';
 import { Grid, GridItem } from '../';
 import renderer from 'react-test-renderer';
 
-describe('@react-artifact/grid', () => {
+describe('@artifak/grid', () => {
   describe('setGridStyles', () => {
     it('should return default styles when provided invalid styles object as argument', () => {
       const expected = { display: 'grid', gridGap: '1.5rem' };

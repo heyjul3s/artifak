@@ -17,7 +17,7 @@ const {
 
 const tsConfigPath = path.join(currentWorkingPath, 'tsconfig.json');
 const inputPath = path.join(currentWorkingPath, src);
-const fileName = name.replace('@react-artifact/', '');
+const fileName = name.replace('@artifak/', '');
 const extensions = ['.js', '.jsx', '.ts', '.tsx'];
 
 const inputOptions = {

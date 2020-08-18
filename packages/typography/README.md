@@ -1,11 +1,11 @@
-# `@react-artifact/typography`
+# `@artifak/typography`
 
 > TODO: description
 
 ## Usage
 
 ```
-const typography = require('@react-artifact/typography');
+const typography = require('@artifak/typography');
 
 // TODO: DEMONSTRATE API
 ```

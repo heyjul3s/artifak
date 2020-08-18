@@ -5,7 +5,7 @@
 ## Usage
 
 ```
-const artifact = require('@react-artifact/artifact');
+const artifact = require('@artifak/artifact');
 
 // TODO: DEMONSTRATE API
 ```

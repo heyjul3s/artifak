@@ -4,7 +4,7 @@ import {
   MockComponent,
 } from '../__mocks__/componentGenerator.mock';
 
-describe('@react-artifact/component-generator', () => {
+describe('@artifak/component-generator', () => {
   describe('createComponents', () => {
     it('should return undefined when provided invalid arguments', () => {
       const expected = void 0;

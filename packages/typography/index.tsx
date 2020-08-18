@@ -1,7 +1,7 @@
 import isPlainObject from 'lodash.isplainobject';
 import styled from 'styled-components';
 import { borderRadius, compose, color, space, typography } from 'styled-system';
-import { createComponents } from '@react-artifact/component-generator';
+import { createComponents } from '@artifak/component-generator';
 
 export const TypographySystemComponent = styled('div')(
   compose(borderRadius, color, space, typography)

@@ -1,11 +1,11 @@
-# `@artifak/block`
+# `@artifak/builder`
 
 > TODO: description
 
 ## Usage
 
 ```
-const block = require('@artifak/block');
+const builder = require('@artifak/builder');
 
 // TODO: DEMONSTRATE API
 ```

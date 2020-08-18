@@ -1,7 +1,7 @@
 import { createBlockComponents, Block } from '../';
 import { mockBlockStyles } from '../__mocks__/block.mock';
 
-describe('@react-artifact/block', () => {
+describe('@artifak/block', () => {
   describe('createBlockComponents - generates Block React components based on styles object argument provided', () => {
     it('should return the base Typography system component when provided with an invalid argument', () => {
       const expected = Block;

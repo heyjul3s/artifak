@@ -2,7 +2,7 @@
   "name": "@artifak/block",
   "version": "1.0.0",
   "description": "> TODO: description",
-  "author": "heyjul3s <julian.cy.low@gmail.com>",
+  "author": "Julian Low <julian.cy.low@gmail.com>",
   "homepage": "https://github.com/heyjul3s/artifak#readme",
   "license": "ISC",
   "main": "dist/block.cjs.js",
@@ -30,7 +30,7 @@
     "url": "https://github.com/heyjul3s/artifak/issues"
   },
   "devDependencies": {
-    "@react-artifact/builder": "^1.0.0",
+    "@artifak/bundler": "^1.0.0",
     "@types/react": "^16.9.45",
     "@types/react-dom": "^16.9.8",
     "react": "^16.13.1",
@@ -41,7 +41,7 @@
     "react": "^16.13.1"
   },
   "dependencies": {
-    "@react-artifact/component-generator": "^1.0.0",
+    "@artifak/component-generator": "^1.0.0",
     "lodash.isplainobject": "^4.0.6"
   }
 }

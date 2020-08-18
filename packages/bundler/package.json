@@ -1,13 +1,13 @@
 {
-  "name": "@artifak/builder",
+  "name": "@artifak/bundler",
   "version": "1.0.0",
   "description": "> TODO: description",
   "author": "Julian Low <julian.cy.low@gmail.com>",
   "homepage": "https://github.com/heyjul3s/fried-rice#readme",
   "license": "ISC",
-  "main": "lib/builder.js",
+  "main": "index.js",
   "bin": {
-    "builder": "./lib/builder.js"
+    "builder": "./index.js"
   },
   "directories": {
     "lib": "lib",

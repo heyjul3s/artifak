@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import isPlainObject from 'lodash.isplainobject';
 
-import { createComponents } from '@react-artifact/component-generator';
+import { createComponents } from '@artifak/component-generator';
 
 import {
   compose,

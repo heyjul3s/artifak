@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`@react-artifact/grid Grid should render 1`] = `
+exports[`@artifak/grid Grid should render 1`] = `
 <div
   className="sc-AxjAm bdEBNB"
 >

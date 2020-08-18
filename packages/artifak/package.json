@@ -1,5 +1,5 @@
 {
-  "name": "@artifak/artifact",
+  "name": "@artifak/artifak",
   "version": "1.0.0",
   "description": "> TODO: description",
   "author": "Julian Low <julian.cy.low@gmail.com>",
@@ -30,11 +30,12 @@
     "url": "https://github.com/heyjul3s/artifak/issues"
   },
   "dependencies": {
-    "@react-artifact/block": "^1.0.0",
-    "@react-artifact/grid": "^1.0.0"
+    "@artifak/block": "^1.0.0",
+    "@artifak/grid": "^1.0.0",
+    "@artifak/typography": "^1.0.0"
   },
   "devDependencies": {
-    "@react-artifact/builder": "^1.0.0",
+    "@artifak/bundler": "^1.0.0",
     "typescript": "^3.9.7"
   }
 }
