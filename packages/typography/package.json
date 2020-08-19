@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Typography utilities to assist in scaffolding your React project's Typography components",
   "keywords": [],
-  "author": "Julian Low <julian.cy.low@gmail.com>",
+  "author": "Julian Low",
   "license": "ISC",
   "main": "dist/typography.cjs.js",
   "module": "dist/typography.esm.js",

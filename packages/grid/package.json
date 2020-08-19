@@ -1,8 +1,8 @@
 {
   "name": "@artifak/grid",
   "version": "1.0.0",
-  "description": "> TODO: description",
-  "author": "Julian Low <julian.cy.low@gmail.com>",
+  "description": "Basic React grid component for helping with building grid layout components",
+  "author": "Julian Low",
   "homepage": "https://github.com/heyjul3s/artifak#readme",
   "license": "ISC",
   "main": "dist/grid.cjs.js",

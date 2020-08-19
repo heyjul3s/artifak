@@ -1,8 +1,8 @@
 {
   "name": "@artifak/block",
   "version": "1.0.0",
-  "description": "> TODO: description",
-  "author": "Julian Low <julian.cy.low@gmail.com>",
+  "description": "Basic React component primitive for handling spacing",
+  "author": "Julian Low",
   "homepage": "https://github.com/heyjul3s/artifak#readme",
   "license": "ISC",
   "main": "dist/block.cjs.js",

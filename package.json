@@ -10,6 +10,7 @@
     "examples/*"
   ],
   "scripts": {
+    "lint": "eslint",
     "build": "npx lerna run build",
     "test": "jest --config config/jest.config.js",
     "test-watch": "jest --config config/jest.config.js --watch",
