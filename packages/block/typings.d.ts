@@ -3,9 +3,13 @@ import {
   ColorProps,
   TextProps,
   SpaceProps,
+  FlexProps,
+  LayoutProps,
 } from 'styled-system';
 
-export type TypographySystem =
+export type BlockSystem =
+  | FlexProps
+  | LayoutProps
   | BorderRadiusProps
   | ColorProps
   | TextProps

@@ -1,16 +1,11 @@
-import {
-  createTypographyComponents,
-  fluidSizing,
-  lineHeightInDecimals,
-  TypographySystemComponent,
-} from '../';
+import { createTypographyComponents, fluidSizing, Typography } from '../';
 
 import { mockTypographyStyles } from '../__mocks__/typography.mock';
 
 describe('@artifak/typography', () => {
   describe('createTypographyComponents - generates typography React components based on styles object argument provided', () => {
     it('should return the base Typography system component when provided with an invalid argument', () => {
-      const expected = TypographySystemComponent;
+      const expected = Typography;
       expect(createTypographyComponents({} as any)).toEqual(expected);
       expect(createTypographyComponents(null as any)).toEqual(expected);
       expect(createTypographyComponents(false as any)).toEqual(expected);
@@ -20,12 +15,6 @@ describe('@artifak/typography', () => {
 
     it('should create React components', () => {
       expect(createTypographyComponents(mockTypographyStyles)).toBeDefined();
-    });
-  });
-
-  describe('lineHeightByPercentage - provides a decimate value with a default of 1.45', () => {
-    it('should EQUAL 1.45 by default', () => {
-      expect(lineHeightInDecimals()).toEqual(1.45);
     });
   });
 

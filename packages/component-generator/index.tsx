@@ -1,21 +1,21 @@
 import * as React from 'react';
-import { TStyledReactComponent } from './typings';
+import { StyledReactComponent } from './typings';
 
-export function createComponents<SCS, SSC>(
-  styledSystemComponent: TStyledReactComponent,
-  systemComponentStyles: SCS
+export function createComponents<ST, SC>(
+  SystemComponent: StyledReactComponent,
+  styles: ST
 ) {
-  if (!styledSystemComponent || !systemComponentStyles) {
+  if (!SystemComponent || !styles) {
     return void 0;
   }
 
-  return Object.entries(systemComponentStyles).reduce((acc, entry) => {
+  return Object.entries(styles).reduce((acc, entry) => {
     const [key, styles] = entry;
-    acc[key] = createComponent(styledSystemComponent, styles);
+    acc[key] = createComponent(SystemComponent, styles);
     acc[key].displayName = key;
 
     return acc;
-  }, {} as SSC);
+  }, {} as SC);
 }
 
 export function createComponent<StyledComponentProps>(
