@@ -22,6 +22,10 @@ npm install @artifak/typography
 
 To generate your typography components, simply define a styles object with the key as your component name. Note that you **must** define the `as` property in order to have it render as the HTML tag that you desire. In the example below, we've defined a component called `H1` to render as an `h1` HTML tag. We've also defined the fontSize in an array that matches the media query widths.
 
+| Arguments | Type   |
+| --------- | ------ |
+| styles    | object |
+
 ```ts
 import { createTypographyComponents } from '@artifak';
 
@@ -41,6 +45,13 @@ Other than helping you generate new typography components, it also contains othe
 ### fluidSizing
 
 This utility function calculates the sizing value dynamically within the passed in min/max constraints without need for media queries.
+
+| Arguments        | Type   |
+| ---------------- | ------ |
+| minElementSize   | number |
+| maxElementSize   | number |
+| minViewportWidth | number |
+| maxViewportWidth | number |
 
 ```ts
 import styled from 'styled-components';
