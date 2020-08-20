@@ -123,6 +123,10 @@ The main purpose of the Artifak typography is to help your generate typography c
 
 ### createTypographyComponents
 
+| Arguments | Type   |
+| --------- | ------ |
+| styles    | object |
+
 ```ts
 import { createTypographyComponents } from '@artifak';
 
@@ -142,6 +146,13 @@ Other than helping you generate new typography components, it also contains othe
 ### fluidSizing
 
 This utility function calculates the sizing value dynamically within the passed in min/max constraints without need for media queries.
+
+| Arguments        | Type   |
+| ---------------- | ------ |
+| minElementSize   | number |
+| maxElementSize   | number |
+| minViewportWidth | number |
+| maxViewportWidth | number |
 
 ```ts
 import styled from 'styled-components';
