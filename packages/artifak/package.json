@@ -1,5 +1,5 @@
 {
-  "name": "@artifak/artifak",
+  "name": "artifak",
   "version": "1.0.0",
   "description": "A set of React UI primitives to help you build your component UI system",
   "author": "Julian Low",
