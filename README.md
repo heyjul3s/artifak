@@ -10,7 +10,6 @@ Features
 - [ ] Flexbox
 - [ ] Image
 - [ ] Forms
-- [ ] Hooks
 
 ## Installation
 
@@ -30,15 +29,22 @@ npm install artifak
 
 Packages can also be installed independently. Simply do `yarn add <package name>` or `npm install <package name>` to add them to your list of dependencies. Below is a list of available packages.
 
-- @artifak/grid
-- @artifak/typography
-- @artifak/block
+- @artifak/**block**
+- @artifak/**grid**
+- @artifak/**typography**
 
-## Usage
+Usage of these components/utilities are illustrated below.
 
-### Block
+## Block
 
-Block is a basic block component that is meant for setting margin, padding sizings to your component.
+Block is a basic block component that acts as a base to your UI components. Concern is largely in spacing (margins and paddings) but you may also assign other characteristics like:
+
+- typography
+- colors
+- flex
+- display
+
+Below is an example of how you may use it.
 
 ```ts
 import { createBlockComponents } from '@artifak';
@@ -54,7 +60,7 @@ const blockStyles = {
 const { Article } = createBlockComponents<typeof blockStyles>(blockStyles);
 ```
 
-### Grid
+## Grid
 
 Grid is a component for quickly setting grid columns. Apart from that, the usual CSS grid styles can also be applied to your liking. There are two properties here that you can set which are `columnWidth` and `columnLength`.
 
@@ -111,9 +117,15 @@ const ImageGallery: React.FC<Props> = ({ images }) => {
 
 ```
 
-### Typography
+## Typography
 
 The main purpose of the Artifak typography is to help your generate typography components according to your needs. This is done via `createTypographyComponents` utility function. Simply define a styles object with the key as your component name. Note that you **must** define the `as` property in order to have it render as the HTML tag that you desire. In the example below, we've defined a component called `H1` to render as an `h1` HTML tag. We've also defined the fontSize in an array that matches the media query widths.
+
+### createTypographyComponents
+
+| Arguments | Type   |
+| --------- | ------ |
+| styles    | object |
 
 ```ts
 import { createTypographyComponents } from '@artifak';
@@ -135,10 +147,17 @@ Other than helping you generate new typography components, it also contains othe
 
 This utility function calculates the sizing value dynamically within the passed in min/max constraints without need for media queries.
 
+| Arguments        | Type   |
+| ---------------- | ------ |
+| minElementSize   | number |
+| maxElementSize   | number |
+| minViewportWidth | number |
+| maxViewportWidth | number |
+
 ```ts
 import styled from 'styled-components';
 
-const Paragraphy = styled.p`
+const Paragraph = styled.p`
   font-size: fluidSizing(16, 96, 300, 1200);
   line-height: fluidSizing(1.4, 1.6, 300, 1200);
 `;

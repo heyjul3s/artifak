@@ -3,8 +3,8 @@ module.exports = {
   collectCoverageFrom: [
     'packages/**/*.{js,jsx,ts,tsx}',
     '!packages/**/dist/**/*.{js,jsx,ts,tsx}',
-    '!packages/artifact/**/*.{js,jsx,ts,tsx}',
-    '!packages/builder/**/*.{js,jsx,ts,tsx}',
+    '!packages/artifak/**/*.{js,jsx,ts,tsx}',
+    '!packages/bundler/**/*.{js,jsx,ts,tsx}',
     '!packages/**/*.d.{ts,tsx}',
     '!packages/**/*.stories.{js,jsx,ts,tsx}'
   ],
@@ -29,8 +29,8 @@ module.exports = {
   },
   modulePathIgnorePatterns: [
     '<rootDir>/packages/block/dist',
-    '<rootDir>/packages/artifact/dist',
-    '<rootDir>/packages/builder/dist',
+    '<rootDir>/packages/artifak/dist',
+    '<rootDir>/packages/bundler/dist',
     '<rootDir>/packages/component-generator/dist',
     '<rootDir>/packages/grid/dist',
     '<rootDir>/packages/typography/dist'

@@ -1,11 +1,42 @@
 # `@artifak/block`
 
-> TODO: description
+Block is a basic block component that acts as a base to your UI components.
+
+## Installation
+
+### Yarn
+
+```sh
+yarn add @artifak/block
+```
+
+### NPM
+
+```sh
+npm install @artifak/block
+```
 
 ## Usage
 
-```
-const block = require('@artifak/block');
+Concern is largely in spacing (margins and paddings) but you may also assign other characteristics like:
 
-// TODO: DEMONSTRATE API
+- typography
+- colors
+- flex
+- display
+
+Below is an example of how you may use it.
+
+```ts
+import { createBlockComponents } from '@artifak';
+
+const blockStyles = {
+  Article: {
+    margin: 0,
+    padding: [15, 30]
+    as: 'article',
+  },
+};
+
+const { Article } = createBlockComponents<typeof blockStyles>(blockStyles);
 ```

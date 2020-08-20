@@ -1,11 +1,3 @@
-# `@artifak/builder`
+# `@artifak/bundler`
 
-> TODO: description
-
-## Usage
-
-```
-const builder = require('@artifak/builder');
-
-// TODO: DEMONSTRATE API
-```
+For internal use only.
