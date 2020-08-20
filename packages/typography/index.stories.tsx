@@ -1,6 +1,5 @@
 import React from 'react';
 import { createTypographyComponents, fluidSizing, fontWeight } from '.';
-import { TypographySystem } from './typings';
 
 const typographyStyles = {
   H1: {

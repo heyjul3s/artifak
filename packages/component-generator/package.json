@@ -1,9 +1,9 @@
 {
   "name": "@artifak/component-generator",
   "version": "1.0.0",
-  "description": "Now I’m the model of a modern major general / The venerated Virginian veteran whose men are all / Lining up, to put me up on a pedestal / Writin’ letters to relatives / Embellishin’ my elegance and eloquence / But the elephant is in the room / The truth is in ya face when ya hear the British cannons go / BOOM",
+  "description": "Component generator utility for Artifak",
   "keywords": [],
-  "author": "heyjul3s <julian.cy.low@gmail.com>",
+  "author": "Julian Low",
   "license": "ISC",
   "module": "dist/component-generator.esm.js",
   "main": "dist/component-generator.cjs.js",
@@ -34,8 +34,8 @@
     "@types/react-dom": "^16.9.8"
   },
   "dependencies": {
-    "react": "^16.13.1",
-    "react-dom": "^16.13.1",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
     "styled-components": "^5.1.1"
   }
 }

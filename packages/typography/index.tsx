@@ -8,9 +8,6 @@ export const Typography = styled('div')(
   compose(borderRadius, color, space, typography)
 );
 
-// ST = typeof styles
-// SC = rendered FCs
-// TODO: return type
 export function createTypographyComponents<ST>(systemComponentStyles: ST) {
   if (
     isPlainObject(systemComponentStyles) &&

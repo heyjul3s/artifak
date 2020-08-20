@@ -1,8 +1,8 @@
 {
   "name": "@artifak/bundler",
   "version": "1.0.0",
-  "description": "> TODO: description",
-  "author": "Julian Low <julian.cy.low@gmail.com>",
+  "description": "Artifak package bundler",
+  "author": "Julian Low",
   "homepage": "https://github.com/heyjul3s/fried-rice#readme",
   "license": "ISC",
   "main": "index.js",
