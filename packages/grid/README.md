@@ -1,11 +1,74 @@
 # `@artifak/grid`
 
-> TODO: description
+@artifak/grid is a component for quickly setting grid columns. Apart from that, the usual CSS grid styles can also be applied to your liking.
+
+## Installation
+
+### Yarn
+
+```sh
+yarn add @artifak/grid
+```
+
+### NPM
+
+```sh
+npm install @artifak/grid
+```
 
 ## Usage
 
-```
-const grid = require('@artifak/grid');
+There are two properties here that you can set which are `columnWidth` and `columnLength`.
 
-// TODO: DEMONSTRATE API
+### Column Width
+
+This defines the sizing for the column based on the width that you provide.
+
+```ts
+import { Grid, GridItem } from 'artifak';
+
+type Props = {
+  images: string[]
+}
+
+const ImageGallery: React.FC<Props> = ({ images }) => {
+  return (
+    <Grid columnWidth="320px">
+      {image.map((image, i) => {
+        return (
+          <GridItem key={i}><img src={image} /></GridItem>
+        )
+
+      })}
+    </GridItem>
+  )
+}
+
+```
+
+### Column Length
+
+This defines the number of columns to distribute your grid contents into.
+
+```ts
+
+import { Grid, GridItem } from 'artifak';
+
+type Props = {
+  images: string[]
+}
+
+const ImageGallery: React.FC<Props> = ({ images }) => {
+  return (
+    <Grid columnLength={4}>
+      {image.map((image, i) => {
+        return (
+          <GridItem key={i}><img src={image} /></GridItem>
+        )
+
+      })}
+    </GridItem>
+  )
+}
+
 ```
