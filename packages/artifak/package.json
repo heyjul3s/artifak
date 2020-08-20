@@ -35,7 +35,6 @@
     "@artifak/typography": "^1.0.0"
   },
   "devDependencies": {
-    "@artifak/bundler": "^1.0.0",
-    "typescript": "^3.9.7"
+    "@artifak/bundler": "^1.0.0"
   }
 }
