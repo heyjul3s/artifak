@@ -6,8 +6,7 @@
   "hoist": true,
   "stream": true,
   "workspaces": [
-    "packages/*",
-    "examples/*"
+    "packages/*"
   ],
   "scripts": {
     "lint": "eslint",
@@ -15,7 +14,6 @@
     "test": "jest --config config/jest.config.js",
     "test-watch": "jest --config config/jest.config.js --watch",
     "test-watchAll": "jest --config config/jest.config.js --watchAll",
-    "coverage": "",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
     "changeset": "changeset",
