@@ -10,7 +10,6 @@ Features
 - [ ] Flexbox
 - [ ] Image
 - [ ] Forms
-- [ ] Hooks
 
 ## Installation
 
@@ -138,7 +137,7 @@ This utility function calculates the sizing value dynamically within the passed 
 ```ts
 import styled from 'styled-components';
 
-const Paragraphy = styled.p`
+const Paragraph = styled.p`
   font-size: fluidSizing(16, 96, 300, 1200);
   line-height: fluidSizing(1.4, 1.6, 300, 1200);
 `;
