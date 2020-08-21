@@ -1,6 +1,6 @@
 {
   "name": "artifak",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A set of React UI primitives to help you build your component UI system",
   "author": "Julian Low",
   "homepage": "https://github.com/heyjul3s/artifak#readme",
@@ -12,9 +12,7 @@
     "lib": "lib",
     "test": "__tests__"
   },
-  "files": [
-    "lib"
-  ],
+  "files": ["lib"],
   "publishConfig": {
     "access": "public"
   },
@@ -30,9 +28,9 @@
     "url": "https://github.com/heyjul3s/artifak/issues"
   },
   "dependencies": {
-    "@artifak/block": "^1.0.0",
-    "@artifak/grid": "^1.0.0",
-    "@artifak/typography": "^1.0.0"
+    "@artifak/block": "^1.0.1",
+    "@artifak/grid": "^1.0.1",
+    "@artifak/typography": "^1.0.1"
   },
   "devDependencies": {
     "@artifak/bundler": "^1.0.0"

@@ -1,6 +1,6 @@
 {
   "name": "@artifak/typography",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Typography utilities to assist in scaffolding your React project's Typography components",
   "keywords": [],
   "author": "Julian Low",
@@ -12,9 +12,7 @@
     "lib": "lib",
     "test": "__tests__"
   },
-  "files": [
-    "lib"
-  ],
+  "files": ["lib"],
   "publishConfig": {
     "access": "public"
   },

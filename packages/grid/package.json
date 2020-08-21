@@ -1,6 +1,6 @@
 {
   "name": "@artifak/grid",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Basic React grid component for helping with building grid layout components",
   "author": "Julian Low",
   "homepage": "https://github.com/heyjul3s/artifak#readme",
@@ -12,9 +12,7 @@
     "lib": "lib",
     "test": "__tests__"
   },
-  "files": [
-    "lib"
-  ],
+  "files": ["lib"],
   "publishConfig": {
     "access": "public"
   },

@@ -1,6 +1,6 @@
 {
   "name": "@artifak/block",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Basic React component primitive for handling spacing",
   "author": "Julian Low",
   "homepage": "https://github.com/heyjul3s/artifak#readme",
@@ -12,9 +12,7 @@
     "lib": "lib",
     "test": "__tests__"
   },
-  "files": [
-    "lib"
-  ],
+  "files": ["lib"],
   "publishConfig": {
     "access": "public"
   },
