@@ -1,10 +1,10 @@
-import { createBlockComponents, Block } from '../';
+import { createBlockComponents, BlockBase } from '../';
 import { mockBlockStyles } from '../__mocks__/block.mock';
 
 describe('@artifak/block', () => {
   describe('createBlockComponents - generates Block React components based on styles object argument provided', () => {
     it('should return the base Typography system component when provided with an invalid argument', () => {
-      const expected = Block;
+      const expected = BlockBase;
       expect(createBlockComponents({} as any)).toEqual(expected);
       expect(createBlockComponents(null as any)).toEqual(expected);
       expect(createBlockComponents(false as any)).toEqual(expected);
