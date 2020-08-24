@@ -1,5 +1,13 @@
 # @artifak/block
 
+## 1.0.2
+
+### Patch Changes
+
+- Export updates
+- Type updates
+- Renamed Block component to BlockBase
+
 ## 1.0.1
 
 ### Patch Changes
