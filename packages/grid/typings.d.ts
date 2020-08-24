@@ -17,13 +17,13 @@ import {
   SpaceProps,
 } from 'styled-system';
 
-export type TGridStyles = Partial<{
+export type SetGridStyles = Partial<{
   columnWidth: string | undefined;
   columnLength: number | undefined;
   gap: string;
 }>;
 
-export type TGrid = {
+export type GridProps = {
   columnLength: number;
   rowLength: number;
   columnWidth: string;
@@ -31,7 +31,7 @@ export type TGrid = {
   gap: string;
 };
 
-export type TGridProps =
+export type GridSystemProps =
   | AlignContentProps
   | AlignItemsProps
   | DisplayProps
@@ -39,7 +39,7 @@ export type TGridProps =
   | JustifyContentProps
   | JustifyItemsProps;
 
-export type TGridItemProps =
+export type GridItemSystemProps =
   | AlignSelfProps
   | GridAreaProps
   | GridColumnProps

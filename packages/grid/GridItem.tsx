@@ -1,6 +1,6 @@
 import React, { forwardRef } from 'react';
 import styled from 'styled-components';
-import { TGridItemProps } from './typings';
+import { GridItemSystemProps } from './typings';
 
 import {
   compose,
@@ -16,7 +16,7 @@ import {
   space,
 } from 'styled-system';
 
-export const StyledGridItem = styled('div')<TGridItemProps>(
+export const StyledGridItem = styled('div')<GridItemSystemProps>(
   compose(
     alignSelf,
     gridArea,
