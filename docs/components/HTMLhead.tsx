@@ -1,4 +1,3 @@
-import React from 'react';
 import Head from 'next/head';
 import { DefaultSeo, NextSeoProps } from 'next-seo';
 
@@ -10,7 +9,7 @@ export const HTMLhead: React.FC<HTMLheadProps> = ({
   canonical,
   additionalMetaTags = []
 }) => (
-  <React.Fragment>
+  <>
     <Head>
       <link
         href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700;800;900&display=swap"
@@ -101,5 +100,5 @@ export const HTMLhead: React.FC<HTMLheadProps> = ({
         ...additionalMetaTags
       ]}
     />
-  </React.Fragment>
+  </>
 );

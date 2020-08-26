@@ -13,8 +13,9 @@ export function Logo() {
       >
         <style type="text/css">
           {`
-  	.st0{fill:#273434;}
-	.st1{fill:#F05E22;}`}
+  	        .st0{fill:#273434;}
+            .st1{fill:#F05E22;}
+            `}
         </style>
         <g>
           <g>
