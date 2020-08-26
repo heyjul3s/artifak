@@ -15,27 +15,25 @@ export const HeaderGrid = styled(Grid)`
   grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
   grid-template-rows: repeat(5, 80px);
 
-  > div:nth-child(2) {
+  > div:nth-child(1) {
+    grid-column: span 2;
+    grid-row: span 1;
     justify-self: end;
   }
 
-  > div:nth-child(3) {
+  > div:nth-child(2) {
     grid-column: span 2;
     grid-row: span 1;
   }
 
   @media (min-width: 769px) {
-    > div:first-child {
-      display: none;
-    }
-
-    > div:nth-child(2) {
+    > div:nth-child(1) {
       grid-column: span 4;
       grid-row: span 1;
       justify-self: end;
     }
 
-    > div:nth-child(3) {
+    > div:nth-child(2) {
       grid-column: span 4;
       grid-row: span 1;
     }
@@ -44,20 +42,20 @@ export const HeaderGrid = styled(Grid)`
   @media (min-width: 1025px) {
     grid-template-rows: repeat(3, 80px);
 
-    > div:nth-child(2) {
+    > div:nth-child(1) {
       grid-column: span 1;
       grid-row: span 1;
       justify-self: end;
       order: 2;
     }
 
-    > div:nth-child(3) {
+    > div:nth-child(2) {
       margin-top: 2em;
     }
   }
 
   @media (min-width: 1200px) {
-    > div:nth-child(3) {
+    > div:nth-child(2) {
       grid-column: 1/6;
     }
   }

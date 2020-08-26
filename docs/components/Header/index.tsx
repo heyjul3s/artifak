@@ -1,25 +1,15 @@
+import React from 'react';
 import { GridItem } from 'artifak';
 import { Container } from '../Container';
-import { NavMenu } from '../NavMenu/NavMenu';
-
-import {
-  HeaderContainer,
-  HeaderContent,
-  HeaderGrid,
-  NavToggle
-} from './styled';
-
+import { NavMenu } from '../NavMenu';
+import { HeaderContainer, HeaderContent, HeaderGrid } from './styled';
 import { Brand, HeaderInfo, GithubMobile } from './components';
 
-export const Header = () => {
+export function Header() {
   return (
     <HeaderContainer>
       <Container>
         <HeaderGrid>
-          <GridItem>
-            <NavToggle />
-          </GridItem>
-
           <GridItem>
             <Brand />
           </GridItem>
@@ -35,4 +25,4 @@ export const Header = () => {
       </Container>
     </HeaderContainer>
   );
-};
+}

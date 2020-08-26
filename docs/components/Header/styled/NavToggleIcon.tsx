@@ -1,10 +1,11 @@
 import styled from 'styled-components';
 
-export const NavToggle = styled.div`
+export const NavToggleIcon = styled.div`
   position: relative;
   top: 18px;
   width: 36px;
   height: 36px;
+  cursor: pointer;
 
   &::before,
   &::after {
@@ -16,6 +17,7 @@ export const NavToggle = styled.div`
     height: 6px;
     background: ${({ theme }) => theme.colors.lightGrey};
     border-radius: 6px;
+    transition: background 300ms ease-out;
   }
 
   &::before {
@@ -24,6 +26,13 @@ export const NavToggle = styled.div`
 
   &::after {
     top: 24px;
+  }
+
+  &:hover {
+    &::before,
+    &::after {
+      background: ${({ theme }) => theme.colors.primary};
+    }
   }
 
   @media (min-width: 769px) {

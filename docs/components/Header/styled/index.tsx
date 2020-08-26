@@ -6,4 +6,4 @@ export {
 } from './Header';
 export { GithubLinkContainer, GithubMobileLinkContainer } from './Github';
 export { BrandLink } from './Brand';
-export { NavToggle } from './NavToggle';
+export { NavToggleIcon } from './NavToggleIcon';
