@@ -1,18 +1,15 @@
-export type Spacing = (multiplier: number) => number;
-
-export const spacing = (multiplier: number = 1): number => {
-  const DEFAULT_SPACING = 5;
-  return DEFAULT_SPACING * multiplier;
-};
-
-interface Space {
-  xs: number;
-  sm: number;
-  md: number;
-  lg: number;
-  xl: number;
-  xxl: number;
+enum SpaceSize {
+  XS = 'xs',
+  SM = 'sm',
+  MD = 'md',
+  LG = 'lg',
+  XL = 'xl',
+  XXL = 'xxl'
 }
+
+export type Space = {
+  [key in SpaceSize]: number;
+};
 
 export const space: Space = {
   xs: spacing(2),
@@ -20,5 +17,12 @@ export const space: Space = {
   md: spacing(8),
   lg: spacing(16),
   xl: spacing(32),
-  xxl: spacing(64),
+  xxl: spacing(64)
 };
+
+export type Spacing = (multiplier: number) => number;
+
+export function spacing(multiplier: number = 1): number {
+  const DEFAULT_SPACING = 5;
+  return DEFAULT_SPACING * multiplier;
+}
