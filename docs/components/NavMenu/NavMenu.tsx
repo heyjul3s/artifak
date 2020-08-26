@@ -36,13 +36,13 @@ export function NavMenu() {
               </>
             </AnchorLink>
 
-            <AnchorLink href="/">
+            <AnchorLink href="/" variant="disabled">
               <>
                 <span>04</span>Flex
               </>
             </AnchorLink>
 
-            <AnchorLink href="/">
+            <AnchorLink href="/" variant="disabled">
               <>
                 <span>05</span>Image
               </>

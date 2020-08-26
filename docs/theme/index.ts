@@ -3,7 +3,6 @@ import { container } from './container';
 import { space, spacing } from './space';
 import { fontFamily } from './fonts';
 import { fontWeight } from 'artifak';
-import { anchor } from './variants/anchor';
 
 export const theme = {
   colors,
@@ -11,8 +10,5 @@ export const theme = {
   fontFamily,
   fontWeight,
   space,
-  spacing,
-  variants: {
-    ...anchor
-  }
+  spacing
 };
