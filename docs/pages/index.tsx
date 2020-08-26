@@ -1,12 +1,10 @@
 import { Layout } from '../components/Layout';
-import { Container } from '../components/Container';
-// import { AnchorLink } from '../components/AnchorLink';
 import { H1, Paragraph } from '../components/Typography';
 
 export default function Home() {
   return (
     <Layout>
-      <Container>
+      <>
         <H1>Introduction</H1>
         <Paragraph>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce id enim
@@ -44,7 +42,7 @@ export default function Home() {
           hac habitasse platea dictumst. In ornare et quam in molestie. Etiam
           elementum mollis ipsum at laoreet. In et pellentesque orci.
         </Paragraph>
-      </Container>
+      </>
     </Layout>
   );
 }

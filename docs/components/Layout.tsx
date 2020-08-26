@@ -1,3 +1,4 @@
+import styled from 'styled-components';
 import { Container } from './Container';
 import { HTMLhead, HTMLheadProps } from './HTMLhead';
 import { Header } from './Header';
@@ -25,13 +26,21 @@ export function Layout({
 
       <Header />
 
-      <Container>
-        <main>
-          <Container>{children}</Container>
-        </main>
-      </Container>
+      <Main>
+        <Container pr="1em" pl="1em">
+          {children}
+        </Container>
+      </Main>
 
       <Footer />
     </>
   );
 }
+
+const Main = styled.main`
+  padding: 1em 0;
+
+  @media (min-width: 769px) {
+    padding: 3em 0;
+  }
+`;
