@@ -1,21 +1,24 @@
-export interface Container {
-  xs: string;
-  sm: number;
-  md: number;
-  lg: number;
-  xl: number;
+export enum ContainerSize {
+  SM = 'sm',
+  MD = 'md',
+  LG = 'lg',
+  XL = 'xl'
 }
 
+export type Container = {
+  [key in ContainerSize]: number;
+};
+
 const containerWidth = {
-  sm: '540px',
-  md: '720px',
-  lg: '960px',
-  xl: '1140px'
+  [ContainerSize.SM]: '540px',
+  [ContainerSize.MD]: '720px',
+  [ContainerSize.LG]: '960px',
+  [ContainerSize.XL]: '1140px'
 };
 
 export const container: string[] = [
-  containerWidth.sm,
-  containerWidth.md,
-  containerWidth.lg,
-  containerWidth.xl
+  containerWidth[ContainerSize.SM],
+  containerWidth[ContainerSize.MD],
+  containerWidth[ContainerSize.LG],
+  containerWidth[ContainerSize.XL]
 ];
