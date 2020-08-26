@@ -20,6 +20,10 @@ export default function Home() {
           our eyes occassionally.
         </Paragraph>
 
+        <Paragraph>
+          This library is written in Typescript and built on styled-system.
+        </Paragraph>
+
         <H2>Installation</H2>
 
         <Paragraph>To install for Yarn, simply run</Paragraph>
