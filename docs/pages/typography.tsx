@@ -1,7 +1,7 @@
 import { Layout } from '../components/Layout';
 import { H1, Paragraph, LargeLead } from '../components/Typography';
-import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
-import atomDark from 'react-syntax-highlighter/dist/cjs/styles/prism/atom-dark';
+import { Syntax } from '../components/Syntax';
+
 import {
   createTypographComponentsExampleUsage,
   createTypographyComponentsDemo
@@ -16,10 +16,12 @@ export default function Typography() {
     <Layout>
       <>
         <H1>Typography</H1>
+
         <Paragraph>
           The typography library offers utilities to help you scaffold your
           React typography components which include...
         </Paragraph>
+
         <ul>
           <li>createTypographyComponents</li>
           <li>fluidSizing</li>
@@ -35,13 +37,7 @@ export default function Typography() {
           your component as. Below is an example.
         </Paragraph>
 
-        <SyntaxHighlighter
-          language="typescript"
-          style={atomDark}
-          customStyle={{ padding: '1em', margin: '1em 0' }}
-        >
-          {createTypographComponentsExampleUsage}
-        </SyntaxHighlighter>
+        <Syntax>{createTypographComponentsExampleUsage}</Syntax>
 
         <Paragraph>
           Note that it is essential to specify the <strong>"as"</strong>{' '}
@@ -50,13 +46,7 @@ export default function Typography() {
           it as you normally would...
         </Paragraph>
 
-        <SyntaxHighlighter
-          language="typescript"
-          style={atomDark}
-          customStyle={{ padding: '1em', margin: '1em 0' }}
-        >
-          {createTypographyComponentsDemo}
-        </SyntaxHighlighter>
+        <Syntax>{createTypographyComponentsDemo}</Syntax>
 
         <LargeLead>fluidSizing</LargeLead>
 
@@ -70,13 +60,7 @@ export default function Typography() {
           may use it.
         </Paragraph>
 
-        <SyntaxHighlighter
-          language="typescript"
-          style={atomDark}
-          customStyle={{ padding: '1em', margin: '1em 0' }}
-        >
-          {fluidSizingExampleUsage}
-        </SyntaxHighlighter>
+        <Syntax>{fluidSizingExampleUsage}</Syntax>
 
         <LargeLead>fontWeight</LargeLead>
 
@@ -86,13 +70,7 @@ export default function Typography() {
           and or to simply add to your styles theme. Simply import this to use.
         </Paragraph>
 
-        <SyntaxHighlighter
-          language="typescript"
-          style={atomDark}
-          customStyle={{ padding: '1em', margin: '1em 0' }}
-        >
-          {fontWeightExampleUsage}
-        </SyntaxHighlighter>
+        <Syntax>{fontWeightExampleUsage}</Syntax>
       </>
     </Layout>
   );

@@ -1,7 +1,6 @@
-import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
-import atomDark from 'react-syntax-highlighter/dist/cjs/styles/prism/atom-dark';
 import { Layout } from '../components/Layout';
 import { H1, H2, Paragraph } from '../components/Typography';
+import { Syntax } from '../components/Syntax';
 
 export default function Home() {
   return (
@@ -28,19 +27,11 @@ export default function Home() {
 
         <Paragraph>To install for Yarn, simply run</Paragraph>
 
-        <SyntaxHighlighter
-          language="typescript"
-          style={atomDark}
-          customStyle={{ padding: '1em', margin: '1em 0' }}
-        >{`yarn add artifak`}</SyntaxHighlighter>
+        <Syntax>{`yarn add artifak`}</Syntax>
 
         <Paragraph>To install for NPM, simply run</Paragraph>
 
-        <SyntaxHighlighter
-          language="typescript"
-          style={atomDark}
-          customStyle={{ padding: '1em', margin: '1em 0' }}
-        >{`npm install artifak`}</SyntaxHighlighter>
+        <Syntax>{`npm install artifak`}</Syntax>
 
         <Paragraph>
           The Artifak library is also available as stand-alone packages
