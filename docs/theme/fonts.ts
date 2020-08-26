@@ -1,9 +1,9 @@
 type FontFamily = {
-  heading: string;
-  body: string;
+  poppins: string;
+  biryani: string;
 };
 
 export const fontFamily: FontFamily = {
-  heading: 'Poppins, sans-serif',
-  body: 'Biryani, sans-serif'
+  poppins: 'Poppins, sans-serif',
+  biryani: 'Biryani, sans-serif'
 };
