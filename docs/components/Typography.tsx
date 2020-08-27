@@ -4,7 +4,7 @@ import { theme } from '../theme';
 const styles = {
   H1: {
     color: theme.colors.text,
-    fontSize: [48, 72],
+    fontSize: [48, 56],
     fontWeight: fontWeight.bold,
     fontFamily: theme.fontFamily.poppins,
     margin: '0 0 0.25em',
