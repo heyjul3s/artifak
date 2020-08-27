@@ -1,6 +1,13 @@
-import { AnchorLink } from '../AnchorLink';
 import { GridItem } from 'artifak';
 import { FlexContainer, FlexItem, Nav } from './styled';
+import { NavLink } from './components/NavLink';
+
+const navMap = {
+  Introduction: 'Introduction',
+  Block: 'Block',
+  Grid: 'Grid',
+  Typography: 'Typography'
+};
 
 export function NavMenu() {
   return (
@@ -8,45 +15,13 @@ export function NavMenu() {
       <GridItem>
         <FlexContainer>
           <FlexItem>
-            <AnchorLink href="/">
-              <>
-                <span>00</span>
-                Introduction
-              </>
-            </AnchorLink>
-
-            <AnchorLink href="/block">
-              <>
-                <span>01</span>
-                Block
-              </>
-            </AnchorLink>
-
-            <AnchorLink href="/grid">
-              <>
-                <span>02</span>Grid
-              </>
-            </AnchorLink>
-          </FlexItem>
-
-          <FlexItem>
-            <AnchorLink href="/typography">
-              <>
-                <span>03</span>Typography
-              </>
-            </AnchorLink>
-
-            <AnchorLink href="/" variant="disabled">
-              <>
-                <span>04</span>Flex
-              </>
-            </AnchorLink>
-
-            <AnchorLink href="/" variant="disabled">
-              <>
-                <span>05</span>Image
-              </>
-            </AnchorLink>
+            {Object.keys(navMap).map((key, i) => (
+              <NavLink
+                name={key}
+                query={{ content: navMap[key] }}
+                key={`${i}-${key}`}
+              />
+            ))}
           </FlexItem>
         </FlexContainer>
       </GridItem>
