@@ -9,27 +9,30 @@ export function Introduction() {
 
       <Paragraph>
         Artifak is a library that comprises of basic UI primitives and utility
-        functions to help you build React application system components. The aim
-        is to attempt to provide basic building blocks with sensible defaults to
-        help you build your components so that you don't have to fight your
-        teammates ala trial by combat on how to scaffold your system components.
-        No lives were lost in creating this library. No tears were shed either
-        as boys don't cry. We simply just sweat through our eyes occassionally.
-      </Paragraph>
-
-      <Paragraph>
-        This library is written in Typescript and built on styled-system.
+        functions to help you build your React application system components.
+        Built with Typescript and Styled System, the aim is to attempt to
+        provide basic building blocks with sensible defaults so that you don't
+        have to fight your teammates ala trial by combat in regards to some
+        details when scaffolding your project. No lives were lost in creating
+        this library. No tears were shed either as boys don't cry. We simply
+        just sweat through our eyes occassionally.
       </Paragraph>
 
       <H2>Installation</H2>
 
       <Paragraph>To install for Yarn, simply run</Paragraph>
 
-      <Syntax>{`yarn add artifak`}</Syntax>
+      <Syntax
+        showLineNumbers={false}
+        language="bash"
+      >{`yarn add artifak`}</Syntax>
 
       <Paragraph>To install for NPM, simply run</Paragraph>
 
-      <Syntax>{`npm install artifak`}</Syntax>
+      <Syntax
+        showLineNumbers={false}
+        language="bash"
+      >{`npm install artifak`}</Syntax>
 
       <Paragraph>
         The Artifak library is also available as stand-alone packages

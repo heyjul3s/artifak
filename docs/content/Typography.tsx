@@ -1,5 +1,5 @@
-import { H1, Paragraph, LargeLead } from '../components/Typography';
-import { Syntax } from '../components/Syntax';
+import { H1, Paragraph, LargeLead, SmallLead } from '../components/Typography';
+import { Syntax, Params } from '../components/Syntax';
 import { List } from '../components/List';
 import {
   createTypographComponentsExampleUsage,
@@ -7,10 +7,12 @@ import {
 } from '../strings/typography/createTypographyComponents';
 
 import { fluidSizingExampleUsage } from '../strings/typography/fluidSizing';
-
 import { fontWeightExampleUsage } from '../strings/typography/fontWeight';
 
+import { fontWeight } from 'artifak';
+
 export function Typography() {
+  console.log(fontWeight);
   return (
     <>
       <H1>Typography</H1>
@@ -24,7 +26,13 @@ export function Typography() {
         data={['createTypographyComponents', 'fluidSizing', 'fontWeight']}
       />
 
-      <LargeLead>createTypographyComponents</LargeLead>
+      <LargeLead>createTypographyComponent</LargeLead>
+
+      <Params
+        properties={{
+          styles: 'object'
+        }}
+      />
 
       <Paragraph>
         As implied, this utility function will generate typography components
@@ -45,6 +53,14 @@ export function Typography() {
       <Syntax>{createTypographyComponentsDemo}</Syntax>
 
       <LargeLead>fluidSizing</LargeLead>
+      <Params
+        properties={{
+          minElementSize: 'number',
+          maxElementSize: 'number',
+          minViewportWidth: 'number',
+          maxViewportWidth: 'number'
+        }}
+      />
 
       <Paragraph>
         This function writes a CSS rule that allows for fluid sizing.

@@ -1,5 +1,6 @@
-import { H1, Paragraph, LargeLead } from '../components/Typography';
-import { Syntax } from '../components/Syntax';
+import { H1, Paragraph, LargeLead, Strong } from '../components/Typography';
+import { AnchorLink } from '../components/AnchorLink';
+import { Syntax, Params } from '../components/Syntax';
 import { List } from '../components/List';
 import {
   createBlockComponentsExampleUsage,
@@ -17,8 +18,11 @@ export function Block() {
         suited for such purposes.
       </Paragraph>
 
+      <LargeLead>BlockBase</LargeLead>
+
       <Paragraph>
-        Generic blocks will comprise of the following style attributes:
+        BlockBase is the basic block component comprising of several style
+        attributes:
       </Paragraph>
 
       <List
@@ -26,11 +30,25 @@ export function Block() {
       />
 
       <Paragraph>
-        Refer to <a href="https://styled-system.com/api">Styled System API</a>
-        for further details.
+        This component is used in{' '}
+        <Strong>
+          <em>createBlockComponents</em>
+        </Strong>{' '}
+        to generate your components. Refer to{' '}
+        <AnchorLink href="https://styled-system.com/api" openAsNewTab={true}>
+          <Strong>Styled System API</Strong>
+        </AnchorLink>
+        &nbsp; for further details regarding the aforementioned style
+        attributes.
       </Paragraph>
 
       <LargeLead>createBlockComponents</LargeLead>
+
+      <Params
+        properties={{
+          styles: 'object'
+        }}
+      />
 
       <Paragraph>
         To generate some components, simply pass in a styles object.
@@ -38,7 +56,15 @@ export function Block() {
 
       <Syntax>{createBlockComponentsExampleUsage}</Syntax>
 
-      <Paragraph>Generated components can then be imported and used.</Paragraph>
+      <Paragraph>
+        Note that the "as" property will need to be defined in order to render
+        it as the target element you desire. If unspecified, it will default to
+        the{' '}
+        <Strong>
+          <em>DIV</em>
+        </Strong>{' '}
+        element. Generated components can then be imported and used.
+      </Paragraph>
 
       <Syntax>{createBlockComponentsDemo}</Syntax>
     </>
