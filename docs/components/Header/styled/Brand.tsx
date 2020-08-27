@@ -3,12 +3,13 @@ import { AnchorLink } from '../../AnchorLink';
 
 export const BrandLink = styled(AnchorLink)`
   > svg {
-    width: 60px;
+    width: 80px;
+    padding-bottom: 0.25em;
   }
 
   @media (min-width: 1025px) {
     > svg {
-      width: 160px;
+      width: 100px;
     }
   }
 `;
