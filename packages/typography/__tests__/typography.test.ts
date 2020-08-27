@@ -1,4 +1,9 @@
-import { createTypographyComponents, fluidSizing, TypographyBase } from '../';
+import {
+  createTypographyComponents,
+  fluidSizing,
+  TypographyBase,
+  fontWeight,
+} from '../';
 
 import { mockTypographyStyles } from '../__mocks__/typography.mock';
 
@@ -34,6 +39,24 @@ describe('@artifak/typography', () => {
     it('should return a CSS string rule', () => {
       const expected = `calc(48px + (96 - 48) * ((100vw - 300px) / (1200 - 300)))`;
       expect(fluidSizing(48, 96, 300, 1200)).toEqual(expected);
+    });
+  });
+
+  describe('fontWeight', () => {
+    it('should return font weights with the correct values', () => {
+      const expected = {
+        BLACK: 900,
+        BOLD: 700,
+        EXTRA_BOLD: 800,
+        EXTRA_LIGHT: 200,
+        LIGHT: 300,
+        MEDIUM: 500,
+        REGULAR: 400,
+        SEMI_BOLD: 600,
+        THIN: 100,
+      };
+
+      expect(fontWeight).toEqual(expected);
     });
   });
 });

@@ -15,7 +15,8 @@ type TFontWeight = {
 };
 
 export const fontWeight = Object.keys(EFontWeightKeys).reduce((acc, key, i) => {
-  const index = i === 0 ? 1 : i;
+  console.log(i);
+  const index = (i += 1);
   acc[key] = index * 100;
 
   return acc;
