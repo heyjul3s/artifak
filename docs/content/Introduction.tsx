@@ -1,5 +1,6 @@
 import { H1, H2, Paragraph } from '../components/Typography';
 import { Syntax } from '../components/Syntax';
+import { List } from '../components/List';
 
 export function Introduction() {
   return (
@@ -34,11 +35,7 @@ export function Introduction() {
         The Artifak library is also available as stand-alone packages
       </Paragraph>
 
-      <ul>
-        <li>@artifak/block</li>
-        <li>@artifak/grid</li>
-        <li>@artifak/typography</li>
-      </ul>
+      <List data={['@artifak/block', '@artifak/grid', '@artifak/typography']} />
 
       <Paragraph>
         Additional components are also in the pipeline namely Flex, Image and

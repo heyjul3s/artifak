@@ -1,6 +1,6 @@
 import { H1, Paragraph, LargeLead } from '../components/Typography';
 import { Syntax } from '../components/Syntax';
-
+import { List } from '../components/List';
 import {
   createBlockComponentsExampleUsage,
   createBlockComponentsDemo
@@ -21,14 +21,14 @@ export function Block() {
         Generic blocks will comprise of the following style attributes:
       </Paragraph>
 
-      <ul>
-        <li>space</li>
-        <li>layout</li>
-        <li>display</li>
-        <li>typography</li>
-        <li>color</li>
-        <li>flexbox</li>
-      </ul>
+      <List
+        data={['space', 'layout', 'display', 'typography', 'color', 'flexbox']}
+      />
+
+      <Paragraph>
+        Refer to <a href="https://styled-system.com/api">Styled System API</a>
+        for further details.
+      </Paragraph>
 
       <LargeLead>createBlockComponents</LargeLead>
 

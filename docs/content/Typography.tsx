@@ -1,6 +1,6 @@
 import { H1, Paragraph, LargeLead } from '../components/Typography';
 import { Syntax } from '../components/Syntax';
-
+import { List } from '../components/List';
 import {
   createTypographComponentsExampleUsage,
   createTypographyComponentsDemo
@@ -20,11 +20,9 @@ export function Typography() {
         typography components which include...
       </Paragraph>
 
-      <ul>
-        <li>createTypographyComponents</li>
-        <li>fluidSizing</li>
-        <li>fontWeight</li>
-      </ul>
+      <List
+        data={['createTypographyComponents', 'fluidSizing', 'fontWeight']}
+      />
 
       <LargeLead>createTypographyComponents</LargeLead>
 
