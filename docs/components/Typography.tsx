@@ -1,3 +1,4 @@
+import styled from 'styled-components';
 import { createTypographyComponents, fontWeight } from 'artifak';
 import { theme } from '../theme';
 
@@ -67,6 +68,7 @@ const styles = {
     fontSize: [18, 20, 22, 24],
     fontFamily: theme.fontFamily.poppins,
     marginTop: 0,
+    marginBottom: '0.4em',
     as: 'p'
   },
 
@@ -111,3 +113,7 @@ export const {
   Paragraph,
   SmallParagraph
 } = createTypographyComponents<typeof styles>(styles);
+
+export const Strong = styled.strong`
+  font-weight: ${({ theme }) => theme.fontWeight.BLACK};
+`;
