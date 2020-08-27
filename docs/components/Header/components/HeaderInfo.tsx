@@ -1,4 +1,4 @@
-import { LargeLead, Paragraph } from '../../Typography';
+import { LargeLead } from '../../Typography';
 import { Github } from './Github';
 import { HeaderInfoContainer } from '../styled';
 
@@ -6,7 +6,6 @@ export function HeaderInfo() {
   return (
     <HeaderInfoContainer>
       <ReleaseTag />
-      <Tagline />
       <Github />
     </HeaderInfoContainer>
   );
@@ -14,12 +13,8 @@ export function HeaderInfo() {
 
 export function ReleaseTag() {
   return (
-    <LargeLead fontSize={[24, 36]} marginBottom="0.15em">
+    <LargeLead fontWeight={700} fontSize={[24, 26]} marginBottom="0.15em">
       R 1.0.2
     </LargeLead>
   );
-}
-
-export function Tagline() {
-  return <Paragraph>A React UI primitives library</Paragraph>;
 }
