@@ -32,7 +32,6 @@ export const AnchorLink: React.FC<Props> = ({
 
 export const Anchor = styled('a')<Props>(
   {
-    display: 'block',
     cursor: 'pointer',
     textDecoration: 'none',
     transition: 'color 400ms ease-out',
