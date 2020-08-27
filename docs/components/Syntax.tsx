@@ -6,7 +6,7 @@ export function Syntax({ children }) {
     <SyntaxHighlighter
       language="typescript"
       style={atomDark}
-      customStyle={{ padding: '1em', margin: '1em 0' }}
+      customStyle={{ padding: '1em', margin: '1em 0 2em' }}
     >
       {children}
     </SyntaxHighlighter>
