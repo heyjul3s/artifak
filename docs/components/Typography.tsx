@@ -7,7 +7,7 @@ const styles = {
     fontSize: [48, 56],
     fontWeight: fontWeight.bold,
     fontFamily: theme.fontFamily.poppins,
-    margin: '0 0 0.25em',
+    margin: '0 0 0.5em',
     lineHeight: 1.15,
     as: 'h1'
   },
