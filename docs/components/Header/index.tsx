@@ -3,7 +3,7 @@ import { GridItem } from 'artifak';
 import { Container } from '../Container';
 import { NavMenu } from '../NavMenu';
 import { HeaderContainer, HeaderContent, HeaderGrid } from './styled';
-import { Brand, HeaderInfo, GithubMobile } from './components';
+import { Brand, HeaderInfo } from './components';
 
 export function Header() {
   return (
@@ -18,7 +18,6 @@ export function Header() {
             <HeaderContent>
               <HeaderInfo />
               <NavMenu />
-              <GithubMobile />
             </HeaderContent>
           </GridItem>
         </HeaderGrid>

@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import { Paragraph } from '../../Typography';
 
 export const GithubLinkContainer = styled(Paragraph)`
-  display: none;
+  margin-bottom: 0;
 
   > a {
     display: inline-block;
@@ -11,15 +11,5 @@ export const GithubLinkContainer = styled(Paragraph)`
 
   @media (min-width: 1025px) {
     display: block;
-  }
-`;
-
-export const GithubMobileLinkContainer = styled(Paragraph)`
-  > a {
-    display: inline-block;
-  }
-
-  @media (min-width: 1025px) {
-    display: none;
   }
 `;

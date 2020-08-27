@@ -1,19 +1,11 @@
 import { AnchorLink } from '../../AnchorLink';
-import { GithubLinkContainer, GithubMobileLinkContainer } from '../styled';
+import { GithubLinkContainer } from '../styled';
 
 export function Github() {
   return (
     <GithubLinkContainer>
       <GithubLink />
     </GithubLinkContainer>
-  );
-}
-
-export function GithubMobile() {
-  return (
-    <GithubMobileLinkContainer>
-      <GithubLink />
-    </GithubMobileLinkContainer>
   );
 }
 
