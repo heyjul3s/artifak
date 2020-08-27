@@ -1,22 +1,15 @@
 import Link from 'next/link';
 import styled, { css } from 'styled-components';
-import { space, SpaceProps } from 'styled-system';
 
 type Props = {
-  marker: string;
   name: string;
   query: { content: string };
 };
 
-export function NavLink({ marker, name, query }: Props) {
-  const markerPadRight = marker === '01' ? '1.2em' : '1em';
-
+export function NavLink({ name, query }: Props) {
   return (
     <Link href={{ pathname: '/', query }}>
-      <NextLinkAnchor>
-        {!!marker && <Marker pr={markerPadRight}>{marker}</Marker>}
-        {name}
-      </NextLinkAnchor>
+      <NextLinkAnchor>{name}</NextLinkAnchor>
     </Link>
   );
 }
@@ -37,5 +30,3 @@ const NextLinkAnchor = styled.a`
     }
   `}
 `;
-
-const Marker = styled.span<SpaceProps>(space);
