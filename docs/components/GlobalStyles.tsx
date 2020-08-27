@@ -9,7 +9,6 @@ export const GlobalStyles = createGlobalStyle`
     text-rendering: optimizeLegibility;
     text-size-adjust: 100%;
     box-sizing: border-box;
-    border-top: 16px solid #f15e22;
   }
 
   body {
