@@ -18,16 +18,14 @@ import {
 } from 'styled-system';
 
 export type SetGridStyles = Partial<{
-  columnWidth: string | undefined;
-  columnLength: number | undefined;
+  columnWidth?: string | string[];
+  columnLength?: number | number[];
   gap: string;
 }>;
 
 export type GridProps = {
-  columnLength: number;
-  rowLength: number;
-  columnWidth: string;
-  rowHeight: string;
+  columnLength?: number | number[];
+  columnWidth?: string | string[];
   gap: string;
 };
 

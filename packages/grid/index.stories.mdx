@@ -28,7 +28,21 @@ Default Grid without passed in props.
 
 With column length.
 
-<Grid columnLength={3}>
+<Grid columnLength={1}>
+  <GridItem>Hello World</GridItem>
+  <GridItem>Hello World</GridItem>
+  <GridItem>Hello World</GridItem>
+  <GridItem>Hello World</GridItem>
+  <GridItem>Hello World</GridItem>
+  <GridItem>Hello World</GridItem>
+  <GridItem>Hello World</GridItem>
+  <GridItem>Hello World</GridItem>
+  <GridItem>Hello World</GridItem>
+</Grid>
+
+With media query
+
+<Grid columnLength={[1, 2, 3]}>
   <GridItem>Hello World</GridItem>
   <GridItem>Hello World</GridItem>
   <GridItem>Hello World</GridItem>
@@ -44,7 +58,21 @@ With column length.
 
 With column width.
 
-<Grid columnWidth="210px">
+<Grid columnWidth={"210px"}>
+  <GridItem>Hello World</GridItem>
+  <GridItem>Hello World</GridItem>
+  <GridItem>Hello World</GridItem>
+  <GridItem>Hello World</GridItem>
+  <GridItem>Hello World</GridItem>
+  <GridItem>Hello World</GridItem>
+  <GridItem>Hello World</GridItem>
+  <GridItem>Hello World</GridItem>
+  <GridItem>Hello World</GridItem>
+</Grid>
+
+With media query.
+
+<Grid columnWidth={["120px", "210px", "240px"]}>
   <GridItem>Hello World</GridItem>
   <GridItem>Hello World</GridItem>
   <GridItem>Hello World</GridItem>
