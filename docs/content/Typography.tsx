@@ -12,7 +12,6 @@ import { fontWeightExampleUsage } from '../strings/typography/fontWeight';
 import { fontWeight } from 'artifak';
 
 export function Typography() {
-  console.log(fontWeight);
   return (
     <>
       <H1>Typography</H1>
