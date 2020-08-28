@@ -1,6 +1,6 @@
 import { Grid, GridItem } from 'artifak';
 
-export function GridColumnWidthDemo() {
+export function ColumnWidthDemo() {
   return (
     <Grid columnWidth="160px" pb={'1em'}>
       <GridItemRando />
@@ -13,9 +13,35 @@ export function GridColumnWidthDemo() {
   );
 }
 
-export function GridColumnLengthDemo() {
+export function ColumnWidthMqDemo() {
+  return (
+    <Grid columnWidth={['80px', '120px']} pb={'1em'}>
+      <GridItemRando />
+      <GridItemRando />
+      <GridItemRando />
+      <GridItemRando />
+      <GridItemRando />
+      <GridItemRando />
+    </Grid>
+  );
+}
+
+export function ColumnLengthDemo() {
   return (
     <Grid columnLength={3} pb={'1em'}>
+      <GridItemRando />
+      <GridItemRando />
+      <GridItemRando />
+      <GridItemRando />
+      <GridItemRando />
+      <GridItemRando />
+    </Grid>
+  );
+}
+
+export function ColumnLengthMqDemo() {
+  return (
+    <Grid columnLength={[1, 3, 6]} pb={'1em'}>
       <GridItemRando />
       <GridItemRando />
       <GridItemRando />
