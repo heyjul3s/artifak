@@ -1,15 +1,13 @@
-import { H1, Paragraph, LargeLead, SmallLead } from '../components/Typography';
+import { H1, Paragraph, LargeLead } from '../components/Typography';
 import { Syntax, Params } from '../components/Syntax';
 import { List } from '../components/List';
 import {
   createTypographComponentsExampleUsage,
   createTypographyComponentsDemo
-} from '../strings/typography/createTypographyComponents';
+} from '../codeExamples/typography/createTypographyComponents';
 
-import { fluidSizingExampleUsage } from '../strings/typography/fluidSizing';
-import { fontWeightExampleUsage } from '../strings/typography/fontWeight';
-
-import { fontWeight } from 'artifak';
+import { fluidSizingExampleUsage } from '../codeExamples/typography/fluidSizing';
+import { fontWeightExampleUsage } from '../codeExamples/typography/fontWeight';
 
 export function Typography() {
   return (
@@ -25,7 +23,7 @@ export function Typography() {
         data={['createTypographyComponents', 'fluidSizing', 'fontWeight']}
       />
 
-      <LargeLead>createTypographyComponent</LargeLead>
+      <LargeLead>createTypographyComponents</LargeLead>
 
       <Params
         properties={{
@@ -66,8 +64,8 @@ export function Typography() {
         Essentially, this eliminates the need for media queries as the element
         will resize in accordance to the viewport constraints that you provide.
         To use this, specify the minimum size and maximum size of your element
-        and also the minimum and maximum size of the viewport that you intend to
-        use as constraints. Below is an example of how you may use it.
+        and also the minimum and maximum size of the viewport width that you
+        intend to use as constraints. Below is an example of how you may use it.
       </Paragraph>
 
       <Syntax>{fluidSizingExampleUsage}</Syntax>

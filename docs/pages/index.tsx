@@ -1,6 +1,5 @@
 import React from 'react';
 import { Layout } from '../components/Layout';
-import { Paragraph } from '../components/Typography';
 import { useRouter } from 'next/router';
 import { content } from '../content';
 
@@ -15,16 +14,11 @@ export default function Home() {
   }, [router.query]);
 
   const PageContent = content[contentType];
+  const Home = content.Introduction;
 
   return (
     <Layout>
-      <>
-        {!!PageContent ? (
-          <PageContent />
-        ) : (
-          <Paragraph>Page Not Found</Paragraph>
-        )}
-      </>
+      <>{!!PageContent ? <PageContent /> : <Home />}</>
     </Layout>
   );
 }

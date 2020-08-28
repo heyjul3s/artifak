@@ -13,9 +13,9 @@ export function Introduction() {
         Built with Typescript and Styled System, the aim is to attempt to
         provide basic building blocks with sensible defaults so that you don't
         have to fight your teammates ala trial by combat in regards to some
-        details when scaffolding your project. No lives were lost in creating
-        this library. No tears were shed either as boys don't cry. We simply
-        just sweat through our eyes occassionally.
+        minor/trivial details when scaffolding your project. No lives were lost
+        in creating this library. No tears were shed either as boys don't cry.
+        We simply just sweat through our eyes occassionally.
       </Paragraph>
 
       <H2>Installation</H2>
@@ -41,8 +41,13 @@ export function Introduction() {
       <List data={['@artifak/block', '@artifak/grid', '@artifak/typography']} />
 
       <Paragraph>
-        Additional components are also in the pipeline namely Flex, Image and
-        others. More to come.
+        Also, bits of this docs site is created via Artifak and bits, because a
+        full system isn't available yet. Additional components/functions are in
+        the pipeline like Flexboxes because some of us unfortunately need to
+        work with IE (why do we hurt ourselves like this?) which was created by
+        a company called Microsoft that was founded by some guy called Bill
+        Gates. There will also be an Image component, Form components and more.
+        Stay tuned.
       </Paragraph>
     </>
   );

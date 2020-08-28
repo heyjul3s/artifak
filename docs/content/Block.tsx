@@ -5,7 +5,7 @@ import { List } from '../components/List';
 import {
   createBlockComponentsExampleUsage,
   createBlockComponentsDemo
-} from '../strings/block/createBlockComponents';
+} from '../codeExamples/block/createBlockComponents';
 
 export function Block() {
   return (
