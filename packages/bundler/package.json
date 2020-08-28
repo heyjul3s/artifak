@@ -39,7 +39,8 @@
     "rollup": "^2.23.1",
     "rollup-plugin-typescript2": "^0.27.2",
     "tslib": "^2.0.1",
-    "typescript": "^3.9.7"
+    "typescript": "^3.9.7",
+    "typescript-plugin-styled-components": "^1.4.4"
   },
   "devDependencies": {}
 }

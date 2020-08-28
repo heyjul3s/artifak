@@ -5,8 +5,11 @@ const resolve = require('@rollup/plugin-node-resolve').default;
 const babel = require('@rollup/plugin-babel').default;
 const typescript = require('rollup-plugin-typescript2');
 const commonjs = require('@rollup/plugin-commonjs');
+const createStyledComponentsTransformer = require('typescript-plugin-styled-components')
+  .default;
 
 const currentWorkingPath = process.cwd();
+const styledComponentsTransformer = createStyledComponentsTransformer();
 
 const {
   src,
@@ -39,6 +42,11 @@ const inputOptions = {
     }),
     typescript({
       tsconfig: tsConfigPath,
+      transformers: [
+        () => ({
+          before: [styledComponentsTransformer],
+        }),
+      ],
     }),
   ],
 };
