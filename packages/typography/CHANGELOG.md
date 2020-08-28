@@ -1,5 +1,11 @@
 # @artifak/typography
 
+## 1.0.3
+
+### Patch Changes
+
+- Bug fix for fontWeight
+
 ## 1.0.2
 
 ### Patch Changes

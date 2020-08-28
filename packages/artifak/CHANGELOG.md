@@ -1,5 +1,16 @@
 # artifak
 
+## 1.0.3
+
+### Patch Changes
+
+- Bug fix for fontWeight
+- Update Grid to accept media query values
+- Refactor bundler
+- Updated dependencies [undefined]
+  - @artifak/grid@1.0.3
+  - @artifak/typography@1.0.3
+
 ## 1.0.2
 
 ### Patch Changes
