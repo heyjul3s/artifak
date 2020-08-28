@@ -7,7 +7,7 @@
     "start": "next start"
   },
   "dependencies": {
-    "artifak": "^1.0.2",
+    "artifak": "^1.0.3",
     "csstype": "^3.0.2",
     "next": "latest",
     "next-seo": "^4.7.3",

@@ -70,15 +70,15 @@
     react-dom "^16.8.6"
     styled-components "^5.1.1"
 
-"@artifak/grid@^1.0.2":
-  version "1.0.2"
-  resolved "https://registry.yarnpkg.com/@artifak/grid/-/grid-1.0.2.tgz#e3d45298d0fc9c164c45a9e3452c6a5c85883649"
-  integrity sha512-3R8OSFBakBoegyPdL0d5hx1htj0d98DaoI1OuCe//auzxpScDWeA68oH1zuRP/BUY42Jg0IshbDZtYnoMxKaEQ==
+"@artifak/grid@^1.0.3":
+  version "1.0.3"
+  resolved "https://registry.yarnpkg.com/@artifak/grid/-/grid-1.0.3.tgz#822e04fa31543cebd1cfd580edf2ba04e0e06926"
+  integrity sha512-gAGmGogYX4wm7Lfz5vT5Z5rj0P1v5UdH9HfKd5eapc/1bzw9BCnUU3FTOoXD63KKUVpaqTXjtUHl2mF/dBo+tQ==
 
-"@artifak/typography@^1.0.2":
-  version "1.0.2"
-  resolved "https://registry.yarnpkg.com/@artifak/typography/-/typography-1.0.2.tgz#5b6401a073165f64710eb8ec7f3a9feac7aedad3"
-  integrity sha512-07KN7FCUn6GWShbZu2XQnF2bXOVNikWQNKEnMSwW9Jq5qQgfgRLHg1ymIsyZ/VReJ5yA+BnrB5irxmiuQ/m8UA==
+"@artifak/typography@^1.0.3":
+  version "1.0.3"
+  resolved "https://registry.yarnpkg.com/@artifak/typography/-/typography-1.0.3.tgz#3bdf6032a2a2c11b993a58b0bc90fb6c6aabf8f8"
+  integrity sha512-+f/d27XWBuW2U8vZ0LQnHzfLnaWWnldTqeBbBbBuzJkgyjxD0vH3GoWktTkpWUTZ7Yk2pAXronx8b8hyUOPqQA==
   dependencies:
     "@artifak/component-generator" "^1.0.0"
 
@@ -1540,14 +1540,14 @@ array-unique@^0.3.2:
   resolved "https://registry.yarnpkg.com/array-unique/-/array-unique-0.3.2.tgz#a894b75d4bc4f6cd679ef3244a9fd8f46ae2d428"
   integrity sha1-qJS3XUvE9s1nnvMkSp/Y9Gri1Cg=
 
-artifak@^1.0.2:
-  version "1.0.2"
-  resolved "https://registry.yarnpkg.com/artifak/-/artifak-1.0.2.tgz#69de9b3380876f06faf9519dee9e8563a430f3fb"
-  integrity sha512-KHdM158qHCkGq0RNTCAL36rA3dZvkGKhTs5Dt5WDykJKcOXy0DO8qQJdhYEAw5+4TWD4Yf03hUjUJ6TMm0VcIw==
+artifak@^1.0.3:
+  version "1.0.3"
+  resolved "https://registry.yarnpkg.com/artifak/-/artifak-1.0.3.tgz#f3af5940c0579fde498c66bb604d34ee441e9093"
+  integrity sha512-3tkfK7cXNMAyl3PoAt3ozq4zc/kz4zs6KQINP5GDXgny4wJMWE1YJIF/BgyKnw2TyGUwh2a8FO5D2bZbFDz8zQ==
   dependencies:
     "@artifak/block" "^1.0.2"
-    "@artifak/grid" "^1.0.2"
-    "@artifak/typography" "^1.0.2"
+    "@artifak/grid" "^1.0.3"
+    "@artifak/typography" "^1.0.3"
 
 asn1.js@^5.2.0:
   version "5.4.1"
