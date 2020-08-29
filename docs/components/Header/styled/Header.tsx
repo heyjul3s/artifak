@@ -2,7 +2,7 @@ import styled, { css } from 'styled-components';
 import { Grid } from 'artifak';
 
 export const HeaderContainer = styled.header`
-  padding: 6em;
+  padding: 2em;
 
   background-image: repeating-linear-gradient(
     -45deg,
@@ -19,6 +19,12 @@ export const HeaderContainer = styled.header`
   a {
     color: #fff;
   }
+
+  ${({ theme }) => css`
+    @media (min-width: ${theme.breakpoints[2]}) {
+      padding: 6em 1em;
+    }
+  `}
 `;
 
 export const HeaderGrid = styled(Grid)`
