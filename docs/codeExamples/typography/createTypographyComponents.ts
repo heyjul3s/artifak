@@ -74,7 +74,7 @@ export const createTypographComponentsExampleUsage = `
 `;
 
 export const createTypographyComponentsDemo = `
-  import { H1 } from '../path/to/where/your/typography/components/are/generated;
+  import { H1 } from '../path/to/where/your/typography/components/are/generated';
 
   export function Article() {
     return (

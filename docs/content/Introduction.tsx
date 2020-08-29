@@ -43,10 +43,7 @@ export function Introduction() {
       <Paragraph>
         Also, bits of this docs site is created via Artifak and bits, because a
         full system isn't available yet. Additional components/functions are in
-        the pipeline like Flexboxes because some of us unfortunately need to
-        work with IE (why do we hurt ourselves like this?) which was created by
-        a company called Microsoft that was founded by some guy called Bill
-        Gates. There will also be an Image component, Form components and more.
+        the pipeline like Flexbox, an Image component, Form components and more.
         Stay tuned.
       </Paragraph>
     </>
