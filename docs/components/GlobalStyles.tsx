@@ -20,14 +20,3 @@ export const GlobalStyles = createGlobalStyle`
     font-family: 'Biryani', sans-serif;
   }
 `;
-
-// background: linear-gradient(
-//     -45deg,
-//     white 47%,
-//     rgba(235, 37, 46, 0.85) 15%,
-//     rgba(235, 37, 46, 0.85) 50%,
-//     white 50%,
-//     white 97%,
-//     rgba(235, 37, 46, 0.85) 75%,
-//     rgba(235, 37, 46, 0.85)
-//   );
