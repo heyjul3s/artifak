@@ -1,84 +1,63 @@
-export const gridExampleUsage = `
-  import { Grid, GridItem } from 'artifak';
-
-  export function BlockGallery () {
-    return (
-      <Grid>
-        <GridItem>1</GridItem>
-        <GridItem>2</GridItem>
-        <GridItem>3</GridItem>
-        <GridItem>4</GridItem>
-        <GridItem>5</GridItem>
-        <GridItem>6</GridItem>
-      <Grid/>
-    )
-  }
-`;
-
 export const columnWidthExample = `
   import { Grid, GridItem } from 'artifak';
 
-  export function BlockGallery () {
-    return (
-      <Grid columnWidth={'240px'}>
-        <GridItem>1</GridItem>
-        <GridItem>2</GridItem>
-        <GridItem>3</GridItem>
-        <GridItem>4</GridItem>
-        <GridItem>5</GridItem>
-        <GridItem>6</GridItem>
-      <Grid/>
-    )
+  export function ImageGallery({ images }) {
+     return (
+      <Grid columnWidth="160px" pb={'1em'}>
+        {images.map((image) => {
+          return (
+            <img src={image} />
+          );
+        })}
+      </Grid>
+    );
   }
 `;
 
 export const columnWidthMqExample = `
   import { Grid, GridItem } from 'artifak';
 
-  export function BlockGallery () {
+  export function ImageGallery() {
     return (
-      <Grid columnWidth={['120px', '240px', '480px']}>
-        <GridItem>1</GridItem>
-        <GridItem>2</GridItem>
-        <GridItem>3</GridItem>
-        <GridItem>4</GridItem>
-        <GridItem>5</GridItem>
-        <GridItem>6</GridItem>
-      <Grid/>
-    )
+      <Grid columnWidth={['80px', '120px']} pb={'1em'}>
+        {images.map((image) => {
+          return (
+            <img src={image} />
+          );
+        })}
+      </Grid>
+    );
   }
 `;
 
 export const columnLengthExample = `
   import { Grid, GridItem } from 'artifak';
 
-  export function BlockGallery () {
+  export function ImageGallery() {
     return (
-      <Grid columnLength={2}>
-        <GridItem>1</GridItem>
-        <GridItem>2</GridItem>
-        <GridItem>3</GridItem>
-        <GridItem>4</GridItem>
-        <GridItem>5</GridItem>
-        <GridItem>6</GridItem>
-      <Grid/>
-    )
+      <Grid columnLength={3} pb={'1em'}>
+        {images.map((image) => {
+          return (
+            <img src={image} />
+          );
+        })}
+      </Grid>
+    );
   }
 `;
 
 export const columnLengthMqExample = `
   import { Grid, GridItem } from 'artifak';
 
-  export function BlockGallery () {
+  export function ImageGallery () {
     return (
-      <Grid columnLength={[1, 2, 6]}>
-        <GridItem>1</GridItem>
-        <GridItem>2</GridItem>
-        <GridItem>3</GridItem>
-        <GridItem>4</GridItem>
-        <GridItem>5</GridItem>
-        <GridItem>6</GridItem>
-      <Grid/>
-    )
+      <Grid columnLength={[1, 3, 6]} pb={'1em'}>
+        {images.map((image) => {
+          return (
+            <img src={image} />
+          );
+        })}
+      </Grid>
+    );
   }
 `;
