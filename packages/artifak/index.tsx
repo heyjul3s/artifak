@@ -1,18 +1,23 @@
-export { BlockBase, BlockSystem, createBlockComponents } from '@artifak/block';
+export { BlockBase, createBlockComponents } from '@artifak/block';
+export type { BlockSystem } from '@artifak/block';
 
 export {
   Grid,
   GridItem,
+} from '@artifak/grid';
+
+export type {
   SetGridStyles,
   GridProps,
   GridSystemProps,
-  GridItemSystemProps,
+  GridItemSystemProps
 } from '@artifak/grid';
 
 export {
   createTypographyComponents,
   fluidSizing,
   fontWeight,
-  TypographySystem,
   TypographyBase,
 } from '@artifak/typography';
+
+export type {   TypographySystem } from '@artifak/typography';
