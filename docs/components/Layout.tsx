@@ -38,7 +38,7 @@ export function Layout({
 }
 
 const Main = styled.main`
-  padding: 1em 0;
+  padding: 2em 0;
 
   @media (min-width: 769px) {
     padding: 3em 0;
