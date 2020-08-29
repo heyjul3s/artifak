@@ -1,21 +1,38 @@
 {
-  "extends": "../tsconfig.json",
-  "exclude": [
-    "node_modules"
-  ],
-  "include": [
-    "next-env.d.ts",
-    "**/*.ts",
-    "**/*.tsx"
-  ],
+  "allowSyntheticDefaultImports": true,
+  "allowJs": true,
+  "composite": true,
+  "declaration": true,
+  "declarationMap": true,
+  "sourceMap": true,
+  "jsx": "react",
+  "target": "esnext",
+  "module": "esnext",
+  "moduleResolution": "node",
+  "strict": true,
+  "noImplicitAny": false,
+  "noUnusedLocals": true,
+  "noUnusedParameters": true,
+  "noImplicitReturns": true,
+  "skipLibCheck": true,
+  "forceConsistentCasingInFileNames": true,
+  "resolveJsonModule": true,
+  "esModuleInterop": true,
+  "exclude": ["node_modules", "../packages/**/*.ts", "../packages/**/*.tsx"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
   "compilerOptions": {
-    "lib": [
-      "dom",
-      "dom.iterable",
-      "esnext"
-    ],
+    "lib": ["dom", "dom.iterable", "esnext"],
     "noEmit": true,
     "isolatedModules": true,
-    "jsx": "preserve"
+    "jsx": "preserve",
+    "target": "es5",
+    "allowJs": true,
+    "skipLibCheck": true,
+    "strict": false,
+    "forceConsistentCasingInFileNames": true,
+    "esModuleInterop": true,
+    "module": "esnext",
+    "moduleResolution": "node",
+    "resolveJsonModule": true
   }
 }
