@@ -7,7 +7,7 @@ export const Marker = styled.div`
   border-left: 16px solid #ffffff;
   border-bottom: 8px solid transparent;
   position: absolute;
-  top: 6px;
+  top: 3px;
   left: 0;
   transform: scale(0);
   transition: transform 300ms ease-out;
