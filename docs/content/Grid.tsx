@@ -1,7 +1,6 @@
 import { H1, H2, Paragraph, LargeLead } from '../components/Typography';
 import { Syntax, Params } from '../components/Syntax';
 import {
-  gridExampleUsage,
   columnWidthExample,
   columnWidthMqExample,
   columnLengthExample,
