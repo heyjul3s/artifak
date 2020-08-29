@@ -1,5 +1,15 @@
 # artifak
 
+## 1.0.4
+
+### Patch Changes
+
+- fix type exports
+- Updated dependencies [undefined]
+  - @artifak/block@1.0.3
+  - @artifak/grid@1.0.4
+  - @artifak/typography@1.0.4
+
 ## 1.0.3
 
 ### Patch Changes

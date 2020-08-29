@@ -1,5 +1,11 @@
 # @artifak/typography
 
+## 1.0.4
+
+### Patch Changes
+
+- fix type exports
+
 ## 1.0.3
 
 ### Patch Changes
