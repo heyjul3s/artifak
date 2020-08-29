@@ -22,11 +22,5 @@ const StyledFooter = styled.footer`
     padding: 2em 0;
     border-top: 1px solid ${theme.colors.border};
     font-family: ${theme.fontFamily.heading};
-
-    > p {
-      > span {
-        color: ${theme.colors.primary};
-      }
-    }
   `}
 `;
