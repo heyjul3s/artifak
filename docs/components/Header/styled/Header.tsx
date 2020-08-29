@@ -2,12 +2,23 @@ import styled, { css } from 'styled-components';
 import { Grid } from 'artifak';
 
 export const HeaderContainer = styled.header`
-  padding: 1em;
+  padding: 6em;
 
-  ${({ theme }) => css`
-    @media (min-width: ${theme.breakpoints[0]}) {
-    margin-top: 5em;
-  `}
+  background-image: repeating-linear-gradient(
+    -45deg,
+    transparent,
+    transparent 7px,
+    rgba(241, 94, 34, 1) 1px,
+    rgba(241, 94, 34, 1) 8px
+  );
+
+  border-top: 16px solid rgba(241, 94, 34, 1);
+  border-bottom: 16px solid rgba(241, 94, 34, 1);
+
+  p,
+  a {
+    color: #fff;
+  }
 `;
 
 export const HeaderGrid = styled(Grid)`
@@ -35,8 +46,6 @@ export const HeaderGrid = styled(Grid)`
 
 export const HeaderContent = styled(Grid)`
   ${({ theme }) => css`
-    border-top: 1px solid ${theme.colors.border};
-    border-bottom: 1px solid ${theme.colors.border};
     padding: 1.5em 0 0.5em;
 
     @media (min-width: ${theme.breakpoints[2]}) {

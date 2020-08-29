@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import styled, { css } from 'styled-components';
+import { Marker } from '../styled';
 
 type Props = {
   name: string;
@@ -9,7 +10,10 @@ type Props = {
 export function NavLink({ name, query }: Props) {
   return (
     <Link href={{ pathname: '/', query }}>
-      <NextLinkAnchor>{name}</NextLinkAnchor>
+      <NextLinkAnchor>
+        <Marker />
+        <LinkText>{name}</LinkText>
+      </NextLinkAnchor>
     </Link>
   );
 }
@@ -19,6 +23,7 @@ const NextLinkAnchor = styled.a`
   cursor: pointer;
   text-decoration: none;
   transition: color 400ms ease-out;
+  position: relative;
 
   ${({ theme }) => css`
     color: ${theme.colors.text};
@@ -26,7 +31,19 @@ const NextLinkAnchor = styled.a`
     font-size: 20px;
 
     &:hover {
-      color: ${theme.colors.black};
+      ${LinkText} {
+        left: 22px;
+      }
+
+      ${Marker} {
+        transform: scale(1);
+      }
     }
   `}
+`;
+
+const LinkText = styled.span`
+  position: relative;
+  left: 0;
+  transition: left 300ms ease-out;
 `;

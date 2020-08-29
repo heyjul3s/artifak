@@ -1,4 +1,9 @@
-export function Logo() {
+type Props = {
+  logoColor?: string;
+  textColor?: string;
+};
+
+export function Logo({ logoColor = '#F05E22', textColor = '#273434' }: Props) {
   return (
     <>
       <svg
@@ -13,8 +18,8 @@ export function Logo() {
       >
         <style type="text/css">
           {`
-  	        .st0{fill:#273434;}
-            .st1{fill:#F05E22;}
+  	        .st0{fill:${textColor};}
+            .st1{fill:${logoColor};}
             `}
         </style>
         <g>

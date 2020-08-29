@@ -7,9 +7,9 @@ const navMap = {
   Introduction: 'Introduction',
   Block: 'Block',
   Grid: 'Grid',
-  Typography: 'Typography',
-  Flex: 'Flex',
-  Image: 'Image'
+  Typography: 'Typography'
+  // Flex: 'Flex',
+  // Image: 'Image'
 };
 
 export function NavMenu() {
