@@ -61,8 +61,9 @@ export function Grid() {
       <ColumnWidthDemo />
 
       <Paragraph>
-        Or define an array of values that corresponds to breakpoints defined in
-        your theme. Resize your browser window to see it in action.
+        Or for finer control, define an array of values that corresponds to
+        breakpoints defined in your theme. Resize your browser window to see it
+        in action.
       </Paragraph>
 
       <Syntax>{columnWidthMqExample}</Syntax>
@@ -82,7 +83,8 @@ export function Grid() {
 
       <Paragraph>
         Like its brethren columnWidth, you may also define an array of column
-        lengths. Resize your browser window to see it in action.
+        lengths for finer control. Resize your browser window to see it in
+        action.
       </Paragraph>
 
       <Syntax>{columnLengthMqExample}</Syntax>
