@@ -18,7 +18,7 @@
   "forceConsistentCasingInFileNames": true,
   "resolveJsonModule": true,
   "esModuleInterop": true,
-  "exclude": ["node_modules", "../packages/**/*.ts", "../packages/**/*.tsx"],
+  "exclude": ["node_modules"],
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
   "compilerOptions": {
     "lib": ["dom", "dom.iterable", "esnext"],
