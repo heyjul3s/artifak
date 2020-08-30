@@ -77,7 +77,7 @@ export const HTMLhead: React.FC<HTMLheadProps> = ({
 
     <DefaultSeo
       title={title}
-      titleTemplate={`heyjules - %s`}
+      titleTemplate={`artifak - %s`}
       canonical={canonical}
       description={description}
       additionalMetaTags={[
