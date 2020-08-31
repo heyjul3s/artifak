@@ -5,7 +5,7 @@ module.exports = {
     '!packages/**/dist/**/*.{js,jsx,ts,tsx}',
     '!packages/artifak/**/*.{js,jsx,ts,tsx}',
     '!packages/bundler/**/*.{js,jsx,ts,tsx}',
-    '!packages/**/*.d.{ts,tsx}',
+    '!packages/**/typings.{ts,tsx}',
     '!packages/**/*.stories.{js,jsx,ts,tsx}'
   ],
   collectCoverage: true,
