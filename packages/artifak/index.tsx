@@ -1,16 +1,18 @@
-export { BlockBase, createBlockComponents } from '@artifak/block';
-export type { BlockSystem } from '@artifak/block';
+export { BlockBase, createBaseComponents, createStyledComponent } from '@artifak/block';
+export type { BlockBaseProps } from '@artifak/block';
+
+export {
+  FlexRow,
+  FlexRowBase,
+  FlexCol,
+  FlexColBase
+} from '@artifak/flex';
 
 export {
   Grid,
+  GridBase,
   GridItem,
-} from '@artifak/grid';
-
-export type {
-  SetGridStyles,
-  GridProps,
-  GridSystemProps,
-  GridItemSystemProps
+  GridItemBase
 } from '@artifak/grid';
 
 export {
@@ -19,5 +21,4 @@ export {
   fontWeight,
   TypographyBase,
 } from '@artifak/typography';
-
-export type {   TypographySystem } from '@artifak/typography';
+export type { TypographyBaseProps } from '@artifak/typography';
