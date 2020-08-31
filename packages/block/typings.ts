@@ -1,16 +1,23 @@
 import {
   BorderRadiusProps,
   ColorProps,
-  TextProps,
+  TypographyProps,
   SpaceProps,
-  FlexProps,
   LayoutProps,
 } from 'styled-system';
 
-export type BlockSystem =
-  | FlexProps
+import { StyledComponent } from 'styled-components';
+
+export type BlockBaseProps =
   | LayoutProps
   | BorderRadiusProps
   | ColorProps
-  | TextProps
+  | TypographyProps
   | SpaceProps;
+
+export type StyledReactComponent = StyledComponent<
+  keyof JSX.IntrinsicElements | React.ComponentType<any>,
+  any,
+  any,
+  any
+>;
