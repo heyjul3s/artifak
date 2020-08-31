@@ -1,11 +1,6 @@
-import { borderRadius, BorderRadiusProps } from 'styled-system';
 import { createComponents } from '@artifak/component-generator';
-import { TypographySystemProps } from './typings';
-import { createStyledComponent } from '@artifak/block';
-
-export const TypographyBase = createStyledComponent<BorderRadiusProps>({}, [
-  borderRadius,
-]);
+import { TypographyBaseProps } from './typings';
+import { TypographyBase } from './TypographyBase';
 
 export function createTypographyComponents<ST>(
   styles: ST
