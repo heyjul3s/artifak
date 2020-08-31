@@ -2,7 +2,7 @@
 
 exports[`FlexRow FlexRow component should render 1`] = `
 <div
-  className="sc-AxjAm hJosSm"
+  className="sc-AxirZ mJzil"
 >
   Test
 </div>
@@ -10,7 +10,7 @@ exports[`FlexRow FlexRow component should render 1`] = `
 
 exports[`FlexRow FlexRow component should render row-reverse 1`] = `
 <div
-  className="sc-AxjAm beCfXn"
+  className="sc-AxirZ dHTfXY"
 >
   Test
 </div>

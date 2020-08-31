@@ -42,6 +42,7 @@
     "react-dom": ">=16.8.6"
   },
   "dependencies": {
+    "@artifak/block": "^1.0.3",
     "@artifak/bundler": "^1.0.1"
   }
 }

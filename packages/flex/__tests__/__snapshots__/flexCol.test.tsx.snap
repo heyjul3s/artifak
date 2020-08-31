@@ -2,12 +2,7 @@
 
 exports[`FlexCol FlexCol should render 1`] = `
 <div
-  className="sc-AxjAm eoEvZF"
-  style={
-    Object {
-      "border": "1px solid black",
-    }
-  }
+  className="sc-AxiKw gvbZUq"
 >
   Test
 </div>

@@ -1,19 +1,5 @@
 import React, { forwardRef } from 'react';
-import { createFlexBase } from './FlexBase';
-
-type Props = {
-  totalColumns: number;
-  offset: number | number[];
-  columnSize: number | number[];
-  gutterWidth: number;
-  reverse: boolean;
-};
-
-export const StyledFlexCol = createFlexBase<Props>({
-  boxSizing: 'border-box',
-  position: 'relative',
-  flex: '0 0 auto',
-});
+import { FlexColBase } from './FlexBase';
 
 export const FlexCol = forwardRef((props: any, ref) => {
   const baseColumnWidth = getColumnWidth(props.totalColumns);
@@ -22,20 +8,17 @@ export const FlexCol = forwardRef((props: any, ref) => {
   const gutterWidth = setGutterWidth(props.gutterWidth);
 
   return (
-    <StyledFlexCol
+    <FlexColBase
       ml={columnOffset}
       maxWidth={columnSizing}
       flexBasis={columnSizing}
       pl={gutterWidth}
       pr={gutterWidth}
-      style={{
-        border: '1px solid black',
-      }}
       ref={ref}
       {...props}
     >
       {props.children}
-    </StyledFlexCol>
+    </FlexColBase>
   );
 });
 

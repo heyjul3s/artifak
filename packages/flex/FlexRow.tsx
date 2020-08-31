@@ -1,25 +1,15 @@
 import React, { forwardRef } from 'react';
-import { createFlexBase } from './FlexBase';
-
-type Props = {
-  reverse?: boolean;
-};
-
-export const StyledFlexRow = createFlexBase<Props>({
-  display: 'flex',
-  flex: '0 1 auto',
-  flexWrap: 'wrap',
-});
+import { FlexRowBase } from './FlexBase';
 
 export const FlexRow = forwardRef((props: any, ref) => {
   return (
-    <StyledFlexRow
+    <FlexRowBase
       flexDirection={setFlexDirection(props.reverse)}
       ref={ref}
       {...props}
     >
       {props.children}
-    </StyledFlexRow>
+    </FlexRowBase>
   );
 });
 

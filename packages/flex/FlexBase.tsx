@@ -1,20 +1,34 @@
-import styled from 'styled-components';
+import { flexbox, FlexBoxProps, position, PositionProps } from 'styled-system';
+import { createBaseComponent } from '@artifak/block';
 
-import {
-  compose,
-  space,
-  layout,
-  display,
-  typography,
-  color,
-  flexbox,
-  position,
-} from 'styled-system';
+type FlexRowProps = {
+  reverse?: boolean;
+};
 
-import { FlexBaseProps } from './typings';
+export const FlexRowBase = createBaseComponent<FlexBoxProps | FlexRowProps>(
+  {
+    display: 'flex',
+    flex: '0 1 auto',
+    flexWrap: 'wrap',
+  },
+  [flexbox]
+);
 
-export const createFlexBase = <P extends FlexBaseProps>(baseStyles = {}) =>
-  styled('div')<P>(
-    baseStyles,
-    compose(space, layout, display, typography, color, flexbox, position)
-  );
+type FlexColProps = {
+  totalColumns: number;
+  offset: number | number[];
+  columnSize: number | number[];
+  gutterWidth: number;
+  reverse: boolean;
+};
+
+export const FlexColBase = createBaseComponent<
+  FlexBoxProps | FlexColProps | PositionProps
+>(
+  {
+    boxSizing: 'border-box',
+    position: 'relative',
+    flex: '0 0 auto',
+  },
+  [flexbox, position]
+);
