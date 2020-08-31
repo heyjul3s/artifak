@@ -15,19 +15,3 @@ exports[`FlexRow FlexRow component should render row-reverse 1`] = `
   Test
 </div>
 `;
-
-exports[`FlexRow should render 1`] = `
-<div
-  className="sc-AxjAm hJosSm"
->
-  Test
-</div>
-`;
-
-exports[`FlexRow should render row-reverse 1`] = `
-<div
-  className="sc-AxjAm beCfXn"
->
-  Test
-</div>
-`;
