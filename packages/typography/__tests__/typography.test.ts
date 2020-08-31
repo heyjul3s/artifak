@@ -1,5 +1,4 @@
 import { createTypographyComponents, fluidSizing, fontWeight } from '../';
-
 import { mockTypographyStyles } from '../__mocks__/typography.mock';
 
 describe('@artifak/typography', () => {

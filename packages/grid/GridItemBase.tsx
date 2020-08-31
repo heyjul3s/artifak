@@ -1,4 +1,4 @@
-import { createBaseComponent } from '@artifak/block';
+import { createStyledComponent } from '@artifak/block';
 
 import {
   gridArea,
@@ -13,7 +13,7 @@ import {
   JustifySelfProps,
 } from 'styled-system';
 
-export const GridItemBase = createBaseComponent<
+export const GridItemBase = createStyledComponent<
   | AlignSelfProps
   | GridAreaProps
   | GridRowProps

@@ -12,7 +12,7 @@ import {
 
 import { BlockBaseProps } from './typings';
 
-export const createBaseComponent = <P,>(
+export const createStyledComponent = <P,>(
   baseStyles: CSSObject = {},
   systemStyleProps: styleFn[] = []
 ): StyledComponent<'div', any, {} & P, never> =>

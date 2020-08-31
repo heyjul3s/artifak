@@ -1,4 +1,4 @@
-import { createBaseComponent } from '@artifak/block';
+import { createStyledComponent } from '@artifak/block';
 import {
   alignItems,
   AlignItemsProps,
@@ -12,7 +12,7 @@ import {
   GridProps,
 } from 'styled-system';
 
-export const GridBase = createBaseComponent<
+export const GridBase = createStyledComponent<
   | AlignItemsProps
   | AlignContentProps
   | JustifyItemsProps

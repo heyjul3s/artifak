@@ -1,11 +1,11 @@
-import { flexbox, FlexBoxProps, position, PositionProps } from 'styled-system';
-import { createBaseComponent } from '@artifak/block';
+import { flexbox, FlexboxProps, position, PositionProps } from 'styled-system';
+import { createStyledComponent } from '@artifak/block';
 
 type FlexRowProps = {
   reverse?: boolean;
 };
 
-export const FlexRowBase = createBaseComponent<FlexBoxProps | FlexRowProps>(
+export const FlexRowBase = createStyledComponent<FlexboxProps | FlexRowProps>(
   {
     display: 'flex',
     flex: '0 1 auto',
@@ -22,8 +22,8 @@ type FlexColProps = {
   reverse: boolean;
 };
 
-export const FlexColBase = createBaseComponent<
-  FlexBoxProps | FlexColProps | PositionProps
+export const FlexColBase = createStyledComponent<
+  FlexboxProps | FlexColProps | PositionProps
 >(
   {
     boxSizing: 'border-box',

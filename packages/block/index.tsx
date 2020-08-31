@@ -1,4 +1,4 @@
-export { createBlockComponents } from './createBlockComponents';
-export { createBaseComponent } from './createBaseComponent';
-export { BlockBase } from './Block';
+export { createBaseComponents } from './createBaseComponents';
+export { createStyledComponent } from './createStyledComponent';
+export { BlockBase } from './BlockBase';
 export type { BlockBaseProps } from './typings';
