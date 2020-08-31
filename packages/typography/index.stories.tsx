@@ -1,10 +1,9 @@
 import React from 'react';
-import { createTypographyComponents, fluidSizing, fontWeight } from '.';
+import { createTypographyComponents, fluidSizing } from '.';
 
 const typographyStyles = {
   H1: {
     fontSize: fluidSizing(48, 96, 300, 1200),
-    fontWeight: fontWeight.bold,
     margin: '0 0 0.25em',
     lineHeight: 1.5,
     as: 'h1',
@@ -12,7 +11,6 @@ const typographyStyles = {
 
   H2: {
     fontSize: [37, 39, 41, 43],
-    fontWeight: fontWeight.bold,
     lineHeight: 1.5,
     marginTop: 0,
     as: 'h2',
@@ -20,21 +18,18 @@ const typographyStyles = {
 
   H3: {
     fontSize: [27, 28, 30, 32],
-    fontWeight: fontWeight.bold,
     lineHeight: 1.5,
     as: 'h3',
   },
 
   H4: {
     fontSize: [18, 20, 22, 24],
-    fontWeight: fontWeight.bold,
     lineHeight: 1.5,
     marginTop: 0,
     as: 'h4',
   },
 
   H5: {
-    fontWeight: fontWeight.bold,
     fontSize: [16, 17, 19, 21],
     lineHeight: 1.5,
     marginTop: 0,
@@ -42,7 +37,6 @@ const typographyStyles = {
   },
 
   H6: {
-    fontWeight: fontWeight.bold,
     fontSize: [16, 17, 19, 21],
     lineHeight: 1.5,
     marginTop: 0,
@@ -50,14 +44,12 @@ const typographyStyles = {
   },
 
   LargeLead: {
-    fontWeight: fontWeight.semiBold,
     fontSize: [18, 20, 22, 24],
     marginTop: 0,
     as: 'p',
   },
 
   SmallLead: {
-    fontWeight: fontWeight.semiBold,
     fontSize: [17, 18, 19, 21],
     lineHeight: 1.5,
     as: 'p',
@@ -73,7 +65,6 @@ const typographyStyles = {
 
   SmallParagraph: {
     fontSize: [12, 14],
-    fontWeight: fontWeight.regular,
     lineHeight: 1.5,
     marginTop: 0,
     as: 'p',

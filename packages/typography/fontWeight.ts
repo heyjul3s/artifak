@@ -1,4 +1,4 @@
-enum EFontWeightKeys {
+enum FontWeightKeys {
   THIN = 'thin',
   EXTRA_LIGHT = 'extraLight',
   LIGHT = 'light',
@@ -10,13 +10,13 @@ enum EFontWeightKeys {
   BLACK = 'black',
 }
 
-type TFontWeight = {
-  [key in EFontWeightKeys]: number;
+type FontWeight = {
+  [key in FontWeightKeys]: number;
 };
 
-export const fontWeight = Object.keys(EFontWeightKeys).reduce((acc, key, i) => {
+export const fontWeight = Object.keys(FontWeightKeys).reduce((acc, key, i) => {
   const index = (i += 1);
   acc[key] = index * 100;
 
   return acc;
-}, {} as TFontWeight);
+}, {} as FontWeight);

@@ -1,12 +1,12 @@
 import {
   BorderRadiusProps,
   ColorProps,
-  TextProps,
+  TypographyProps,
   SpaceProps,
 } from 'styled-system';
 
-export type TypographySystem =
+export type TypographySystemProps =
   | BorderRadiusProps
   | ColorProps
-  | TextProps
+  | TypographyProps
   | SpaceProps;
