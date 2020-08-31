@@ -1,22 +1,5 @@
 import React, { forwardRef } from 'react';
-import styled from 'styled-components';
-import { SetGridStyles, GridSystemProps } from './typings';
-
-import {
-  compose,
-  display,
-  grid,
-  justifyItems,
-  justifyContent,
-  alignItems,
-  alignContent,
-  space,
-} from 'styled-system';
-
-export const setGridStyles = ({ gap = '1.5rem' }: SetGridStyles) => ({
-  display: 'grid',
-  gridGap: `${gap}`,
-});
+import { GridBase } from './GridBase';
 
 export const setGridTemplateColumns = (
   columnWidth?: string | string[],
@@ -65,22 +48,10 @@ export function repeatableColumnLength(columnLength: number): string {
   return `repeat(${columnLength}, 1fr)`;
 }
 
-export const StyledGrid = styled('div')<GridSystemProps>(
-  setGridStyles,
-
-  compose(
-    display,
-    grid,
-    space,
-    alignItems,
-    alignContent,
-    justifyItems,
-    justifyContent
-  )
-);
-
 export const Grid = forwardRef((props: any, ref) => (
-  <StyledGrid
+  <GridBase
+    display="grid"
+    gridGap={props.gridGap ? props.gridGap : '1.5rem'}
     gridTemplateColumns={setGridTemplateColumns(
       props.columnWidth,
       props.columnLength
@@ -89,5 +60,5 @@ export const Grid = forwardRef((props: any, ref) => (
     {...props}
   >
     {props.children}
-  </StyledGrid>
+  </GridBase>
 ));

@@ -2,15 +2,15 @@
 
 exports[`GridItem should render correctly 1`] = `
 <div
-  className="sc-AxjAm StDqN"
+  className="sc-AxirZ ktnnZK"
 >
   Hello World
 </div>
 `;
 
-exports[`StyledGridItem should render correctly 1`] = `
+exports[`GridItemBase should render correctly 1`] = `
 <div
-  className="sc-AxjAm StDqN"
+  className="sc-AxirZ ktnnZK"
 >
   Hello World
 </div>

@@ -2,35 +2,36 @@
 
 exports[`@artifak/grid Grid should render 1`] = `
 <div
-  className="sc-AxjAm dHnard"
+  className="sc-AxirZ cUWpAj"
+  display="grid"
 >
   <div
-    className="sc-AxirZ ktnnZK"
+    className="sc-AxiKw bOTXee"
   >
     1
   </div>
   <div
-    className="sc-AxirZ ktnnZK"
+    className="sc-AxiKw bOTXee"
   >
     2
   </div>
   <div
-    className="sc-AxirZ ktnnZK"
+    className="sc-AxiKw bOTXee"
   >
     3
   </div>
   <div
-    className="sc-AxirZ ktnnZK"
+    className="sc-AxiKw bOTXee"
   >
     4
   </div>
   <div
-    className="sc-AxirZ ktnnZK"
+    className="sc-AxiKw bOTXee"
   >
     5
   </div>
   <div
-    className="sc-AxirZ ktnnZK"
+    className="sc-AxiKw bOTXee"
   >
     6
   </div>

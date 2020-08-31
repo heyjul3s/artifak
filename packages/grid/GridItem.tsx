@@ -1,38 +1,8 @@
 import React, { forwardRef } from 'react';
-import styled from 'styled-components';
-import { GridItemSystemProps } from './typings';
-
-import {
-  compose,
-  gridArea,
-  gridColumn,
-  gridRow,
-  justifySelf,
-  alignSelf,
-  maxHeight,
-  maxWidth,
-  minHeight,
-  minWidth,
-  space,
-} from 'styled-system';
-
-export const StyledGridItem = styled('div')<GridItemSystemProps>(
-  compose(
-    alignSelf,
-    gridArea,
-    gridRow,
-    gridColumn,
-    justifySelf,
-    maxHeight,
-    maxWidth,
-    minHeight,
-    minWidth,
-    space
-  )
-);
+import { GridItemBase } from './GridItemBase';
 
 export const GridItem = forwardRef((props: any, ref) => (
-  <StyledGridItem {...props} ref={ref}>
+  <GridItemBase {...props} ref={ref}>
     {props.children}
-  </StyledGridItem>
+  </GridItemBase>
 ));

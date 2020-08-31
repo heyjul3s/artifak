@@ -1,11 +1,12 @@
 import React from 'react';
-import { StyledGridItem, GridItem } from '../GridItem';
+import { GridItem } from '../GridItem';
+import { GridItemBase } from '../GridItemBase';
 import renderer from 'react-test-renderer';
 
-describe('StyledGridItem', () => {
+describe('GridItemBase', () => {
   it('should render correctly', () => {
     const tree = renderer
-      .create(<StyledGridItem>Hello World</StyledGridItem>)
+      .create(<GridItemBase>Hello World</GridItemBase>)
       .toJSON();
     expect(tree).toMatchSnapshot();
   });
