@@ -1,16 +1,11 @@
-import {
-  createTypographyComponents,
-  fluidSizing,
-  TypographyBase,
-  fontWeight,
-} from '../';
+import { createTypographyComponents, fluidSizing, fontWeight } from '../';
 
 import { mockTypographyStyles } from '../__mocks__/typography.mock';
 
 describe('@artifak/typography', () => {
   describe('createTypographyComponents - generates typography React components based on styles object argument provided', () => {
     it('should return the base Typography system component when provided with an invalid argument', () => {
-      const expected = TypographyBase;
+      const expected = {};
       expect(createTypographyComponents({} as any)).toEqual(expected);
       expect(createTypographyComponents(null as any)).toEqual(expected);
       expect(createTypographyComponents(false as any)).toEqual(expected);

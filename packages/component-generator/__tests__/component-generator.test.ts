@@ -7,8 +7,8 @@ import {
 describe('@artifak/component-generator', () => {
   describe('createComponents', () => {
     it('should return undefined when provided invalid arguments', () => {
-      const expected = void 0;
-      const SystemComponent = generator.createComponents(void 0, void 0);
+      const expected = {};
+      const SystemComponent = generator.createComponents(void 0 as any, void 0);
 
       expect(SystemComponent).toEqual(expected);
     });
