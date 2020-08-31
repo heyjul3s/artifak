@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled, { CSSObject, StyledComponent } from 'styled-components';
 
 import {
   compose,
@@ -9,8 +9,6 @@ import {
   color,
   styleFn,
 } from 'styled-system';
-
-import { CSSObject, StyledComponent } from 'styled-components';
 
 import { BlockBaseProps } from './typings';
 
