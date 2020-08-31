@@ -4,24 +4,20 @@ import { StyledReactComponent } from './typings';
 export function createComponents<ST, SC>(
   SystemComponent: StyledReactComponent,
   styles: ST
-) {
-  if (!SystemComponent || !styles) {
-    return void 0;
-  }
-
+): { [key in keyof ST]: React.FC<SC> } {
   return Object.entries(styles).reduce((acc, entry) => {
     const [key, styles] = entry;
-    acc[key] = createComponent(SystemComponent, styles);
+    acc[key] = createComponent<SC, ST>(SystemComponent, styles);
     acc[key].displayName = key;
 
     return acc;
-  }, {} as SC);
+  }, {}) as { [key in keyof ST]: React.FC<SC> };
 }
 
-export function createComponent<StyledComponentProps>(
+export function createComponent<SC, ST>(
   StyledReactComponent,
-  styles
-): React.FC<StyledComponentProps> {
+  styles: ST
+): React.FC<SC> {
   return (props) => (
     <StyledReactComponent {...styles} {...props}>
       {props.children}
