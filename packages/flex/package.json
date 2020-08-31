@@ -1,0 +1,45 @@
+{
+  "name": "@artifak/flex",
+  "version": "1.0.0",
+  "description": "Now I’m the model of a modern major general / The venerated Virginian veteran whose men are all / Lining up, to put me up on a pedestal / Writin’ letters to relatives / Embellishin’ my elegance and eloquence / But the elephant is in the room / The truth is in ya face when ya hear the British cannons go / BOOM",
+  "keywords": [],
+  "author": "heyjul3s <julian.cy.low@gmail.com>",
+  "license": "ISC",
+  "main": "lib/flex.js",
+  "directories": {
+    "lib": "lib",
+    "test": "__tests__"
+  },
+  "files": [
+    "lib"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/heyjul3s/artifak.git"
+  },
+  "scripts": {
+    "test": "echo \"Error: run tests from root\" && exit 1"
+  },
+  "bugs": {
+    "url": "https://github.com/heyjul3s/artifak/issues"
+  },
+  "homepage": "https://github.com/heyjul3s/artifak#readme",
+  "devDependencies": {
+    "@types/react": "^16.9.48",
+    "@types/react-dom": "^16.9.8",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "styled-components": "^5.1.1",
+    "styled-system": "^5.1.5"
+  },
+  "peerDependencies": {
+    "react": ">=16.8.6",
+    "react-dom": ">=16.8.6"
+  },
+  "dependencies": {
+    "@artifak/bundler": "^1.0.1"
+  }
+}

@@ -1,0 +1,33 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`FlexRow FlexRow component should render 1`] = `
+<div
+  className="sc-AxjAm hJosSm"
+>
+  Test
+</div>
+`;
+
+exports[`FlexRow FlexRow component should render row-reverse 1`] = `
+<div
+  className="sc-AxjAm beCfXn"
+>
+  Test
+</div>
+`;
+
+exports[`FlexRow should render 1`] = `
+<div
+  className="sc-AxjAm hJosSm"
+>
+  Test
+</div>
+`;
+
+exports[`FlexRow should render row-reverse 1`] = `
+<div
+  className="sc-AxjAm beCfXn"
+>
+  Test
+</div>
+`;

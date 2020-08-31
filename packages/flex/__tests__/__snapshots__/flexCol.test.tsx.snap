@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`FlexCol FlexCol should render 1`] = `
+<div
+  className="sc-AxjAm eoEvZF"
+  style={
+    Object {
+      "border": "1px solid black",
+    }
+  }
+>
+  Test
+</div>
+`;
