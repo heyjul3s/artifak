@@ -1,5 +1,5 @@
 import React, { forwardRef } from 'react';
-import { FlexRowBase } from './FlexBase';
+import { FlexRowBase } from './FlexRowBase';
 
 export const FlexRow = forwardRef((props: any, ref) => {
   return (

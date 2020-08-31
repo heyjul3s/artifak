@@ -1,5 +1,5 @@
 import React, { forwardRef } from 'react';
-import { FlexColBase } from './FlexBase';
+import { FlexColBase } from './FlexColBase';
 
 export const FlexCol = forwardRef((props: any, ref) => {
   const baseColumnWidth = getColumnWidth(props.totalColumns);
