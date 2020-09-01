@@ -14,7 +14,8 @@ export function Block() {
       <Paragraph>
         The Block library provides a utility to generate generic components.
         This was made with container elements in mind so will probably be best
-        suited for such purposes.
+        suited for such purposes. If you need something a little more specific,
+        you can look into utilising Artifak's component generator.
       </Paragraph>
       <H2>BlockBase</H2>
       <Paragraph>
