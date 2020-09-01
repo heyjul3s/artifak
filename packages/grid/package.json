@@ -5,6 +5,16 @@
   "author": "Julian Low",
   "homepage": "https://github.com/heyjul3s/artifak#readme",
   "license": "ISC",
+  "keywords": [
+    "react",
+    "react-component",
+    "component",
+    "ui",
+    "flex",
+    "grid",
+    "block",
+    "layout"
+  ],
   "main": "dist/grid.cjs.js",
   "module": "dist/grid.esm.js",
   "src": "index.tsx",
