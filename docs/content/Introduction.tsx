@@ -47,6 +47,8 @@ export function Introduction() {
           '@artifak/component-generator'
         ]}
       />
+
+      <Paragraph>More to come. Stay tuned.</Paragraph>
     </>
   );
 }

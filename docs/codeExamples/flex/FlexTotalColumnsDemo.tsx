@@ -30,7 +30,7 @@ const Block = styled.div`
   ${({ theme }) => css`
     display: inline-block;
     width: 100%;
-    height: 30px;
+    height: 40px;
     background: ${theme.colors.primary};
   `}
 `;

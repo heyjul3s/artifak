@@ -30,7 +30,7 @@ export function Block() {
 
       <Params
         params={{
-          styles: 'CSSobject'
+          styles: 'CSSObject'
         }}
       />
 

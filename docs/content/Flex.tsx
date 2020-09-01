@@ -150,8 +150,8 @@ export function Flex() {
 
       <H3>Total Columns</H3>
       <Paragraph>
-        totalColumns is available should you need to be more specific with your
-        column count.
+        Depending on design, sometimes you might need a more specific column
+        count. The totalColumns prop is available for such occasions.
       </Paragraph>
       <Syntax>{flexTotalColumnsUsage}</Syntax>
       <FlexTotalColumnsDemo />
