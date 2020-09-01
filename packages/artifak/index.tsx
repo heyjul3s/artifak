@@ -1,3 +1,8 @@
+export {
+  createStyledComponent,
+  createBaseComponents
+} from '@artifak/component-generator'
+
 export { BlockBase, createBlockComponents } from '@artifak/block';
 export type { BlockBaseProps } from '@artifak/block';
 
