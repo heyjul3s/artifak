@@ -1,5 +1,13 @@
 # @artifak/block
 
+## 1.0.4
+
+### Patch Changes
+
+- Refactor to use component-generator library
+- Updated dependencies [undefined]
+  - @artifak/component-generator@1.0.1
+
 ## 1.0.3
 
 ### Patch Changes

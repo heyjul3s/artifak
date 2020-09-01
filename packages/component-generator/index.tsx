@@ -36,7 +36,7 @@ export function createComponents<ST, SC>(
 }
 
 export function createComponent<SC, ST>(
-  StyledReactComponent,
+  StyledReactComponent: AnyStyledComponent,
   styles: ST
 ): React.FC<SC> {
   return (props) => (

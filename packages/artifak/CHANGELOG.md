@@ -1,5 +1,19 @@
 # artifak
 
+## 1.0.5
+
+### Patch Changes
+
+- Added component generator
+- New flex component
+- Additional types
+- Updated dependencies [undefined]
+  - @artifak/block@1.0.4
+  - @artifak/component-generator@1.0.1
+  - @artifak/flex@1.0.1
+  - @artifak/grid@1.0.5
+  - @artifak/typography@1.0.5
+
 ## 1.0.4
 
 ### Patch Changes

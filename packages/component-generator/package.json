@@ -1,10 +1,19 @@
 {
   "name": "@artifak/component-generator",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Component generator utility for Artifak",
-  "keywords": [],
   "author": "Julian Low",
   "license": "ISC",
+  "keywords": [
+    "react",
+    "react-component",
+    "component",
+    "ui",
+    "flex",
+    "grid",
+    "block",
+    "layout"
+  ],
   "module": "dist/component-generator.esm.js",
   "main": "dist/component-generator.cjs.js",
   "src": "index.tsx",
@@ -12,9 +21,7 @@
     "lib": "lib",
     "test": "__tests__"
   },
-  "files": [
-    "lib"
-  ],
+  "files": ["lib"],
   "publishConfig": {
     "access": "public"
   },
