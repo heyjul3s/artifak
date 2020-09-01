@@ -1,5 +1,11 @@
-import { H1, H3, Paragraph, SmallLead } from '../components/Typography';
-import { Syntax } from '../components/Syntax';
+import {
+  H1,
+  H3,
+  Paragraph,
+  SmallLead,
+  LargeLead
+} from '../components/Typography';
+import { Syntax, Params } from '../components/Syntax';
 
 import {
   createStyledComponentUsage,
@@ -18,10 +24,15 @@ export function Generator() {
         functions have been made available.
       </Paragraph>
 
-      <H3>createStyledComponent</H3>
-      <SmallLead>systemStyleProps: styleFn[]</SmallLead>
-      <SmallLead>baseStyles: CSSObject</SmallLead>
-      <SmallLead>element: styleFn[]</SmallLead>
+      <LargeLead>createStyledComponent</LargeLead>
+
+      <Params
+        params={{
+          systemStyleProps: 'styleFn[]',
+          baseStyles: 'CSSObject',
+          element: 'keyof JSX.IntrinsicElements'
+        }}
+      />
 
       <Paragraph>
         The purpose of this utility function is to generate a base styled
@@ -30,10 +41,14 @@ export function Generator() {
 
       <Syntax>{createStyledComponentUsage}</Syntax>
 
-      <H3>createBaseComponents</H3>
+      <LargeLead>createBaseComponents</LargeLead>
 
-      <SmallLead>BaseComponent: AnyStyledComponent</SmallLead>
-      <SmallLead>styles: CSSObject</SmallLead>
+      <Params
+        params={{
+          BaseComponent: 'AnyStyledComponent',
+          styles: 'CSSObject'
+        }}
+      />
 
       <Paragraph>
         createBaseComponents, as implied, would generate a bunch of styled

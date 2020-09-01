@@ -1,5 +1,5 @@
-import { H1, Paragraph, LargeLead } from '../components/Typography';
-import { Syntax, Params, ParamsDescription } from '../components/Syntax';
+import { H1, H4, Paragraph, LargeLead } from '../components/Typography';
+import { Syntax, Params } from '../components/Syntax';
 import { List } from '../components/List';
 import {
   createTypographComponentsExampleUsage,
@@ -17,13 +17,14 @@ export function Typography() {
         The typography library offers utilities to help you scaffold your React
         typography components which include...
       </Paragraph>
+
       <List
         data={['createTypographyComponents', 'fluidSizing', 'fontWeight']}
       />
+
       <LargeLead>createTypographyComponents</LargeLead>
 
-      <ParamsDescription
-        label="<args>"
+      <Params
         params={{
           styles: 'CSSobject'
         }}
@@ -36,6 +37,7 @@ export function Typography() {
         component as. Below is an example.
       </Paragraph>
       <Syntax>{createTypographComponentsExampleUsage}</Syntax>
+
       <Paragraph>
         Note that it is essential to specify the <strong>"as"</strong> property
         in your styles object to render the component as the HTML element that
@@ -45,8 +47,7 @@ export function Typography() {
       <Syntax>{createTypographyComponentsDemo}</Syntax>
       <LargeLead>fluidSizing</LargeLead>
 
-      <ParamsDescription
-        label="<args>"
+      <Params
         params={{
           minElementSize: 'number',
           maxElementSize: 'number',
@@ -64,6 +65,7 @@ export function Typography() {
         intend to use as constraints. Below is an example of how you may use it.
       </Paragraph>
       <Syntax>{fluidSizingExampleUsage}</Syntax>
+
       <LargeLead>fontWeight</LargeLead>
       <Paragraph>
         fontWeight is essentially just a constant. Nothing special here. This is

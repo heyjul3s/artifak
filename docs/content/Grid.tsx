@@ -1,4 +1,12 @@
-import { H1, H2, H3, Paragraph, LargeLead } from '../components/Typography';
+import {
+  H1,
+  H2,
+  H3,
+  H4,
+  SmallLead,
+  Paragraph,
+  LargeLead
+} from '../components/Typography';
 import { Syntax, Params, ParamsDescription } from '../components/Syntax';
 import {
   columnWidthExample,
@@ -26,12 +34,9 @@ export function Grid() {
 
       <H3>Grid</H3>
 
-      <ParamsDescription
-        params={{
-          columnWidth: 'string | string[]',
-          columnLength: 'number | number[]'
-        }}
-      />
+      <H4>Props</H4>
+      <SmallLead>{'columnWidth: string | string[]'}</SmallLead>
+      <SmallLead>{'columnLength: number | number[]'}</SmallLead>
 
       <Paragraph>
         The Grid component comes with a gap default of 1.5em and two params
