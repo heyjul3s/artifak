@@ -15,11 +15,11 @@ const styles = {
 
   H2: {
     color: theme.colors.text,
-    fontSize: [37, 39, 41, 43],
+    fontSize: [24, 32, 40],
     fontWeight: fontWeight.bold,
     fontFamily: theme.fontFamily.poppins,
     lineHeight: 1.45,
-    marginTop: 0,
+    margin: '0 0 0.5em',
     as: 'h2'
   },
 
@@ -29,6 +29,7 @@ const styles = {
     fontWeight: fontWeight.bold,
     fontFamily: theme.fontFamily.poppins,
     lineHeight: 1.45,
+    margin: '0 0 0.5em',
     as: 'h3'
   },
 
@@ -38,7 +39,7 @@ const styles = {
     fontWeight: fontWeight.bold,
     fontFamily: theme.fontFamily.poppins,
     lineHeight: 1.45,
-    marginTop: 0,
+    margin: '0 0 0.5em',
     as: 'h4'
   },
 
@@ -48,7 +49,7 @@ const styles = {
     fontSize: [16, 17, 19, 21],
     fontFamily: theme.fontFamily.poppins,
     lineHeight: 1.45,
-    marginTop: 0,
+    margin: '0 0 0.5em',
     as: 'h5'
   },
 
@@ -58,7 +59,7 @@ const styles = {
     fontSize: [16, 17, 19, 21],
     fontFamily: theme.fontFamily.poppins,
     lineHeight: 1.45,
-    marginTop: 0,
+    margin: '0 0 0.5em',
     as: 'h6'
   },
 

@@ -38,14 +38,15 @@ export function Introduction() {
         The Artifak library is also available as stand-alone packages
       </Paragraph>
 
-      <List data={['@artifak/block', '@artifak/grid', '@artifak/typography']} />
-
-      <Paragraph>
-        Also, bits of this docs site is created via Artifak and bits, because a
-        full system isn't available yet. Additional components/functions are in
-        the pipeline like Flexbox, an Image component, Form components and more.
-        Stay tuned.
-      </Paragraph>
+      <List
+        data={[
+          '@artifak/block',
+          '@artifak/grid',
+          '@artifak/typography',
+          '@artifak/flex',
+          '@artifak/component-generator'
+        ]}
+      />
     </>
   );
 }

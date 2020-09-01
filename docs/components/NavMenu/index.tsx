@@ -7,8 +7,9 @@ const navMap = {
   Introduction: 'Introduction',
   Block: 'Block',
   Grid: 'Grid',
-  Typography: 'Typography'
-  // Flex: 'Flex',
+  Typography: 'Typography',
+  Flex: 'Flex',
+  Generator: 'Generator'
   // Image: 'Image'
 };
 

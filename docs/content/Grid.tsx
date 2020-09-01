@@ -1,5 +1,5 @@
-import { H1, H2, Paragraph, LargeLead } from '../components/Typography';
-import { Syntax, Params } from '../components/Syntax';
+import { H1, H2, H3, Paragraph, LargeLead } from '../components/Typography';
+import { Syntax, Params, ParamsDescription } from '../components/Syntax';
 import {
   columnWidthExample,
   columnWidthMqExample,
@@ -24,27 +24,27 @@ export function Grid() {
         component and the <strong>GridItem</strong> component.
       </Paragraph>
 
-      <LargeLead>Grid</LargeLead>
+      <H3>Grid</H3>
 
-      <Params
-        properties={{
+      <ParamsDescription
+        params={{
           columnWidth: 'string | string[]',
           columnLength: 'number | number[]'
         }}
       />
 
       <Paragraph>
-        The Grid component comes with a gap default of 1.5em and two properties
+        The Grid component comes with a gap default of 1.5em and two params
         namely <strong>columnLength</strong> and <strong>columnWidth</strong>.
       </Paragraph>
 
-      <LargeLead>GridItem</LargeLead>
+      <H3>GridItem</H3>
 
       <Paragraph>
         GridItem, as suggested, is a component that is used to contain your
         elements within the Grid component. It includes CSS grid child style
-        properties to be used at your discretion. By default, it applies no
-        styles unless specified.
+        params to be used at your discretion. By default, it applies no styles
+        unless specified.
       </Paragraph>
 
       <H2>Usage</H2>

@@ -1,6 +1,6 @@
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
 import coy from 'react-syntax-highlighter/dist/cjs/styles/prism/coy';
-import { SmallParagraph, Strong } from '../components/Typography';
+import { Paragraph, SmallParagraph, Strong } from '../components/Typography';
 
 const customCoy = {
   ...coy,
@@ -45,12 +45,34 @@ export function Syntax({
   );
 }
 
-export const Params = ({ properties }: any) => {
-  const propertyKeys = Object.keys(properties);
+export const ParamsDescription = ({ label = '<props>', params }) => {
+  return (
+    <>
+      <Paragraph
+        style={{
+          display: 'inline-block'
+        }}
+      >
+        <Strong>
+          <em>{label}</em>
+        </Strong>
+        &nbsp;
+      </Paragraph>
+      <Params params={params} />
+    </>
+  );
+};
+
+export const Params = ({ params }: any) => {
+  const propertyKeys = Object.keys(params);
 
   return (
     <>
-      <SmallParagraph>
+      <Paragraph
+        style={{
+          display: 'inline-block'
+        }}
+      >
         (
         {propertyKeys.map((key, i) => {
           const comma = i !== propertyKeys.length - 1 ? ', ' : '';
@@ -58,12 +80,12 @@ export const Params = ({ properties }: any) => {
           return (
             <span>
               <Strong>{key}</Strong>
-              {`: ${properties[key]}${comma}`}
+              {`: ${params[key]}${comma}`}
             </span>
           );
         })}
         )
-      </SmallParagraph>
+      </Paragraph>
     </>
   );
 };
