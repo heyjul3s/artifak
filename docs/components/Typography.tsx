@@ -79,6 +79,7 @@ const styles = {
     fontSize: [17, 18, 19, 21],
     fontFamily: theme.fontFamily.poppins,
     lineHeight: 1.45,
+    marginTop: 0,
     as: 'p'
   },
 

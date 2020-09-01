@@ -1,9 +1,11 @@
 import { H1, Paragraph, LargeLead, Strong } from '../components/Typography';
 import { Syntax, Params } from '../components/Syntax';
+
 import {
+  BlockBaseUsage,
   createBlockComponentsExampleUsage,
   createBlockComponentsDemo
-} from '../codeExamples/block/createBlockComponents';
+} from '../codeExamples/block';
 
 export function Block() {
   return (
@@ -21,6 +23,8 @@ export function Block() {
         BlockBase is the basic block component comprising of several style
         attributes: color, display, layout, typography and space.
       </Paragraph>
+
+      <Syntax>{BlockBaseUsage}</Syntax>
 
       <LargeLead>createBlockComponents</LargeLead>
 

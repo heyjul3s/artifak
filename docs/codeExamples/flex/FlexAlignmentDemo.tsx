@@ -5,7 +5,7 @@ import { FlexRow, FlexCol, FlexColBaseProps } from 'artifak';
 export function FlexAlignmentDemo() {
   return (
     <>
-      <FlexRow justifyContent="center" alignItems="center">
+      <FlexRow justifyContent={['flex-start', 'center']} alignItems="center">
         <FlexCol columnSize={[12, 6, 4]} totalColumns={16}>
           <Block1 />
         </FlexCol>

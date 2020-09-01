@@ -3,12 +3,12 @@ import { Grid, GridItem } from 'artifak';
 export function ColumnWidthDemo() {
   return (
     <Grid columnWidth="160px" pb={'1em'}>
-      <GridItemRando />
-      <GridItemRando />
-      <GridItemRando />
-      <GridItemRando />
-      <GridItemRando />
-      <GridItemRando />
+      <GridItemBlock />
+      <GridItemBlock />
+      <GridItemBlock />
+      <GridItemBlock />
+      <GridItemBlock />
+      <GridItemBlock />
     </Grid>
   );
 }
@@ -16,12 +16,12 @@ export function ColumnWidthDemo() {
 export function ColumnWidthMqDemo() {
   return (
     <Grid columnWidth={['80px', '120px']} pb={'1em'}>
-      <GridItemRando />
-      <GridItemRando />
-      <GridItemRando />
-      <GridItemRando />
-      <GridItemRando />
-      <GridItemRando />
+      <GridItemBlock />
+      <GridItemBlock />
+      <GridItemBlock />
+      <GridItemBlock />
+      <GridItemBlock />
+      <GridItemBlock />
     </Grid>
   );
 }
@@ -29,12 +29,12 @@ export function ColumnWidthMqDemo() {
 export function ColumnLengthDemo() {
   return (
     <Grid columnLength={3} pb={'1em'}>
-      <GridItemRando />
-      <GridItemRando />
-      <GridItemRando />
-      <GridItemRando />
-      <GridItemRando />
-      <GridItemRando />
+      <GridItemBlock />
+      <GridItemBlock />
+      <GridItemBlock />
+      <GridItemBlock />
+      <GridItemBlock />
+      <GridItemBlock />
     </Grid>
   );
 }
@@ -42,21 +42,21 @@ export function ColumnLengthDemo() {
 export function ColumnLengthMqDemo() {
   return (
     <Grid columnLength={[1, 3, 6]} pb={'1em'}>
-      <GridItemRando />
-      <GridItemRando />
-      <GridItemRando />
-      <GridItemRando />
-      <GridItemRando />
-      <GridItemRando />
+      <GridItemBlock />
+      <GridItemBlock />
+      <GridItemBlock />
+      <GridItemBlock />
+      <GridItemBlock />
+      <GridItemBlock />
     </Grid>
   );
 }
 
-function GridItemRando() {
+function GridItemBlock() {
   return (
     <GridItem>
       <img
-        src={'https://source.unsplash.com/random/200x200'}
+        src="/orange-block.svg"
         style={{
           objectFit: 'cover',
           width: '100%'

@@ -5,7 +5,8 @@ import {
   H4,
   SmallLead,
   Paragraph,
-  LargeLead
+  LargeLead,
+  SmallParagraph
 } from '../components/Typography';
 import { Syntax, Params, ParamsDescription } from '../components/Syntax';
 import {
@@ -21,6 +22,8 @@ import {
   ColumnLengthMqDemo
 } from '../codeExamples/grid/GridDemo';
 
+import { FlexRow, FlexCol } from 'artifak';
+
 export function Grid() {
   return (
     <>
@@ -34,14 +37,46 @@ export function Grid() {
 
       <H3>Grid</H3>
 
-      <H4>Props</H4>
-      <SmallLead>{'columnWidth: string | string[]'}</SmallLead>
-      <SmallLead>{'columnLength: number | number[]'}</SmallLead>
-
       <Paragraph>
         The Grid component comes with a gap default of 1.5em and two params
         namely <strong>columnLength</strong> and <strong>columnWidth</strong>.
       </Paragraph>
+
+      <FlexRow
+        p={'30px 30px 10px'}
+        mb={'1rem'}
+        style={{
+          border: '1px solid black'
+        }}
+      >
+        <FlexCol columnSize={12} gutterWidth={0}>
+          <H4>Props</H4>
+        </FlexCol>
+
+        <FlexCol columnSize={[12, 5, 4]} gutterWidth={0}>
+          <SmallLead mb={'0.15rem'}>columnWidth</SmallLead>
+          <SmallParagraph>string | string[]</SmallParagraph>
+        </FlexCol>
+
+        <FlexCol columnSize={[12, 7, 8]} gutterWidth={0}>
+          <Paragraph>
+            This sets a repeating width for the grid auto columns in accordance
+            to the width you provide.
+          </Paragraph>
+        </FlexCol>
+
+        <FlexCol columnSize={[12, 5, 4]} gutterWidth={0}>
+          <SmallLead mb={'0.15rem'}>columnLength</SmallLead>
+          <SmallParagraph>number | number[]</SmallParagraph>
+        </FlexCol>
+
+        <FlexCol columnSize={[12, 7, 8]} gutterWidth={0}>
+          <Paragraph>
+            This sets a repeating 1fr in accordance to the number of columns
+            provided.
+          </Paragraph>
+        </FlexCol>
+      </FlexRow>
 
       <H3>GridItem</H3>
 
@@ -53,6 +88,9 @@ export function Grid() {
       </Paragraph>
 
       <H2>Usage</H2>
+      <Paragraph>
+        Below are some examples of Grid in action. Note that{' '}
+      </Paragraph>
 
       <LargeLead>columnWidth</LargeLead>
 
@@ -74,6 +112,8 @@ export function Grid() {
       <Syntax>{columnWidthMqExample}</Syntax>
 
       <ColumnWidthMqDemo />
+
+      <br />
 
       <LargeLead>columnLength</LargeLead>
 

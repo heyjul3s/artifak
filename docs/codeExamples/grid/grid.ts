@@ -3,10 +3,13 @@ export const columnWidthExample = `
 
   export function ImageGallery({ images }) {
      return (
-      <Grid columnWidth="160px" pb={'1em'}>
+      <Grid columnWidth="160px">
         {images.map((image) => {
           return (
-            <img src={image} />
+            <img src={image}  style={{
+              objectFit: 'cover',
+              width: '100%'
+            }}/>
           );
         })}
       </Grid>
@@ -19,10 +22,13 @@ export const columnWidthMqExample = `
 
   export function ImageGallery() {
     return (
-      <Grid columnWidth={['80px', '120px']} pb={'1em'}>
+      <Grid columnWidth={['80px', '120px']}>
         {images.map((image) => {
           return (
-            <img src={image} />
+            <img src={image}  style={{
+              objectFit: 'cover',
+              width: '100%'
+            }}/>
           );
         })}
       </Grid>
@@ -35,10 +41,13 @@ export const columnLengthExample = `
 
   export function ImageGallery() {
     return (
-      <Grid columnLength={3} pb={'1em'}>
+      <Grid columnLength={3}>
         {images.map((image) => {
           return (
-            <img src={image} />
+            <img src={image}  style={{
+              objectFit: 'cover',
+              width: '100%'
+            }}/>
           );
         })}
       </Grid>
@@ -51,10 +60,13 @@ export const columnLengthMqExample = `
 
   export function ImageGallery () {
     return (
-      <Grid columnLength={[1, 3, 6]} pb={'1em'}>
+      <Grid columnLength={[1, 3, 6]}>
         {images.map((image) => {
           return (
-            <img src={image} />
+            <img src={image}  style={{
+              objectFit: 'cover',
+              width: '100%'
+            }}/>
           );
         })}
       </Grid>
