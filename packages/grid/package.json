@@ -45,6 +45,6 @@
     "react-dom": ">=16.8.6"
   },
   "dependencies": {
-    "@artifak/block": "^1.0.3"
+    "@artifak/component-generator": "^1.0.0"
   }
 }

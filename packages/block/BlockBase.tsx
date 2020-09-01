@@ -1,3 +1,3 @@
-import { createStyledComponent } from './createStyledComponent';
+import { createStyledComponent } from '@artifak/component-generator';
 
 export const BlockBase = createStyledComponent<{}>();

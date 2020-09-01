@@ -2,7 +2,7 @@
 
 exports[`GridItem should render correctly 1`] = `
 <div
-  className="sc-AxirZ ktnnZK"
+  className="sc-AxjAm StDqN"
 >
   Hello World
 </div>
@@ -10,7 +10,7 @@ exports[`GridItem should render correctly 1`] = `
 
 exports[`GridItemBase should render correctly 1`] = `
 <div
-  className="sc-AxirZ ktnnZK"
+  className="sc-AxjAm StDqN"
 >
   Hello World
 </div>

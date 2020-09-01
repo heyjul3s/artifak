@@ -1,5 +1,24 @@
 import * as React from 'react';
-import { StyledReactComponent } from './typings';
+import styled, { CSSObject, AnyStyledComponent } from 'styled-components';
+
+import {
+  compose,
+  space,
+  layout,
+  display,
+  typography,
+  color,
+  styleFn,
+} from 'styled-system';
+
+import { StyledReactComponent, BaseComponentProps } from './typings';
+
+export function createBaseComponents<ST, CP>(
+  BaseComponent: AnyStyledComponent,
+  styles: ST
+): { [key in keyof ST]: React.FC<CP> } {
+  return createComponents<ST, CP>(BaseComponent, styles);
+}
 
 export function createComponents<ST, SC>(
   SystemComponent: StyledReactComponent,
@@ -26,3 +45,13 @@ export function createComponent<SC, ST>(
     </StyledReactComponent>
   );
 }
+
+export const createStyledComponent = <CP extends {}>(
+  systemStyleProps: styleFn[] = [],
+  baseStyles: CSSObject = {},
+  element: keyof JSX.IntrinsicElements = 'div'
+) =>
+  styled(element)<BaseComponentProps & CP>(
+    baseStyles,
+    compose(color, display, layout, space, typography, ...systemStyleProps)
+  );

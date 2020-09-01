@@ -1,18 +1,19 @@
-import {
-  ColorProps,
-  DisplayProps,
-  FlexBoxProps,
-  LayoutProps,
-  PositionProps,
-  SpaceProps,
-  TypographyProps,
-} from 'styled-system';
+import { FlexboxProps, PositionProps } from 'styled-system';
 
-export type FlexBaseProps =
-  | ColorProps
-  | DisplayProps
-  | FlexBoxProps
-  | LayoutProps
-  | PositionProps
-  | SpaceProps
-  | TypographyProps;
+export type FlexRowBaseProps = FlexRowCompProps & FlexboxProps;
+
+export type FlexRowCompProps = {
+  reverse?: boolean;
+};
+
+export type FlexColBaseProps =
+  | (FlexColCompProps & FlexboxProps)
+  | PositionProps;
+
+export type FlexColCompProps = {
+  totalColumns: number;
+  offset: number | number[];
+  columnSize: number | number[];
+  gutterWidth: number;
+  reverse: boolean;
+};

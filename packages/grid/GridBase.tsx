@@ -1,21 +1,19 @@
-import { createStyledComponent } from '@artifak/block';
+import { createStyledComponent } from '@artifak/component-generator';
+
 import {
   alignItems,
-  AlignItemsProps,
   alignContent,
-  AlignContentProps,
   justifyItems,
-  JustifyItemsProps,
   justifyContent,
-  JustifyContentProps,
   grid,
-  GridProps,
 } from 'styled-system';
 
-export const GridBase = createStyledComponent<
-  | AlignItemsProps
-  | AlignContentProps
-  | JustifyItemsProps
-  | JustifyContentProps
-  | GridProps
->({}, [alignItems, alignContent, justifyItems, justifyContent, grid]);
+import { GridBaseProps } from './typings';
+
+export const GridBase = createStyledComponent<GridBaseProps>([
+  alignItems,
+  alignContent,
+  justifyItems,
+  justifyContent,
+  grid,
+]);
