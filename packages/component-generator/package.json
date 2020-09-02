@@ -1,6 +1,6 @@
 {
   "name": "@artifak/component-generator",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Component generator utility for Artifak",
   "author": "Julian Low",
   "license": "MIT",
@@ -21,9 +21,7 @@
     "lib": "lib",
     "test": "__tests__"
   },
-  "files": [
-    "lib"
-  ],
+  "files": ["lib"],
   "publishConfig": {
     "access": "public"
   },

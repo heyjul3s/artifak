@@ -1,5 +1,17 @@
 # artifak
 
+## 1.0.6
+
+### Patch Changes
+
+- Minor Patch - Cleanup style props to generator, flex, grid, typography
+- Updated dependencies [undefined]
+  - @artifak/block@1.0.5
+  - @artifak/component-generator@1.0.2
+  - @artifak/flex@1.0.2
+  - @artifak/grid@1.0.6
+  - @artifak/typography@1.0.6
+
 ## 1.0.5
 
 ### Patch Changes

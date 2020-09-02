@@ -1,6 +1,6 @@
 {
   "name": "@artifak/flex",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "A styled-component Flex grid component for your layout needs.",
   "keywords": [
     "react",
@@ -21,9 +21,7 @@
     "lib": "lib",
     "test": "__tests__"
   },
-  "files": [
-    "lib"
-  ],
+  "files": ["lib"],
   "publishConfig": {
     "access": "public"
   },
@@ -54,7 +52,7 @@
     "react-dom": ">=16.8.6"
   },
   "dependencies": {
-    "@artifak/bundler": "^1.0.1",
-    "@artifak/component-generator": "^1.0.1"
+    "@artifak/bundler": "^1.0.2",
+    "@artifak/component-generator": "^1.0.2"
   }
 }

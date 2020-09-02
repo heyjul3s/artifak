@@ -1,6 +1,6 @@
 {
   "name": "@artifak/bundler",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Artifak package bundler",
   "author": "Julian Low",
   "homepage": "https://github.com/heyjul3s/fried-rice#readme",
@@ -13,9 +13,7 @@
     "lib": "lib",
     "test": "__tests__"
   },
-  "files": [
-    "lib"
-  ],
+  "files": ["lib"],
   "publishConfig": {
     "access": "public"
   },

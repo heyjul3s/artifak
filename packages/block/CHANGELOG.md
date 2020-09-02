@@ -1,5 +1,13 @@
 # @artifak/block
 
+## 1.0.5
+
+### Patch Changes
+
+- Typings update
+- Updated dependencies [undefined]
+  - @artifak/component-generator@1.0.2
+
 ## 1.0.4
 
 ### Patch Changes
