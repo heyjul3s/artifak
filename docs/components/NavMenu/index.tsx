@@ -8,8 +8,8 @@ const navMap = {
   Block: 'Block',
   Grid: 'Grid',
   Typography: 'Typography',
-  Flex: 'Flex',
-  Generator: 'Generator'
+  Flex: 'Flex'
+  // Generator: 'Generator'
   // Image: 'Image'
 };
 
