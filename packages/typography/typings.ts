@@ -1,12 +1,3 @@
-import {
-  BorderRadiusProps,
-  ColorProps,
-  TypographyProps,
-  SpaceProps,
-} from 'styled-system';
+import { BaseComponentProps } from '@artifak/component-generator';
 
-export type TypographyBaseProps =
-  | BorderRadiusProps
-  | ColorProps
-  | TypographyProps
-  | SpaceProps;
+export type TypographyBaseProps = BaseComponentProps;
