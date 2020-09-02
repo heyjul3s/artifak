@@ -71,4 +71,4 @@ export const createStyledComponent = <CP extends {}>(
     )
   );
 
-export type { BaseComponentProps } from './typings';
+export { BaseComponentProps } from './typings';

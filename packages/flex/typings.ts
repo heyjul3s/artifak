@@ -2,15 +2,19 @@ import { FlexboxProps } from 'styled-system';
 
 import { BaseComponentProps } from '@artifak/component-generator';
 
-export type FlexRowBaseProps = FlexRowCompProps &
-  (FlexboxProps | BaseComponentProps);
+export type FlexRowBaseProps =
+  | FlexRowCompProps
+  | FlexboxProps
+  | BaseComponentProps;
 
 export type FlexRowCompProps = {
   reverse?: boolean;
 };
 
-export type FlexColBaseProps = FlexColCompProps &
-  (FlexboxProps | BaseComponentProps);
+export type FlexColBaseProps =
+  | FlexColCompProps
+  | FlexboxProps
+  | BaseComponentProps;
 
 export type FlexColCompProps = {
   totalColumns: number;
