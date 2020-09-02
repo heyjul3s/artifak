@@ -70,3 +70,5 @@ export const createStyledComponent = <CP extends {}>(
       ...systemStyleProps
     )
   );
+
+export type { BaseComponentProps } from './typings';
