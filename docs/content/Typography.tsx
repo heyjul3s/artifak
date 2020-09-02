@@ -1,4 +1,4 @@
-import { H1, H4, Paragraph, LargeLead } from '../components/Typography';
+import { H1, Paragraph, LargeLead } from '../components/Typography';
 import { Syntax, Params } from '../components/Syntax';
 import { List } from '../components/List';
 import {

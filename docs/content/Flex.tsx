@@ -17,9 +17,9 @@ import {
   FlexOffsetDemo,
   flexOffsetUsage,
   FlexTotalColumnsDemo,
-  flexTotalColumnsUsage,
-  FlexAlignmentDemo,
-  flexAlignmentUsage
+  flexTotalColumnsUsage
+  // FlexAlignmentDemo,
+  // flexAlignmentUsage
 } from '../codeExamples/flex';
 
 import { FlexRow, FlexCol } from 'artifak';
@@ -158,14 +158,14 @@ export function Flex() {
 
       <br />
 
-      <H3>Alignment, Distribution, Ordering, etc.</H3>
+      {/* <H3>Alignment, Distribution, Ordering, etc.</H3>
       <Paragraph>
         As this is based off of styled-system, you can basically assign CSS flex
         alignment or justify properties directly onto FlexCol.
       </Paragraph>
 
       <Syntax>{flexAlignmentUsage}</Syntax>
-      <FlexAlignmentDemo />
+      <FlexAlignmentDemo /> */}
 
       <br />
     </>

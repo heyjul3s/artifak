@@ -8,7 +8,7 @@ import {
   LargeLead,
   SmallParagraph
 } from '../components/Typography';
-import { Syntax, Params, ParamsDescription } from '../components/Syntax';
+import { Syntax } from '../components/Syntax';
 import {
   columnWidthExample,
   columnWidthMqExample,
