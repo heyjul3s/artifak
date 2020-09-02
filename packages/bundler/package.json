@@ -4,7 +4,7 @@
   "description": "Artifak package bundler",
   "author": "Julian Low",
   "homepage": "https://github.com/heyjul3s/fried-rice#readme",
-  "license": "ISC",
+  "license": "MIT",
   "main": "index.js",
   "bin": {
     "builder": "./index.js"
@@ -13,7 +13,9 @@
     "lib": "lib",
     "test": "__tests__"
   },
-  "files": ["lib"],
+  "files": [
+    "lib"
+  ],
   "publishConfig": {
     "access": "public"
   },

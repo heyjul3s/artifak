@@ -3,7 +3,7 @@
   "version": "1.0.1",
   "description": "Component generator utility for Artifak",
   "author": "Julian Low",
-  "license": "ISC",
+  "license": "MIT",
   "keywords": [
     "react",
     "react-component",
@@ -21,7 +21,9 @@
     "lib": "lib",
     "test": "__tests__"
   },
-  "files": ["lib"],
+  "files": [
+    "lib"
+  ],
   "publishConfig": {
     "access": "public"
   },

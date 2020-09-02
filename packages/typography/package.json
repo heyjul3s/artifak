@@ -13,7 +13,7 @@
     "layout"
   ],
   "author": "Julian Low",
-  "license": "ISC",
+  "license": "MIT",
   "main": "dist/typography.cjs.js",
   "module": "dist/typography.esm.js",
   "src": "index.tsx",
@@ -21,7 +21,9 @@
     "lib": "lib",
     "test": "__tests__"
   },
-  "files": ["lib"],
+  "files": [
+    "lib"
+  ],
   "publishConfig": {
     "access": "public"
   },
