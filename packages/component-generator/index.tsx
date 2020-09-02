@@ -3,12 +3,16 @@ import styled, { CSSObject, AnyStyledComponent } from 'styled-components';
 
 import {
   compose,
-  space,
-  layout,
-  display,
-  typography,
+  background,
+  border,
   color,
+  display,
+  layout,
+  position,
+  shadow,
+  space,
   styleFn,
+  typography,
 } from 'styled-system';
 
 import { StyledReactComponent, BaseComponentProps } from './typings';
@@ -53,5 +57,16 @@ export const createStyledComponent = <CP extends {}>(
 ) =>
   styled(element)<BaseComponentProps & CP>(
     baseStyles,
-    compose(color, display, layout, space, typography, ...systemStyleProps)
+    compose(
+      background,
+      border,
+      color,
+      display,
+      layout,
+      position,
+      shadow,
+      space,
+      typography,
+      ...systemStyleProps
+    )
   );

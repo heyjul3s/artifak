@@ -1,10 +1,14 @@
 import { StyledComponent } from 'styled-components';
 import {
-  SpaceProps,
-  LayoutProps,
-  DisplayProps,
-  TypographyProps,
+  BackgroundProps,
+  BorderProps,
   ColorProps,
+  DisplayProps,
+  LayoutProps,
+  PositionProps,
+  ShadowProps,
+  SpaceProps,
+  TypographyProps,
 } from 'styled-system';
 
 export type StyledReactComponent = StyledComponent<
@@ -15,8 +19,12 @@ export type StyledReactComponent = StyledComponent<
 >;
 
 export type BaseComponentProps =
+  | BackgroundProps
+  | BorderProps
   | ColorProps
   | DisplayProps
   | LayoutProps
+  | PositionProps
+  | ShadowProps
   | SpaceProps
   | TypographyProps;
