@@ -1,6 +1,7 @@
 # `@artifak/typography`
 
-The main purpose of the Artifak typography is to help your generate typography components according to your needs.
+The main purpose of the Artifak typography is to help your generate typography components according to your needs. You can also view the docs
+at [Artifak Typography](https://www.artifak.dev/?content=Typography).
 
 ## Installation
 
@@ -27,7 +28,7 @@ To generate your typography components, simply define a styles object with the k
 | styles    | object |
 
 ```ts
-import { createTypographyComponents } from '@artifak';
+import { createTypographyComponents } from '@artifak/typography';
 
 const typeStyles = {
   H1: {
@@ -57,7 +58,7 @@ This utility function calculates the sizing value dynamically within the passed 
 import styled from 'styled-components';
 
 const Paragraph = styled.p`
-  font-size: fluidSizing(16, 96, 300, 1200);
-  line-height: fluidSizing(1.4, 1.6, 300, 1200);
+  font-size: ${fluidSizing(16, 96, 300, 1200)};
+  line-height: ${fluidSizing(1.4, 1.6, 300, 1200)};
 `;
 ```

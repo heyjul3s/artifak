@@ -1,6 +1,7 @@
 # `@artifak/block`
 
-Block is a basic block component that acts as a base to your UI components.
+Block is a basic block component that acts as a base to your UI components. You can also view the docs
+at [Artifak Block](https://www.artifak.dev/?content=Block).
 
 ## Installation
 
@@ -17,13 +18,6 @@ npm install @artifak/block
 ```
 
 ## Usage
-
-Concern is largely in spacing (margins and paddings) but you may also assign other characteristics like:
-
-- typography
-- colors
-- flex
-- display
 
 Below is an example of how you may use it.
 

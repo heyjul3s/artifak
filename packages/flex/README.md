@@ -1,11 +1,35 @@
 # `@artifak/flex`
 
-> TODO: description
+A flexbox version of @artifak/flex. You can also view the docs at [Artifak Flex](https://www.artifak.dev/?content=Flex).
+
+## Installation
+
+### Yarn
+
+```sh
+yarn add @artifak/flex
+```
+
+### NPM
+
+```sh
+npm install @artifak/flex
+```
 
 ## Usage
 
-```
-const flex = require('@artifak/flex');
+Below is an example of how you may use it.
 
-// TODO: DEMONSTRATE API
+```ts
+import { FlexRow, FlexCol } from '@artifak/flex';
+
+export const Blog = () => {
+  return (
+    <FlexRow>
+      <FlexCol columnSize={[12, 6, 4]}>Column 1<FlexCol>
+      <FlexCol columnSize={[12, 6, 4]}>Column 2<FlexCol>
+      <FlexCol columnSize={[12, 6, 4]}>Column 3<FlexCol>
+    </FlexRow>
+  );
+};
 ```

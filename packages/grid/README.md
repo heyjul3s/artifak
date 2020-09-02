@@ -1,6 +1,6 @@
 # `@artifak/grid`
 
-@artifak/grid is a component for quickly setting grid columns. Apart from that, the usual CSS grid styles can also be applied to your liking.
+@artifak/grid is a component for quickly setting grid columns. Apart from that, the usual CSS grid styles can also be applied to your liking. You can also view the docs at [Artifak Grid](https://www.artifak.dev/?content=Grid).
 
 ## Installation
 
@@ -25,7 +25,7 @@ There are two properties here that you can set which are `columnWidth` and `colu
 This defines the sizing for the column based on the width that you provide.
 
 ```ts
-import { Grid, GridItem } from 'artifak';
+import { Grid, GridItem } from '@artifak/grid';
 
 type Props = {
   images: string[]
@@ -52,7 +52,7 @@ This defines the number of columns to distribute your grid contents into.
 
 ```ts
 
-import { Grid, GridItem } from 'artifak';
+import { Grid, GridItem } from '@artifak/grid';
 
 type Props = {
   images: string[]
