@@ -17,9 +17,11 @@ import {
   FlexOffsetDemo,
   flexOffsetUsage,
   FlexTotalColumnsDemo,
-  flexTotalColumnsUsage
-  // FlexAlignmentDemo,
-  // flexAlignmentUsage
+  flexTotalColumnsUsage,
+  FlexAlignmentDemo,
+  flexAlignmentUsage,
+  CustomColDemo,
+  customColUsage
 } from '../codeExamples/flex';
 
 import { FlexRow, FlexCol } from 'artifak';
@@ -139,33 +141,54 @@ export function Flex() {
       </Paragraph>
 
       <H3>Column Sizing</H3>
+      <Paragraph>
+        Below are examples of how to use the columnSizing prop, with default
+        totalColumns of 12.
+      </Paragraph>
       <Syntax>{flexColumnSizingUsage}</Syntax>
       <FlexColumnSizingDemo />
 
       <br />
 
       <H3>Offsetting</H3>
+      <Paragraph>
+        Offsets work in tandem with columnSizing. Adjust accordingly if you
+        using a custom number of columns.
+      </Paragraph>
       <Syntax>{flexOffsetUsage}</Syntax>
       <FlexOffsetDemo />
 
       <H3>Total Columns</H3>
       <Paragraph>
         Depending on design, sometimes you might need a more specific column
-        count. The totalColumns prop is available for such occasions.
+        count. The totalColumns prop is available for such occasions. Below is
+        an example that sets the total columns to 16 instead of using the
+        default 12 columns.
       </Paragraph>
       <Syntax>{flexTotalColumnsUsage}</Syntax>
       <FlexTotalColumnsDemo />
 
       <br />
 
-      {/* <H3>Alignment, Distribution, Ordering, etc.</H3>
+      <Paragraph>
+        You can also wrap up FlexCol so that you don't need to define it in
+        every FlexCol. Below is a somewhat contrived example.
+      </Paragraph>
+
+      <Syntax>{customColUsage}</Syntax>
+
+      <CustomColDemo />
+
+      <br />
+
+      <H3>Alignment, Distribution, Ordering, etc.</H3>
       <Paragraph>
         As this is based off of styled-system, you can basically assign CSS flex
         alignment or justify properties directly onto FlexCol.
       </Paragraph>
 
       <Syntax>{flexAlignmentUsage}</Syntax>
-      <FlexAlignmentDemo /> */}
+      <FlexAlignmentDemo />
 
       <br />
     </>
