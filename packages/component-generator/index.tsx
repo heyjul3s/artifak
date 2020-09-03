@@ -50,12 +50,12 @@ export function createComponent<SC, ST>(
   );
 }
 
-export const createStyledComponent = <CP extends {}>(
+export function createStyledComponent<CP extends {}>(
   systemStyleProps: styleFn[] = [],
   baseStyles: CSSObject = {},
   element: keyof JSX.IntrinsicElements = 'div'
-) =>
-  styled(element)<BaseComponentProps & CP>(
+) {
+  return styled(element)<BaseComponentProps & CP>(
     baseStyles,
     compose(
       background,
@@ -70,5 +70,6 @@ export const createStyledComponent = <CP extends {}>(
       ...systemStyleProps
     )
   );
+}
 
 export { BaseComponentProps } from './typings';

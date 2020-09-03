@@ -9,7 +9,12 @@ const createStyledComponentsTransformer = require('typescript-plugin-styled-comp
   .default;
 
 const currentWorkingPath = process.cwd();
-const styledComponentsTransformer = createStyledComponentsTransformer();
+
+const styledComponentsTransformer = createStyledComponentsTransformer({
+  getDisplayName(filename, bindingName) {
+    return path.relative(__dirname, filename);
+  },
+});
 
 const {
   src,
@@ -33,6 +38,15 @@ const inputOptions = {
     commonjs(),
     babel({
       extensions,
+      plugins: [
+        [
+          'babel-plugin-styled-components',
+          {
+            namespace: `artifak-${fileName}`,
+            displayName: true,
+          },
+        ],
+      ],
       presets: [
         '@babel/preset-env',
         '@babel/preset-react',
