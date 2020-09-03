@@ -18,6 +18,12 @@ export function Introduction() {
         We simply just sweat through our eyes occassionally.
       </Paragraph>
 
+      <Paragraph>
+        As a TLDR, think of it as an extra thin layer on top of Styled System
+        with some bonus utility functions so knowledge in Styled Components and
+        Styled System required.{' '}
+      </Paragraph>
+
       <H2>Installation</H2>
 
       <Paragraph>To install for Yarn, simply run</Paragraph>

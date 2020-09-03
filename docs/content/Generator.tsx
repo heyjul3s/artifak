@@ -1,4 +1,4 @@
-import { H1, Paragraph, LargeLead } from '../components/Typography';
+import { H1, H2, Paragraph, LargeLead } from '../components/Typography';
 import { Syntax, Params } from '../components/Syntax';
 
 import {
@@ -13,9 +13,10 @@ export function Generator() {
       <Paragraph>
         The component-generator library or generator for short, comprises of 2
         utility functions namely createStyledComponent and createBaseComponents.
-        As you might have guessed, these are one of the core functions of the
-        Artifak library. But for the purposes of greater flexibility, these
-        functions have been made available.
+        As you might have guessed, these are the core functions of the Artifak
+        library. But for the purposes of greater flexibility, these functions
+        have been made available as not all style rules are available right off
+        the bat and you may need the option to further extend the system.
       </Paragraph>
 
       <LargeLead>createStyledComponent</LargeLead>
@@ -51,6 +52,8 @@ export function Generator() {
       </Paragraph>
 
       <Syntax>{createBaseComponentsUsage}</Syntax>
+
+      <H2>Extending Your System</H2>
     </>
   );
 }
