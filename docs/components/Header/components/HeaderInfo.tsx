@@ -1,4 +1,4 @@
-import { LargeLead } from '../../Typography';
+import { LargeLead, SmallParagraph, Strong } from '../../Typography';
 import { Github } from './Github';
 import { HeaderInfoContainer } from '../styled';
 
@@ -7,6 +7,9 @@ export function HeaderInfo() {
     <HeaderInfoContainer>
       <ReleaseTag />
       <Github />
+      <SmallParagraph>
+        <Strong>MIT</Strong> licenced
+      </SmallParagraph>
     </HeaderInfoContainer>
   );
 }
@@ -14,7 +17,7 @@ export function HeaderInfo() {
 export function ReleaseTag() {
   return (
     <LargeLead fontWeight={700} fontSize={[24, 26]} marginBottom="0.15em">
-      R 1.0.6
+      R 1.0.7
     </LargeLead>
   );
 }
