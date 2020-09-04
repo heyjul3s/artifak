@@ -49,8 +49,8 @@ export function Introduction() {
           '@artifak/block',
           '@artifak/grid',
           '@artifak/typography',
-          '@artifak/flex'
-          // '@artifak/component-generator'
+          '@artifak/flex',
+          '@artifak/component-generator'
         ]}
       />
 

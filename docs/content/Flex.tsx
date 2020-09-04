@@ -31,9 +31,9 @@ export function Flex() {
     <>
       <H1>Flex</H1>
       <Paragraph>
-        The Flex library provides 2 components for usage: FlexRow and FlexCol.
-        Basically these serve purposes similar to the Grid components but via
-        CSS flexbox.
+        The Flex library provides 2 components for usage:{' '}
+        <Strong>FlexRow</Strong> and <Strong>FlexCol</Strong>. Basically these
+        serve purposes similar to the Grid components but via CSS flexbox.
       </Paragraph>
 
       <H3>FlexRow</H3>

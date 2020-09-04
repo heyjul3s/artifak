@@ -33,7 +33,7 @@ export function Syntax({
       customStyle={{
         backgroundColor: '#fafafa',
         borderRadius: 4,
-        fontSize: 13,
+        fontSize: '1.2rem',
         overflowX: 'auto',
         WebkitOverflowScrolling: 'touch',
         padding: '1em',

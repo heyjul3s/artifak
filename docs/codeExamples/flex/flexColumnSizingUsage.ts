@@ -40,4 +40,18 @@ export const flexColumnSizingUsage = `
       <Block />
     </FlexCol>
   </FlexRow>
+
+   <FlexRow>
+      <FlexCol columnSize={[12, 4]}>
+        <Block>
+          <span>4</span>
+        </Block>
+      </FlexCol>
+
+      <FlexCol columnSize={[12, 8]}>
+        <Block>
+          <span>8</span>
+        </Block>
+      </FlexCol>
+    </FlexRow>
 `;

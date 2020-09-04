@@ -18,5 +18,6 @@ export const GlobalStyles = createGlobalStyle`
     min-height: 100%;
     background-color: #fdfdfd;
     font-family: 'Biryani', sans-serif;
+    font-size: 16px;
   }
 `;

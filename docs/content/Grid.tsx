@@ -6,15 +6,19 @@ import {
   SmallLead,
   Paragraph,
   LargeLead,
-  SmallParagraph
+  SmallParagraph,
+  Strong
 } from '../components/Typography';
+
 import { Syntax } from '../components/Syntax';
+
 import {
   columnWidthExample,
   columnWidthMqExample,
   columnLengthExample,
   columnLengthMqExample
 } from '../codeExamples/grid/grid';
+
 import {
   ColumnWidthDemo,
   ColumnWidthMqDemo,
@@ -31,8 +35,8 @@ export function Grid() {
 
       <Paragraph>
         The Grid library has nothing to with Tron unfortunately and comprises of
-        2 components for your layout needs which are the <strong>Grid</strong>{' '}
-        component and the <strong>GridItem</strong> component.
+        2 components for your layout needs which are the <Strong>Grid</Strong>{' '}
+        component and the <Strong>GridItem</Strong> component.
       </Paragraph>
 
       <H3>Grid</H3>
@@ -72,11 +76,20 @@ export function Grid() {
 
         <FlexCol columnSize={[12, 7, 8]} gutterWidth={0}>
           <Paragraph>
-            This sets a repeating 1fr in accordance to the number of columns
-            provided.
+            Similar to columnWidth, except it will be in 1fr and repeats in
+            accordance to the columnLength provided.
           </Paragraph>
         </FlexCol>
       </FlexRow>
+
+      <br />
+
+      <Paragraph>
+        That said, you can still set your own gridAutoColumns and style it your
+        own way with the Grid component. It will only run the included
+        gridAutoColumns styles when columnWidth or columnLength is passed as a
+        prop.
+      </Paragraph>
 
       <H3>GridItem</H3>
 

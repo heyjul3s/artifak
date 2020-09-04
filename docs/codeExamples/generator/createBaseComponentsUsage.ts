@@ -3,7 +3,11 @@ export const createBaseComponentsUsage = `
   import { createStyledComponent, createBaseComponents } from 'artifak';
 
   // Create your base component
-  const BaseComponent = createStyledComponent<PositionProps>([position], { position: 'relative' }, 'article');
+  const BaseComponent = createStyledComponent<PositionProps>(
+    [position],
+    { position: 'relative' },
+    'article'
+  );
 
   // Define your styles
   const styles = {
@@ -21,5 +25,9 @@ export const createBaseComponentsUsage = `
   };
 
   // And put it all here
-  const { Article1, Article2, Article3 } = createBaseComponents<typeof styles>(BaseComponent, styles);
+  export const {
+    Article1,
+    Article2,
+    Article3
+  } = createBaseComponents<typeof styles>(BaseComponent, styles);
 `;
