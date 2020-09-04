@@ -101,9 +101,7 @@ export function Grid() {
       </Paragraph>
 
       <H2>Usage</H2>
-      <Paragraph>
-        Below are some examples of Grid in action. Note that{' '}
-      </Paragraph>
+      <Paragraph>Below are some examples of Grid in action.</Paragraph>
 
       <LargeLead>columnWidth</LargeLead>
 

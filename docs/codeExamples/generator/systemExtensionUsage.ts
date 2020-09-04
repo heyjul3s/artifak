@@ -44,5 +44,5 @@ export const systemExtensionUsage = `
     Component1,
     Component2,
     Component3
-  } = createBaseComponents<typeof styles>(myStyles);
+  } = createBaseComponents<typeof myStyles>(myStyles);
 `;
