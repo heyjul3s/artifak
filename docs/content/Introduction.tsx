@@ -11,17 +11,12 @@ export function Introduction() {
         Artifak is a library that comprises of basic UI primitives and utility
         functions to help you build your React application system components.
         Built with Typescript and Styled System, the aim is to attempt to
-        provide basic building blocks with sensible defaults so that you don't
-        have to fight your teammates ala trial by combat in regards to some
-        minor/trivial details when scaffolding your project. No lives were lost
-        in creating this library. No tears were shed either as boys don't cry.
-        We simply just sweat through our eyes occassionally.
-      </Paragraph>
-
-      <Paragraph>
-        As a TLDR, think of it as an extra thin layer on top of Styled System
-        with some bonus utility functions so knowledge in Styled Components and
-        Styled System required.{' '}
+        provide basic building blocks with sensible defaults with some bonus
+        utility functions so that you don't have to fight your teammates ala
+        trial by combat in regards to some minor/trivial details when
+        scaffolding your project. No lives were lost in creating this library.
+        No tears were shed either as boys don't cry. We simply just sweat
+        through our eyes occassionally.
       </Paragraph>
 
       <H2>Installation</H2>
