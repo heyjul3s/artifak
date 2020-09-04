@@ -1,5 +1,20 @@
 # artifak
 
+## 1.0.7
+
+### Patch Changes
+
+- fix type exports: Flex, Grid, component-generator
+- update types for Typography
+- added new CSS properties for Typography
+- add package namespace to bundler
+
+- Updated dependencies
+  - @artifak/component-generator@1.0.3
+  - @artifak/flex@1.0.3
+  - @artifak/grid@1.0.7
+  - @artifak/typography@1.0.7
+
 ## 1.0.6
 
 ### Patch Changes

@@ -1,5 +1,11 @@
 # @artifak/component-generator
 
+## 1.0.3
+
+### Patch Changes
+
+- fix type exports
+
 ## 1.0.2
 
 ### Patch Changes

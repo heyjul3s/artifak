@@ -1,5 +1,13 @@
 # @artifak/grid
 
+## 1.0.7
+
+### Patch Changes
+
+- fix type exports
+- Updated dependencies [undefined]
+  - @artifak/component-generator@1.0.3
+
 ## 1.0.6
 
 ### Patch Changes

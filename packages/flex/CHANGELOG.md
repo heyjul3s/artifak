@@ -1,5 +1,15 @@
 # @artifak/flex
 
+## 1.0.3
+
+### Patch Changes
+
+- fix type exports
+
+- Updated dependencies [undefined]
+  - @artifak/bundler@1.0.3
+  - @artifak/component-generator@1.0.3
+
 ## 1.0.2
 
 ### Patch Changes

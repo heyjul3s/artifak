@@ -1,5 +1,14 @@
 # @artifak/typography
 
+## 1.0.7
+
+### Patch Changes
+
+- update types for Typography
+- added new CSS properties for Typography
+- Updated dependencies [undefined]
+  - @artifak/component-generator@1.0.3
+
 ## 1.0.6
 
 ### Patch Changes

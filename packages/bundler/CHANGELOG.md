@@ -1,5 +1,11 @@
 # @artifak/bundler
 
+## 1.0.3
+
+### Patch Changes
+
+- add package namespace to bundler
+
 ## 1.0.2
 
 ### Patch Changes
