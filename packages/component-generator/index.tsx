@@ -72,4 +72,4 @@ export function createStyledComponent<CP extends {}>(
   );
 }
 
-export { BaseComponentProps } from './typings';
+export type { BaseComponentProps } from './typings';
