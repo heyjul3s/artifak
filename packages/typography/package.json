@@ -21,7 +21,9 @@
     "lib": "lib",
     "test": "__tests__"
   },
-  "files": ["lib"],
+  "files": [
+    "lib"
+  ],
   "publishConfig": {
     "access": "public"
   },
@@ -42,6 +44,7 @@
     "@types/react-dom": "^16.9.8",
     "@types/styled-components": "^5.1.2",
     "@types/styled-system": "^5.1.10",
+    "csstype": "^3.0.3",
     "lodash.isplainobject": "^4.0.6",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
