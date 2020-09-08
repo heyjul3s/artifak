@@ -1,7 +1,7 @@
 export type ImageProps = CommonProps &
   ImageElementProps &
   BackgroundImageProps &
-  PlaceholderImage;
+  Placeholder;
 
 export type ImageState = {
   imageSource: string;
@@ -16,14 +16,13 @@ export type CommonProps = {
   ariaLabel?: string;
   ariaLabelledBy?: string;
   ariaDescribedBy?: string;
-  className?: string;
   fit?: string;
   position?: string;
 };
 
-export type PlaceholderImage = {
-  PlaceholderImage?:
-    | React.ElementType<PlaceholderImageProps>
+export type Placeholder = {
+  Placeholder?:
+    | React.ElementType<PlaceholderProps>
     | React.ComponentClass
     | React.FunctionComponent;
 };
@@ -53,7 +52,7 @@ export type BackgroundImageProps = {
   src: string;
 };
 
-export type PlaceholderImageProps = ImageState;
+export type PlaceholderProps = ImageState;
 
 export type CrossOriginType = 'anonymous' | 'use-credentials';
 

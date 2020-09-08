@@ -1,23 +1,23 @@
 import * as React from 'react';
-import { ImageProps } from './typings';
+import { ImageProps, ImageState } from './typings';
 import { supportsObjectFit } from './lib/support';
 import { Imej } from './Image';
 import { BackgroundImage } from './BackgroundImage';
 import { getAllImageProps, getAllBackgroundImageProps } from './lib/props';
 
-export const Img: React.FC<ImageProps> = (props) => {
+export function Img(props: ImageProps) {
   const image: HTMLImageElement = new Image();
 
   const {
-    src,
+    children,
     decode,
     delay = 0,
     fallbackImage,
-    children,
-    PlaceholderImage,
+    Placeholder,
+    src,
   } = props;
 
-  const [imageState, setImageState] = React.useState({
+  const [imageState, setImageState] = React.useState<ImageState>({
     imageWidth: 0,
     imageHeight: 0,
     imageSource: src,
@@ -89,13 +89,13 @@ export const Img: React.FC<ImageProps> = (props) => {
     setImageState({
       imageWidth: image.width,
       imageHeight: image.height,
-      imageSource: fallbackImage,
+      imageSource: fallbackImage as string,
       isLoading: !imageState.error && !!props.fallbackImage ? true : false,
       isLoaded: false,
       error: 'Failed to load image.',
     });
 
-    onImageError = null;
+    onImageError = null as any;
   };
 
   if (!imageState.isLoaded && !imageState.isLoading && !!imageState.error) {
@@ -104,7 +104,7 @@ export const Img: React.FC<ImageProps> = (props) => {
 
   return (
     <React.Fragment>
-      {!!PlaceholderImage && <PlaceholderImage {...imageState} />}
+      {!!Placeholder && <Placeholder {...imageState} />}
 
       {isLoadImage && !children && supportsObjectFit && (
         <Imej {...getAllImageProps(props)} src={imageState.imageSource} />
@@ -118,4 +118,4 @@ export const Img: React.FC<ImageProps> = (props) => {
       )}
     </React.Fragment>
   );
-};
+}

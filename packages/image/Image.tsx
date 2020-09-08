@@ -1,5 +1,6 @@
 import * as React from 'react';
-import { CommonProps, ImageProps } from './types';
+import { ImageBase } from './ImageBase';
+import { CommonProps, ImageProps } from './typings';
 import { getImageStyles } from './lib/styles';
 
 type Props = CommonProps & ImageProps;
@@ -9,7 +10,6 @@ export const Imej: React.FC<Props> = ({
   ariaLabel,
   ariaLabelledBy,
   ariaDescribedBy,
-  className,
   crossOrigin,
   decoding,
   fit,
@@ -22,8 +22,7 @@ export const Imej: React.FC<Props> = ({
   const imageStyles = getImageStyles({ fit, position, style });
 
   return (
-    <img
-      className={className}
+    <ImageBase
       src={src}
       alt={alt}
       crossOrigin={crossOrigin}
@@ -33,7 +32,7 @@ export const Imej: React.FC<Props> = ({
       aria-label={ariaLabel || alt}
       aria-labelledby={ariaLabelledBy}
       aria-describedby={ariaDescribedBy}
-      style={imageStyles as React.CSSProperties}
+      {...imageStyles}
     />
   );
 };

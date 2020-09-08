@@ -1,3 +1,5 @@
+import React from 'react';
+
 export const getImageStyles = ({
   fit = 'contain',
   position = '50% 50%',
