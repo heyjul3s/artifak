@@ -48,10 +48,14 @@ export function repeatableColumnLength(columnLength: number): string {
   return `repeat(${columnLength}, 1fr)`;
 }
 
+export function addGridGap(gridGap: string | undefined) {
+  return !!gridGap ? gridGap : '1.5rem';
+}
+
 export const Grid = forwardRef((props: any, ref) => (
   <GridBase
     display="grid"
-    gridGap={props.gridGap ? props.gridGap : '1.5rem'}
+    gridGap={addGridGap(props.gridGap)}
     gridTemplateColumns={setGridTemplateColumns(
       props.columnWidth,
       props.columnLength

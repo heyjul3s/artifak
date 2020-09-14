@@ -1,5 +1,5 @@
 import React from 'react';
-import { setGridTemplateColumns } from '../Grid';
+import { setGridTemplateColumns, addGridGap } from '../Grid';
 import { Grid, GridItem } from '../';
 import renderer from 'react-test-renderer';
 
@@ -31,6 +31,18 @@ describe('@artifak/grid', () => {
     it('should return a array column length CSS grid rule', () => {
       const expected = ['repeat(2, 1fr)', 'repeat(6, 1fr)'];
       expect(setGridTemplateColumns(void 0, [2, 6])).toEqual(expected);
+    });
+  });
+
+  describe('addGridGap', () => {
+    it('should return string value of "1.5rem" if provided with invalid arguments', () => {
+      const expected = '1.5rem';
+      expect(addGridGap(void 0)).toEqual(expected);
+    });
+
+    it('should return grid gap string value when provided', () => {
+      const expected = '3em';
+      expect(addGridGap('3em')).toEqual(expected);
     });
   });
 
