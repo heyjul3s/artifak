@@ -1,11 +1,12 @@
 import React from 'react';
 import { isNonEmptyString } from './string';
+import { ImgComponent } from '../typings';
 
 export const getImageStyles = ({
   fit = 'contain',
   position = '50% 50%',
   style = {},
-} = {}) => {
+}: Pick<ImgComponent.Props, 'position' | 'fit' | 'style'> = {}) => {
   const { objectFit, objectPosition, ...styles }: React.CSSProperties = style;
 
   return {
@@ -15,7 +16,9 @@ export const getImageStyles = ({
   };
 };
 
-export const getBackgroundImageStyles = (props) => {
+export const getBackgroundImageStyles = (
+  props: Pick<ImgComponent.Props, 'src' | 'position' | 'fit' | 'style'>
+) => {
   return {
     backgroundImage: `url("${props.src}")`,
     backgroundPosition: props.position,
@@ -27,6 +30,6 @@ export const getBackgroundImageStyles = (props) => {
   };
 };
 
-export function imgSizes(srcset?: string, sizes?: string): string | undefined {
+export function imgSizes(srcset?: string, sizes?: string) {
   return isNonEmptyString(srcset) && isNonEmptyString(sizes) ? sizes : void 0;
 }
