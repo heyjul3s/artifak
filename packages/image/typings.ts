@@ -1,64 +1,79 @@
-export type ImageProps = CommonProps &
-  ImageElementProps &
-  BackgroundImageProps &
-  Placeholder;
+import { BaseComponentProps } from '@artifak/component-generator';
 
-export type ImageState = {
-  imageSource: string;
-  imageWidth: number;
-  imageHeight: number;
-  isLoading: boolean;
-  isLoaded: boolean;
-  error?: string;
-};
+export namespace ImgComponent {
+  export type Props = BaseComponentProps &
+    Base.CommonProps &
+    Base.Imagery &
+    Base.BackgroundImagery &
+    Placeholder;
 
-export type CommonProps = {
-  ariaLabel?: string;
-  ariaLabelledBy?: string;
-  ariaDescribedBy?: string;
-  fit?: string;
-  position?: string;
-};
+  export type State = {
+    imageSource: string;
+    // imageWidth: number;
+    // imageHeight: number;
+    isLoading: boolean;
+    isLoaded: boolean;
+    error?: string;
+  };
 
-export type Placeholder = {
-  Placeholder?:
-    | React.ElementType<PlaceholderProps>
-    | React.ComponentClass
-    | React.FunctionComponent;
-};
+  export type Placeholder = {
+    Placeholder?:
+      | React.ElementType<State>
+      | React.ComponentClass
+      | React.FunctionComponent;
+  };
+}
 
-export type ImageElementProps = {
-  alt?: string;
-  className?: string;
-  crossOrigin?: CrossOriginType;
-  delay?: number;
-  decode?: boolean;
-  decoding?: DecodingType;
-  fallbackImage?: string;
-  onload?: (imageState: PropsOnloadArg) => void;
-  onerror?: (imageState: PropsOnloadArg) => void;
-  sizes?: string;
-  style?: React.CSSProperties;
-  src: string;
-  srcset?: string;
-};
+export namespace Base {
+  export type CommonProps = {
+    ariaLabel?: string;
+    ariaLabelledBy?: string;
+    ariaDescribedBy?: string;
+    fit?: string;
+    position?: string;
+  };
 
-export type BackgroundImageProps = {
-  alt?: string;
-  children?: React.ReactNode;
-  fallbackImage?: string;
-  role?: string;
-  style?: React.CSSProperties;
-  src: string;
-};
+  export type Imagery = ImageryProps & CommonProps;
 
-export type PlaceholderProps = ImageState;
+  export type ImageryProps = {
+    alt?: string;
+    crossOrigin?: ImgAttributes.CrossOriginType;
+    delay?: number;
+    decode?: boolean;
+    decoding?: ImgAttributes.DecodingType;
+    fallbackSrc?: string;
+    onload?: (imageState: ImgEvents.OnLoad) => void;
+    onerror?: (imageState: ImgEvents.OnError) => void;
+    sizes?: string;
+    src: string;
+    srcset?: string;
+  };
 
-export type CrossOriginType = 'anonymous' | 'use-credentials';
+  export type BackgroundImagery = BackgroundImageProps & CommonProps;
 
-export type DecodingType = 'async' | 'sync' | 'auto';
+  export type BackgroundImageProps = {
+    alt?: string;
+    children?: React.ReactNode;
+    fallbackSrc?: string;
+    role?: string;
+    style?: React.CSSProperties;
+    src: string;
+  };
+}
 
-export type PropsOnloadArg = {
-  imageWidth: number;
-  imageHeight: number;
-} & ImageState;
+export namespace ImgEvents {
+  export type OnLoad = {
+    imageWidth: number;
+    imageHeight: number;
+  } & ImgComponent.State;
+
+  export type OnError = {
+    imageWidth: number;
+    imageHeight: number;
+  } & ImgComponent.State;
+}
+
+export namespace ImgAttributes {
+  export type CrossOriginType = 'anonymous' | 'use-credentials';
+  export type DecodingType = 'async' | 'sync' | 'auto';
+}

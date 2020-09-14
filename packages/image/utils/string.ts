@@ -1,5 +1,7 @@
-export const isString = (arg: any): boolean =>
-  Object.prototype.toString.call(arg) === '[object String]';
+export function isString(arg: any) {
+  return Object.prototype.toString.call(arg) === '[object String]';
+}
 
-export const isNonEmptyString = (arg: any): boolean =>
-  isString(arg) && arg.trim() !== '';
+export function isNonEmptyString(arg: any) {
+  return isString(arg) && arg.trim() !== '';
+}
