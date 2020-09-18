@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Imagery should render 1`] = `
+<DocumentFragment>
+  <img
+    alt=""
+    aria-describedby=""
+    aria-label=""
+    aria-labelledby=""
+    class="artifak__sc-6om8fa-0 cnSMHr"
+    decoding="auto"
+    sizes=""
+    src=""
+    srcset=""
+  />
+</DocumentFragment>
+`;

@@ -4,9 +4,10 @@ import { Imagery } from './Imagery';
 import { BackgroundImagery } from './BackgroundImagery';
 import { ImgContext } from './context';
 import { imgSizes } from './utils/styles';
+import { supportsObjectFit } from './utils/support';
 
 export function Img(props: ImgComponent.Props) {
-  const { children, delay = 0, fallbackSrc, Placeholder, src } = props;
+  const { children, fallbackSrc, src } = props;
 
   const [imageState, setImageState] = React.useState<ImgComponent.State>({
     imageSource: src,
@@ -25,19 +26,17 @@ export function Img(props: ImgComponent.Props) {
     });
   }, []);
 
-  let onImageLoad: () => void = async () => {
-    await setTimeout(() => {
-      setImageState({
-        ...imageState,
-        isLoading: false,
-        isLoaded: true,
-        error: void 0,
-      });
-    }, delay);
+  let onImageLoad = () => {
+    setImageState({
+      ...imageState,
+      isLoading: false,
+      isLoaded: true,
+      error: void 0,
+    });
   };
 
-  let onImageError: () => Promise<void> | null = async () => {
-    await setImageState({
+  let onImageError = () => {
+    setImageState({
       imageSource: fallbackSrc as string,
       isLoading: !imageState.error && !!props.fallbackSrc ? true : false,
       isLoaded: false,
@@ -55,15 +54,12 @@ export function Img(props: ImgComponent.Props) {
         sizes: imgSizes(props.srcset, props.sizes),
       }}
     >
-      {!!Placeholder && (!imageState.isLoaded || imageState.error) && (
-        <Placeholder {...imageState} />
-      )}
-
-      {!children && !imageState.error && (
+      {!children && (
         <Imagery onImageLoad={onImageLoad} onImageError={onImageError} />
       )}
 
-      {!!children && <BackgroundImagery />}
+      {!!children ||
+        (props.fit === 'cover' && !supportsObjectFit && <BackgroundImagery />)}
     </ImgContext.Provider>
   );
 }

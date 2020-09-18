@@ -1,7 +1,11 @@
 import { BaseComponentProps } from '@artifak/component-generator';
+import { StylesProps } from 'styled-system';
 
 export namespace ImgComponent {
-  export type Props = BaseComponentProps &
+  export type Props = {
+    onload?: () => void;
+    onerror?: () => void;
+  } & BaseComponentProps &
     Base.CommonProps &
     Base.Imagery &
     Base.BackgroundImagery;
@@ -21,6 +25,7 @@ export namespace Base {
     ariaDescribedBy?: string;
     fit?: string;
     position?: string;
+    style?: Partial<StylesProps>;
   };
 
   export type Imagery = ImageryProps & CommonProps;
@@ -44,21 +49,8 @@ export namespace Base {
     children?: React.ReactNode;
     fallbackSrc?: string;
     role?: string;
-    style?: React.CSSProperties;
     src: string;
   };
-}
-
-export namespace ImgEvents {
-  export type OnLoad = {
-    imageWidth: number;
-    imageHeight: number;
-  } & ImgComponent.State;
-
-  export type OnError = {
-    imageWidth: number;
-    imageHeight: number;
-  } & ImgComponent.State;
 }
 
 export namespace ImgAttributes {
