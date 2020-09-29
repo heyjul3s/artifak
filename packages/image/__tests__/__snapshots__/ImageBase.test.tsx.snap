@@ -1,9 +1,0 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
-
-exports[`ImageryBase should render 1`] = `
-<DocumentFragment>
-  <img
-    class="artifak__sc-6om8fa-0 brhrtq"
-  />
-</DocumentFragment>
-`;
