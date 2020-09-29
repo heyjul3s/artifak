@@ -1,17 +1,23 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Imagery should render 1`] = `
+exports[`Img should render an img element with fallbackSrc value as src 1`] = `
 <DocumentFragment>
   <img
-    alt=""
-    aria-describedby=""
-    aria-label=""
-    aria-labelledby=""
-    class="artifak__sc-6om8fa-0 cnSMHr"
-    decoding="auto"
-    sizes=""
-    src=""
-    srcset=""
+    alt="test"
+    aria-label="test"
+    class="artifak__sc-6om8fa-0 brhrtq"
+    src="./noImage.png"
+  />
+</DocumentFragment>
+`;
+
+exports[`Img should render an img element with src and alt defined 1`] = `
+<DocumentFragment>
+  <img
+    alt="hello world"
+    aria-label="hello world"
+    class="artifak__sc-6om8fa-0 brhrtq"
+    src="https://source.unsplash.com/random/10x10"
   />
 </DocumentFragment>
 `;

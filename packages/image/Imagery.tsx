@@ -25,31 +25,36 @@ export function Imagery(props: ImgComponent.Props) {
     });
   }, []);
 
-  let onImageLoad = (target: HTMLImageElement) => {
-    setImageState({
-      ...imageState,
-      imageWidth: target.width,
-      imageHeight: target.height,
-      isLoading: false,
-      isLoaded: true,
-      error: void 0,
-    });
+  const isImageLoading =
+    !imageState.error && !!props.fallbackSrc ? true : false;
+
+  const sizes = imgSizes(props.srcset, props.sizes);
+
+  let onImageLoad = function({ target }) {
+    return (function(target: HTMLImageElement) {
+      setImageState({
+        ...imageState,
+        imageWidth: target.width,
+        imageHeight: target.height,
+        isLoading: false,
+        isLoaded: true,
+        error: void 0,
+      });
+    })(target);
   };
 
-  let onImageError = () => {
-    setImageState({
+  let onImageError = async () => {
+    await setImageState({
       imageSource: fallbackSrc as string,
       imageWidth: 0,
       imageHeight: 0,
-      isLoading: !imageState.error && !!props.fallbackSrc ? true : false,
+      isLoading: isImageLoading,
       isLoaded: false,
       error: 'Failed to load image.',
     });
 
     onImageError = null as any;
   };
-
-  const sizes = imgSizes(props.srcset, props.sizes);
 
   return (
     <ImageryBase
@@ -60,7 +65,7 @@ export function Imagery(props: ImgComponent.Props) {
       crossOrigin={props.crossOrigin}
       decoding={props.decoding}
       onError={onImageError}
-      onLoad={({ target }) => onImageLoad(target)}
+      onLoad={onImageLoad}
       src={imageState.imageSource}
       srcSet={props.srcset}
       sizes={sizes}

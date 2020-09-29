@@ -18,8 +18,9 @@ describe('Img', () => {
   it('should render an img element with fallbackSrc value as src', () => {
     const { asFragment } = render(
       <Imagery
-        src="https://sourcelaopj.com/random/10x10"
-        fallbackSrc="https://source.unsplash.com/random/10x10"
+        src="./noImage.png"
+        fallbackSrc="./__mocks__/test-image.svg"
+        alt="test"
       />,
       {}
     );
