@@ -35,16 +35,6 @@ module.exports = {
     '<rootDir>/packages/grid/dist',
     '<rootDir>/packages/typography/dist'
   ],
-  // TODO: setup linting
-  // projects: [
-  //   {
-  //     displayName: 'test'
-  //   },
-  //   {
-  //     displayName: 'lint',
-  //     runner: 'jest-runner-eslint',
-  //     testMatch: ['<rootDir>/**/*.{js, jsx, ts, tsx}']
-  //   }
-  // ],
+  setupFilesAfterEnv: ['<rootDir>/config/setupTests.ts'],
   prettierPath: '<rootDir>/config/prettier.config.js'
 };
