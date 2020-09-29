@@ -5,7 +5,7 @@ exports[`Img should render an img element with fallbackSrc value as src 1`] = `
   <img
     alt="test"
     aria-label="test"
-    class="artifak__sc-6om8fa-0 brhrtq"
+    class="artifak__sc-6om8fa-0 elnunh"
     src="./noImage.png"
   />
 </DocumentFragment>
@@ -16,7 +16,7 @@ exports[`Img should render an img element with src and alt defined 1`] = `
   <img
     alt="hello world"
     aria-label="hello world"
-    class="artifak__sc-6om8fa-0 brhrtq"
+    class="artifak__sc-6om8fa-0 elnunh"
     src="https://source.unsplash.com/random/10x10"
   />
 </DocumentFragment>
