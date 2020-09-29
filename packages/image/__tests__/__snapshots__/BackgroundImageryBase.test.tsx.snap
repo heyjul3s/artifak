@@ -1,9 +1,0 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
-
-exports[`BackgroundImageryBase should render 1`] = `
-<DocumentFragment>
-  <div
-    class="artifak__sc-6om8fa-0 dtstAK"
-  />
-</DocumentFragment>
-`;

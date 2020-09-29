@@ -1,6 +1,5 @@
 /* istanbul ignore file */
 
-export { Img } from './Img';
+export { Imagery } from './Imagery';
 export { ImageryBase } from './ImageryBase';
-export { BackgroundImageryBase } from './BackgroundImageryBase';
 export type { Base, ImgAttributes, ImgComponent, ImgEvents } from './typings';
