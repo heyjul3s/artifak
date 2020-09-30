@@ -1,20 +1,18 @@
 import React from 'react';
 import { GridItem } from '../GridItem';
 import { GridItemBase } from '../GridItemBase';
-import renderer from 'react-test-renderer';
+import { render } from '@testing-library/react';
 
 describe('GridItemBase', () => {
   it('should render correctly', () => {
-    const tree = renderer
-      .create(<GridItemBase>Hello World</GridItemBase>)
-      .toJSON();
-    expect(tree).toMatchSnapshot();
+    const { asFragment } = render(<GridItemBase>Grid Item Base</GridItemBase>);
+    expect(asFragment()).toMatchSnapshot();
   });
 });
 
 describe('GridItem', () => {
   it('should render correctly', () => {
-    const tree = renderer.create(<GridItem>Hello World</GridItem>).toJSON();
-    expect(tree).toMatchSnapshot();
+    const { asFragment } = render(<GridItem>Grid Item</GridItem>);
+    expect(asFragment()).toMatchSnapshot();
   });
 });

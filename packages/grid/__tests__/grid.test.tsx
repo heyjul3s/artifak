@@ -1,7 +1,7 @@
 import React from 'react';
 import { setGridTemplateColumns, addGridGap } from '../Grid';
 import { Grid, GridItem } from '../';
-import renderer from 'react-test-renderer';
+import { render } from '@testing-library/react';
 
 describe('@artifak/grid', () => {
   describe('setGridTemplateColumns', () => {
@@ -48,19 +48,18 @@ describe('@artifak/grid', () => {
 
   describe('Grid', () => {
     it('should render', () => {
-      const tree = renderer
-        .create(
-          <Grid>
-            <GridItem>1</GridItem>
-            <GridItem>2</GridItem>
-            <GridItem>3</GridItem>
-            <GridItem>4</GridItem>
-            <GridItem>5</GridItem>
-            <GridItem>6</GridItem>
-          </Grid>
-        )
-        .toJSON();
-      expect(tree).toMatchSnapshot();
+      const { asFragment } = render(
+        <Grid>
+          <GridItem>1</GridItem>
+          <GridItem>2</GridItem>
+          <GridItem>3</GridItem>
+          <GridItem>4</GridItem>
+          <GridItem>5</GridItem>
+          <GridItem>6</GridItem>
+        </Grid>
+      );
+
+      expect(asFragment()).toMatchSnapshot();
     });
   });
 });

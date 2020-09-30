@@ -11,6 +11,17 @@ exports[`Img should render an img element with fallbackSrc value as src 1`] = `
 </DocumentFragment>
 `;
 
+exports[`Img should render an img element with fallbackSrc value as src 2`] = `
+<DocumentFragment>
+  <img
+    alt="test"
+    aria-label="test"
+    class="artifak__sc-6om8fa-0 elnunh"
+    src=""
+  />
+</DocumentFragment>
+`;
+
 exports[`Img should render an img element with src and alt defined 1`] = `
 <DocumentFragment>
   <img

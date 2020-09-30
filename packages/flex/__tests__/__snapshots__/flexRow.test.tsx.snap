@@ -1,17 +1,21 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`FlexRow FlexRow component should render 1`] = `
-<div
-  className="artifak__sc-6om8fa-0 gWioZe"
->
-  Test
-</div>
+<DocumentFragment>
+  <div
+    class="artifak__sc-6om8fa-0 gWioZe"
+  >
+    Flex Row
+  </div>
+</DocumentFragment>
 `;
 
 exports[`FlexRow FlexRow component should render row-reverse 1`] = `
-<div
-  className="artifak__sc-6om8fa-0 kGxDSn"
->
-  Test
-</div>
+<DocumentFragment>
+  <div
+    class="artifak__sc-6om8fa-0 kGxDSn"
+  >
+    Flex Row Reverse
+  </div>
+</DocumentFragment>
 `;

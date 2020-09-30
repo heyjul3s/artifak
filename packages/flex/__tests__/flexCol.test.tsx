@@ -1,5 +1,6 @@
 import React from 'react';
-import renderer from 'react-test-renderer';
+import { render } from '@testing-library/react';
+import 'jest-styled-components';
 import {
   getColumnWidth,
   setColumnSizing,
@@ -79,10 +80,8 @@ describe('FlexCol', () => {
 
   describe('FlexCol', () => {
     it('should render', () => {
-      const tree = renderer
-        .create(<FlexCol columnSize={1}>Test</FlexCol>)
-        .toJSON();
-      expect(tree).toMatchSnapshot();
+      const { asFragment } = render(<FlexCol columnSize={1}>Test</FlexCol>);
+      expect(asFragment()).toMatchSnapshot();
     });
   });
 });

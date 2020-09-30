@@ -1,9 +1,25 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`FlexCol FlexCol should render 1`] = `
+<DocumentFragment>
+  .c0 {
+  box-sizing: border-box;
+  position: relative;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  max-width: 8.33%;
+  -webkit-flex-basis: 8.33%;
+  -ms-flex-preferred-size: 8.33%;
+  flex-basis: 8.33%;
+  padding-left: 0.5em;
+  padding-right: 0.5em;
+}
+
 <div
-  className="artifak__sc-6om8fa-0 guGdqN"
->
-  Test
-</div>
+    class="c0"
+  >
+    Test
+  </div>
+</DocumentFragment>
 `;

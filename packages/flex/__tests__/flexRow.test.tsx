@@ -1,5 +1,5 @@
 import React from 'react';
-import renderer from 'react-test-renderer';
+import { render } from '@testing-library/react';
 import { FlexRow, setFlexDirection } from '../FlexRow';
 
 describe('FlexRow', () => {
@@ -17,15 +17,15 @@ describe('FlexRow', () => {
 
   describe('FlexRow component', () => {
     it('should render', () => {
-      const tree = renderer.create(<FlexRow>Test</FlexRow>).toJSON();
-      expect(tree).toMatchSnapshot();
+      const { asFragment } = render(<FlexRow>Flex Row</FlexRow>);
+      expect(asFragment()).toMatchSnapshot();
     });
 
     it('should render row-reverse', () => {
-      const tree = renderer
-        .create(<FlexRow reverse={true}>Test</FlexRow>)
-        .toJSON();
-      expect(tree).toMatchSnapshot();
+      const { asFragment } = render(
+        <FlexRow reverse={true}>Flex Row Reverse</FlexRow>
+      );
+      expect(asFragment()).toMatchSnapshot();
     });
   });
 });

@@ -1,17 +1,21 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`GridItem should render correctly 1`] = `
-<div
-  className="artifak__sc-6om8fa-0"
->
-  Hello World
-</div>
+<DocumentFragment>
+  <div
+    class="artifak__sc-6om8fa-0"
+  >
+    Grid Item
+  </div>
+</DocumentFragment>
 `;
 
 exports[`GridItemBase should render correctly 1`] = `
-<div
-  className="artifak__sc-6om8fa-0"
->
-  Hello World
-</div>
+<DocumentFragment>
+  <div
+    class="artifak__sc-6om8fa-0"
+  >
+    Grid Item Base
+  </div>
+</DocumentFragment>
 `;
