@@ -9,11 +9,8 @@ export namespace ImgComponent {
     Base.Imagery;
 
   export type State = {
-    imageSource: string;
-    imageWidth: number;
-    imageHeight: number;
-    isLoading: boolean;
-    isLoaded: boolean;
+    imageSource: string | undefined;
+    isImageLoaded: boolean;
     error?: string;
   };
 }

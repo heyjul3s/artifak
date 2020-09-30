@@ -8,10 +8,7 @@ export function Imagery(props: ImgComponent.Props) {
 
   const [imageState, setImageState] = React.useState<ImgComponent.State>({
     imageSource: src,
-    imageWidth: 0,
-    imageHeight: 0,
-    isLoading: false,
-    isLoaded: false,
+    isImageLoaded: false,
     error: void 0,
   });
 
@@ -19,41 +16,26 @@ export function Imagery(props: ImgComponent.Props) {
     setImageState({
       ...imageState,
       imageSource: src,
-      isLoading: true,
-      isLoaded: false,
       error: void 0,
     });
   }, []);
 
-  const isImageLoading =
-    !imageState.error && !!props.fallbackSrc ? true : false;
-
   const sizes = imgSizes(props.srcset, props.sizes);
 
-  let onImageLoad = function({ target }) {
-    return (function(target: HTMLImageElement) {
-      setImageState({
-        ...imageState,
-        imageWidth: target.width,
-        imageHeight: target.height,
-        isLoading: false,
-        isLoaded: true,
-        error: void 0,
-      });
-    })(target);
+  let onImageLoad = async () => {
+    await setImageState({
+      ...imageState,
+      isImageLoaded: true,
+      error: void 0,
+    });
   };
 
   let onImageError = async () => {
     await setImageState({
-      imageSource: fallbackSrc as string,
-      imageWidth: 0,
-      imageHeight: 0,
-      isLoading: isImageLoading,
-      isLoaded: false,
-      error: 'Failed to load image.',
+      ...imageState,
+      imageSource: !imageState.error && !!fallbackSrc ? fallbackSrc : void 0,
+      error: 'Failed to load image',
     });
-
-    onImageError = null as any;
   };
 
   return (
