@@ -32,7 +32,8 @@
     "url": "git+https://github.com/heyjul3s/artifak.git"
   },
   "scripts": {
-    "test": "echo \"Error: run tests from root\" && exit 1"
+    "test": "echo \"Error: run tests from root\" && exit 1",
+    "build": "builder"
   },
   "bugs": {
     "url": "https://github.com/heyjul3s/artifak/issues"
