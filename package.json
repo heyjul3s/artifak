@@ -55,5 +55,10 @@
   },
   "dependencies": {
     "@changesets/cli": "^2.10.3"
+  },
+  "resolutions": {
+    "dot-prop": "^4.2.1",
+    "node-fetch": "^2.6.1",
+    "yargs-parser": "^20.2.0"
   }
 }
