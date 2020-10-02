@@ -1,5 +1,19 @@
 # artifak
 
+## 1.0.8
+
+### Patch Changes
+
+- generator bundle fix
+- vulnerability patches
+- reduced bundle size
+- Updated dependencies [undefined]
+  - @artifak/block@1.0.6
+  - @artifak/component-generator@1.0.4
+  - @artifak/flex@1.0.4
+  - @artifak/grid@1.0.8
+  - @artifak/typography@1.0.8
+
 ## 1.0.7
 
 ### Patch Changes

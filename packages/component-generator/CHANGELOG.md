@@ -1,5 +1,12 @@
 # @artifak/component-generator
 
+## 1.0.4
+
+### Patch Changes
+
+- generator bundle fix
+- vulnerability patches
+
 ## 1.0.3
 
 ### Patch Changes

@@ -1,5 +1,15 @@
 # @artifak/flex
 
+## 1.0.4
+
+### Patch Changes
+
+- vulnerability patches
+- reduced bundle size
+- Updated dependencies [undefined]
+  - @artifak/bundler@1.0.4
+  - @artifak/component-generator@1.0.4
+
 ## 1.0.3
 
 ### Patch Changes

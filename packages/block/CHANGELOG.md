@@ -1,5 +1,14 @@
 # @artifak/block
 
+## 1.0.6
+
+### Patch Changes
+
+- vulnerability patches
+- reduced bundle size
+- Updated dependencies [undefined]
+  - @artifak/component-generator@1.0.4
+
 ## 1.0.5
 
 ### Patch Changes
