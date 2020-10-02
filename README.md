@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/heyjul3s/artifak.svg?branch=master)](https://travis-ci.org/heyjul3s/artifak)
+
 # Artifak
 
 Artifak is a React UI primitive components library to help you scaffold component system in your React project and is built with Styled System. Documentation can be found at [Artifak](https://artifak.dev).
@@ -24,3 +26,4 @@ Packages can also be installed independently. Simply do `yarn add <package name>
 - @artifak/**grid**
 - @artifak/**typography**
 - @artifak/**flex**
+- @artifak/**component-generator**
