@@ -2,6 +2,7 @@ import React from 'react';
 import { setGridTemplateColumns, addGridGap } from '../Grid';
 import { Grid, GridItem } from '../';
 import { render } from '@testing-library/react';
+import 'jest-styled-components';
 
 describe('@artifak/grid', () => {
   describe('setGridTemplateColumns', () => {
@@ -60,6 +61,36 @@ describe('@artifak/grid', () => {
       );
 
       expect(asFragment()).toMatchSnapshot();
+    });
+
+    it('should render grid-auto-columns style if no columnSize prop is provided', () => {
+      const { getByTestId } = render(
+        <Grid data-testid="grid" gridAutoColumns="200px">
+          <GridItem>1</GridItem>
+          <GridItem>2</GridItem>
+          <GridItem>3</GridItem>
+          <GridItem>4</GridItem>
+          <GridItem>5</GridItem>
+          <GridItem>6</GridItem>
+        </Grid>
+      );
+
+      expect(getByTestId('grid')).toHaveStyleRule('grid-auto-columns', '200px');
+    });
+
+    it('should render gridGap style if a value is provided', () => {
+      const { getByTestId } = render(
+        <Grid data-testid="grid" gridGap="20px">
+          <GridItem>1</GridItem>
+          <GridItem>2</GridItem>
+          <GridItem>3</GridItem>
+          <GridItem>4</GridItem>
+          <GridItem>5</GridItem>
+          <GridItem>6</GridItem>
+        </Grid>
+      );
+
+      expect(getByTestId('grid')).toHaveStyleRule('grid-gap', '20px');
     });
   });
 });

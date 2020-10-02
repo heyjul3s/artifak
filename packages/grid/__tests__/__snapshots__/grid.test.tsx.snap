@@ -2,37 +2,42 @@
 
 exports[`@artifak/grid Grid should render 1`] = `
 <DocumentFragment>
-  <div
-    class="artifak__sc-6om8fa-0 bjOzfg"
+  .c0 {
+  display: grid;
+  grid-gap: 1.5rem;
+}
+
+<div
+    class="c0"
     display="grid"
   >
     <div
-      class="artifak__sc-6om8fa-0"
+      class=""
     >
       1
     </div>
     <div
-      class="artifak__sc-6om8fa-0"
+      class=""
     >
       2
     </div>
     <div
-      class="artifak__sc-6om8fa-0"
+      class=""
     >
       3
     </div>
     <div
-      class="artifak__sc-6om8fa-0"
+      class=""
     >
       4
     </div>
     <div
-      class="artifak__sc-6om8fa-0"
+      class=""
     >
       5
     </div>
     <div
-      class="artifak__sc-6om8fa-0"
+      class=""
     >
       6
     </div>
