@@ -21,7 +21,9 @@
     "lib": "lib",
     "test": "__tests__"
   },
-  "files": ["lib"],
+  "files": [
+    "lib"
+  ],
   "publishConfig": {
     "access": "public"
   },
@@ -30,6 +32,7 @@
     "url": "git+https://github.com/heyjul3s/artifak.git"
   },
   "scripts": {
+    "build": "builder",
     "test": "echo \"Error: run tests from root\" && exit 1"
   },
   "bugs": {
