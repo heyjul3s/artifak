@@ -1,6 +1,6 @@
-import { FlexboxProps } from 'styled-system';
+import type { FlexboxProps } from 'styled-system';
 
-import { BaseComponentProps } from '@artifak/component-generator';
+import type { BaseComponentProps } from '@artifak/component-generator';
 
 export type FlexRowBaseProps =
   | FlexRowCompProps

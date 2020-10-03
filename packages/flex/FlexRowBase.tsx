@@ -1,6 +1,6 @@
 import { flexbox } from 'styled-system';
 import { createStyledComponent } from '@artifak/component-generator';
-import { FlexRowBaseProps } from './typings';
+import type { FlexRowBaseProps } from './typings';
 
 export const FlexRowBase = createStyledComponent<FlexRowBaseProps>([flexbox], {
   display: 'flex',

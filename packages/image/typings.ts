@@ -1,4 +1,4 @@
-import { BaseComponentProps } from '@artifak/component-generator';
+import type { BaseComponentProps } from '@artifak/component-generator';
 
 export namespace ImgComponent {
   export type Props = {

@@ -8,7 +8,7 @@ import {
   alignSelf,
 } from 'styled-system';
 
-import { GridItemBaseProps } from './typings';
+import type { GridItemBaseProps } from './typings';
 
 export const GridItemBase = createStyledComponent<GridItemBaseProps>([
   alignSelf,
