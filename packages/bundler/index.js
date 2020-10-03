@@ -5,7 +5,6 @@ const resolve = require('@rollup/plugin-node-resolve').default;
 const babel = require('@rollup/plugin-babel').default;
 const typescript = require('rollup-plugin-typescript2');
 const commonjs = require('@rollup/plugin-commonjs');
-const bundleSize = require('rollup-plugin-bundle-size');
 const createStyledComponentsTransformer = require('typescript-plugin-styled-components')
   .default;
 
@@ -63,7 +62,6 @@ const inputOptions = {
         }),
       ],
     }),
-    bundleSize(),
   ],
 };
 
