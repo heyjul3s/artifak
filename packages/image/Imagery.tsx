@@ -4,39 +4,7 @@ import { ImageryBase } from './ImageryBase';
 import { imgSizes } from './utils/attributes';
 
 export function Imagery(props: ImgComponent.Props) {
-  const { fallbackSrc, src } = props;
-
-  const [imageState, setImageState] = React.useState<ImgComponent.State>({
-    imageSource: src,
-    isImageLoaded: false,
-    error: void 0,
-  });
-
-  React.useEffect(() => {
-    setImageState({
-      ...imageState,
-      imageSource: src,
-      error: void 0,
-    });
-  }, []);
-
   const sizes = imgSizes(props.srcset, props.sizes);
-
-  let onImageLoad = async () => {
-    await setImageState({
-      ...imageState,
-      isImageLoaded: true,
-      error: void 0,
-    });
-  };
-
-  let onImageError = async () => {
-    await setImageState({
-      ...imageState,
-      imageSource: !imageState.error && !!fallbackSrc ? fallbackSrc : void 0,
-      error: 'Failed to load image',
-    });
-  };
 
   return (
     <ImageryBase
@@ -46,9 +14,7 @@ export function Imagery(props: ImgComponent.Props) {
       aria-describedby={props.ariaDescribedBy}
       crossOrigin={props.crossOrigin}
       decoding={props.decoding}
-      onError={onImageError}
-      onLoad={onImageLoad}
-      src={imageState.imageSource}
+      src={props.src}
       srcSet={props.srcset}
       sizes={sizes}
     />
