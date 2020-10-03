@@ -5,16 +5,19 @@ import {
 } from '../__mocks__/componentGenerator.mock';
 
 describe('@artifak/component-generator', () => {
-  describe('createComponents', () => {
+  describe('createComponentsDictionary', () => {
     it('should return undefined when provided invalid arguments', () => {
       const expected = {};
-      const SystemComponent = generator.createComponents(void 0 as any, void 0);
+      const SystemComponent = generator.createComponentsDictionary(
+        void 0 as any,
+        void 0
+      );
 
       expect(SystemComponent).toEqual(expected);
     });
 
     it('should create React components', () => {
-      const SystemComponent = generator.createComponents(
+      const SystemComponent = generator.createComponentsDictionary(
         MockComponent,
         mockComponentStyles
       );
@@ -22,10 +25,13 @@ describe('@artifak/component-generator', () => {
     });
   });
 
-  describe('createComponent', () => {
+  describe('createStyledFunctionComponent', () => {
     it('should return a component', () => {
       expect(
-        generator.createComponent(MockComponent, mockComponentStyles)
+        generator.createStyledFunctionComponent(
+          MockComponent,
+          mockComponentStyles
+        )
       ).toBeDefined();
     });
   });

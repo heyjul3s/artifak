@@ -15,31 +15,64 @@ import {
   typography,
 } from 'styled-system';
 
-import { StyledReactComponent, BaseComponentProps } from './typings';
+import type { StyledComponent } from 'styled-components';
+
+import type {
+  BackgroundProps,
+  BorderProps,
+  ColorProps,
+  DisplayProps,
+  LayoutProps,
+  PositionProps,
+  ShadowProps,
+  SpaceProps,
+  TypographyProps,
+} from 'styled-system';
+
+export type StyledReactComponent = StyledComponent<
+  keyof JSX.IntrinsicElements | React.ComponentType<any>,
+  any,
+  any,
+  any
+>;
+
+export type BaseComponentProps =
+  | BackgroundProps
+  | BorderProps
+  | ColorProps
+  | DisplayProps
+  | LayoutProps
+  | PositionProps
+  | ShadowProps
+  | SpaceProps
+  | TypographyProps;
 
 export function createBaseComponents<ST, CP>(
   BaseComponent: AnyStyledComponent,
   styles: ST
-): { [key in keyof ST]: React.FC<CP> } {
-  return createComponents<ST, CP>(BaseComponent, styles);
+): { [key in keyof any]: React.FC<CP> } {
+  return createComponentsDictionary<ST, CP>(BaseComponent, styles);
 }
 
-export function createComponents<ST, SC>(
+export function createComponentsDictionary<ST, SC>(
   SystemComponent: StyledReactComponent,
   styles: ST
-): { [key in keyof ST]: React.FC<SC> } {
+) {
   return !!styles && Object.keys(styles).length >= 1
-    ? (Object.entries(styles).reduce((acc, entry) => {
-        const [key, styles] = entry;
-        acc[key] = createComponent<SC, ST>(SystemComponent, styles);
-        acc[key].displayName = key;
+    ? Object.entries(styles).reduce((acc, entry) => {
+      const [prop, style] = entry;
 
-        return acc;
-      }, {}) as { [key in keyof ST]: React.FC<SC> })
-    : ({} as { [key in keyof ST]: React.FC<SC> });
+      if (hasKey(styles, prop)) {
+        acc[prop] = createStyledFunctionComponent<SC, ST>(SystemComponent, style);
+        acc[prop].displayName = prop;
+      }
+
+      return acc;
+    }, {} as { [key in keyof any]: React.FC<SC> })
+    : {} as { [key in keyof any]: React.FC<SC> };
 }
 
-export function createComponent<SC, ST>(
+export function createStyledFunctionComponent<SC, ST>(
   StyledReactComponent: AnyStyledComponent,
   styles: ST
 ): React.FC<SC> {
@@ -72,4 +105,6 @@ export function createStyledComponent<CP extends {}>(
   );
 }
 
-export type { BaseComponentProps } from './typings';
+function hasKey<O>(obj: O, key: keyof any): key is keyof O {
+  return key in obj
+}
