@@ -35,6 +35,6 @@ module.exports = {
     '<rootDir>/packages/grid/dist',
     '<rootDir>/packages/typography/dist'
   ],
-  setupFilesAfterEnv: ['<rootDir>/config/setupTests.ts'],
+  setupFilesAfterEnv: ['<rootDir>/config/jest.setup.js'],
   prettierPath: '<rootDir>/config/prettier.config.js'
 };
