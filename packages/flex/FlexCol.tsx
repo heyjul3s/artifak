@@ -1,7 +1,7 @@
-import React, { forwardRef } from 'react';
+import React from 'react';
 import { FlexColBase } from './FlexColBase';
 
-export const FlexCol = forwardRef((props: any, ref) => {
+export const FlexCol = React.forwardRef((props: any, ref) => {
   const baseColumnWidth = getColumnWidth(props.totalColumns);
   const columnOffset = setColumnOffset(baseColumnWidth, props.offset);
   const columnSizing = setColumnSizing(baseColumnWidth, props.columnSize);

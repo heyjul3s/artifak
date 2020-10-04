@@ -1,7 +1,7 @@
-import React, { forwardRef } from 'react';
+import React from 'react';
 import { FlexRowBase } from './FlexRowBase';
 
-export const FlexRow = forwardRef((props: any, ref) => {
+export const FlexRow = React.forwardRef((props: any, ref) => {
   return (
     <FlexRowBase
       flexDirection={setFlexDirection(props.reverse)}

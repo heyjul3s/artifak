@@ -1,5 +1,24 @@
-import React, { forwardRef } from 'react';
+import React from 'react';
 import { GridBase } from './GridBase';
+
+export const Grid = React.forwardRef((props: any, ref) => (
+  <GridBase
+    display="grid"
+    gridGap={addGridGap(props.gridGap)}
+    gridTemplateColumns={setGridTemplateColumns(
+      props.columnWidth,
+      props.columnLength
+    )}
+    ref={ref}
+    {...props}
+  >
+    {props.children}
+  </GridBase>
+));
+
+export function addGridGap(gridGap: string | undefined) {
+  return !!gridGap ? gridGap : '1.5rem';
+}
 
 export const setGridTemplateColumns = (
   columnWidth?: string | string[],
@@ -47,22 +66,3 @@ export function setRepeatableColumnLengths(
 export function repeatableColumnLength(columnLength: number): string {
   return `repeat(${columnLength}, 1fr)`;
 }
-
-export function addGridGap(gridGap: string | undefined) {
-  return !!gridGap ? gridGap : '1.5rem';
-}
-
-export const Grid = forwardRef((props: any, ref) => (
-  <GridBase
-    display="grid"
-    gridGap={addGridGap(props.gridGap)}
-    gridTemplateColumns={setGridTemplateColumns(
-      props.columnWidth,
-      props.columnLength
-    )}
-    ref={ref}
-    {...props}
-  >
-    {props.children}
-  </GridBase>
-));
