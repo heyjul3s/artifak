@@ -1,20 +1,25 @@
 import React from 'react';
 import { GridBase } from './GridBase';
 
-export const Grid = React.forwardRef((props: any, ref) => (
-  <GridBase
-    display="grid"
-    gridGap={addGridGap(props.gridGap)}
-    gridTemplateColumns={setGridTemplateColumns(
-      props.columnWidth,
-      props.columnLength
-    )}
-    ref={ref}
-    {...props}
-  >
-    {props.children}
-  </GridBase>
-));
+export const Grid = React.forwardRef((props: any, ref) => {
+  const gridGap = addGridGap(props.gridGap);
+  const gridTemplateColumns = setGridTemplateColumns(
+    props.columnWidth,
+    props.columnLength
+  );
+
+  return (
+    <GridBase
+      display="grid"
+      gridGap={gridGap}
+      gridTemplateColumns={gridTemplateColumns}
+      ref={ref}
+      {...props}
+    >
+      {props.children}
+    </GridBase>
+  );
+});
 
 export function addGridGap(gridGap: string | undefined) {
   return !!gridGap ? gridGap : '1.5rem';
