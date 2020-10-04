@@ -1,5 +1,18 @@
 # @artifak/grid
 
+## 1.1.0
+
+### Minor Changes
+
+- dependency fixes, pkg updates, lowered styled-components version to avoid hook error
+- import type fixes
+- update to store invocations as const to pass to component
+
+### Patch Changes
+
+- Updated dependencies [undefined]
+  - @artifak/component-generator@1.1.0
+
 ## 1.0.8
 
 ### Patch Changes

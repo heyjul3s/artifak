@@ -1,6 +1,6 @@
 {
   "name": "@artifak/image",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "An image component with object-fit support, error handling and other niceties",
   "keywords": [
     "react",
@@ -16,9 +16,7 @@
     "lib": "lib",
     "test": "__tests__"
   },
-  "files": [
-    "lib"
-  ],
+  "files": ["lib"],
   "publishConfig": {
     "access": "public"
   },

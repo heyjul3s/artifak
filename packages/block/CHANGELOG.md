@@ -1,5 +1,18 @@
 # @artifak/block
 
+## 1.1.0
+
+### Minor Changes
+
+- dependency fixes, pkg updates, lowered styled-components version to avoid hook error
+- import type fixes
+- typing fixes for createBlockComponents
+
+### Patch Changes
+
+- Updated dependencies [undefined]
+  - @artifak/component-generator@1.1.0
+
 ## 1.0.6
 
 ### Patch Changes

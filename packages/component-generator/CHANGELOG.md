@@ -1,5 +1,15 @@
 # @artifak/component-generator
 
+## 1.1.0
+
+### Minor Changes
+
+- dependency fixes, pkg updates, lowered styled-components version to avoid hook error
+- import type fixes
+- add new key checking function
+- type fix/update for component-generator functions
+- rename generator functions for better readability
+
 ## 1.0.4
 
 ### Patch Changes

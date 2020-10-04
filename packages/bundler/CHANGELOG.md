@@ -1,5 +1,11 @@
 # @artifak/bundler
 
+## 1.1.0
+
+### Minor Changes
+
+- remove bundlesize usage
+
 ## 1.0.4
 
 ### Patch Changes
