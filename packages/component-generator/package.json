@@ -42,10 +42,14 @@
   "devDependencies": {
     "@types/react": "^16.9.46",
     "@types/react-dom": "^16.9.8",
-    "react": "^16.8.6",
-    "react-dom": "^16.8.6",
-    "styled-components": "^5.2.0",
+    "react": "^16.11.0",
+    "react-dom": "^16.11.0",
+    "styled-components": "^4.4.1",
     "styled-system": "^5.1.5"
   },
-  "dependencies": {}
+  "peerDependencies": {
+    "react": ">=16.11.0",
+    "react-dom": ">=16.11.0",
+    "styled-components": ">=4.4.1"
+  }
 }

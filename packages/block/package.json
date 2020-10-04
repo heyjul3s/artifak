@@ -45,16 +45,17 @@
     "@types/react-dom": "^16.9.8",
     "@types/styled-components": "^5.1.3",
     "@types/styled-system": "^5.1.10",
-    "react": "^16.8.6",
-    "react-dom": "^16.8.6"
+    "react": "^16.11.0",
+    "react-dom": "^16.11.0",
+    "styled-components": "^4.4.1",
+    "styled-system": "^5.1.5"
   },
   "peerDependencies": {
-    "react": ">=16.8.6",
-    "react-dom": ">=16.8.6"
+    "react": ">=16.11.0",
+    "react-dom": ">=16.11.0",
+    "styled-components": ">=4.4.1"
   },
   "dependencies": {
-    "@artifak/component-generator": "^1.0.4",
-    "styled-components": "^5.2.0",
-    "styled-system": "^5.1.5"
+    "@artifak/component-generator": "^1.0.4"
   }
 }
