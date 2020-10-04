@@ -17,7 +17,7 @@ export function HeaderInfo() {
 export function ReleaseTag() {
   return (
     <LargeLead fontWeight={700} fontSize={[24, 26]} marginBottom="0.15em">
-      R 1.0.7
+      R 1.0.9
     </LargeLead>
   );
 }

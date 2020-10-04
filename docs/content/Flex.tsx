@@ -184,7 +184,7 @@ export function Flex() {
       <H3>Alignment, Distribution, Ordering, etc.</H3>
       <Paragraph>
         As this is based off of styled-system, you can basically assign CSS flex
-        alignment or justify properties directly onto FlexCol.
+        alignment or justify properties directly onto FlexRow or FlexCol.
       </Paragraph>
 
       <Syntax>{flexAlignmentUsage}</Syntax>
