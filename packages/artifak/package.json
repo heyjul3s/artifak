@@ -22,7 +22,9 @@
     "lib": "lib",
     "test": "__tests__"
   },
-  "files": ["lib"],
+  "files": [
+    "lib"
+  ],
   "publishConfig": {
     "access": "public"
   },
@@ -42,6 +44,7 @@
     "@artifak/component-generator": "^1.0.4",
     "@artifak/flex": "^1.0.4",
     "@artifak/grid": "^1.0.8",
+    "@artifak/imagery": "^1.0.1",
     "@artifak/typography": "^1.0.8"
   },
   "devDependencies": {
