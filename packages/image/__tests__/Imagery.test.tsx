@@ -13,25 +13,4 @@ describe('Img', () => {
 
     expect(asFragment()).toMatchSnapshot();
   });
-
-  it('should render an img element with fallbackSrc value as src', () => {
-    const { asFragment } = render(
-      <Imagery
-        src="./noImage.png"
-        fallbackSrc="./__mocks__/test-image.svg"
-        alt="test"
-      />
-    );
-
-    expect(asFragment()).toMatchSnapshot();
-  });
-
-  it('should render an img element with fallbackSrc value as src', () => {
-    const { asFragment } = render(
-      <Imagery src="" alt="test" fallbackSrc="./__mocks__/test-image.svg" />,
-      {}
-    );
-
-    expect(asFragment()).toMatchSnapshot();
-  });
 });

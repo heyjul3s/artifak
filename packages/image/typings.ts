@@ -1,58 +1,27 @@
 import type { BaseComponentProps } from '@artifak/component-generator';
 
 export namespace ImgComponent {
-  export type Props = {
-    onload?: () => void;
-    onerror?: () => void;
-  } & BaseComponentProps &
-    Base.CommonProps &
-    Base.Imagery;
-
-  export type State = {
-    imageSource: string | undefined;
-    isImageLoaded: boolean;
-    error?: string;
-  };
+  export type Props = BaseComponentProps & Imagery.Props;
 }
 
-export namespace Base {
-  export type CommonProps = {
+export namespace Imagery {
+  export type Props = Attributes & Accessibility;
+
+  export type Accessibility = {
     ariaLabel?: string;
     ariaLabelledBy?: string;
     ariaDescribedBy?: string;
-    fit?: string;
-    position?: string;
-    style?: React.CSSProperties;
   };
 
-  export type Imagery = ImageryProps & CommonProps;
-
-  export type ImageryProps = {
+  export type Attributes = {
     alt?: string;
-    crossOrigin?: ImgAttributes.CrossOriginType;
-    decoding?: ImgAttributes.DecodingType;
-    fallbackSrc?: string;
-    onload?: (imageState: ImgEvents.OnLoad) => void;
-    onerror?: (imageState: ImgEvents.OnError) => void;
+    crossOrigin?: 'anonymous' | 'use-credentials';
+    decoding?: 'async' | 'sync' | 'auto';
+    onLoad?: () => void;
+    onError?: () => void;
     sizes?: string;
     src: string;
     srcset?: string;
+    style?: React.CSSProperties;
   };
-}
-
-export namespace ImgEvents {
-  export type OnLoad = {
-    imageWidth: number;
-    imageHeight: number;
-  } & ImgComponent.State;
-
-  export type OnError = {
-    imageWidth: number;
-    imageHeight: number;
-  } & ImgComponent.State;
-}
-
-export namespace ImgAttributes {
-  export type CrossOriginType = 'anonymous' | 'use-credentials';
-  export type DecodingType = 'async' | 'sync' | 'auto';
 }
