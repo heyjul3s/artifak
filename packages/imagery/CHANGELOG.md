@@ -1,5 +1,13 @@
 # @artifak/image
 
+## 1.0.2
+
+### Patch Changes
+
+- Update typings
+- Update props usage
+- Remove unused exports
+
 ## 1.0.1
 
 ### Patch Changes

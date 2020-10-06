@@ -1,5 +1,18 @@
 # artifak
 
+## 1.1.0
+
+### Minor Changes
+
+- Add Imagery component
+- Update Readme
+- Storybook update
+
+### Patch Changes
+
+- Updated dependencies [undefined]
+  - @artifak/imagery@1.0.2
+
 ## 1.0.8
 
 ### Patch Changes
