@@ -4,6 +4,7 @@ import { Grid } from './Grid';
 import { Typography } from './Typography';
 import { Flex } from './Flex';
 import { Generator } from './Generator';
+import { Imagery } from './Imagery';
 
 export const content = {
   Introduction,
@@ -11,5 +12,6 @@ export const content = {
   Grid,
   Typography,
   Flex,
-  Generator
+  Generator,
+  Imagery
 };
