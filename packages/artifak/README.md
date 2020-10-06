@@ -25,3 +25,4 @@ Packages can also be installed independently. Simply do `yarn add <package name>
 - @artifak/**typography**
 - @artifak/**flex**
 - @artifak/**component-generator**
+- @artifak/**imagery**
