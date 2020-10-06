@@ -53,6 +53,39 @@
   dependencies:
     cross-fetch "3.0.5"
 
+"@artifak/block@^1.0.6":
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/@artifak/block/-/block-1.1.0.tgz#d86e577b98dc61d5b195592b0213e6029e0e4e45"
+  integrity sha512-XkpxiUCjtFwZsLlql2PRL8/RoPcPorvUleGv1Oel04bOJ71GXxKgY9iTlatHVyiOk71DiRt2hhSLMYu2fK4+oQ==
+  dependencies:
+    "@artifak/component-generator" "^1.1.0"
+
+"@artifak/component-generator@^1.0.4", "@artifak/component-generator@^1.1.0":
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/@artifak/component-generator/-/component-generator-1.1.0.tgz#1c24d219ad66bf0bdb9b91b1c52a89e87a806b9a"
+  integrity sha512-uWmGQyPhwvGbJ12P2mftXKH0mF9Hj3o7sJUng5CJJAzqZkfmBhuZ7R6lobGc0wWtAv+eFduxxytYgM/EfA+MBg==
+
+"@artifak/flex@^1.0.4":
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/@artifak/flex/-/flex-1.1.0.tgz#55bed05b3bb1e31d2d542411fc06df54f25ba310"
+  integrity sha512-m8J8spPdkGkv1IZ0+Yhag0qZVY8bYtVuhIY5hJpn2EfRk4ybOme6Aad7P9UpWezHcbZ/pWVP0ZSCdnExFqpzCw==
+  dependencies:
+    "@artifak/component-generator" "^1.1.0"
+
+"@artifak/grid@^1.0.8":
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/@artifak/grid/-/grid-1.1.0.tgz#caaedfe3e35bc19e8bfdeab88f1dfc534a173d08"
+  integrity sha512-jDezrwbLwXu0FnC9ihRfal/+XiQ+nY00jZrK38JsjqJSASapS1msAeQFP9r80Oro2/V8FKvka2GmFGKnzUIhiA==
+  dependencies:
+    "@artifak/component-generator" "^1.1.0"
+
+"@artifak/typography@^1.0.8":
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/@artifak/typography/-/typography-1.1.0.tgz#af546022ee36451bcd4dc19e35a7cd868a19222c"
+  integrity sha512-AUXSYCNlbbPL9osloxufYvOpmfC2Mc23T0NPDI2lGPrdyv20qGAfH95b1LuT6E5a4wPYsiLhevSyyri1l4zWVg==
+  dependencies:
+    "@artifak/component-generator" "^1.1.0"
+
 "@babel/code-frame@7.8.3":
   version "7.8.3"
   resolved "https://registry.yarnpkg.com/@babel/code-frame/-/code-frame-7.8.3.tgz#33e25903d7481181534e12ec0a25f16b6fcf419e"
@@ -1510,6 +1543,17 @@ array-unique@^0.3.2:
   version "0.3.2"
   resolved "https://registry.yarnpkg.com/array-unique/-/array-unique-0.3.2.tgz#a894b75d4bc4f6cd679ef3244a9fd8f46ae2d428"
   integrity sha1-qJS3XUvE9s1nnvMkSp/Y9Gri1Cg=
+
+artifak@^1.0.8:
+  version "1.0.8"
+  resolved "https://registry.yarnpkg.com/artifak/-/artifak-1.0.8.tgz#534414621336a07c90b752dc52468f291c048ca1"
+  integrity sha512-zmm066IynJeuT6mR80JZK3w/FTvueWMafrIW6FygaQSbIRc59paj/+AnQJmiyhibXLujsK2LuzQ005NHjUn6BQ==
+  dependencies:
+    "@artifak/block" "^1.0.6"
+    "@artifak/component-generator" "^1.0.4"
+    "@artifak/flex" "^1.0.4"
+    "@artifak/grid" "^1.0.8"
+    "@artifak/typography" "^1.0.8"
 
 asn1.js@^5.2.0:
   version "5.4.1"
