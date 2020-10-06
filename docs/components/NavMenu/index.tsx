@@ -9,8 +9,10 @@ const navMap = {
   Grid: 'Grid',
   Typography: 'Typography',
   Flex: 'Flex',
-  Generator: 'Generator'
-  // Image: 'Image'
+  Generator: 'Generator',
+  Imagery: 'Imagery'
+  // Forms: 'Forms',
+  // Media: 'Media'
 };
 
 export function NavMenu() {
@@ -40,7 +42,7 @@ export function NavMenu() {
 const NavMenuGrid = styled(Grid)`
   ${({ theme }) => css`
     @media (min-width: ${theme.breakpoints[2]}) {
-      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(33%, 1fr));
     }
   `}
 `;

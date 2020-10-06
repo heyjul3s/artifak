@@ -1,7 +1,7 @@
 import styled from 'styled-components';
-import { Paragraph } from '../../Typography';
+import { SmallParagraph } from '../../Typography';
 
-export const GithubLinkContainer = styled(Paragraph)`
+export const GithubLinkContainer = styled(SmallParagraph)`
   margin-bottom: 0;
 
   > a {

@@ -6,11 +6,9 @@ export const FlexContainer = styled.div`
 
   @media (min-width: 1025px) {
     flex-direction: row;
-    padding-top: 0.5em;
 
     > div {
       flex: 1 1 50%;
-      padding-left: 1em;
     }
   }
 `;

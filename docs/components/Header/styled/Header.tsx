@@ -37,34 +37,14 @@ export const HeaderGrid = styled(Grid)`
 
   ${({ theme }) => css`
     @media (min-width: ${theme.breakpoints[2]}) {
-      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-
-      > div:nth-child(1) {
-        grid-column: span 1;
-      }
-
-      > div:nth-child(2) {
-        grid-column: span 2;
-      }
+      grid-template-columns: 25% 20% auto;
     }
   `}
 `;
 
 export const HeaderContent = styled(Grid)`
   ${({ theme }) => css`
-    padding: 1.5em 0 0.5em;
-
-    @media (min-width: ${theme.breakpoints[2]}) {
-      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-
-      > div:nth-child(1) {
-        grid-column: span 1;
-      }
-
-      > div:nth-child(2) {
-        grid-column: span 2;
-      }
-    }
+    padding: 0 0 0.5em;
   `}
 `;
 
@@ -74,6 +54,7 @@ export const HeaderInfoContainer = styled.div`
   ${({ theme }) => css`
     @media (min-width: ${theme.breakpoints[2]}) {
       display: inline-block;
+      padding-left: 1em;
     }
   `}
 `;

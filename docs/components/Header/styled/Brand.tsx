@@ -5,12 +5,7 @@ import { Tagline } from '../styled';
 export const BrandLink = styled(AnchorLink)`
   > svg {
     width: 80px;
-    padding-bottom: 0.5em;
-  }
-
-  > p {
-    position: relative;
-    top: 8px;
+    padding-bottom: 0.25em;
   }
 
   @media (min-width: 1025px) {

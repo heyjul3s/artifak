@@ -8,22 +8,20 @@ import { Brand, HeaderInfo } from './components';
 export function Header() {
   return (
     <HeaderContainer>
-      <Container p={30} bg={'rgba(241, 94, 34, 1)'}>
+      <Container p={`40px 40px 30px`} bg={'rgba(241, 94, 34, 1)'}>
         <HeaderGrid>
           <GridItem>
             <Brand />
           </GridItem>
 
-          <GridItem
-            style={{
-              borderTop: '1px solid #D0D0D9',
-              borderBottom: '1px solid #D0D0D9'
-            }}
-          >
-            <HeaderContent>
+          <GridItem>
+            <HeaderContent gridGap={0}>
               <HeaderInfo />
-              <NavMenu />
             </HeaderContent>
+          </GridItem>
+
+          <GridItem>
+            <NavMenu />
           </GridItem>
         </HeaderGrid>
       </Container>
