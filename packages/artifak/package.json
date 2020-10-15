@@ -15,14 +15,16 @@
     "block",
     "layout"
   ],
+  "sideEffects": false,
   "main": "dist/artifak.cjs.js",
   "module": "dist/artifak.esm.js",
   "src": "index.tsx",
+  "types": "dist/index.d.ts",
   "directories": {
     "lib": "lib",
     "test": "__tests__"
   },
-  "files": ["lib"],
+  "files": ["dist"],
   "publishConfig": {
     "access": "public"
   },
@@ -31,7 +33,7 @@
     "url": "git+https://github.com/heyjul3s/artifak.git"
   },
   "scripts": {
-    "build": "builder",
+    "build": "rimraf dist && builder",
     "test": "echo \"Error: run tests from root\" && exit 1"
   },
   "bugs": {

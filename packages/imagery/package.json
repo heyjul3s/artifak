@@ -11,13 +11,17 @@
   ],
   "author": "Julian Low",
   "license": "MIT",
+  "sideEffects": false,
   "main": "dist/imagery.cjs.js",
   "module": "dist/imagery.esm.js",
   "src": "index.tsx",
+  "types": "dist/index.d.ts",
   "directories": {
-    "lib": "lib"
+    "test": "__tests__"
   },
-  "files": ["lib"],
+  "files": [
+    "dist"
+  ],
   "publishConfig": {
     "access": "public"
   },
@@ -26,7 +30,7 @@
     "url": "git+https://github.com/heyjul3s/artifak.git"
   },
   "scripts": {
-    "build": "builder",
+    "build": "rimraf dist && builder",
     "test": "echo \"Error: run tests from root\" && exit 1"
   },
   "bugs": {
@@ -40,11 +44,8 @@
     "@types/styled-components": "^5.1.3",
     "@types/styled-system": "^5.1.10",
     "csstype": "^3.0.3",
-    "lodash.isempty": "^4.4.0",
-    "lodash.isplainobject": "^4.0.6",
     "react": "^16.11.0",
     "react-dom": "^16.11.0",
-    "react-testing-library": "^8.0.1",
     "styled-components": "^4.4.1",
     "styled-system": "^5.1.5"
   },

@@ -14,15 +14,16 @@
     "block",
     "layout"
   ],
+  "sideEffects": false,
   "module": "dist/component-generator.esm.js",
   "main": "dist/component-generator.cjs.js",
   "src": "index.tsx",
+  "types": "dist/index.d.ts",
   "directories": {
-    "lib": "lib",
     "test": "__tests__"
   },
   "files": [
-    "lib"
+    "dist"
   ],
   "publishConfig": {
     "access": "public"
@@ -33,7 +34,7 @@
   },
   "scripts": {
     "test": "echo \"Error: run tests from root\" && exit 1",
-    "build": "builder"
+    "build": "rimraf dist && builder"
   },
   "bugs": {
     "url": "https://github.com/heyjul3s/artifak/issues"
