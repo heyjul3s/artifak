@@ -2,10 +2,8 @@ module.exports = {
   rootDir: '../',
   collectCoverageFrom: [
     'packages/**/*.{js,jsx,ts,tsx}',
-    '!packages/**/dist/**/*.{js,jsx,ts,tsx}',
-    '!packages/artifak/**/*.{js,jsx,ts,tsx}',
-    '!packages/bundler/**/*.{js,jsx,ts,tsx}',
     '!packages/**/typings.{ts,tsx}',
+    '!packages/**/*.d.{ts,tsx}',
     '!packages/**/*.stories.{js,jsx,ts,tsx}'
   ],
   collectCoverage: true,
@@ -22,19 +20,11 @@ module.exports = {
       '<rootDir>/__mocks__/fileMock.js',
     '\\.(css|scss)$': 'identity-obj-proxy'
   },
-  testPathIgnorePatterns: ['/node_modules/'],
+  testPathIgnorePatterns: ['/node_modules/', '/dist/'],
   transform: {
     '^.+\\.[jt]sx?$': 'babel-jest',
     '^.+\\.(tsx|ts)?$': 'ts-jest'
   },
-  modulePathIgnorePatterns: [
-    '<rootDir>/packages/block/dist',
-    '<rootDir>/packages/artifak/dist',
-    '<rootDir>/packages/bundler/dist',
-    '<rootDir>/packages/component-generator/dist',
-    '<rootDir>/packages/grid/dist',
-    '<rootDir>/packages/typography/dist'
-  ],
   setupFilesAfterEnv: ['<rootDir>/config/jest.setup.js'],
   prettierPath: '<rootDir>/config/prettier.config.js'
 };
