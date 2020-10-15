@@ -1,4 +1,4 @@
-import * as generator from '../';
+import { createBaseComponents, createStyledFunctionComponent } from '../';
 import {
   mockComponentStyles,
   MockComponent,
@@ -8,7 +8,7 @@ describe('@artifak/component-generator', () => {
   describe('createComponentsDictionary', () => {
     it('should return undefined when provided invalid arguments', () => {
       const expected = {};
-      const SystemComponent = generator.createComponentsDictionary(
+      const SystemComponent = createBaseComponents(
         void 0 as any,
         void 0
       );
@@ -17,7 +17,7 @@ describe('@artifak/component-generator', () => {
     });
 
     it('should create React components', () => {
-      const SystemComponent = generator.createComponentsDictionary(
+      const SystemComponent = createBaseComponents(
         MockComponent,
         mockComponentStyles
       );
@@ -28,7 +28,7 @@ describe('@artifak/component-generator', () => {
   describe('createStyledFunctionComponent', () => {
     it('should return a component', () => {
       expect(
-        generator.createStyledFunctionComponent(
+        createStyledFunctionComponent(
           MockComponent,
           mockComponentStyles
         )

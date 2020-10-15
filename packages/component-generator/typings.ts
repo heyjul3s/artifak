@@ -1,5 +1,6 @@
-import { StyledComponent } from 'styled-components';
-import {
+import type { StyledComponent } from 'styled-components';
+
+import type {
   BackgroundProps,
   BorderProps,
   ColorProps,
