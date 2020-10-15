@@ -3,18 +3,9 @@ const rollup = require('rollup');
 const path = require('path');
 const resolve = require('@rollup/plugin-node-resolve').default;
 const babel = require('@rollup/plugin-babel').default;
-const typescript = require('rollup-plugin-typescript2');
+const typescript = require('@rollup/plugin-typescript');
 const commonjs = require('@rollup/plugin-commonjs');
-const createStyledComponentsTransformer = require('typescript-plugin-styled-components')
-  .default;
-
 const currentWorkingPath = process.cwd();
-
-const styledComponentsTransformer = createStyledComponentsTransformer({
-  getDisplayName(filename, bindingName) {
-    return path.relative(__dirname, filename);
-  },
-});
 
 const {
   src,
@@ -30,7 +21,10 @@ const extensions = ['.js', '.jsx', '.ts', '.tsx'];
 
 const inputOptions = {
   input: inputPath,
-  external: ['react'],
+  output: {
+    dir: "dist",
+  },
+  external: ['react', 'react-dom', 'styled-components', 'styled-system' ],
   plugins: [
     resolve({
       extensions,
@@ -56,24 +50,22 @@ const inputOptions = {
     }),
     typescript({
       tsconfig: tsConfigPath,
-      transformers: [
-        () => ({
-          before: [styledComponentsTransformer],
-        }),
-      ],
     }),
   ],
 };
 
 const outputOptions = [
   {
-    file: `dist/${fileName}.cjs.js`,
+    dir: 'dist',
     format: 'cjs',
+    sourcemap: true
   },
   {
-    file: `dist/${fileName}.esm.js`,
+    dir: 'dist',
     format: 'esm',
+    sourcemap: true
   },
+
 ];
 
 async function build() {
