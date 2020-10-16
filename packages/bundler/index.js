@@ -58,14 +58,15 @@ const outputOptions = [
   {
     dir: 'dist',
     format: 'cjs',
-    sourcemap: true
+    sourcemap: true,
+    exports: "named",
   },
   {
     dir: 'dist',
     format: 'esm',
-    sourcemap: true
+    sourcemap: true,
+    exports: "named",
   },
-
 ];
 
 async function build() {
