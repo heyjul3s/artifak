@@ -3,7 +3,7 @@ const rollup = require('rollup');
 const path = require('path');
 const resolve = require('@rollup/plugin-node-resolve').default;
 const babel = require('@rollup/plugin-babel').default;
-const typescript = require('@rollup/plugin-typescript');
+const typescript = require('rollup-plugin-typescript2');
 const commonjs = require('@rollup/plugin-commonjs');
 const currentWorkingPath = process.cwd();
 
@@ -21,9 +21,6 @@ const extensions = ['.js', '.jsx', '.ts', '.tsx'];
 
 const inputOptions = {
   input: inputPath,
-  output: {
-    dir: "dist",
-  },
   external: ['react', 'react-dom', 'styled-components', 'styled-system' ],
   plugins: [
     resolve({
@@ -56,17 +53,43 @@ const inputOptions = {
 
 const outputOptions = [
   {
-    dir: 'dist',
+    file: `dist/${fileName}.cjs.js`,
     format: 'cjs',
+    globals: {
+      react: 'React',
+      'react-dom': 'ReactDOM',
+      'styled-components': 'StyledComponents',
+      'styled-system': 'StyledSystem'
+    },
     sourcemap: true,
     exports: "named",
   },
   {
-    dir: 'dist',
+    file: `dist/${fileName}.esm.js`,
     format: 'esm',
+    globals: {
+      react: 'React',
+      'react-dom': 'ReactDOM',
+      'styled-components': 'StyledComponents',
+      'styled-system': 'StyledSystem'
+    },
     sourcemap: true,
     exports: "named",
   },
+  {
+    file: `dist/${fileName}.min.js`,
+    format: "umd",
+    name: `${fileName}`,
+    globals: {
+      react: 'React',
+      'react-dom': 'ReactDOM',
+      'styled-components': 'StyledComponents',
+      'styled-system': 'StyledSystem'
+    },
+    esModule: false,
+    exports: "named",
+    sourcemap: true,
+  }
 ];
 
 async function build() {
