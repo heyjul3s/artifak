@@ -1,5 +1,12 @@
 # @artifak/bundler
 
+## 1.1.2
+
+### Patch Changes
+
+- Output configuration fix
+- Bamboozled by @rollup/plugin-typescript. Revert back to rollup-plugin-typescript2.
+
 ## 1.1.1
 
 ### Patch Changes
