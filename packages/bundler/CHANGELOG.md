@@ -1,5 +1,13 @@
 # @artifak/bundler
 
+## 1.1.1
+
+### Patch Changes
+
+- replaced rollup-plugin-typescript2 to fix typescript build error
+- update build configuration to exclude styled-components and styled system
+- update build output configuration to use dir to work with @rollup/plugin-typescript
+
 ## 1.1.0
 
 ### Minor Changes

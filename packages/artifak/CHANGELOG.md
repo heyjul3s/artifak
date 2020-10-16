@@ -1,5 +1,23 @@
 # artifak
 
+## 1.1.1
+
+### Patch Changes
+
+- replaced rollup-plugin-typescript2 to fix typescript build error
+- update build configuration to exclude styled-components and styled system
+- update build output configuration to use dir to work with @rollup/plugin-typescript
+- update jest config to exclude \*.d.ts files
+- fix types property in package.json
+
+- Updated dependencies
+  - @artifak/block@1.1.1
+  - @artifak/component-generator@1.1.1
+  - @artifak/flex@1.1.1
+  - @artifak/grid@1.1.1
+  - @artifak/imagery@1.0.3
+  - @artifak/typography@1.1.1
+
 ## 1.1.0
 
 ### Minor Changes
@@ -10,7 +28,7 @@
 
 ### Patch Changes
 
-- Updated dependencies [undefined]
+- Updated dependencies
   - @artifak/imagery@1.0.2
 
 ## 1.0.8
@@ -20,7 +38,7 @@
 - generator bundle fix
 - vulnerability patches
 - reduced bundle size
-- Updated dependencies [undefined]
+- Updated dependencies
   - @artifak/block@1.0.6
   - @artifak/component-generator@1.0.4
   - @artifak/flex@1.0.4
@@ -47,7 +65,7 @@
 ### Patch Changes
 
 - Minor Patch - Cleanup style props to generator, flex, grid, typography
-- Updated dependencies [undefined]
+- Updated dependencies
   - @artifak/block@1.0.5
   - @artifak/component-generator@1.0.2
   - @artifak/flex@1.0.2
@@ -61,7 +79,7 @@
 - Added component generator
 - New flex component
 - Additional types
-- Updated dependencies [undefined]
+- Updated dependencies
   - @artifak/block@1.0.4
   - @artifak/component-generator@1.0.1
   - @artifak/flex@1.0.1
@@ -73,7 +91,7 @@
 ### Patch Changes
 
 - fix type exports
-- Updated dependencies [undefined]
+- Updated dependencies
   - @artifak/block@1.0.3
   - @artifak/grid@1.0.4
   - @artifak/typography@1.0.4
@@ -85,7 +103,7 @@
 - Bug fix for fontWeight
 - Update Grid to accept media query values
 - Refactor bundler
-- Updated dependencies [undefined]
+- Updated dependencies
   - @artifak/grid@1.0.3
   - @artifak/typography@1.0.3
 
@@ -105,7 +123,7 @@
 
 ### Patch Changes
 
-- Updated dependencies [undefined]
+- Updated dependencies
   - @artifak/block@1.0.1
   - @artifak/grid@1.0.1
   - @artifak/typography@1.0.1

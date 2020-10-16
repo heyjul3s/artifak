@@ -1,5 +1,13 @@
 # @artifak/grid
 
+## 1.1.1
+
+### Patch Changes
+
+- fix types property in package.json
+- Updated dependencies
+  - @artifak/component-generator@1.1.1
+
 ## 1.1.0
 
 ### Minor Changes
@@ -10,7 +18,7 @@
 
 ### Patch Changes
 
-- Updated dependencies [undefined]
+- Updated dependencies
   - @artifak/component-generator@1.1.0
 
 ## 1.0.8
@@ -18,7 +26,7 @@
 ### Patch Changes
 
 - vulnerability patches
-- Updated dependencies [undefined]
+- Updated dependencies
   - @artifak/component-generator@1.0.4
 
 ## 1.0.7
@@ -26,7 +34,7 @@
 ### Patch Changes
 
 - fix type exports
-- Updated dependencies [undefined]
+- Updated dependencies
   - @artifak/component-generator@1.0.3
 
 ## 1.0.6
@@ -34,7 +42,7 @@
 ### Patch Changes
 
 - Clean up style props and type updates
-- Updated dependencies [undefined]
+- Updated dependencies
   - @artifak/component-generator@1.0.2
 
 ## 1.0.5
@@ -42,7 +50,7 @@
 ### Patch Changes
 
 - Refactored to use component-generator
-- Updated dependencies [undefined]
+- Updated dependencies
   - @artifak/component-generator@1.0.1
 
 ## 1.0.4

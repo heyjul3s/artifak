@@ -1,5 +1,11 @@
 # @artifak/component-generator
 
+## 1.1.1
+
+### Patch Changes
+
+- fix types property in package.json
+
 ## 1.1.0
 
 ### Minor Changes

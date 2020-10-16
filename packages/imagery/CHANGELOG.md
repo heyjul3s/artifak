@@ -1,5 +1,11 @@
 # @artifak/image
 
+## 1.0.3
+
+### Patch Changes
+
+- fix types property in package.json
+
 ## 1.0.2
 
 ### Patch Changes

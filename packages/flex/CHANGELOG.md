@@ -1,5 +1,13 @@
 # @artifak/flex
 
+## 1.1.1
+
+### Patch Changes
+
+- fix types property in package.json
+- Updated dependencies
+  - @artifak/component-generator@1.1.1
+
 ## 1.1.0
 
 ### Minor Changes
@@ -9,7 +17,7 @@
 
 ### Patch Changes
 
-- Updated dependencies [undefined]
+- Updated dependencies
   - @artifak/component-generator@1.1.0
 
 ## 1.0.4
@@ -18,7 +26,7 @@
 
 - vulnerability patches
 - reduced bundle size
-- Updated dependencies [undefined]
+- Updated dependencies
   - @artifak/bundler@1.0.4
   - @artifak/component-generator@1.0.4
 
@@ -28,7 +36,7 @@
 
 - fix type exports
 
-- Updated dependencies [undefined]
+- Updated dependencies
   - @artifak/bundler@1.0.3
   - @artifak/component-generator@1.0.3
 
@@ -37,7 +45,7 @@
 ### Patch Changes
 
 - Clean up style props and type updates
-- Updated dependencies [undefined]
+- Updated dependencies
   - @artifak/bundler@1.0.2
   - @artifak/component-generator@1.0.2
 
@@ -46,5 +54,5 @@
 ### Patch Changes
 
 - New flex component
-- Updated dependencies [undefined]
+- Updated dependencies
   - @artifak/component-generator@1.0.1

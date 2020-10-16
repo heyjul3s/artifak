@@ -1,5 +1,13 @@
 # @artifak/block
 
+## 1.1.1
+
+### Patch Changes
+
+- fix types property in package.json
+- Updated dependencies
+  - @artifak/component-generator@1.1.1
+
 ## 1.1.0
 
 ### Minor Changes
@@ -10,7 +18,7 @@
 
 ### Patch Changes
 
-- Updated dependencies [undefined]
+- Updated dependencies
   - @artifak/component-generator@1.1.0
 
 ## 1.0.6
@@ -19,7 +27,7 @@
 
 - vulnerability patches
 - reduced bundle size
-- Updated dependencies [undefined]
+- Updated dependencies
   - @artifak/component-generator@1.0.4
 
 ## 1.0.5
@@ -27,7 +35,7 @@
 ### Patch Changes
 
 - Typings update
-- Updated dependencies [undefined]
+- Updated dependencies
   - @artifak/component-generator@1.0.2
 
 ## 1.0.4
@@ -35,7 +43,7 @@
 ### Patch Changes
 
 - Refactor to use component-generator library
-- Updated dependencies [undefined]
+- Updated dependencies
   - @artifak/component-generator@1.0.1
 
 ## 1.0.3
