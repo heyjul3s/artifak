@@ -1,6 +1,6 @@
 {
   "name": "@artifak/imagery",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "A basic primitive, styled image component ",
   "keywords": [
     "react",

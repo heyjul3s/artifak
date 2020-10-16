@@ -1,5 +1,18 @@
 # artifak
 
+## 1.1.2
+
+### Patch Changes
+
+- Build fix
+- Updated dependencies [undefined]
+  - @artifak/block@1.1.2
+  - @artifak/component-generator@1.1.2
+  - @artifak/flex@1.1.2
+  - @artifak/grid@1.1.2
+  - @artifak/imagery@1.0.4
+  - @artifak/typography@1.1.2
+
 ## 1.1.1
 
 ### Patch Changes

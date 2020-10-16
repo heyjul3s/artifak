@@ -1,6 +1,6 @@
 {
   "name": "@artifak/typography",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "description": "Typography utilities to assist in scaffolding your React project's Typography components",
   "keywords": [
     "react",
@@ -51,7 +51,7 @@
     "styled-system": "^5.1.5"
   },
   "dependencies": {
-    "@artifak/component-generator": "^1.1.1"
+    "@artifak/component-generator": "^1.1.2"
   },
   "peerDependencies": {
     "react": ">=16.11.0",

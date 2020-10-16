@@ -1,5 +1,11 @@
 # @artifak/component-generator
 
+## 1.1.2
+
+### Patch Changes
+
+- Build fix
+
 ## 1.1.1
 
 ### Patch Changes
