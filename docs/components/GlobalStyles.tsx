@@ -1,5 +1,6 @@
 import { createGlobalStyle } from 'styled-components';
 import styledNormalize from 'styled-normalize';
+import { theme } from '../theme';
 
 export const GlobalStyles = createGlobalStyle`
   ${styledNormalize}
@@ -16,8 +17,9 @@ export const GlobalStyles = createGlobalStyle`
     padding: 0;
     overflow-x: hidden;
     min-height: 100%;
-    background-color: #fdfdfd;
+    background-color: ${theme.colors.fadedWhite};
     font-family: 'Biryani', sans-serif;
     font-size: 16px;
+    color: ${theme.colors.grey}
   }
 `;

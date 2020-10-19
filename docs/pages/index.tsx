@@ -1,7 +1,7 @@
 import React from 'react';
 import { Layout } from '../components/Layout';
 import { useRouter } from 'next/router';
-import { content } from '../content';
+import { content } from '../containers';
 
 export default function Home() {
   const router = useRouter();

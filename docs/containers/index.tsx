@@ -1,4 +1,4 @@
-import { Introduction } from './Introduction';
+import { Introduction } from './Introduction/Introduction';
 import { Block } from './Block';
 import { Grid } from './Grid';
 import { Typography } from './Typography';

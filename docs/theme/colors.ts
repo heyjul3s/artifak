@@ -3,6 +3,7 @@ import { Property } from 'csstype';
 export enum NeutralColorKeys {
   BLACK = 'black',
   WHITE = 'white',
+  FADED_WHITE = 'fadedWhite',
   DEEP_GREY = 'deepGrey',
   GREY = 'grey',
   LIGHT_GREY = 'lightGrey',
@@ -19,7 +20,8 @@ const neutralColors = {
   [NeutralColorKeys.DEEP_GREY]: '#4A4A4D',
   [NeutralColorKeys.GREY]: '#565659',
   [NeutralColorKeys.LIGHT_GREY]: '#939399',
-  [NeutralColorKeys.EXTRA_LIGHT_GREY]: '#D0D0D9'
+  [NeutralColorKeys.EXTRA_LIGHT_GREY]: '#D0D0D9',
+  [NeutralColorKeys.FADED_WHITE]: '#FDFDFD'
 };
 
 export enum ThemeColorKeys {
