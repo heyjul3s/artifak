@@ -1,8 +1,10 @@
+import React from 'react';
 import styled from 'styled-components';
 import { Container } from './Container';
 import { HTMLhead, HTMLheadProps } from './HTMLhead';
 import { Header } from './Header';
 import { Footer } from './Footer';
+import { NavTop } from './NavTop/NavTop';
 
 type LayoutProps = {
   children: React.ReactChildren | React.ReactElement;
@@ -23,6 +25,8 @@ export function Layout({
         canonical={canonical}
         additionalMetaTags={additionalMetaTags}
       />
+
+      <NavTop />
 
       <Header />
 
