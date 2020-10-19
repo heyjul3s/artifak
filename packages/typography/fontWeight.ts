@@ -17,7 +17,7 @@ type FontWeight = {
 export const fontWeight = Object.keys(FontWeightKeys).reduce(
   (acc: FontWeight, key, i) => {
     const index = (i += 1);
-    acc[key as Partial<FontWeightKeys>] = index * 100;
+    acc[key as keyof FontWeight] = index * 100;
 
     return acc;
   },
