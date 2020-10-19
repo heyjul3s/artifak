@@ -48,6 +48,6 @@
     "@artifak/typography": "^1.1.2"
   },
   "devDependencies": {
-    "@artifak/bundler": "^1.1.1"
+    "@artifak/bundler": "^1.1.2"
   }
 }
