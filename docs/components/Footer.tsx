@@ -9,8 +9,8 @@ export function Footer() {
   return (
     <Container pr={`1em`} pl={`1em`}>
       <StyledFooter>
-        <SmallParagraph>
-          <span>julian low</span> ©️ {currentYear}
+        <SmallParagraph textAlign="center">
+          artifak created By Julian Low {currentYear}
         </SmallParagraph>
       </StyledFooter>
     </Container>
