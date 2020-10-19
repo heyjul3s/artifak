@@ -1,5 +1,11 @@
 # @artifak/image
 
+## 1.0.5
+
+### Patch Changes
+
+- @artifak/bundler dependency version bump
+
 ## 1.0.4
 
 ### Patch Changes

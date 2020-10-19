@@ -1,5 +1,13 @@
 # @artifak/grid
 
+## 1.1.3
+
+### Patch Changes
+
+- @artifak/bundler dependency version bump
+- Updated dependencies [undefined]
+  - @artifak/component-generator@1.1.3
+
 ## 1.1.2
 
 ### Patch Changes
