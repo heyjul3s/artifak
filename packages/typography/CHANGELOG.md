@@ -1,5 +1,14 @@
 # @artifak/typography
 
+## 1.1.3
+
+### Patch Changes
+
+- @artifak/bundler dependency version bump
+- Fix invalid fontWeight prop key
+- Updated dependencies [undefined]
+  - @artifak/component-generator@1.1.3
+
 ## 1.1.2
 
 ### Patch Changes
