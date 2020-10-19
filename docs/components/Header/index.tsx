@@ -1,30 +1,17 @@
 import React from 'react';
-import { GridItem } from 'artifak';
-import { Container } from '../Container';
-import { NavMenu } from '../NavMenu';
-import { HeaderContainer, HeaderContent, HeaderGrid } from './styled';
-import { Brand, HeaderInfo } from './components';
+import styled from 'styled-components';
+import { Brand } from './Brand';
+import { Tagline } from './Tagline';
 
 export function Header() {
   return (
     <HeaderContainer>
-      <Container p={`40px 40px 30px`} bg={'rgba(241, 94, 34, 1)'}>
-        <HeaderGrid>
-          <GridItem>
-            <Brand />
-          </GridItem>
-
-          <GridItem>
-            <HeaderContent gridGap={0}>
-              <HeaderInfo />
-            </HeaderContent>
-          </GridItem>
-
-          <GridItem>
-            <NavMenu />
-          </GridItem>
-        </HeaderGrid>
-      </Container>
+      <Brand />
+      <Tagline />
     </HeaderContainer>
   );
 }
+
+const HeaderContainer = styled.header`
+  padding: 3em 0 0;
+`
