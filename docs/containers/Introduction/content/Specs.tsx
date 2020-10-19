@@ -1,5 +1,5 @@
 import React from 'react';
-import { H2, Paragraph } from '../../../components/Typography';
+import { H2, H4, Paragraph } from '../../../components/Typography';
 import { Section } from '../../../components/Section';
 import { SectionTitle } from '../../../components/SectionTitle';
 
@@ -42,13 +42,7 @@ export function Specs() {
         specs.map(({ title, content }, i) => {
           return (
             <>
-              <Paragraph>{title}</Paragraph>
-
-              {content.length === 1 && <Paragraph>{content}</Paragraph>}
-
-              {content.length > 1 && (content as string[]).map((detail, i) => {
-                return <Paragraph>{detail}</Paragraph>
-              })}
+              <Spec title={title} content={content} />
             </>
           )
         })
@@ -57,3 +51,21 @@ export function Specs() {
   );
 }
 
+type SpecProps = {
+  title: string;
+  content: string | string[];
+}
+
+function Spec({ title, content }: SpecProps) {
+  return (
+    <>
+      <H4>{title}</H4>
+
+      {!Array.isArray(content) && <Paragraph>{content}</Paragraph> }
+
+      {Array.isArray(content) && content.length > 1 && (content as string[]).map((detail, i) => {
+        return <Paragraph>{detail}</Paragraph>
+      })}
+    </>
+  )
+}
