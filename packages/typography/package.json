@@ -17,10 +17,11 @@
   "sideEffects": false,
   "main": "dist/typography.cjs.js",
   "module": "dist/typography.esm.js",
-  "src": "index.tsx",
-  "types": "dist/index.d.ts",
+  "src": "src/index.tsx",
+  "types": "dist/src/index.d.ts",
   "directories": {
-    "test": "__tests__"
+    "test": "__tests__",
+    "src": "src"
   },
   "files": ["dist"],
   "publishConfig": {
