@@ -4,8 +4,6 @@
     "allowJs": true,
     "composite": true,
     "declaration": true,
-    "declarationMap": true,
-    "sourceMap": true,
     "jsx": "react",
     "target": "esnext",
     "module": "esnext",
