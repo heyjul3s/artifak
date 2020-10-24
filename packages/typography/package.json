@@ -7,10 +7,7 @@
     "react-component",
     "component",
     "ui",
-    "flex",
-    "grid",
-    "block",
-    "layout"
+    "typography"
   ],
   "author": "Julian Low",
   "license": "MIT",
@@ -23,7 +20,9 @@
     "test": "__tests__",
     "src": "src"
   },
-  "files": ["dist"],
+  "files": [
+    "dist"
+  ],
   "publishConfig": {
     "access": "public"
   },
