@@ -5,8 +5,8 @@
     "composite": true,
     "declaration": true,
     "jsx": "react",
-    "target": "esnext",
-    "module": "esnext",
+    "module": "es2015",
+    "target": "es2017",
     "moduleResolution": "node",
     "strict": true,
     "noImplicitAny": false,
@@ -18,5 +18,12 @@
     "resolveJsonModule": true,
     "esModuleInterop": true
   },
-  "exclude": ["node_modules", "__tests__", "__mocks__", "dist"]
+  "exclude": [
+    "node_modules",
+    "__tests__",
+    "__mocks__",
+    "src/__tests__",
+    "src/__mocks__",
+    "dist"
+  ]
 }

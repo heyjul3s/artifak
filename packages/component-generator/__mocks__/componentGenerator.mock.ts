@@ -7,19 +7,19 @@ import {
   display,
   typography,
   color,
-  flexbox,
+  flexbox
 } from 'styled-system';
 
 export const mockComponentStyles = {
   H1: {
-    marginBottom: [15],
-    as: 'h1',
+    marginBottom: ['15px'],
+    as: 'h1'
   },
 
   H2: {
     marginTop: 0,
-    as: 'h2',
-  },
+    as: 'h2'
+  }
 };
 
 export const MockComponent = styled('div')(

@@ -2,9 +2,17 @@
   "extends": "../../tsconfig.json",
   "allowSyntheticDefaultImports": true,
   "compilerOptions": {
-    "outDir": "dist",
-    "rootDir": "."
+    "outDir": "dist"
   },
   "sourceMap": true,
-  "references": []
+  "references": [],
+  "include": ["src/*.ts", "src/*.tsx"],
+  "exclude": [
+    "node_modules",
+    "__tests__",
+    "__mocks__",
+    "src/__tests__",
+    "src/__mocks__",
+    "dist"
+  ]
 }

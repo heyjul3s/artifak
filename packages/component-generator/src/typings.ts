@@ -1,6 +1,6 @@
-import type { StyledComponent } from 'styled-components';
+import { StyledComponent } from 'styled-components';
 
-import type {
+import {
   BackgroundProps,
   BorderProps,
   ColorProps,
@@ -9,7 +9,7 @@ import type {
   PositionProps,
   ShadowProps,
   SpaceProps,
-  TypographyProps,
+  TypographyProps
 } from 'styled-system';
 
 export type StyledReactComponent = StyledComponent<

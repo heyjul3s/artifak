@@ -1,7 +1,7 @@
-import { createBaseComponents, createStyledFunctionComponent } from '../';
+import { createBaseComponents, createStyledFunctionComponent } from '../src';
 import {
   mockComponentStyles,
-  MockComponent,
+  MockComponent
 } from '../__mocks__/componentGenerator.mock';
 
 describe('@artifak/component-generator', () => {
@@ -10,7 +10,7 @@ describe('@artifak/component-generator', () => {
       const expected = {};
       const SystemComponent = createBaseComponents(
         void 0 as any,
-        void 0
+        void 0 as any
       );
 
       expect(SystemComponent).toEqual(expected);
@@ -28,10 +28,7 @@ describe('@artifak/component-generator', () => {
   describe('createStyledFunctionComponent', () => {
     it('should return a component', () => {
       expect(
-        createStyledFunctionComponent(
-          MockComponent,
-          mockComponentStyles
-        )
+        createStyledFunctionComponent(MockComponent, mockComponentStyles)
       ).toBeDefined();
     });
   });
