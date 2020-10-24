@@ -1,6 +1,6 @@
-import type CSS from 'csstype';
-import type { Theme, RequiredTheme, ResponsiveValue } from 'styled-system';
-import type { BaseComponentProps } from '@artifak/component-generator';
+import CSS from 'csstype';
+import { Theme, RequiredTheme, ResponsiveValue } from 'styled-system';
+import { BaseComponentProps } from '@artifak/component-generator';
 
 export interface TextDecorationProps<ThemeType extends Theme = RequiredTheme> {
   textDecoration?: ResponsiveValue<CSS.Property.TextDecoration, ThemeType>;

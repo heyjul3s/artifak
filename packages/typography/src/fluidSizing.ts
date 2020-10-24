@@ -3,7 +3,7 @@ export function fluidSizing(
   maxElementSize: number,
   minViewportWidth: number,
   maxViewportWidth: number
-) {
+): string | false {
   return (
     !!minElementSize &&
     !!maxElementSize &&

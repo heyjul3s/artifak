@@ -1,9 +1,5 @@
-/* istanbul ignore file */
-
-export {
-  createTypographyComponents,
-} from './createTypographyComponents';
-export { TypographyBase} from './TypographyBase';
+export { createTypographyComponents } from './createTypographyComponents';
+export { TypographyBase } from './TypographyBase';
 export { fontWeight } from './fontWeight';
 export { fluidSizing } from './fluidSizing';
-export type { TypographyBaseProps } from './typings';
+export { TypographyBaseProps } from './typings';

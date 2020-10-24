@@ -3,26 +3,26 @@ import { createStyledComponent } from '@artifak/component-generator';
 
 const typographyStylesConfig = system({
   textDecoration: {
-    property: 'textDecoration',
+    property: 'textDecoration'
   },
   textIndent: {
-    property: 'textIndent',
+    property: 'textIndent'
   },
   textTransform: {
-    property: 'textTransform',
+    property: 'textTransform'
   },
   textOverflow: {
-    property: 'textOverflow',
+    property: 'textOverflow'
   },
   whiteSpace: {
-    property: 'whiteSpace',
+    property: 'whiteSpace'
   },
   wordBreak: {
-    property: 'wordBreak',
+    property: 'wordBreak'
   },
   wordSpacing: {
-    property: 'wordSpacing',
-  },
+    property: 'wordSpacing'
+  }
 });
 
 export const TypographyBase = createStyledComponent([typographyStylesConfig]);

@@ -7,7 +7,7 @@ enum FontWeightKeys {
   SEMI_BOLD = 'semiBold',
   BOLD = 'bold',
   EXTRA_BOLD = 'extraBold',
-  BLACK = 'black',
+  BLACK = 'black'
 }
 
 type FontWeight = {
