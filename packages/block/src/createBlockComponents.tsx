@@ -1,6 +1,6 @@
 import React from 'react';
 import { createBaseComponents } from '@artifak/component-generator';
-import type { BlockBaseProps } from './typings';
+import { BlockBaseProps } from './typings';
 import { BlockBase } from './BlockBase';
 
 export function createBlockComponents<ST>(

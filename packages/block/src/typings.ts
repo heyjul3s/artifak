@@ -1,9 +1,9 @@
-import type {
+import {
   BorderRadiusProps,
   ColorProps,
   TypographyProps,
   SpaceProps,
-  LayoutProps,
+  LayoutProps
 } from 'styled-system';
 
 export type BlockBaseProps =
