@@ -1,6 +1,7 @@
 import React from 'react';
 import { GridBase } from './GridBase';
 
+/* eslint-disable @typescript-eslint/no-explicit-any */
 export const Grid = React.forwardRef((props: any, ref) => {
   const gridGap = addGridGap(props.gridGap);
   const gridTemplateColumns = setGridTemplateColumns(

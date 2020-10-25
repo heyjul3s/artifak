@@ -1,6 +1,7 @@
 import React from 'react';
 import { FlexColBase } from './FlexColBase';
 
+/* eslint-disable @typescript-eslint/no-explicit-any */
 export const FlexCol = React.forwardRef((props: any, ref) => {
   const baseColumnWidth = getColumnWidth(props.totalColumns);
   const columnOffset = setColumnOffset(baseColumnWidth, props.offset);
@@ -60,6 +61,6 @@ export function setGutterWidth(
     : `${(gutterWidth as number) / 2}em`;
 }
 
-export function isNumber(val: any): boolean {
+export function isNumber(val: number): boolean {
   return !isNaN(val) && isFinite(val);
 }

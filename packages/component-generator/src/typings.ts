@@ -12,6 +12,7 @@ import {
   TypographyProps
 } from 'styled-system';
 
+/* eslint-disable @typescript-eslint/no-explicit-any */
 export type StyledReactComponent = StyledComponent<
   keyof JSX.IntrinsicElements | React.ComponentType<any>,
   any,
