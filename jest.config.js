@@ -1,5 +1,5 @@
 module.exports = {
-  rootDir: '../',
+  rootDir: '.',
   collectCoverageFrom: [
     'packages/**/*.{js,jsx,ts,tsx}',
     '!packages/**/typings.{ts,tsx}',
@@ -25,6 +25,6 @@ module.exports = {
     '^.+\\.[jt]sx?$': 'babel-jest',
     '^.+\\.(tsx|ts)?$': 'ts-jest'
   },
-  setupFilesAfterEnv: ['<rootDir>/config/jest.setup.js'],
-  prettierPath: '<rootDir>/config/prettier.config.js'
+  setupFilesAfterEnv: ['<rootDir>/jest.setup.js'],
+  prettierPath: '<rootDir>/prettier.config.js'
 };
