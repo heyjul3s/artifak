@@ -4,6 +4,7 @@
   "description": "Component generator utility for Artifak",
   "author": "Julian Low",
   "license": "MIT",
+  "sideEffects": false,
   "keywords": [
     "react",
     "react-component",
@@ -14,7 +15,6 @@
     "block",
     "layout"
   ],
-  "sideEffects": false,
   "module": "dist/component-generator.esm.js",
   "main": "dist/component-generator.cjs.js",
   "src": "src/index.tsx",
@@ -34,8 +34,8 @@
     "url": "git+https://github.com/heyjul3s/artifak.git"
   },
   "scripts": {
-    "test": "echo \"Error: run tests from root\" && exit 1",
-    "build": "rimraf dist && builder"
+    "build": "rimraf dist && builder",
+    "test": "echo \"Error: run tests from root\" && exit 1"
   },
   "bugs": {
     "url": "https://github.com/heyjul3s/artifak/issues"
