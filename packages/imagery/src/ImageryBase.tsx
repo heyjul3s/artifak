@@ -5,11 +5,11 @@ import { ImgComponent } from './typings';
 
 const imageStylesConfig = system({
   objectFit: {
-    property: 'objectFit',
+    property: 'objectFit'
   },
   objectPosition: {
-    property: 'objectPosition',
-  },
+    property: 'objectPosition'
+  }
 });
 
 export const ImageryBase: StyledComponent<
