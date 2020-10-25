@@ -16,7 +16,7 @@ import {
 
 import { BaseComponentProps } from './typings';
 
-export function createBaseStyledComponent<CP>(
+export function createStyledComponent<CP extends Record<string, unknown>>(
   systemStyleProps: styleFn[] = [],
   baseStyles: CSSObject = {},
   element: keyof JSX.IntrinsicElements = 'div'

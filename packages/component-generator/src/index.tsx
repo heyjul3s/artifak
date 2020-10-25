@@ -3,6 +3,6 @@ export {
   createStyledFunctionComponent
 } from './createBaseComponents';
 
-export { createBaseStyledComponent } from './createBaseStyledComponent';
+export { createStyledComponent } from './createStyledComponent';
 
 export { BaseComponentProps, StyledReactComponent } from './typings';
