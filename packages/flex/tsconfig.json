@@ -2,8 +2,7 @@
   "extends": "../../tsconfig.json",
   "allowSyntheticDefaultImports": true,
   "compilerOptions": {
-    "outDir": "dist",
-    "rootDir": "."
+    "outDir": "dist"
   },
   "sourceMap": true,
   "references": []

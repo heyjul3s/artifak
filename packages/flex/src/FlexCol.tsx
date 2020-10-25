@@ -22,7 +22,7 @@ export const FlexCol = React.forwardRef((props: any, ref) => {
   );
 });
 
-export function getColumnWidth(totalColumns: number = 12) {
+export function getColumnWidth(totalColumns = 12): number {
   return isNumber(totalColumns) && totalColumns > 2
     ? Number(parseFloat((100 / totalColumns).toString()).toFixed(2))
     : 100;
@@ -31,18 +31,18 @@ export function getColumnWidth(totalColumns: number = 12) {
 export function setColumnSizing(
   baseColumnWidth: number,
   columnSize: number | number[]
-) {
+): string | string[] {
   return Array.isArray(columnSize) && columnSize.length > 1
-    ? columnSize.map((size) => `${size * baseColumnWidth}%`)
+    ? columnSize.map(size => `${size * baseColumnWidth}%`)
     : `${(columnSize as number) * baseColumnWidth}%`;
 }
 
 export function setColumnOffset(
   baseColumnWidth: number,
   offset: number | number[]
-) {
+): string | string[] | undefined {
   if (Array.isArray(offset) && offset.length > 1) {
-    return offset.map((size) => `${size * baseColumnWidth}%`);
+    return offset.map(size => `${size * baseColumnWidth}%`);
   }
 
   if (!Array.isArray(offset) && !!offset) {
@@ -52,12 +52,14 @@ export function setColumnOffset(
   return void 0;
 }
 
-export function setGutterWidth(gutterWidth: number | number[] = 1) {
+export function setGutterWidth(
+  gutterWidth: number | number[] = 1
+): string | string[] {
   return Array.isArray(gutterWidth) && gutterWidth.length > 1
-    ? gutterWidth.map((width) => `${width / 2}em`)
+    ? gutterWidth.map(width => `${width / 2}em`)
     : `${(gutterWidth as number) / 2}em`;
 }
 
-export function isNumber(val: any) {
+export function isNumber(val: any): boolean {
   return !isNaN(val) && isFinite(val);
 }
