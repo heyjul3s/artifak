@@ -5,15 +5,15 @@ import {
   gridColumn,
   gridRow,
   justifySelf,
-  alignSelf,
+  alignSelf
 } from 'styled-system';
 
-import type { GridItemBaseProps } from './typings';
+import { GridItemBaseProps } from './typings';
 
 export const GridItemBase = createStyledComponent<GridItemBaseProps>([
   alignSelf,
   gridArea,
   gridRow,
   gridColumn,
-  justifySelf,
+  justifySelf
 ]);

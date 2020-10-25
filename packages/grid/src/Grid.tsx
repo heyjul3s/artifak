@@ -21,7 +21,7 @@ export const Grid = React.forwardRef((props: any, ref) => {
   );
 });
 
-export function addGridGap(gridGap: string | undefined) {
+export function addGridGap(gridGap: string | undefined): string {
   return !!gridGap ? gridGap : '1.5rem';
 }
 
@@ -44,7 +44,7 @@ export function setRepeatableColumnWidths(
   columnWidth: string | string[]
 ): string | string[] {
   if (Array.isArray(columnWidth) && columnWidth.length) {
-    return columnWidth.map((width) => {
+    return columnWidth.map(width => {
       return repeatableColumnWidth(width);
     });
   } else {
@@ -60,7 +60,7 @@ export function setRepeatableColumnLengths(
   columnLength: number | number[]
 ): string | string[] {
   if (Array.isArray(columnLength) && columnLength.length) {
-    return columnLength.map((length) => {
+    return columnLength.map(length => {
       return repeatableColumnLength(length);
     });
   } else {

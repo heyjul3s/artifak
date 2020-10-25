@@ -1,6 +1,6 @@
 import React from 'react';
-import { setGridTemplateColumns, addGridGap } from '../Grid';
-import { Grid, GridItem } from '../';
+import { setGridTemplateColumns, addGridGap } from '../src/Grid';
+import { Grid, GridItem } from '../src';
 import { render } from '@testing-library/react';
 import 'jest-styled-components';
 
@@ -15,7 +15,7 @@ describe('@artifak/grid', () => {
     it('should return an array of auto-fit CSS grid rule', () => {
       const expected = [
         'repeat(auto-fit, minmax(120px, 1fr))',
-        'repeat(auto-fit, minmax(320px, 1fr))',
+        'repeat(auto-fit, minmax(320px, 1fr))'
       ];
       const gridTemplateColumnStyles = setGridTemplateColumns(
         ['120px', '320px'],

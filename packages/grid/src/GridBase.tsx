@@ -5,15 +5,15 @@ import {
   alignContent,
   justifyItems,
   justifyContent,
-  grid,
+  grid
 } from 'styled-system';
 
-import type { GridBaseProps } from './typings';
+import { GridBaseProps } from './typings';
 
 export const GridBase = createStyledComponent<GridBaseProps>([
   alignItems,
   alignContent,
   justifyItems,
   justifyContent,
-  grid,
+  grid
 ]);

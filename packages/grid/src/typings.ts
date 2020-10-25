@@ -1,4 +1,4 @@
-import type {
+import {
   AlignItemsProps,
   AlignContentProps,
   AlignSelfProps,
@@ -8,7 +8,7 @@ import type {
   GridAreaProps,
   GridColumnProps,
   GridRowProps,
-  JustifySelfProps,
+  JustifySelfProps
 } from 'styled-system';
 
 export type GridBaseProps =
