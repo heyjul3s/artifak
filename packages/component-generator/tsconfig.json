@@ -5,14 +5,5 @@
     "outDir": "dist"
   },
   "sourceMap": true,
-  "references": [],
-  "include": ["src/*.ts", "src/*.tsx"],
-  "exclude": [
-    "node_modules",
-    "__tests__",
-    "__mocks__",
-    "src/__tests__",
-    "src/__mocks__",
-    "dist"
-  ]
+  "include": ["src/*.ts", "src/*.tsx"]
 }

@@ -1,4 +1,4 @@
-import styled, { CSSObject } from 'styled-components';
+import styled, { CSSObject, AnyStyledComponent } from 'styled-components';
 
 import {
   compose,
@@ -16,11 +16,11 @@ import {
 
 import { BaseComponentProps } from './typings';
 
-export function createStyledComponent<CP extends Record<string, unknown>>(
+export function createStyledComponent<CP>(
   systemStyleProps: styleFn[] = [],
   baseStyles: CSSObject = {},
   element: keyof JSX.IntrinsicElements = 'div'
-): styleFn {
+): AnyStyledComponent {
   return styled(element)<BaseComponentProps & CP>(
     baseStyles,
     compose(
