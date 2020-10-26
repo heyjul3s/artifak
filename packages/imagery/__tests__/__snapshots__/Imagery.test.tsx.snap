@@ -4,7 +4,7 @@ exports[`Img should render an img element with src and alt defined 1`] = `
 <DocumentFragment>
   <img
     alt="hello world"
-    class="artifak__sc-18dncu9-0 jrrydc"
+    class="sc-bdVaJa hHijb"
     src="https://source.unsplash.com/random/10x10"
   />
 </DocumentFragment>

@@ -1,4 +1,4 @@
-import { imgSizes } from '../../utils/attributes';
+import { imgSizes } from '../../src/utils/attributes';
 
 describe('Attributes', () => {
   describe('imgSizes', () => {

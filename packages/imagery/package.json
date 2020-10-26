@@ -14,12 +14,15 @@
   "sideEffects": false,
   "main": "dist/imagery.cjs.js",
   "module": "dist/imagery.esm.js",
-  "src": "index.tsx",
-  "types": "dist/index.d.ts",
+  "src": "src/index.tsx",
+  "types": "dist/src/index.d.ts",
   "directories": {
-    "test": "__tests__"
+    "test": "__tests__",
+    "src": "src"
   },
-  "files": ["dist"],
+  "files": [
+    "dist"
+  ],
   "publishConfig": {
     "access": "public"
   },

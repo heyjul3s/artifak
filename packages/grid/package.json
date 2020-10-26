@@ -10,7 +10,6 @@
     "react-component",
     "component",
     "ui",
-    "flex",
     "grid",
     "block",
     "layout"
@@ -18,12 +17,15 @@
   "sideEffects": false,
   "main": "dist/grid.cjs.js",
   "module": "dist/grid.esm.js",
-  "src": "index.tsx",
-  "types": "dist/index.d.ts",
+  "src": "src/index.tsx",
+  "types": "dist/src/index.d.ts",
   "directories": {
-    "test": "__tests__"
+    "test": "__tests__",
+    "src": "src"
   },
-  "files": ["dist"],
+  "files": [
+    "dist"
+  ],
   "publishConfig": {
     "access": "public"
   },
