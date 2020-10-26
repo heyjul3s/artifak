@@ -1,6 +1,6 @@
 import React from 'react';
 import { render } from '@testing-library/react';
-import { FlexRow, setFlexDirection } from '../src/FlexRow';
+import { FlexRow, setFlexDirection } from '../FlexRow';
 
 describe('FlexRow', () => {
   describe('setFlexDirection', () => {

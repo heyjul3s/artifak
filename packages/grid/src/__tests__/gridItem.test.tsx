@@ -1,6 +1,6 @@
 import React from 'react';
-import { GridItem } from '../src/GridItem';
-import { GridItemBase } from '../src/GridItemBase';
+import { GridItem } from '../GridItem';
+import { GridItemBase } from '../GridItemBase';
 import { render } from '@testing-library/react';
 
 describe('GridItemBase', () => {

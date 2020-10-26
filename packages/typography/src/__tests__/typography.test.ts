@@ -1,4 +1,4 @@
-import { createTypographyComponents, fluidSizing, fontWeight } from '../src';
+import { createTypographyComponents, fluidSizing, fontWeight } from '../';
 import { mockTypographyStyles } from '../__mocks__/typography.mock';
 
 describe('@artifak/typography', () => {
@@ -47,7 +47,7 @@ describe('@artifak/typography', () => {
         MEDIUM: 500,
         REGULAR: 400,
         SEMI_BOLD: 600,
-        THIN: 100,
+        THIN: 100
       };
 
       expect(fontWeight).toEqual(expected);

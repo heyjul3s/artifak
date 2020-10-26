@@ -1,6 +1,6 @@
 import React from 'react';
 import { render } from '@testing-library/react';
-import { Imagery } from '../src';
+import { Imagery } from '../';
 
 describe('Img', () => {
   it('should render an img element with src and alt defined', () => {
