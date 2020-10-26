@@ -1,58 +1,58 @@
 import React from 'react';
-import { createTypographyComponents, fluidSizing } from '.';
+import { createTypographyComponents, fluidSizing } from './src';
 
 const typographyStyles = {
   H1: {
     fontSize: fluidSizing(48, 96, 300, 1200),
     margin: '0 0 0.25em',
     lineHeight: 1.5,
-    as: 'h1',
+    as: 'h1'
   },
 
   H2: {
     fontSize: [37, 39, 41, 43],
     lineHeight: 1.5,
     marginTop: 0,
-    as: 'h2',
+    as: 'h2'
   },
 
   H3: {
     fontSize: [27, 28, 30, 32],
     lineHeight: 1.5,
-    as: 'h3',
+    as: 'h3'
   },
 
   H4: {
     fontSize: [18, 20, 22, 24],
     lineHeight: 1.5,
     marginTop: 0,
-    as: 'h4',
+    as: 'h4'
   },
 
   H5: {
     fontSize: [16, 17, 19, 21],
     lineHeight: 1.5,
     marginTop: 0,
-    as: 'h5',
+    as: 'h5'
   },
 
   H6: {
     fontSize: [16, 17, 19, 21],
     lineHeight: 1.5,
     marginTop: 0,
-    as: 'h6',
+    as: 'h6'
   },
 
   LargeLead: {
     fontSize: [18, 20, 22, 24],
     marginTop: 0,
-    as: 'p',
+    as: 'p'
   },
 
   SmallLead: {
     fontSize: [17, 18, 19, 21],
     lineHeight: 1.5,
-    as: 'p',
+    as: 'p'
   },
 
   Paragraph: {
@@ -60,15 +60,15 @@ const typographyStyles = {
     fontWeight: 300,
     lineHeight: 1.5,
     marginTop: 0,
-    as: 'p',
+    as: 'p'
   },
 
   SmallParagraph: {
     fontSize: [12, 14],
     lineHeight: 1.5,
     marginTop: 0,
-    as: 'p',
-  },
+    as: 'p'
+  }
 };
 
 const {
@@ -81,7 +81,7 @@ const {
   LargeLead,
   SmallLead,
   Paragraph,
-  SmallParagraph,
+  SmallParagraph
 } = createTypographyComponents<typeof typographyStyles>(typographyStyles);
 
 export const Type = () => {
@@ -103,5 +103,5 @@ export const Type = () => {
 
 export default {
   title: 'Typography',
-  component: Type,
+  component: Type
 };

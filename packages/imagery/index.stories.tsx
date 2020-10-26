@@ -1,5 +1,5 @@
 import React from 'react';
-import { Imagery as Image } from './';
+import { Imagery as Image } from './src';
 import TestImg from './__mocks__/test-image.svg';
 
 export const Img = () => {
@@ -12,5 +12,5 @@ export const ImgWithTerminalError = () => {
 
 export default {
   title: 'Image',
-  component: [Img, ImgWithTerminalError],
+  component: [Img, ImgWithTerminalError]
 };
