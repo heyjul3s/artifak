@@ -3,6 +3,7 @@ plugins:
     enabled: true
 
 exclude_patterns:
+  - 'docs/'
   - '**/node_modules/'
   - '**/*.d.ts'
   - '.storybook/'
