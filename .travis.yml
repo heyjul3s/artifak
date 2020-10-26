@@ -3,10 +3,8 @@ node_js:
   - 12
 
 script:
+  - yarn
   - yarn lint
   - yarn test
 
 after_success: yarn coverage
-
-on:
-  tags: true
