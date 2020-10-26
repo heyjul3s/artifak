@@ -2,7 +2,6 @@
 const rollup = require('rollup');
 const path = require('path');
 const resolve = require('@rollup/plugin-node-resolve').default;
-const babel = require('@rollup/plugin-babel').default;
 const typescript = require('rollup-plugin-typescript2');
 const commonjs = require('@rollup/plugin-commonjs');
 const createStyledComponentsTransformer = require('typescript-plugin-styled-components')
@@ -30,24 +29,14 @@ const inputOptions = {
       extensions
     }),
     commonjs(),
-    babel({
-      extensions,
-      exclude: ['node_modules/**', 'src/__mocks__/**', 'src/__tests__/**'],
-      plugins: ['@babel/plugin-transform-runtime'],
-      presets: [
-        '@babel/preset-env',
-        '@babel/preset-react',
-        '@babel/preset-typescript'
-      ],
-      babelHelpers: 'runtime'
-    }),
     typescript({
       tsconfig: tsConfigPath,
       transformers: [
         () => ({
           before: [styledComponentsTransformer]
         })
-      ]
+      ],
+      clean: true
     })
   ]
 };
@@ -64,24 +53,27 @@ const baseOutputOptions = {
   exports: 'named'
 };
 
-const outputOptions = [
+const formatOptions = [
   {
     file: `dist/${fileName}.cjs.js`,
-    format: 'cjs',
-    ...baseOutputOptions
+    format: 'cjs'
   },
   {
     file: `dist/${fileName}.esm.js`,
     format: 'esm',
-    ...baseOutputOptions
+    esModule: true
   },
   {
     file: `dist/${fileName}.umd.js`,
     format: 'umd',
-    esModule: false,
-    ...baseOutputOptions
+    esModule: false
   }
 ];
+
+const outputOptions = formatOptions.map(opt => ({
+  ...opt,
+  ...baseOutputOptions
+}));
 
 async function build() {
   try {

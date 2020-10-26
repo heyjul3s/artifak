@@ -1,20 +1,11 @@
 module.exports = {
   plugins: [
     '@babel/plugin-proposal-class-properties',
-    '@babel/plugin-transform-runtime',
-    [
-      'babel-plugin-styled-components',
-      {
-        namespace: 'artifak',
-        fileName: false,
-        displayName: true,
-      },
-    ],
+    '@babel/plugin-transform-runtime'
   ],
   presets: [
-    'minify',
     '@babel/preset-env',
     '@babel/preset-react',
-    '@babel/preset-typescript',
-  ],
+    '@babel/preset-typescript'
+  ]
 };
