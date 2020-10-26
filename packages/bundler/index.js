@@ -4,6 +4,7 @@ const path = require('path');
 const resolve = require('@rollup/plugin-node-resolve').default;
 const typescript = require('rollup-plugin-typescript2');
 const commonjs = require('@rollup/plugin-commonjs');
+const terser = require('rollup-plugin-terser').terser;
 const createStyledComponentsTransformer = require('typescript-plugin-styled-components')
   .default;
 const currentWorkingPath = process.cwd();
@@ -38,6 +39,12 @@ const inputOptions = {
       ],
       clean: true
     })
+    // terser({
+    //   output: { comments: false },
+    //   compress: {
+    //     drop_console: true
+    //   }
+    // })
   ]
 };
 
@@ -59,6 +66,18 @@ const formatOptions = [
     format: 'cjs'
   },
   {
+    file: `dist/${fileName}.cjs.min.js`,
+    format: 'cjs',
+    plugins: [
+      terser({
+        output: { comments: false },
+        compress: {
+          drop_console: true
+        }
+      })
+    ]
+  },
+  {
     file: `dist/${fileName}.esm.js`,
     format: 'esm',
     esModule: true
@@ -67,6 +86,19 @@ const formatOptions = [
     file: `dist/${fileName}.umd.js`,
     format: 'umd',
     esModule: false
+  },
+  {
+    file: `dist/${fileName}.umd.min.js`,
+    format: 'umd',
+    esModule: false,
+    plugins: [
+      terser({
+        output: { comments: false },
+        compress: {
+          drop_console: true
+        }
+      })
+    ]
   }
 ];
 
