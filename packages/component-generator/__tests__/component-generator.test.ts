@@ -1,4 +1,11 @@
-import { createBaseComponents, createStyledFunctionComponent } from '../src';
+import { system } from 'styled-system';
+
+import {
+  createBaseComponents,
+  createStyledFunctionComponent,
+  createStyledComponent
+} from '../src';
+
 import {
   mockComponentStyles,
   MockComponent
@@ -30,6 +37,26 @@ describe('@artifak/component-generator', () => {
       expect(
         createStyledFunctionComponent(MockComponent, mockComponentStyles)
       ).toBeDefined();
+    });
+  });
+
+  describe('createStyledComponent', () => {
+    it('should return a styled component', () => {
+      const mockConfig = system({
+        textDecoration: true,
+        textIndent: true,
+        textTransform: true,
+        textOverflow: true,
+        whiteSpace: true,
+        wordBreak: true,
+        wordSpacing: true
+      });
+
+      const resultingStyledComponent = createStyledComponent([mockConfig], {
+        fontSize: '1em'
+      });
+
+      expect(resultingStyledComponent).toBeDefined();
     });
   });
 });
