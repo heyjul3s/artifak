@@ -2,27 +2,15 @@ import { system } from 'styled-system';
 import { createStyledComponent } from '@artifak/component-generator';
 
 const typographyStylesConfig = system({
-  textDecoration: {
-    property: 'textDecoration'
-  },
-  textIndent: {
-    property: 'textIndent'
-  },
-  textTransform: {
-    property: 'textTransform'
-  },
-  textOverflow: {
-    property: 'textOverflow'
-  },
-  whiteSpace: {
-    property: 'whiteSpace'
-  },
-  wordBreak: {
-    property: 'wordBreak'
-  },
-  wordSpacing: {
-    property: 'wordSpacing'
-  }
+  textDecoration: true,
+  textIndent: true,
+  textTransform: true,
+  textOverflow: true,
+  whiteSpace: true,
+  wordBreak: true,
+  wordSpacing: true
 });
 
-export const TypographyBase = createStyledComponent([typographyStylesConfig]);
+export const TypographyBase = createStyledComponent<
+  typeof typographyStylesConfig
+>([typographyStylesConfig]);
