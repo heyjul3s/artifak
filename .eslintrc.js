@@ -19,7 +19,8 @@ module.exports = {
     }
   },
   rules: {
-    quotes: [2, 'single', { avoidEscape: true }]
+    quotes: [2, 'single', { avoidEscape: true }],
+    '@typescript-eslint/no-var-requires': [0]
     // place to specify ESLint rules - can be used to overwrite rules specified from the extended configs
     // e.g. "@typescript-eslint/explicit-function-return-type": "off",
   }
