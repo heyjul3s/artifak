@@ -39,12 +39,6 @@ const inputOptions = {
       ],
       clean: true
     })
-    // terser({
-    //   output: { comments: false },
-    //   compress: {
-    //     drop_console: true
-    //   }
-    // })
   ]
 };
 
@@ -67,15 +61,7 @@ const formatOptions = [
   },
   {
     file: `dist/${fileName}.cjs.min.js`,
-    format: 'cjs',
-    plugins: [
-      terser({
-        output: { comments: false },
-        compress: {
-          drop_console: true
-        }
-      })
-    ]
+    format: 'cjs'
   },
   {
     file: `dist/${fileName}.esm.js`,
@@ -90,7 +76,17 @@ const formatOptions = [
   {
     file: `dist/${fileName}.umd.min.js`,
     format: 'umd',
-    esModule: false,
+    esModule: false
+  }
+];
+
+const outputOptions = formatOptions.map(opt => {
+  const options = {
+    ...opt,
+    ...baseOutputOptions
+  };
+
+  const minifyPlugin = {
     plugins: [
       terser({
         output: { comments: false },
@@ -99,13 +95,10 @@ const formatOptions = [
         }
       })
     ]
-  }
-];
+  };
 
-const outputOptions = formatOptions.map(opt => ({
-  ...opt,
-  ...baseOutputOptions
-}));
+  return opt.file.includes('min') ? { ...options, ...minifyPlugin } : options;
+});
 
 async function build() {
   try {
