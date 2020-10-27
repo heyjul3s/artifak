@@ -16,11 +16,7 @@ const inputPath = path.join(currentWorkingPath, src);
 const fileName = name.replace('@artifak/', '');
 const extensions = ['.js', '.jsx', '.ts', '.tsx'];
 
-const styledComponentsTransformer = createStyledComponentsTransformer({
-  getDisplayName(filename, bindingName) {
-    return path.relative(__dirname, filename);
-  }
-});
+const styledComponentsTransformer = createStyledComponentsTransformer();
 
 const inputOptions = {
   input: inputPath,
