@@ -6,7 +6,7 @@ import {
   setColumnOffset,
   setGutterWidth,
   FlexCol
-} from '../FlexCol';
+} from '../src/FlexCol';
 
 describe('FlexCol', () => {
   describe('getColumnWidth', () => {

@@ -1,6 +1,6 @@
 import React from 'react';
 import { render } from '@testing-library/react';
-import { ImageryBase } from '../ImageryBase';
+import { ImageryBase } from '../src/ImageryBase';
 import 'jest-styled-components';
 
 describe('ImageryBase', () => {

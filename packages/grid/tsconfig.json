@@ -4,6 +4,6 @@
     "outDir": "dist",
     "rootDir": "."
   },
-  "exclude": ["dist", "node_modules"],
-  "references": []
+  "references": [],
+  "include": ["src"]
 }

@@ -1,14 +1,5 @@
 module.exports = {
   rootDir: '.',
-  roots: [
-    '<rootDir>/packages/artifak',
-    '<rootDir>/packages/block',
-    '<rootDir>/packages/component-generator',
-    '<rootDir>/packages/flex',
-    '<rootDir>/packages/grid',
-    '<rootDir>/packages/imagery',
-    '<rootDir>/packages/typography'
-  ],
   collectCoverageFrom: [
     'packages/**/src/*.{js,jsx,ts,tsx}',
     '!packages/**/src/typings.{ts,tsx}',
@@ -24,16 +15,6 @@ module.exports = {
       statements: 90
     }
   },
-  modulePaths: [
-    '<rootDir>',
-    '<rootDir>/packages/artifak',
-    '<rootDir>/packages/block',
-    '<rootDir>/packages/component-generator',
-    '<rootDir>/packages/flex',
-    '<rootDir>/packages/grid',
-    '<rootDir>/packages/imagery',
-    '<rootDir>/packages/typography'
-  ],
   moduleNameMapper: {
     '\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$':
       '<rootDir>/__mocks__/fileMock.js',

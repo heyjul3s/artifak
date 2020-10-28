@@ -4,7 +4,7 @@ import {
   createBaseComponents,
   createStyledFunctionComponent,
   createStyledComponent
-} from '..';
+} from '../src';
 
 import {
   mockComponentStyles,

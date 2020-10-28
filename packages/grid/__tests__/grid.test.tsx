@@ -1,5 +1,5 @@
 import React from 'react';
-import { setGridTemplateColumns, addGridGap } from '../Grid';
+import { setGridTemplateColumns, addGridGap } from '../src/Grid';
 import { Grid, GridItem } from '..';
 import { render } from '@testing-library/react';
 import 'jest-styled-components';

@@ -1,4 +1,4 @@
-import { createBlockComponents } from '..';
+import { createBlockComponents } from '../src';
 import { mockBlockStyles } from '../__mocks__/block.mock';
 
 describe('@artifak/block', () => {
