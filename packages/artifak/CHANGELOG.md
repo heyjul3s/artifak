@@ -1,5 +1,24 @@
 # artifak
 
+## 1.1.4
+
+### Patch Changes
+
+- remove babel for build process and added terser for minification
+- remove usage of type keyword for type imports/exports for lint support
+- move files of packages to src dir for easier handling
+- add coverage, bundlesize check for Travis CI
+- add badges to readme
+- add coverage script
+
+- Updated dependencies [undefined]
+  - @artifak/block@1.1.4
+  - @artifak/component-generator@1.1.4
+  - @artifak/flex@1.1.4
+  - @artifak/grid@1.1.4
+  - @artifak/imagery@1.0.6
+  - @artifak/typography@1.1.4
+
 ## 1.1.3
 
 ### Patch Changes

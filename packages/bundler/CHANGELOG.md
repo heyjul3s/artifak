@@ -1,5 +1,12 @@
 # @artifak/bundler
 
+## 1.1.3
+
+### Patch Changes
+
+- remove babel for build process and added terser for minification
+- remove unused packages
+
 ## 1.1.2
 
 ### Patch Changes
