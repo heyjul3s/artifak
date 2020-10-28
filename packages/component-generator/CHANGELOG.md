@@ -1,5 +1,12 @@
 # @artifak/component-generator
 
+## 1.1.4
+
+### Patch Changes
+
+- remove usage of type keyword for type imports/exports for lint support
+- move files to src dir for easier handling
+
 ## 1.1.3
 
 ### Patch Changes
