@@ -1,0 +1,25 @@
+{
+  "files": [
+    {
+      "path": "./packages/artifak/dist/*.js"
+    },
+    {
+      "path": "./packages/block/dist/*.js"
+    },
+    {
+      "path": "./packages/component-generator/dist/*.js"
+    },
+    {
+      "path": "./packages/flex/dist/*.js"
+    },
+    {
+      "path": "./packages/grid/dist/*.js"
+    },
+    {
+      "path": "./packages/imagery/dist/*.js"
+    },
+    {
+      "path": "./packages/typography/dist/*.js"
+    }
+  ]
+}

@@ -4,6 +4,6 @@
   "compilerOptions": {
     "outDir": "dist"
   },
-  "sourceMap": true,
-  "references": []
+  "references": [],
+  "include": ["src"]
 }

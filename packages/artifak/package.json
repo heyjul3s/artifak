@@ -18,13 +18,15 @@
   "sideEffects": false,
   "main": "dist/artifak.cjs.js",
   "module": "dist/artifak.esm.js",
-  "src": "index.tsx",
+  "src": "src/index.tsx",
   "types": "dist/index.d.ts",
   "directories": {
     "lib": "lib",
     "test": "__tests__"
   },
-  "files": ["dist"],
+  "files": [
+    "dist"
+  ],
   "publishConfig": {
     "access": "public"
   },
@@ -34,6 +36,7 @@
   },
   "scripts": {
     "build": "rimraf dist && builder",
+    "depcheck": "npx depcheck",
     "test": "echo \"Error: run tests from root\" && exit 1"
   },
   "bugs": {

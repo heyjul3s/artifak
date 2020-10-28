@@ -4,6 +4,6 @@
   "compilerOptions": {
     "outDir": "dist"
   },
-  "sourceMap": true,
-  "include": ["src/*.ts", "src/*.tsx"]
+  "references": [],
+  "include": ["src"]
 }

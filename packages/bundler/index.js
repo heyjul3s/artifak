@@ -4,6 +4,7 @@ const path = require('path');
 const resolve = require('@rollup/plugin-node-resolve').default;
 const typescript = require('rollup-plugin-typescript2');
 const commonjs = require('@rollup/plugin-commonjs');
+const terser = require('rollup-plugin-terser').terser;
 const createStyledComponentsTransformer = require('typescript-plugin-styled-components')
   .default;
 const currentWorkingPath = process.cwd();
@@ -15,11 +16,7 @@ const inputPath = path.join(currentWorkingPath, src);
 const fileName = name.replace('@artifak/', '');
 const extensions = ['.js', '.jsx', '.ts', '.tsx'];
 
-const styledComponentsTransformer = createStyledComponentsTransformer({
-  getDisplayName(filename, bindingName) {
-    return path.relative(__dirname, filename);
-  }
-});
+const styledComponentsTransformer = createStyledComponentsTransformer();
 
 const inputOptions = {
   input: inputPath,
@@ -59,6 +56,10 @@ const formatOptions = [
     format: 'cjs'
   },
   {
+    file: `dist/${fileName}.cjs.min.js`,
+    format: 'cjs'
+  },
+  {
     file: `dist/${fileName}.esm.js`,
     format: 'esm',
     esModule: true
@@ -67,13 +68,33 @@ const formatOptions = [
     file: `dist/${fileName}.umd.js`,
     format: 'umd',
     esModule: false
+  },
+  {
+    file: `dist/${fileName}.umd.min.js`,
+    format: 'umd',
+    esModule: false
   }
 ];
 
-const outputOptions = formatOptions.map(opt => ({
-  ...opt,
-  ...baseOutputOptions
-}));
+const outputOptions = formatOptions.map(opt => {
+  const options = {
+    ...opt,
+    ...baseOutputOptions
+  };
+
+  const minifyPlugin = {
+    plugins: [
+      terser({
+        output: { comments: false },
+        compress: {
+          drop_console: true
+        }
+      })
+    ]
+  };
+
+  return opt.file.includes('min') ? { ...options, ...minifyPlugin } : options;
+});
 
 async function build() {
   try {

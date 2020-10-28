@@ -1,8 +1,13 @@
 language: node_js
 node_js:
-  - 10
+  - 12
+
+before_script:
+  - yarn build
+
 script:
+  - yarn bundlesize
   - yarn lint
   - yarn test
-on:
-  tags: true
+
+after_success: yarn coverage
