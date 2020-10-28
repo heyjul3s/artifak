@@ -3,6 +3,8 @@ node_js:
   - 12
 
 script:
+  - yarn
+  - yarn build
   - yarn bundlesize
   - yarn lint
   - yarn test

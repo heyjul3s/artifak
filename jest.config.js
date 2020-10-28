@@ -1,13 +1,13 @@
 module.exports = {
   rootDir: '.',
   roots: [
-    '<rootDir>/packages/artifak/src',
-    '<rootDir>/packages/block/src',
-    '<rootDir>/packages/component-generator/src',
-    '<rootDir>/packages/flex/src',
-    '<rootDir>/packages/grid/src',
-    '<rootDir>/packages/imagery/src',
-    '<rootDir>/packages/typography/src'
+    '<rootDir>/packages/artifak',
+    '<rootDir>/packages/block',
+    '<rootDir>/packages/component-generator',
+    '<rootDir>/packages/flex',
+    '<rootDir>/packages/grid',
+    '<rootDir>/packages/imagery',
+    '<rootDir>/packages/typography'
   ],
   collectCoverageFrom: [
     'packages/**/src/*.{js,jsx,ts,tsx}',
