@@ -7,7 +7,7 @@ const styles = {
     fontSize: [48, 56],
     fontFamily: theme.fontFamily.poppins,
     margin: '0 0 0.5em',
-    lineHeight: 1.15,
+    lineHeight: 1.5,
     as: 'h1'
   },
 
@@ -52,6 +52,7 @@ const styles = {
   },
 
   LargeLead: {
+    color: theme.colors.primary,
     fontWeight: fontWeight.semiBold,
     fontSize: [18, 20, 22, 24],
     fontFamily: theme.fontFamily.poppins,

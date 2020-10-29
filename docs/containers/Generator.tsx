@@ -1,5 +1,5 @@
-import { H1, H2, Paragraph, LargeLead, Strong } from '../components/Typography';
-import { Syntax, Params } from '../components/Syntax';
+import { Paragraph, Strong } from '../components/Typography';
+import { Syntax } from '../components/Syntax';
 
 import {
   createStyledComponentUsage,
@@ -7,10 +7,22 @@ import {
   systemExtensionUsage
 } from '../codeExamples/generator';
 
+import { HR } from '../components/HR';
+import { ArticleDoc } from '../components/ArticleDoc';
+import { APIheading } from '../components/APIheading';
+import { ArticleSubSectionTitle } from '../components/ArticleSubSectionTitle';
+
 export function Generator() {
   return (
+    <ArticleDoc title="Generator">
+      <GeneratorContent />
+    </ArticleDoc>
+  );
+}
+
+export function GeneratorContent() {
+  return (
     <>
-      <H1>Generator</H1>
       <Paragraph>
         The component-generator library or generator for short, comprises of 2
         utility functions namely <Strong>createStyledComponent</Strong> and
@@ -22,16 +34,16 @@ export function Generator() {
         option to further extend the system.
       </Paragraph>
 
-      <LargeLead>createStyledComponent</LargeLead>
+      <HR />
 
-      <Params
+      <APIheading
+        name="createStyledComponent"
         params={{
           systemStyleProps: 'styleFn[]',
           baseStyles: 'CSSObject',
           element: 'keyof JSX.IntrinsicElements'
         }}
       />
-
       <Paragraph>
         The purpose of this utility function is to generate a base styled
         component which would then be used in createBaseComponents (or not if
@@ -40,15 +52,15 @@ export function Generator() {
 
       <Syntax>{createStyledComponentUsage}</Syntax>
 
-      <LargeLead>createBaseComponents</LargeLead>
+      <HR />
 
-      <Params
+      <APIheading
+        name="createBaseComponents"
         params={{
           BaseComponent: 'AnyStyledComponent',
           styles: 'CSSObject'
         }}
       />
-
       <Paragraph>
         createBaseComponents, as implied, would generate a bunch of styled
         components in accordance to the styles that you provide. This would
@@ -57,7 +69,11 @@ export function Generator() {
 
       <Syntax>{createBaseComponentsUsage}</Syntax>
 
-      <H2>Customising/Adding CSS properties to the system</H2>
+      <HR />
+
+      <ArticleSubSectionTitle>
+        Customising/Adding CSS properties to the system
+      </ArticleSubSectionTitle>
 
       <Paragraph>
         To add to the previous createBaseComponents components example, let's

@@ -1,5 +1,5 @@
-import { H1, Paragraph, LargeLead } from '../components/Typography';
-import { Syntax, Params } from '../components/Syntax';
+import { Paragraph } from '../components/Typography';
+import { Syntax } from '../components/Syntax';
 import { List } from '../components/List';
 import {
   createTypographComponentsExampleUsage,
@@ -9,10 +9,21 @@ import {
 import { fluidSizingExampleUsage } from '../codeExamples/typography/fluidSizing';
 import { fontWeightExampleUsage } from '../codeExamples/typography/fontWeight';
 
+import { HR } from '../components/HR';
+import { ArticleDoc } from '../components/ArticleDoc';
+import { APIheading } from '../components/APIheading';
+
 export function Typography() {
   return (
+    <ArticleDoc title="Typography">
+      <TypographyContent />
+    </ArticleDoc>
+  );
+}
+
+export function TypographyContent() {
+  return (
     <>
-      <H1>Typography</H1>
       <Paragraph>
         The typography library offers utilities to help you scaffold your React
         typography components which include...
@@ -22,14 +33,12 @@ export function Typography() {
         data={['createTypographyComponents', 'fluidSizing', 'fontWeight']}
       />
 
-      <LargeLead>createTypographyComponents</LargeLead>
+      <HR />
 
-      <Params
-        params={{
-          styles: 'CSSobject'
-        }}
+      <APIheading
+        name="createTypographyComponents"
+        params={{ styles: 'CSSobject' }}
       />
-
       <Paragraph>
         As implied, this utility function will generate typography components
         for you. All that is needed is to pass a styles object to the function
@@ -45,9 +54,11 @@ export function Typography() {
         normally would...
       </Paragraph>
       <Syntax>{createTypographyComponentsDemo}</Syntax>
-      <LargeLead>fluidSizing</LargeLead>
 
-      <Params
+      <HR />
+
+      <APIheading
+        name="fluidSizing"
         params={{
           minElementSize: 'number',
           maxElementSize: 'number',
@@ -55,7 +66,6 @@ export function Typography() {
           maxViewportWidth: 'number'
         }}
       />
-
       <Paragraph>
         This function writes a CSS rule that allows for fluid sizing.
         Essentially, this eliminates the need for media queries as the element
@@ -66,7 +76,9 @@ export function Typography() {
       </Paragraph>
       <Syntax>{fluidSizingExampleUsage}</Syntax>
 
-      <LargeLead>fontWeight</LargeLead>
+      <HR />
+
+      <APIheading name="fontWeight" />
       <Paragraph>
         fontWeight is essentially just a constant. Nothing special here. This is
         just to provide a fully typed and ready-to-use constant for usage and or

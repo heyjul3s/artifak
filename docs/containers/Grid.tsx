@@ -1,15 +1,4 @@
-import {
-  H1,
-  H2,
-  H3,
-  H4,
-  SmallLead,
-  Paragraph,
-  LargeLead,
-  SmallParagraph,
-  Strong
-} from '../components/Typography';
-
+import { Paragraph, Strong } from '../components/Typography';
 import { Syntax } from '../components/Syntax';
 
 import {
@@ -26,61 +15,54 @@ import {
   ColumnLengthMqDemo
 } from '../codeExamples/grid/GridDemo';
 
-import { FlexRow, FlexCol } from 'artifak';
+import { HR } from '../components/HR';
+import { FlexTable } from '../components/FlexTable';
+import { ArticleDoc } from '../components/ArticleDoc';
+import { APIheading } from '../components/APIheading';
+import { ArticleSubSectionTitle } from '../components/ArticleSubSectionTitle';
 
 export function Grid() {
   return (
-    <>
-      <H1>Grid</H1>
+    <ArticleDoc title="Grid">
+      <GridContent />
+    </ArticleDoc>
+  );
+}
 
+export function GridContent() {
+  return (
+    <>
       <Paragraph>
         The Grid library has nothing to with Tron unfortunately and comprises of
         2 components for your layout needs which are the <Strong>Grid</Strong>{' '}
         component and the <Strong>GridItem</Strong> component.
       </Paragraph>
 
-      <H3>Grid</H3>
+      <HR />
 
+      <APIheading name="Grid" />
       <Paragraph>
         The Grid component comes with a gap default of 1.5em and two params
         namely <strong>columnLength</strong> and <strong>columnWidth</strong>.
       </Paragraph>
 
-      <FlexRow
-        p={'30px 30px 10px'}
-        mb={'1rem'}
-        style={{
-          border: '1px solid black'
-        }}
-      >
-        <FlexCol columnSize={12} gutterWidth={0}>
-          <H4>Props</H4>
-        </FlexCol>
-
-        <FlexCol columnSize={[12, 5, 4]} gutterWidth={0}>
-          <SmallLead mb={'0.15rem'}>columnWidth</SmallLead>
-          <SmallParagraph>string | string[]</SmallParagraph>
-        </FlexCol>
-
-        <FlexCol columnSize={[12, 7, 8]} gutterWidth={0}>
-          <Paragraph>
-            This sets a repeating width for the grid auto columns in accordance
-            to the width you provide.
-          </Paragraph>
-        </FlexCol>
-
-        <FlexCol columnSize={[12, 5, 4]} gutterWidth={0}>
-          <SmallLead mb={'0.15rem'}>columnLength</SmallLead>
-          <SmallParagraph>number | number[]</SmallParagraph>
-        </FlexCol>
-
-        <FlexCol columnSize={[12, 7, 8]} gutterWidth={0}>
-          <Paragraph>
-            Similar to columnWidth, except it will be in 1fr and repeats in
-            accordance to the columnLength provided.
-          </Paragraph>
-        </FlexCol>
-      </FlexRow>
+      <FlexTable
+        title="Props"
+        cells={[
+          {
+            prop: 'columnWidth',
+            subProp: 'string | string[]',
+            content:
+              'This sets a repeating width for the grid auto columns in accordance to the width you provide.'
+          },
+          {
+            prop: 'columnLength',
+            subProp: 'number | number[]',
+            content:
+              ' Similar to columnWidth, except it will be in 1fr and repeats in accordance to the columnLength provided.'
+          }
+        ]}
+      />
 
       <br />
 
@@ -91,8 +73,7 @@ export function Grid() {
         prop.
       </Paragraph>
 
-      <H3>GridItem</H3>
-
+      <APIheading name="GridItem" />
       <Paragraph>
         GridItem, as suggested, is a component that is used to contain your
         elements within the Grid component. It includes CSS grid child style
@@ -100,11 +81,12 @@ export function Grid() {
         unless specified.
       </Paragraph>
 
-      <H2>Usage</H2>
+      <HR />
+
+      <ArticleSubSectionTitle>Usage</ArticleSubSectionTitle>
       <Paragraph>Below are some examples of Grid in action.</Paragraph>
 
-      <LargeLead>columnWidth</LargeLead>
-
+      <APIheading name="columnWidth" />
       <Paragraph>
         With columnWidth, GridItems will wrap around depending on your viewport
         width. You can define a single value...
@@ -124,10 +106,9 @@ export function Grid() {
 
       <ColumnWidthMqDemo />
 
-      <br />
+      <HR />
 
-      <LargeLead>columnLength</LargeLead>
-
+      <APIheading name="columnLength" />
       <Paragraph>
         With columnLength, GridItems will retain the specified columnLength and
         resize in accordance to your viewport width.

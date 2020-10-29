@@ -1,14 +1,4 @@
-import {
-  H1,
-  H2,
-  H3,
-  H4,
-  Paragraph,
-  Strong,
-  SmallLead,
-  SmallParagraph
-} from '../components/Typography';
-
+import { Paragraph, Strong } from '../components/Typography';
 import { Syntax } from '../components/Syntax';
 
 import {
@@ -24,123 +14,88 @@ import {
   customColUsage
 } from '../codeExamples/flex';
 
-import { FlexRow, FlexCol } from 'artifak';
+import { HR } from '../components/HR';
+
+import { ArticleDoc } from '../components/ArticleDoc';
+import { APIheading } from '../components/APIheading';
+import { FlexTable } from '../components/FlexTable';
+import { ArticleSubSectionTitle } from '../components/ArticleSubSectionTitle';
 
 export function Flex() {
   return (
+    <ArticleDoc title="Flex">
+      <FlexContent />
+    </ArticleDoc>
+  );
+}
+
+export function FlexContent() {
+  return (
     <>
-      <H1>Flex</H1>
       <Paragraph>
         The Flex library provides 2 components for usage:{' '}
         <Strong>FlexRow</Strong> and <Strong>FlexCol</Strong>. Basically these
         serve purposes similar to the Grid components but via CSS flexbox.
       </Paragraph>
 
-      <H3>FlexRow</H3>
+      <HR />
+
+      <APIheading name="FlexRow" />
       <Paragraph>FlexRow acts a parent container to FlexCol.</Paragraph>
 
-      <FlexRow
-        p={'30px 30px 10px'}
-        mb={'1rem'}
-        style={{
-          border: '1px solid black'
-        }}
-      >
-        <FlexCol columnSize={12} gutterWidth={0}>
-          <H4>Props</H4>
-        </FlexCol>
+      <FlexTable
+        title="Props"
+        cells={[
+          {
+            prop: 'reverse',
+            subProp: 'boolean',
+            content: 'Sets the row in reverse when true.'
+          }
+        ]}
+      />
 
-        <FlexCol columnSize={[12, 5, 4]} gutterWidth={0}>
-          <SmallLead mb={'0.15rem'}>reverse</SmallLead>
-          <SmallParagraph>boolean</SmallParagraph>
-        </FlexCol>
-
-        <FlexCol columnSize={[12, 7, 8]} gutterWidth={0}>
-          <Paragraph>Sets the row in reverse when true.</Paragraph>
-        </FlexCol>
-      </FlexRow>
-
-      <H3>FlexCol</H3>
+      <APIheading name="FlexCol" />
       <Paragraph>
         FlexCol is where most of the heavy lifting is. FlexCol will require
         being wrapped in FlexRow in order to work.
       </Paragraph>
 
-      <FlexRow
-        p={'30px 30px 10px'}
-        mb={'1rem'}
-        style={{
-          border: '1px solid black'
-        }}
-      >
-        <FlexCol columnSize={12} gutterWidth={0}>
-          <H4>Props</H4>
-        </FlexCol>
+      <FlexTable
+        title="Props"
+        cells={[
+          {
+            prop: 'columnSize',
+            subProp: 'number | number[]',
+            content:
+              'The columnSize prop defines the size of the column. This will be the most common prop you will defining for FlexCol.You may define this as a single number or an array of numbers for responsive.'
+          },
+          {
+            prop: 'offset',
+            subProp: 'number | number[]',
+            content:
+              'The offset prop lets offset your columns. You may define this as a single number or an array of numbers for responsive.'
+          },
+          {
+            prop: 'gutterWidth',
+            subProp: 'number | number[]',
+            content:
+              ' The gutterWidth prop defines padding for your columns. Note that the number value provided is the total between left and right paddings. Again, array of numbers for responsive and yes, you can set it to 0.'
+          },
+          {
+            prop: 'totalColumns',
+            subProp: 'number',
+            content:
+              'The totalColumns prop lets you define the total number of columns to be used as a basis. This defaults to 12.'
+          }
+        ]}
+      />
 
-        <FlexCol columnSize={[12, 5, 4]} gutterWidth={0}>
-          <SmallLead mb={'0.15rem'}>columnSize</SmallLead>
-          <SmallParagraph>number | number[]</SmallParagraph>
-        </FlexCol>
-
-        <FlexCol columnSize={[12, 7, 8]} gutterWidth={0}>
-          <Paragraph>
-            The &nbsp;
-            <Strong>columnSize</Strong> prop defines the size of the column.
-            This will be the most common prop you will defining for FlexCol.You
-            may define this as a single number or an array of numbers for
-            responsive.
-          </Paragraph>
-        </FlexCol>
-
-        <FlexCol columnSize={[12, 5, 4]} gutterWidth={0}>
-          <SmallLead mb={'0.15rem'}>offset</SmallLead>
-          <SmallParagraph>number | number[]</SmallParagraph>
-        </FlexCol>
-
-        <FlexCol columnSize={[12, 7, 8]} gutterWidth={0}>
-          <Paragraph>
-            The &nbsp;
-            <Strong>offset</Strong> prop lets offset your columns. You may
-            define this as a single number or an array of numbers for
-            responsive.
-          </Paragraph>
-        </FlexCol>
-
-        <FlexCol columnSize={[12, 5, 4]} gutterWidth={0}>
-          <SmallLead mb={'0.15rem'}>gutterWidth</SmallLead>
-          <SmallParagraph>number | number[]</SmallParagraph>
-        </FlexCol>
-
-        <FlexCol columnSize={[12, 7, 8]} gutterWidth={0}>
-          <Paragraph>
-            The &nbsp;
-            <Strong>gutterWidth</Strong> prop defines padding for your columns.
-            Note that the number value provided is the total between left and
-            right paddings. Again, array of numbers for responsive and yes, you
-            can set it to 0.
-          </Paragraph>
-        </FlexCol>
-
-        <FlexCol columnSize={[12, 5, 4]} gutterWidth={0}>
-          <SmallLead mb={'0.15rem'}>totalColumns: number</SmallLead>
-          <SmallParagraph>number</SmallParagraph>
-        </FlexCol>
-
-        <FlexCol columnSize={[12, 7, 8]} gutterWidth={0}>
-          <Paragraph>
-            The &nbsp;
-            <Strong>totalColumns</Strong> prop lets you define the total number
-            of columns to be used as a basis. This defaults to 12.
-          </Paragraph>
-        </FlexCol>
-      </FlexRow>
-
-      <H2>Usage</H2>
+      <ArticleSubSectionTitle>Usage</ArticleSubSectionTitle>
       <Paragraph>
         Below are examples of how to use the Flex components.
       </Paragraph>
 
-      <H3>Column Sizing</H3>
+      <APIheading name="Column Sizing" />
       <Paragraph>
         Below are examples of how to use the columnSizing prop, with default
         totalColumns of 12.
@@ -148,9 +103,9 @@ export function Flex() {
       <Syntax>{flexColumnSizingUsage}</Syntax>
       <FlexColumnSizingDemo />
 
-      <br />
+      <HR />
 
-      <H3>Offsetting</H3>
+      <APIheading name="Offsetting" />
       <Paragraph>
         Offsets work in tandem with columnSizing. Adjust accordingly if you
         using a custom number of columns.
@@ -158,7 +113,9 @@ export function Flex() {
       <Syntax>{flexOffsetUsage}</Syntax>
       <FlexOffsetDemo />
 
-      <H3>Total Columns</H3>
+      <HR />
+
+      <APIheading name="Total Columns" />
       <Paragraph>
         Depending on design, sometimes you might need a more specific column
         count. The totalColumns prop is available for such occasions. Below is
@@ -168,7 +125,7 @@ export function Flex() {
       <Syntax>{flexTotalColumnsUsage}</Syntax>
       <FlexTotalColumnsDemo />
 
-      <br />
+      <HR />
 
       <Paragraph>
         You can also wrap up FlexCol so that you don't need to define it in
@@ -179,9 +136,9 @@ export function Flex() {
 
       <CustomColDemo />
 
-      <br />
+      <HR />
 
-      <H3>Alignment, Distribution, Ordering, etc.</H3>
+      <APIheading name="Alignment, Distribution, Ordering, etc." />
       <Paragraph>
         As this is based off of styled-system, you can basically assign CSS flex
         alignment or justify properties directly onto FlexRow or FlexCol.
