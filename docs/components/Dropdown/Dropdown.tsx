@@ -1,19 +1,19 @@
 import React from 'react';
-import { useRouter } from 'next/router'
+import { useRouter } from 'next/router';
 import styled from 'styled-components';
 import { DropdownHead, Options } from './components';
 
 type Props = {
   title: string;
   list: ListItemProp[];
-}
+};
 
 type ListItemProp = {
   id: string;
   title: string;
   selected: boolean;
   key: string;
-}
+};
 
 export function Dropdown({ title = '', list = [] }: Props) {
   const router = useRouter();
@@ -30,14 +30,14 @@ export function Dropdown({ title = '', list = [] }: Props) {
     }
 
     return function cleanupListener() {
-      window.removeEventListener('click', close)
-    }
+      window.removeEventListener('click', close);
+    };
   }, [listOpen]);
 
   React.useEffect(() => {
     router.push({
       pathname: '/',
-      query: { content: headerTitle },
+      query: { content: headerTitle }
     });
   }, [headerTitle]);
 
@@ -56,19 +56,20 @@ export function Dropdown({ title = '', list = [] }: Props) {
 
   return (
     <Wrapper>
-      <DropdownHead toggleList={toggleList} headerTitle={headerTitle} listOpen={listOpen} />
+      <DropdownHead
+        toggleList={toggleList}
+        headerTitle={headerTitle}
+        listOpen={listOpen}
+      />
 
-      {
-        listOpen &&
-          <Options list={list} selectItem={selectItem} />
-      }
+      {listOpen && <Options list={list} selectItem={selectItem} />}
     </Wrapper>
-  )
+  );
 }
 
 const Wrapper = styled.div`
   position: relative;
-  max-width: 400px;
+  max-width: 300px;
   width: 100%;
   font-size: 1.6rem;
   user-select: none;

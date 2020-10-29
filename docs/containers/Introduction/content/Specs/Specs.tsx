@@ -12,11 +12,14 @@ export function Specs() {
         Further details about the Artifak library are provided below.
       </Paragraph>
 
-      <SpecContainer columnLength={2}>
+      <SpecContainer columnLength={[1, 2]}>
         <SpecCol>
-          <Spec title="R 1.1.3" content="MIT Licence" />
-          <Spec title="Node" content=">= 10.14.2" />
-          <Spec title="Size" content={['Minified 9.9kb', 'Minified and Gzipped 2.3kb']} />
+          <Spec title="R 1.1.4" content="MIT Licence" />
+          <Spec title="Node" content=">= 12.19.0" />
+          <Spec
+            title="Size"
+            content={['Minified 4.7kb', 'Minified and Gzipped 1.5kb']}
+          />
         </SpecCol>
 
         <SpecCol>
@@ -27,7 +30,8 @@ export function Specs() {
               'typescript >= 4.0.0',
               'styled-components >= 4.4.1',
               'styled-system >= 5.1.5'
-            ]} />
+            ]}
+          />
         </SpecCol>
       </SpecContainer>
     </Section>

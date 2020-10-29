@@ -26,7 +26,6 @@ const BlockedSectionTitleContainer = styled.div`
     margin-bottom: 1.5em;
 
     &::after {
-      content: '';
       flex: 1;
       background: ${theme.colors.primary};
       height: 1px;
@@ -36,6 +35,12 @@ const BlockedSectionTitleContainer = styled.div`
     &::after {
       margin-left: 1em;
     }
+
+    @media(min-width: ${theme.breakpoints[1]}) {
+      &::after {
+        content: '';
+      }
+    }
   `}
 `;
 
@@ -44,5 +49,10 @@ const BlockedSectionTitleText = styled(H1)`
     background: ${theme.colors.primary};
     color: ${theme.colors.white};
     padding: 0.1em 0.25em;
+    width: 100%;
+
+    @media(min-width: ${theme.breakpoints[1]}) {
+      width: auto;
+    }
   `}
 `;

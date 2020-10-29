@@ -46,7 +46,7 @@ const links = [
     title: 'Generator',
     selected: false,
     key: 'modules'
-  },
+  }
   // {
   //   id: 'variants',
   //   title: 'Variants',
@@ -66,5 +66,11 @@ export function Header() {
 }
 
 const HeaderContainer = styled.header`
-  padding: 5em 0 0;
-`
+  padding: 2em 0 0;
+
+  ${({ theme }) => `
+    @media(min-width: ${theme.breakpoints[0]}) {
+      padding: 5em 0 0;
+    }
+  `}
+`;

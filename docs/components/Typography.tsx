@@ -20,7 +20,7 @@ const styles = {
   },
 
   H3: {
-    fontSize: [27, 28, 30, 32],
+    fontSize: [24, 28, 30, 32],
     fontFamily: theme.fontFamily.poppins,
     lineHeight: 1.45,
     margin: '0 0 0.5em',

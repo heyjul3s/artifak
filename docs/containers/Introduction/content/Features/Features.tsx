@@ -2,18 +2,27 @@ import React from 'react';
 import { Paragraph } from '../../../../components/Typography';
 import { Section } from '../../../../components/Section';
 import { SectionTitle } from '../../../../components/SectionTitle';
-import { BuildIcon, ModularIcon, ExtensibleIcon, TSIcon, LightweightIcon, SimpleIcon } from './Icons';
+import {
+  BuildIcon,
+  ModularIcon,
+  ExtensibleIcon,
+  TSIcon,
+  LightweightIcon,
+  SimpleIcon
+} from './Icons';
 import { FeaturesGrid, FeatureItem } from './components/';
 
 const IntroductionContent = [
   {
     title: 'Freedom To Build',
-    content: 'Made in mind to provide a solid foundation to build, the rest is up to you.',
+    content:
+      'Made in mind to provide a solid foundation to build, the rest is up to you.',
     Icon: BuildIcon
   },
   {
     title: 'Modular',
-    content: 'Distributed packages allows you to install only the packages that you want.',
+    content:
+      'Distributed packages allows you to install only the packages that you want.',
     Icon: ModularIcon
   },
   {
@@ -23,14 +32,15 @@ const IntroductionContent = [
   },
   {
     title: 'Typescript',
-    content: "Written in Typescript so you don't have to tame another idiosyncratic JS beast.",
+    content:
+      "Written in Typescript so you don't have to tame another idiosyncratic JS beast.",
     Icon: TSIcon
   },
   {
     title: 'Lightweight',
-    content: 'A mere minified 9.9kb of goodness to help you build your system components.',
+    content:
+      'A mere minified 9.9kb of goodness to help you build your system components.',
     Icon: LightweightIcon
-
   },
   {
     title: 'Simple',
@@ -44,15 +54,21 @@ export function Features() {
     <Section>
       <SectionTitle title="Features" />
       <Paragraph textAlign="center" mb="2em">
-        Here’s why you want to consider and use the Artifak UI primitives library.
+        Here’s why you want to consider and use the Artifak UI primitives
+        library.
       </Paragraph>
 
-      <FeaturesGrid columnLength={3}>
-        {
-          IntroductionContent.map(({ title, content, Icon }, i) => {
-            return <FeatureItem key={`feature-${i}`} title={title} content={content} Icon={Icon} />;
-          })
-        }
+      <FeaturesGrid columnLength={[1, 3]}>
+        {IntroductionContent.map(({ title, content, Icon }, i) => {
+          return (
+            <FeatureItem
+              key={`feature-${i}`}
+              title={title}
+              content={content}
+              Icon={Icon}
+            />
+          );
+        })}
       </FeaturesGrid>
     </Section>
   );

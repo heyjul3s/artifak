@@ -15,19 +15,27 @@ export function InstallationInstructions() {
         language="bash"
       >{`yarn add artifak`}</Syntax>
 
-      <Paragraph m={0} pl={'1em'} pr={'1em'}>or</Paragraph>
+      <Paragraph m={0} pl={'1em'} pr={'1em'}>
+        or
+      </Paragraph>
 
       <Syntax
         showLineNumbers={false}
         language="bash"
       >{`npm install artifak`}</Syntax>
     </InstallationInstructionsContainer>
-  )
+  );
 }
 
 const InstallationInstructionsContainer = styled.div`
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-`
+
+  ${({ theme }) => `
+    @media (min-width: ${theme.breakpoints[1]}) {
+      flex-direction: row;
+    }
+  `}
+`;
