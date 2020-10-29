@@ -39,7 +39,7 @@ const IntroductionContent = [
   {
     title: 'Lightweight',
     content:
-      'A mere minified 9.9kb of goodness to help you build your system components.',
+      'A mere minified 4.7kb of goodness to help you build your system components.',
     Icon: LightweightIcon
   },
   {

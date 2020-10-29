@@ -20,7 +20,7 @@ export function Footer() {
 const StyledFooter = styled.footer`
   ${({ theme }) => css`
     padding: 2em 0;
-    border-top: 1px solid ${theme.colors.border};
+    border-top: 1px solid ${theme.colors.primary};
     font-family: ${theme.fontFamily.heading};
   `}
 `;
