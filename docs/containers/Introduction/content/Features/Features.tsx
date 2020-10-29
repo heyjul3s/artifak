@@ -58,7 +58,7 @@ export function Features() {
         library.
       </Paragraph>
 
-      <FeaturesGrid columnLength={[1, 3]}>
+      <FeaturesGrid columnLength={[1, 2, 2, 3]}>
         {IntroductionContent.map(({ title, content, Icon }, i) => {
           return (
             <FeatureItem
