@@ -4,10 +4,14 @@ import { H2 } from './Typography';
 
 type Props = {
   title: string;
-}
+};
 
 export function SectionTitle({ title }: Props) {
-  return <StyledSectionTitle><H2 m={0}>{title}</H2></StyledSectionTitle>;
+  return (
+    <StyledSectionTitle>
+      <SectionTitleH2 mb={0}>{title}</SectionTitleH2>
+    </StyledSectionTitle>
+  );
 }
 
 const StyledSectionTitle = styled.div`
@@ -33,8 +37,14 @@ const StyledSectionTitle = styled.div`
       margin-left: 1em;
     }
 
-    ${H2} {
+    > ${H2} {
       color: ${theme.colors.primary};
     }
+  `}
+`;
+
+const SectionTitleH2 = styled(H2)`
+  ${({ theme }) => `
+    color: ${theme.colors.primary};
   `}
 `;
