@@ -14,7 +14,7 @@ export function Specs() {
 
       <SpecContainer columnLength={[1, 2]}>
         <SpecCol>
-          <Spec title="R 1.1.4" content="MIT Licence" />
+          <Spec title="R 1.1.5" content="MIT Licence" />
           <Spec title="Node" content=">= 12.19.0" />
           <Spec
             title="Size"
