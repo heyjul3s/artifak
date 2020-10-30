@@ -1,5 +1,13 @@
 # artifak
 
+## 1.1.5
+
+### Patch Changes
+
+- Fix key type error in createTypographyComponents
+- Updated dependencies [undefined]
+  - @artifak/typography@1.1.5
+
 ## 1.1.4
 
 ### Patch Changes

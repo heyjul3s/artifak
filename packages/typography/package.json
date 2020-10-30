@@ -1,6 +1,6 @@
 {
   "name": "@artifak/typography",
-  "version": "1.1.4",
+  "version": "1.1.5",
   "description": "Typography utilities to assist in scaffolding your React project's Typography components",
   "keywords": [
     "react",
