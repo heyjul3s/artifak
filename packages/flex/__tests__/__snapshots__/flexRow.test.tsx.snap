@@ -3,7 +3,7 @@
 exports[`FlexRow FlexRow component should render 1`] = `
 <DocumentFragment>
   <div
-    class="sc-bdVaJa dZjhST"
+    class="sc-bdfBwQ kxJcpL"
   >
     Flex Row
   </div>
@@ -13,7 +13,7 @@ exports[`FlexRow FlexRow component should render 1`] = `
 exports[`FlexRow FlexRow component should render row-reverse 1`] = `
 <DocumentFragment>
   <div
-    class="sc-bdVaJa tvNuj"
+    class="sc-bdfBwQ evVzDO"
   >
     Flex Row Reverse
   </div>
