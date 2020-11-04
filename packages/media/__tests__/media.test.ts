@@ -29,6 +29,15 @@ describe('@artifak/media', () => {
         })
       ).toEqual(['screen', '(any-hover: hover)']);
     });
+
+    it('should return an array with a media type screen string and any-hover rule string', () => {
+      expect(
+        createQueryValuesArray({
+          screen: 'screen',
+          width: '30em >= width <= 50em'
+        })
+      ).toEqual(['screen', '(min-width: 30em)', '(max-width: 50em)']);
+    });
   });
 
   describe('formatQueryValue - if not a media type query, returns media query enclosed in parentheses else returns them as is', () => {
@@ -51,11 +60,3 @@ describe('@artifak/media', () => {
     });
   });
 });
-
-// describe('extractQueryValues', () => {
-//   it('needs tests', () => {
-//     expect(
-//       extractQueryValues({ screen: 'screen', anyHover: 'any-hover: hover' })
-//     ).toEqual(['screen', '(any-hover: hover)']);
-//   });
-// });
