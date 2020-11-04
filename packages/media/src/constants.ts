@@ -1,5 +1,6 @@
 import { mediaDeviceQueries } from './mediaDevices';
 import { mediaTypeQueries } from './mediaTypes';
+import { mediaAccessibilityQueries } from './mediaAccessibilty';
 
 export const {
   all,
@@ -22,5 +23,13 @@ export const {
   displayMinUI,
   displayStandalone,
   landscape,
-  portrait
-} = { ...mediaDeviceQueries, ...mediaTypeQueries };
+  portrait,
+  darkColorScheme,
+  lightColorScheme,
+  reducedMotion,
+  reducedMotionAny
+} = {
+  ...mediaDeviceQueries,
+  ...mediaTypeQueries,
+  ...mediaAccessibilityQueries
+};
