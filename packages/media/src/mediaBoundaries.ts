@@ -57,12 +57,12 @@ export function createBoundaryString(
     : `(${boundaryTypes[boundaryType]}: ${values[0]})`;
 }
 
-export function extractValues(value: string): string[] {
-  const VALUE_REGEX = /((\d{1,}\/\d{1,})|(\d{1,}(r|em)|px|vh|vw))+/g;
-  return isNonEmptyString(value) ? value.match(VALUE_REGEX) : [];
-}
+const OPERATOR_REGEX = /(?:[(>|<)=)]+)/g;
+const VALUE_REGEX = /((\d{1,}\/\d{1,})|(\d{1,}(r|em)|px|vh|vw))+/g;
 
-export function extractOperators(value: string): string[] {
-  const OPERATOR_REGEX = /(?:[(>|<)=)]+)/g;
-  return isNonEmptyString(value) ? value.match(OPERATOR_REGEX) : [];
+export const extractValues = extractByRegex.bind(this, VALUE_REGEX);
+export const extractOperators = extractByRegex.bind(this, OPERATOR_REGEX);
+
+export function extractByRegex(REGEX: RegExp, value: string): string[] {
+  return isNonEmptyString(value) ? value.match(REGEX) : [];
 }
