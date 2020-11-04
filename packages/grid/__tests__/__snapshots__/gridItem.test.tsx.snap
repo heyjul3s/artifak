@@ -3,7 +3,7 @@
 exports[`GridItem should render correctly 1`] = `
 <DocumentFragment>
   <div
-    class="sc-bdfBwQ"
+    class="sc-bdVaJa bDWFJH"
   >
     Grid Item
   </div>
@@ -13,7 +13,7 @@ exports[`GridItem should render correctly 1`] = `
 exports[`GridItemBase should render correctly 1`] = `
 <DocumentFragment>
   <div
-    class="sc-bdfBwQ"
+    class="sc-bdVaJa bDWFJH"
   >
     Grid Item Base
   </div>
