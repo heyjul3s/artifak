@@ -1,5 +1,10 @@
-// import { css } from 'styled-components';
-import { media, formatQueryValue, createQueryValuesArray } from '../src/media';
+import {
+  media,
+  formatQueryValue,
+  createQueryArray,
+  createQueryString,
+  filterQueryArgs
+} from '../src/media';
 
 describe('@artifak/media', () => {
   describe('media - main function that runs all necessary operations to return a styled-component media query', () => {
@@ -14,29 +19,88 @@ describe('@artifak/media', () => {
         })
       ).toBeDefined();
     });
+
+    it('should handle multiple media query arg objects', () => {
+      expect(
+        media(
+          { width: '30em >= width <= 50em', screen: 'screen' },
+          { landscape: 'orientation: landscape' }
+        )
+      ).toBeDefined();
+    });
   });
 
-  describe('createQueryValuesArray - loops through object, processes media query rules and returns them in a string array ', () => {
+  describe('filterQueryArgs', () => {
+    it('should return an empty array when provided with falsy args', () => {
+      expect(filterQueryArgs(void 0)).toEqual([]);
+      expect(filterQueryArgs(null)).toEqual([]);
+      expect(filterQueryArgs([void 0, null])).toEqual([]);
+    });
+
+    it('should return an empty array when provided with empty query objects', () => {
+      expect(filterQueryArgs([{}])).toEqual([]);
+    });
+
+    it('should return an array with query objects when provided with non-empty query objects', () => {
+      expect(filterQueryArgs([{ width: '>= 30em' }])).toEqual([
+        { width: '>= 30em' }
+      ]);
+
+      expect(
+        filterQueryArgs([{ screen: 'screen' }, { width: '>= 30em' }])
+      ).toEqual([{ screen: 'screen' }, { width: '>= 30em' }]);
+    });
+  });
+
+  describe('createQueryString - concatenates query string arrays with "OR" if applies', () => {
+    it('should return media query string with formatted value when provided a single prop in a single query object', () => {
+      expect(createQueryString([{ width: '>= 30em' }])).toEqual(
+        '(min-width: 30em)'
+      );
+    });
+
+    it('should return media query string concatenated with "AND" when given a single query object', () => {
+      expect(
+        createQueryString([
+          {
+            screen: 'screen',
+            width: '30em >= width <= 50em'
+          }
+        ])
+      ).toEqual('screen and (min-width: 30em) and (max-width: 50em)');
+    });
+
+    it('should return media query string concatenated with "OR" when given multiple query object', () => {
+      expect(
+        createQueryString([
+          { screen: 'screen', width: '>= 30em' },
+          { landscape: 'orientation: landscape' }
+        ])
+      ).toEqual('screen and (min-width: 30em), (orientation: landscape)');
+    });
+  });
+
+  describe('createQueryArray - processes media query rules and returns them in a string concatenated with "AND" if applies', () => {
     it('should return an empty array when no args are passed', () => {
-      expect(createQueryValuesArray()).toEqual([]);
+      expect(createQueryArray()).toEqual('');
     });
 
     it('should return an array with a media type screen string and any-hover rule string', () => {
       expect(
-        createQueryValuesArray({
+        createQueryArray({
           screen: 'screen',
           anyHover: 'any-hover: hover'
         })
-      ).toEqual(['screen', '(any-hover: hover)']);
+      ).toEqual('screen and (any-hover: hover)');
     });
 
     it('should return an array with a media type screen string and any-hover rule string', () => {
       expect(
-        createQueryValuesArray({
+        createQueryArray({
           screen: 'screen',
           width: '30em >= width <= 50em'
         })
-      ).toEqual(['screen', '(min-width: 30em)', '(max-width: 50em)']);
+      ).toEqual('screen and (min-width: 30em) and (max-width: 50em)');
     });
   });
 
