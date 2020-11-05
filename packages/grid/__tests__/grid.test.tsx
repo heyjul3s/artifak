@@ -6,6 +6,10 @@ import 'jest-styled-components';
 
 describe('@artifak/grid', () => {
   describe('setGridTemplateColumns', () => {
+    it('should return an empty string when args are undefined', () => {
+      expect(setGridTemplateColumns(void 0, void 0)).toEqual('');
+    });
+
     it('should return a string auto-fit CSS grid rule', () => {
       const expected = 'repeat(auto-fit, minmax(320px, 1fr))';
       const gridTemplateColumnStyles = setGridTemplateColumns('320px', void 0);
