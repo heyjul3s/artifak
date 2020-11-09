@@ -20,7 +20,7 @@ import { BaseComponentProps } from './typings';
 
 export function createStyledComponent<CP>(
   baseStyles: CSSObject = {},
-  variants: VariantArgs<object, string, string> = {},
+  variants: VariantArgs<Record<string, unknown>, string, string> = {},
   systemStyleProps: styleFn[] = [],
   element: keyof JSX.IntrinsicElements = 'div'
 ): AnyStyledComponent {
