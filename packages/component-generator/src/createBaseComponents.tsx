@@ -1,10 +1,11 @@
 import React from 'react';
 import { AnyStyledComponent } from 'styled-components';
+import { ComponentVariant } from './typings';
 
-export function createBaseComponents<ST, CP extends { variant?: string }>(
+export function createBaseComponents<ST, CP>(
   BaseStyledComponent: AnyStyledComponent,
   styles: ST
-): { [key in keyof ST]: React.FC<CP> } {
+): { [key in keyof ST]: React.FC<CP & ComponentVariant> } {
   return !!styles && Object.keys(styles).length >= 1
     ? Object.entries(styles).reduce((acc, entry) => {
         const [prop, style] = entry;
@@ -18,8 +19,8 @@ export function createBaseComponents<ST, CP extends { variant?: string }>(
         }
 
         return acc;
-      }, {} as { [key in keyof ST]: React.FC<CP> })
-    : ({} as { [key in keyof ST]: React.FC<CP> });
+      }, {} as { [key in keyof ST]: React.FC<CP & ComponentVariant> })
+    : ({} as { [key in keyof ST]: React.FC<CP & ComponentVariant> });
 }
 
 export function createStyledFunctionComponent<ST, CP>(

@@ -10,7 +10,7 @@ import {
 
 import { GridItemBaseProps } from './typings';
 
-export const GridItemBase = createStyledComponent<GridItemBaseProps>([
+export const GridItemBase = createStyledComponent<GridItemBaseProps>({}, {}, [
   alignSelf,
   gridArea,
   gridRow,

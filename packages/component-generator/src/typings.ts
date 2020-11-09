@@ -30,3 +30,5 @@ export type BaseComponentProps =
   | ShadowProps
   | SpaceProps
   | TypographyProps;
+
+export type ComponentVariant = { variant?: string };
