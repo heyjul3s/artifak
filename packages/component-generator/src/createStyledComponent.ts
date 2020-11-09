@@ -11,18 +11,22 @@ import {
   shadow,
   space,
   typography,
+  variant,
+  VariantArgs,
   styleFn
 } from 'styled-system';
 
 import { BaseComponentProps } from './typings';
 
 export function createStyledComponent<CP>(
-  systemStyleProps: styleFn[] = [],
   baseStyles: CSSObject = {},
+  variants: VariantArgs<Record<string, unknown>, string, string> = {},
+  systemStyleProps: styleFn[] = [],
   element: keyof JSX.IntrinsicElements = 'div'
 ): AnyStyledComponent {
   return styled(element)<BaseComponentProps & CP>(
     baseStyles,
+    variant(variants),
     compose(
       background,
       border,

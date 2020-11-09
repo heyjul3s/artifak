@@ -13,4 +13,4 @@ const typographyStylesConfig = system({
 
 export const TypographyBase = createStyledComponent<
   typeof typographyStylesConfig
->([typographyStylesConfig]);
+>({}, {}, [typographyStylesConfig]);
