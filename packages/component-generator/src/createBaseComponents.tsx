@@ -1,7 +1,7 @@
 import React from 'react';
 import { AnyStyledComponent } from 'styled-components';
 
-export function createBaseComponents<ST, CP>(
+export function createBaseComponents<ST, CP extends { variant?: string }>(
   BaseStyledComponent: AnyStyledComponent,
   styles: ST
 ): { [key in keyof ST]: React.FC<CP> } {
