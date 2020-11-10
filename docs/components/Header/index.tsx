@@ -46,13 +46,19 @@ const links = [
     title: 'Generator',
     selected: false,
     key: 'modules'
+  },
+  {
+    id: 'media',
+    title: 'Media',
+    selected: false,
+    key: 'modules'
   }
   // {
   //   id: 'variants',
   //   title: 'Variants',
   //   selected: false,
-  //   key: 'location'
-  // },
+  //   key: 'modules'
+  // }
 ];
 
 export function Header() {
