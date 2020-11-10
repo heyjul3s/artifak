@@ -52,13 +52,13 @@ const links = [
     title: 'Media',
     selected: false,
     key: 'modules'
+  },
+  {
+    id: 'variants',
+    title: 'Variants',
+    selected: false,
+    key: 'modules'
   }
-  // {
-  //   id: 'variants',
-  //   title: 'Variants',
-  //   selected: false,
-  //   key: 'modules'
-  // }
 ];
 
 export function Header() {

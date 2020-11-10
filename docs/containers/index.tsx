@@ -6,6 +6,7 @@ import { Flex } from './Flex';
 import { Generator } from './Generator';
 import { Imagery } from './Imagery';
 import { Media } from './Media';
+import { Variants } from './Variants';
 
 export const content = {
   Introduction,
@@ -15,5 +16,6 @@ export const content = {
   Flex,
   Generator,
   Imagery,
-  Media
+  Media,
+  Variants
 };
