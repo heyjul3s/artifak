@@ -14,9 +14,7 @@ export const systemExtensionUsage = `
   // add your prop via "system"
   // for more on how "system" works: https://styled-system.com/custom-props/
   const myStylesConfig = system({
-    textDecoration: {
-      property: 'textDecoration',
-    },
+    textDecoration: true
   });
 
   // Create the styled component.
