@@ -1,7 +1,7 @@
-import { mediaDeviceQueries } from '../src/mediaDevices';
+import { mediaInputQueries } from '../src/mediaInput';
 
 describe('mediaDevices', () => {
   it('should be defined', () => {
-    expect(mediaDeviceQueries).toBeDefined;
+    expect(mediaInputQueries).toBeDefined;
   });
 });

@@ -1,9 +1,11 @@
 import { MediaBoundaries } from './mediaBoundaries';
-import { MediaDeviceQueries } from './mediaDevices';
-import { MediaTypes } from './MediaTypes';
+import { MediaInputQueries } from './mediaInput';
+import { MediaTypes } from './mediaTypes';
 import { MediaAccessibilityQueries } from './mediaAccessibilty';
+import { MediaDisplayQueries } from './mediaDisplay';
 
 export type Media = MediaBoundaries &
-  MediaDeviceQueries &
+  MediaInputQueries &
   MediaTypes &
-  MediaAccessibilityQueries;
+  MediaAccessibilityQueries &
+  MediaDisplayQueries;
