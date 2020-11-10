@@ -26,7 +26,7 @@ export function MediaContent() {
 
       <HR />
 
-      <APIheading name="media" params={{ queries: 'Media' }} />
+      <APIheading name="media" />
       <Paragraph>
         The mixin currently supports the following media queries. Below are a
         list of props and their respective values.
