@@ -1,6 +1,7 @@
-import { mediaDeviceQueries } from './mediaDevices';
+import { mediaInputQueries } from './mediaInput';
 import { mediaTypeQueries } from './mediaTypes';
 import { mediaAccessibilityQueries } from './mediaAccessibilty';
+import { mediaDisplayQueries } from './mediaDisplay';
 
 export const {
   all,
@@ -29,7 +30,8 @@ export const {
   reducedMotion,
   reducedMotionAny
 } = {
-  ...mediaDeviceQueries,
+  ...mediaInputQueries,
   ...mediaTypeQueries,
-  ...mediaAccessibilityQueries
+  ...mediaAccessibilityQueries,
+  ...mediaDisplayQueries
 };
