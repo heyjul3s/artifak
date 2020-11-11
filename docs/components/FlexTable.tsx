@@ -8,7 +8,12 @@ import {
   SmallParagraph
 } from '../components/Typography';
 
-export function FlexTable({ title, cells }) {
+type Props = {
+  title?: string;
+  cells: { prop: string; content: string }[];
+};
+
+export function FlexTable({ title, cells }: Props) {
   return (
     <FlexRow
       p={'30px 30px 10px'}
@@ -17,7 +22,7 @@ export function FlexTable({ title, cells }) {
         border: '1px solid black'
       }}
     >
-      <FlexTableTitle title={title} />
+      {!!title && <FlexTableTitle title={title} />}
 
       {!!cells &&
         cells.length &&

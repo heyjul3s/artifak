@@ -1,4 +1,4 @@
-import { Paragraph } from '../components/Typography';
+import { Paragraph, Strong } from '../components/Typography';
 import { Syntax } from '../components/Syntax';
 import { min, max, minMax, and, or, single } from '../codeExamples/media';
 import { ArticleSubSectionTitle } from '../components/ArticleSubSectionTitle';
@@ -19,9 +19,12 @@ export function MediaContent() {
   return (
     <>
       <Paragraph>
-        A styled-component mixin, Media helps you write media queries for your
-        styled components. At its current incarnation, the mixin supports "and"
-        and "or" media query operators. The "not" operator is not supported yet.
+        Although most width related queries should be taken care of via Styled
+        System, sometimes our concern goes beyond that and what's more, there
+        are currently newer media queries that we can specify now. Therefore, a
+        media query mixin is included with Artifak to help in regards to this.
+        At its current incarnation, the mixin only supports "and" and "or" media
+        query operators. The "not" operator is not supported yet.
       </Paragraph>
 
       <HR />
@@ -35,7 +38,6 @@ export function MediaContent() {
       <APIheading name="Media Types" />
 
       <FlexTable
-        title="Queries"
         cells={[
           {
             prop: 'all',
@@ -76,7 +78,6 @@ export function MediaContent() {
       </Paragraph>
 
       <FlexTable
-        title="Queries"
         cells={[
           {
             prop: 'width',
@@ -101,7 +102,6 @@ export function MediaContent() {
 
       <APIheading name="Media Input" />
       <FlexTable
-        title="Queries"
         cells={[
           {
             prop: 'hover',
@@ -142,7 +142,6 @@ export function MediaContent() {
 
       <APIheading name="Media Display" />
       <FlexTable
-        title="Queries"
         cells={[
           {
             prop: 'fullScreen',
@@ -175,7 +174,6 @@ export function MediaContent() {
 
       <APIheading name="Media Accessibility" />
       <FlexTable
-        title="Queries"
         cells={[
           {
             prop: 'darkColorScheme',
@@ -209,14 +207,16 @@ export function MediaContent() {
       <HR />
 
       <APIheading name="Single Value Queries" />
-      <Paragraph>Returns an equivalent of "@media (width: 768px)"</Paragraph>
+      <Paragraph>
+        Returns an equivalent of <Strong>"@media (width: 768px)"</Strong>
+      </Paragraph>
       <Syntax>{single}</Syntax>
 
       <HR />
 
       <APIheading name="Min Queries" />
       <Paragraph>
-        Returns an equivalent of "@media (min-width: 768px)"
+        Returns an equivalent of <Strong>"@media (min-width: 768px)"</Strong>
       </Paragraph>
       <Syntax>{min}</Syntax>
 
@@ -224,7 +224,7 @@ export function MediaContent() {
 
       <APIheading name="Max Queries" />
       <Paragraph>
-        Returns an equivalent of "@media (max-width: 768px)"
+        Returns an equivalent of <Strong>"@media (max-width: 768px)"</Strong>
       </Paragraph>
       <Syntax>{max}</Syntax>
 
@@ -232,8 +232,8 @@ export function MediaContent() {
 
       <APIheading name="Min And Max Queries" />
       <Paragraph>
-        Returns an equivalent of "@media (min-width: 768px) and (max-width:
-        1200px)"
+        Returns an equivalent of{' '}
+        <Strong>"@media (min-width: 768px) and (max-width: 1200px)"</Strong>
       </Paragraph>
       <Syntax>{minMax}</Syntax>
 
@@ -243,7 +243,7 @@ export function MediaContent() {
       <Paragraph>
         To formulate queries with the "and" operator, simply add your query to
         the same query object. Below will formulate a query equivalent to:
-        "@media screen and (min-width: 768px)"
+        <Strong>"@media screen and (min-width: 768px)"</Strong>
       </Paragraph>
       <Syntax>{and}</Syntax>
 
@@ -252,8 +252,10 @@ export function MediaContent() {
       <APIheading name="Querying with the 'OR' operator" />
       <Paragraph>
         To formulate queries with the "or" operator, simply add another query
-        object as argument. Below will formulate a query equivalent to: "@media
-        screen and (min-width: 768px), (orientation: landscape)"
+        object as argument. Below will formulate a query equivalent to:{' '}
+        <Strong>
+          "@media screen and (min-width: 768px), (orientation: landscape)"
+        </Strong>
       </Paragraph>
       <Syntax>{or}</Syntax>
     </>

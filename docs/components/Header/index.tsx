@@ -58,6 +58,12 @@ const links = [
     title: 'Variants',
     selected: false,
     key: 'modules'
+  },
+  {
+    id: 'customisation',
+    title: 'Customisation',
+    selected: false,
+    key: 'modules'
   }
 ];
 

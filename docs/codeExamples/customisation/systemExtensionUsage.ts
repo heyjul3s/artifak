@@ -1,5 +1,6 @@
 export const systemExtensionUsage = `
   import { system } from 'styled-system';
+  import { Property } from 'csstype';
   import { createStyledComponent, createBaseComponents } from 'artifak';
   import { Theme, RequiredTheme, ResponsiveValue } from 'styled-system';
 
@@ -8,7 +9,7 @@ export const systemExtensionUsage = `
   // You will find most of what you need via @types/styled-system but if you don't
   // well... here's an example of making your own.
   export interface TextDecorationProps<ThemeType extends Theme = RequiredTheme> {
-    textDecoration?: ResponsiveValue<CSS.Property.TextDecoration, ThemeType>;
+    textDecoration?: ResponsiveValue<Property.TextDecoration, ThemeType>;
   }
 
   // add your prop via "system"
@@ -19,7 +20,9 @@ export const systemExtensionUsage = `
 
   // Create the styled component.
   // In this example, we're assuming we want to generate a bunch of components from this base.
-  const MyBaseComponent = createStyledComponent<TextDecorationProps>([myStylesConfig]);
+  const MyBaseComponent = createStyledComponent<TextDecorationProps>(
+    {}, {}, [myStylesConfig]
+  );
 
   const myStyles = {
     Component1: {

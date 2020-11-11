@@ -21,7 +21,9 @@ export function VariantsContent() {
 
       <Paragraph>
         For occasions that you want to create components and include variants
-        with them, you can turn to the Generator library to do so.
+        with them, you can use the createStyledComponent utility function to do
+        so and after you can use the createBaseComponents to generate off of
+        your newly created base Styled Component if you wish to.
       </Paragraph>
 
       <Syntax>{generateWithVariants}</Syntax>
