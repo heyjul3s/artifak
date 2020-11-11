@@ -4,9 +4,7 @@ export const createBaseComponentsUsage = `
 
   // Create your base component
   const BaseComponent = createStyledComponent<PositionProps>(
-    [position],
-    { position: 'relative' },
-    'article'
+    { position: 'relative' }, {}, [position], 'article'
   );
 
   // Define your styles

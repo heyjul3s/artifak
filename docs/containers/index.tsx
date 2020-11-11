@@ -5,6 +5,9 @@ import { Typography } from './Typography';
 import { Flex } from './Flex';
 import { Generator } from './Generator';
 import { Imagery } from './Imagery';
+import { Media } from './Media';
+import { Variants } from './Variants';
+import { Customisation } from './Customisation';
 
 export const content = {
   Introduction,
@@ -13,5 +16,8 @@ export const content = {
   Typography,
   Flex,
   Generator,
-  Imagery
+  Imagery,
+  Media,
+  Variants,
+  Customisation
 };

@@ -6,7 +6,7 @@ type Props = {
   content: React.ReactNodeArray;
 };
 
-export function ArticleContentBlock({ sectionTitle, content }) {
+export function ArticleContentBlock({ sectionTitle, content }: Props) {
   return (
     <section>
       <H3>{sectionTitle}</H3>

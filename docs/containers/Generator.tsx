@@ -3,14 +3,12 @@ import { Syntax } from '../components/Syntax';
 
 import {
   createStyledComponentUsage,
-  createBaseComponentsUsage,
-  systemExtensionUsage
+  createBaseComponentsUsage
 } from '../codeExamples/generator';
 
 import { HR } from '../components/HR';
 import { ArticleDoc } from '../components/ArticleDoc';
 import { APIheading } from '../components/APIheading';
-import { ArticleSubSectionTitle } from '../components/ArticleSubSectionTitle';
 
 export function Generator() {
   return (
@@ -68,19 +66,6 @@ export function GeneratorContent() {
       </Paragraph>
 
       <Syntax>{createBaseComponentsUsage}</Syntax>
-
-      <HR />
-
-      <ArticleSubSectionTitle>
-        Customising/Adding CSS properties to the system
-      </ArticleSubSectionTitle>
-
-      <Paragraph>
-        To add to the previous createBaseComponents components example, let's
-        say you'd like to extend the system with some extra CSS properties.
-      </Paragraph>
-
-      <Syntax>{systemExtensionUsage}</Syntax>
     </>
   );
 }
