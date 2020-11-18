@@ -1,4 +1,4 @@
-import styled, { CSSObject, AnyStyledComponent } from 'styled-components';
+import styled, { AnyStyledComponent } from 'styled-components';
 
 import {
   compose,
@@ -11,23 +11,25 @@ import {
   shadow,
   space,
   typography,
-  variant,
-  VariantArgs,
-  styleFn
+  variant
 } from 'styled-system';
 
-import { BaseComponentProps } from './typings';
+import { BaseComponentProps, CreateStyledComponent } from './typings';
 
-export function createStyledComponent<CP>(
-  baseStyles: CSSObject = {},
-  variants: VariantArgs<Record<string, unknown>, string, string> = {},
-  systemStyleProps: styleFn[] = [],
-  element: keyof JSX.IntrinsicElements = 'div'
+export function createStyledComponent<P>(
+  config: CreateStyledComponent
 ): AnyStyledComponent {
-  return styled(element)<BaseComponentProps & CP>(
-    baseStyles,
-    variant(variants),
-    compose(
+  const {
+    styles = {},
+    variants = {},
+    styleProps = [],
+    element = 'div'
+  } = config;
+
+  return styled(element)<BaseComponentProps & P>`
+    ${styles},
+    ${variant({ variants })},
+    ${compose(
       background,
       border,
       color,
@@ -37,7 +39,7 @@ export function createStyledComponent<CP>(
       shadow,
       space,
       typography,
-      ...systemStyleProps
-    )
-  );
+      ...styleProps
+    )}
+  `;
 }
