@@ -1,7 +1,7 @@
 import { system } from 'styled-system';
 import { createStyledComponent } from '@artifak/component-generator';
 
-const typographyStylesConfig = system({
+const typographyStyleProps = system({
   textDecoration: true,
   textIndent: true,
   textTransform: true,
@@ -12,5 +12,5 @@ const typographyStylesConfig = system({
 });
 
 export const TypographyBase = createStyledComponent<
-  typeof typographyStylesConfig
->({}, {}, [typographyStylesConfig]);
+  typeof typographyStyleProps
+>({ styleProps: [typographyStyleProps] });

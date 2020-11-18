@@ -4,8 +4,8 @@ import { BlockBaseProps } from './typings';
 import { BlockBase } from './BlockBase';
 
 /* eslint-disable @typescript-eslint/no-explicit-any */
-export function createBlockComponents<ST>(
-  styles: ST
+export function createBlockComponents<S>(
+  styles: S
 ): { [key in keyof any]: React.FC<BlockBaseProps> } {
-  return createBaseComponents<ST, BlockBaseProps>(BlockBase, styles);
+  return createBaseComponents<S, BlockBaseProps>(BlockBase, styles);
 }
