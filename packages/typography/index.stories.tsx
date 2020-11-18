@@ -1,5 +1,8 @@
 import React from 'react';
 import { createTypographyComponents, fluidSizing } from './src';
+import { createStyledComponent } from '@artifak/component-generator';
+import styled from 'styled-components';
+import { variant } from 'styled-system';
 
 const typographyStyles = {
   H1: {
@@ -84,9 +87,24 @@ const {
   SmallParagraph
 } = createTypographyComponents<typeof typographyStyles>(typographyStyles);
 
+const SysH1 = styled(H1)(
+  variant({
+    variants: {
+      primary: {
+        color: 'red'
+      },
+      secondary: {
+        color: 'hotpink'
+      }
+    }
+  })
+);
+
 export const Type = () => {
   return (
     <>
+      <SysH1 variant="primary">Hello World</SysH1>
+      <SysH1 variant="secondary">Hello World</SysH1>
       <H1>Example h1</H1>
       <H2>Example h2</H2>
       <H3>Example h2</H3>
@@ -101,7 +119,33 @@ export const Type = () => {
   );
 };
 
+const VariableH1 = createStyledComponent({
+  styles: {
+    fontSize: fluidSizing(48, 96, 300, 1200),
+    margin: '0 0 0.25em',
+    lineHeight: 1.5,
+    as: 'h1'
+  },
+  variants: {
+    primary: {
+      color: 'red'
+    },
+    secondary: {
+      color: 'hotpink'
+    }
+  }
+});
+
+export const TypeVariant = () => {
+  return (
+    <>
+      <VariableH1 variant="primary">Hello World</VariableH1>
+      <VariableH1 variant="secondary">Hello World</VariableH1>
+    </>
+  );
+};
+
 export default {
   title: 'Typography',
-  component: Type
+  component: [Type, TypeVariant]
 };
