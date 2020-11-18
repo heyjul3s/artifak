@@ -7,7 +7,7 @@ export type Settings<A> = {
   attrs?: A;
 };
 
-export function createBaseComponents<P, S, A>(
+export function createBaseComponents<S, P, A>(
   BaseStyledComponent: AnyStyledComponent,
   settings: { [key in keyof S]: Settings<HTMLAttributes<A>> }
 ): { [key in keyof S]: React.FC<P & ComponentVariant> } {
@@ -17,7 +17,7 @@ export function createBaseComponents<P, S, A>(
         const { styles, attrs } = setting as Settings<HTMLAttributes<A>>;
 
         if (hasKey(settings, prop)) {
-          acc[prop] = createStyledFunctionComponent<P, A>(
+          acc[prop] = createStyledFunctionComponent<A, P>(
             BaseStyledComponent,
             styles,
             attrs
@@ -31,7 +31,7 @@ export function createBaseComponents<P, S, A>(
     : ({} as { [key in keyof S]: React.FC<P & ComponentVariant> });
 }
 
-export function createStyledFunctionComponent<P, A>(
+export function createStyledFunctionComponent<A, P>(
   BaseStyledComponent: AnyStyledComponent,
   styles: { [key: string]: string | string[] | number | number[] },
   attrs: HTMLAttributes<A> = {}
