@@ -3,12 +3,11 @@ export function fluidSizing(
   maxElementSize: number,
   minViewportWidth: number,
   maxViewportWidth: number
-): string | false {
-  return (
-    !!minElementSize &&
+): string {
+  return !!minElementSize &&
     !!maxElementSize &&
     !!minViewportWidth &&
-    !!maxViewportWidth &&
-    `calc(${minElementSize}px + (${maxElementSize} - ${minElementSize}) * ((100vw - ${minViewportWidth}px) / (${maxViewportWidth} - ${minViewportWidth})))`
-  );
+    !!maxViewportWidth
+    ? `calc(${minElementSize}px + (${maxElementSize} - ${minElementSize}) * ((100vw - ${minViewportWidth}px) / (${maxViewportWidth} - ${minViewportWidth})))`
+    : '';
 }
