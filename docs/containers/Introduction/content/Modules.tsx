@@ -33,7 +33,13 @@ const modules = [
   },
   {
     name: '@artifak/imagery',
-    content: 'A very basic image component.'
+    content:
+      'Due to varying different needs for imagery, Artifak Imagery component is simply a basic one.'
+  },
+  {
+    name: '@artifak/media',
+    content:
+      'A Styled Component media query mixin with "AND" and "OR" support along with some newer supported media queries.'
   }
 ];
 
