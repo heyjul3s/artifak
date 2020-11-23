@@ -1,12 +1,13 @@
 language: node_js
 node_js:
-  - 14.5.0
+  - 14.15.1
 
 before_script:
   - yarn build
 
 script:
+  - yarn bundlesize
   - yarn lint
-  - yarn test -u
+  - yarn test
 
 after_success: yarn coverage
