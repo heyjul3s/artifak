@@ -26,10 +26,10 @@ export function createStyledComponent<P>(
     element = 'div'
   } = config;
 
-  return styled(element)<BaseComponentProps & P>`
-    ${styles},
-    ${variant({ variants })},
-    ${compose(
+  return styled(element)<BaseComponentProps & P>(
+    styles,
+    variant({ variants }),
+    compose(
       background,
       border,
       color,
@@ -40,6 +40,6 @@ export function createStyledComponent<P>(
       space,
       typography,
       ...styleProps
-    )}
-  `;
+    )
+  );
 }

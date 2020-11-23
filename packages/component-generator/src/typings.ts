@@ -1,5 +1,5 @@
 import { StyledComponent, CSSObject } from 'styled-components';
-import { VariantArgs, styleFn } from 'styled-system';
+import { styleFn, ObjectOrArray } from 'styled-system';
 
 import {
   BackgroundProps,
@@ -34,10 +34,19 @@ export type BaseComponentProps =
 
 export type ComponentVariant = { variant?: string };
 
+export type StyleValue =
+  | string
+  | number
+  | ObjectOrArray<number | string | symbol>;
+
 export type CreateStyledComponent = {
   styles?: CSSObject;
   variants?: {
-    variants: VariantArgs<Record<string, CSSObject>, string, string>;
+    [key: string]: Partial<
+      {
+        [key in keyof CSSObject]: StyleValue;
+      }
+    >;
   };
   styleProps?: styleFn[];
   element?: keyof JSX.IntrinsicElements;
