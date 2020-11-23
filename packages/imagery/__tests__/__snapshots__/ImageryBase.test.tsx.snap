@@ -2,16 +2,16 @@
 
 exports[`ImageryBase should render 1`] = `
 <DocumentFragment>
-  <div
-    class="sc-bdVaJa kDzGxq"
+  <img
+    class="sc-bdVaJa hHijb"
   />
 </DocumentFragment>
 `;
 
 exports[`ImageryBase should render styles object-fit and object-position 1`] = `
 <DocumentFragment>
-  <div
-    class="sc-bdVaJa kDzGxq"
+  <img
+    class="sc-bdVaJa hgNDTD"
   />
 </DocumentFragment>
 `;
