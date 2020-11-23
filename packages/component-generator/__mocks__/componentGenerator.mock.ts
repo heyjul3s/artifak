@@ -12,13 +12,17 @@ import {
 
 export const mockComponentStyles = {
   H1: {
-    marginBottom: ['15px'],
-    as: 'h1'
+    styles: {
+      marginBottom: ['15px'],
+      as: 'h1'
+    }
   },
 
   H2: {
-    marginTop: 0,
-    as: 'h2'
+    styles: {
+      marginTop: 0,
+      as: 'h2'
+    }
   }
 };
 

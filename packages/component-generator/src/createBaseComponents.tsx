@@ -1,34 +1,44 @@
-import React from 'react';
+import React, { HTMLAttributes } from 'react';
 import { AnyStyledComponent } from 'styled-components';
 import { ComponentVariant } from './typings';
 
-export function createBaseComponents<ST, CP>(
-  BaseStyledComponent: AnyStyledComponent,
-  styles: ST
-): { [key in keyof ST]: React.FC<CP & ComponentVariant> } {
-  return !!styles && Object.keys(styles).length >= 1
-    ? Object.entries(styles).reduce((acc, entry) => {
-        const [prop, style] = entry;
+export type Settings<A> = {
+  /* eslint-disable @typescript-eslint/no-explicit-any */
+  styles: { [key in keyof any]: string | string[] | number | number[] };
+  attrs?: A;
+};
 
-        if (hasKey(styles, prop)) {
-          acc[prop] = createStyledFunctionComponent<ST, CP>(
+export function createBaseComponents<S, P, A>(
+  BaseStyledComponent: AnyStyledComponent,
+  settings: { [key in keyof S]: Settings<HTMLAttributes<A>> }
+): { [key in keyof S]: React.FC<P & ComponentVariant> } {
+  return !!settings && Object.keys(settings).length >= 1
+    ? Object.entries(settings).reduce((acc, entry) => {
+        const [prop, setting] = entry;
+        const { styles, attrs } = setting as Settings<HTMLAttributes<A>>;
+
+        if (hasKey(settings, prop)) {
+          acc[prop] = createStyledFunctionComponent<A, P>(
             BaseStyledComponent,
-            style
+            styles,
+            attrs
           );
+
           acc[prop].displayName = prop;
         }
 
         return acc;
-      }, {} as { [key in keyof ST]: React.FC<CP & ComponentVariant> })
-    : ({} as { [key in keyof ST]: React.FC<CP & ComponentVariant> });
+      }, {} as { [key in keyof S]: React.FC<P & ComponentVariant> })
+    : ({} as { [key in keyof S]: React.FC<P & ComponentVariant> });
 }
 
-export function createStyledFunctionComponent<ST, CP>(
+export function createStyledFunctionComponent<A, P>(
   BaseStyledComponent: AnyStyledComponent,
-  styles: ST
-): React.FC<CP> {
+  styles: { [key: string]: string | string[] | number | number[] },
+  attrs: HTMLAttributes<A> = {}
+): React.FC<P> {
   return props => (
-    <BaseStyledComponent {...styles} {...props}>
+    <BaseStyledComponent {...styles} {...attrs} {...props}>
       {props.children}
     </BaseStyledComponent>
   );

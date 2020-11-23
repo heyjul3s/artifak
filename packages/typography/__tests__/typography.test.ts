@@ -19,14 +19,14 @@ describe('@artifak/typography', () => {
 
   describe('fluidSizing - writes sizing CSS rule that dynamically adapts to screen width based on provided min/max constraits', () => {
     it('should return FALSE by default', () => {
-      const expected = false;
+      const expected = '';
       expect(
         fluidSizing(void 0 as any, void 0 as any, void 0 as any, void 0 as any)
       ).toEqual(expected);
     });
 
     it('should return FALSE by when provided falsy arguments', () => {
-      const expected = false;
+      const expected = '';
       expect(fluidSizing(void 0 as any, 96, 300, 1200)).toEqual(expected);
     });
 
