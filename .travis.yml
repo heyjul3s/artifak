@@ -8,6 +8,6 @@ before_script:
 script:
   - yarn bundlesize
   - yarn lint
-  - yarn test -u
+  - yarn test
 
 after_success: yarn coverage

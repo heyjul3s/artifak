@@ -3,6 +3,7 @@ import { AnyStyledComponent } from 'styled-components';
 import { ComponentVariant } from './typings';
 
 export type Settings<A> = {
+  /* eslint-disable @typescript-eslint/no-explicit-any */
   styles: { [key in keyof any]: string | string[] | number | number[] };
   attrs?: A;
 };
