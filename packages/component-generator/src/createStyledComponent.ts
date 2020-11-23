@@ -16,7 +16,7 @@ import {
 
 import { BaseComponentProps, CreateStyledComponent } from './typings';
 
-export function createStyledComponent<P>(
+export function createStyledComponent<P = void>(
   config: CreateStyledComponent
 ): AnyStyledComponent {
   const {

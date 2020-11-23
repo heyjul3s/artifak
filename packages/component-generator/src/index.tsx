@@ -10,5 +10,6 @@ export {
   StyledReactComponent,
   ComponentVariant,
   CreateStyledComponent,
-  CreateBaseComponentsConfig
+  CreateBaseComponentsConfig,
+  Settings
 } from './typings';

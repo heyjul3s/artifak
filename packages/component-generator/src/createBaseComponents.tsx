@@ -1,14 +1,12 @@
 import React, { HTMLAttributes } from 'react';
 import { AnyStyledComponent } from 'styled-components';
-import { ComponentVariant } from './typings';
+import { ComponentVariant, Settings } from './typings';
 
-export type Settings<A> = {
-  /* eslint-disable @typescript-eslint/no-explicit-any */
-  styles: { [key in keyof any]: string | string[] | number | number[] };
-  attrs?: A;
-};
-
-export function createBaseComponents<S, P, A>(
+export function createBaseComponents<
+  S,
+  P = Record<string, unknown>,
+  A = HTMLDivElement
+>(
   BaseStyledComponent: AnyStyledComponent,
   settings: { [key in keyof S]: Settings<HTMLAttributes<A>> }
 ): { [key in keyof S]: React.FC<P & ComponentVariant> } {

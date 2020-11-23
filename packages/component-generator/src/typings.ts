@@ -57,3 +57,9 @@ export interface CreateBaseComponentsConfig {
     as?: keyof JSX.IntrinsicElements;
   } & CSSObject;
 }
+
+export type Settings<A = void> = {
+  /* eslint-disable @typescript-eslint/no-explicit-any */
+  styles: { [key in keyof any]: string | string[] | number | number[] };
+  attrs?: A;
+};
