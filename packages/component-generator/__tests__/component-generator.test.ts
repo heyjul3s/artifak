@@ -35,12 +35,20 @@ describe('@artifak/component-generator', () => {
   describe('createStyledFunctionComponent', () => {
     it('should return a component', () => {
       expect(
-        createStyledFunctionComponent(MockComponent, mockComponentStyles)
+        createStyledFunctionComponent(
+          MockComponent,
+          mockComponentStyles.H1.styles
+        )
       ).toBeDefined();
     });
   });
 
   describe('createStyledComponent', () => {
+    it('should return a styled component with default config when no arguments are provided', () => {
+      const resultingStyledComponent = createStyledComponent({});
+      expect(resultingStyledComponent).toBeDefined();
+    });
+
     it('should return a styled component', () => {
       const mockConfig = system({
         textDecoration: true,
@@ -52,8 +60,9 @@ describe('@artifak/component-generator', () => {
         wordSpacing: true
       });
 
-      const resultingStyledComponent = createStyledComponent([mockConfig], {
-        fontSize: '1em'
+      const resultingStyledComponent = createStyledComponent({
+        styles: { fontSize: '1em' },
+        styleProps: [mockConfig]
       });
 
       expect(resultingStyledComponent).toBeDefined();

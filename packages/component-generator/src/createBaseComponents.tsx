@@ -1,34 +1,42 @@
-import React from 'react';
+import React, { HTMLAttributes } from 'react';
 import { AnyStyledComponent } from 'styled-components';
-import { ComponentVariant } from './typings';
+import { ComponentVariant, Settings } from './typings';
 
-export function createBaseComponents<ST, CP>(
+export function createBaseComponents<
+  S,
+  P = Record<string, unknown>,
+  A = HTMLDivElement
+>(
   BaseStyledComponent: AnyStyledComponent,
-  styles: ST
-): { [key in keyof ST]: React.FC<CP & ComponentVariant> } {
-  return !!styles && Object.keys(styles).length >= 1
-    ? Object.entries(styles).reduce((acc, entry) => {
-        const [prop, style] = entry;
+  settings: { [key in keyof S]: Settings<HTMLAttributes<A>> }
+): { [key in keyof S]: React.FC<P & ComponentVariant> } {
+  return !!settings && Object.keys(settings).length >= 1
+    ? Object.entries(settings).reduce((acc, entry) => {
+        const [prop, setting] = entry;
+        const { styles, attrs } = setting as Settings<HTMLAttributes<A>>;
 
-        if (hasKey(styles, prop)) {
-          acc[prop] = createStyledFunctionComponent<ST, CP>(
+        if (hasKey(settings, prop)) {
+          acc[prop] = createStyledFunctionComponent<A, P>(
             BaseStyledComponent,
-            style
+            styles,
+            attrs
           );
+
           acc[prop].displayName = prop;
         }
 
         return acc;
-      }, {} as { [key in keyof ST]: React.FC<CP & ComponentVariant> })
-    : ({} as { [key in keyof ST]: React.FC<CP & ComponentVariant> });
+      }, {} as { [key in keyof S]: React.FC<P & ComponentVariant> })
+    : ({} as { [key in keyof S]: React.FC<P & ComponentVariant> });
 }
 
-export function createStyledFunctionComponent<ST, CP>(
+export function createStyledFunctionComponent<A, P>(
   BaseStyledComponent: AnyStyledComponent,
-  styles: ST
-): React.FC<CP> {
+  styles: { [key: string]: string | string[] | number | number[] },
+  attrs: HTMLAttributes<A> = {}
+): React.FC<P> {
   return props => (
-    <BaseStyledComponent {...styles} {...props}>
+    <BaseStyledComponent {...styles} {...attrs} {...props}>
       {props.children}
     </BaseStyledComponent>
   );

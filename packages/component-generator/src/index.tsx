@@ -5,4 +5,11 @@ export {
 
 export { createStyledComponent } from './createStyledComponent';
 
-export { BaseComponentProps, StyledReactComponent } from './typings';
+export {
+  BaseComponentProps,
+  StyledReactComponent,
+  ComponentVariant,
+  CreateStyledComponent,
+  CreateBaseComponentsConfig,
+  Settings
+} from './typings';

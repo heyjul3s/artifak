@@ -1,4 +1,5 @@
-import { StyledComponent } from 'styled-components';
+import { StyledComponent, CSSObject } from 'styled-components';
+import { styleFn, ObjectOrArray } from 'styled-system';
 
 import {
   BackgroundProps,
@@ -32,3 +33,33 @@ export type BaseComponentProps =
   | TypographyProps;
 
 export type ComponentVariant = { variant?: string };
+
+export type StyleValue =
+  | string
+  | number
+  | ObjectOrArray<number | string | symbol>;
+
+export type CreateStyledComponent = {
+  styles?: CSSObject;
+  variants?: {
+    [key: string]: Partial<
+      {
+        [key in keyof CSSObject]: StyleValue;
+      }
+    >;
+  };
+  styleProps?: styleFn[];
+  element?: keyof JSX.IntrinsicElements;
+};
+
+export interface CreateBaseComponentsConfig {
+  [key: string]: {
+    as?: keyof JSX.IntrinsicElements;
+  } & CSSObject;
+}
+
+export type Settings<A = void> = {
+  /* eslint-disable @typescript-eslint/no-explicit-any */
+  styles: { [key in keyof any]: string | string[] | number | number[] };
+  attrs?: A;
+};
