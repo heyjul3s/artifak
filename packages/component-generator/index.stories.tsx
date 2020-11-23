@@ -75,11 +75,10 @@ const TypographyBase = createStyledComponent<typeof typographyStyleProps>({
   styleProps: [typographyStyleProps]
 });
 
-export const { H1 } = createBaseComponents<
-  typeof typoConfig,
-  any,
-  HTMLHeadElement
->(TypographyBase, typoConfig);
+const { H1 } = createBaseComponents<typeof typoConfig, any, HTMLHeadElement>(
+  TypographyBase,
+  typoConfig
+);
 
 const VariantH1 = styled(H1)(
   variant({
