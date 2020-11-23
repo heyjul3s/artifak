@@ -6,8 +6,7 @@ before_script:
   - yarn build
 
 script:
-  - yarn bundlesize
   - yarn lint
-  - yarn test
+  - yarn test -u
 
 after_success: yarn coverage
