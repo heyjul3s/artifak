@@ -1,11 +1,13 @@
 import { theme } from '../theme';
 import { createBlockComponents } from 'artifak';
 
-const styles = {
+const settings = {
   Container: {
-    margin: '0 auto',
-    maxWidth: theme.container
+    styles: {
+      margin: '0 auto',
+      maxWidth: theme.container
+    }
   }
 };
 
-export const { Container } = createBlockComponents<typeof styles>(styles);
+export const { Container } = createBlockComponents<typeof settings>(settings);
