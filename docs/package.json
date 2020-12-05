@@ -10,7 +10,7 @@
   },
   "dependencies": {
     "artifak": "^1.1.5",
-    "csstype": "^3.0.4",
+    "csstype": "^3.0.5",
     "next": "10.0.1",
     "next-seo": "^4.16.0",
     "react": "^16.14.0",
