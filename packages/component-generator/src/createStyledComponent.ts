@@ -1,4 +1,5 @@
-import styled, { AnyStyledComponent } from 'styled-components';
+import React from 'react';
+import styled, { AnyStyledComponent, StyledComponent } from 'styled-components';
 
 import {
   compose,
@@ -14,19 +15,56 @@ import {
   variant
 } from 'styled-system';
 
-import { BaseComponentProps, CreateStyledComponent } from './typings';
+import {
+  BaseComponentProps,
+  StyledComponentConfig,
+  StyledComponentConfigWithBase
+} from './typings';
 
-export function createStyledComponent<P>(
-  config: CreateStyledComponent
-): AnyStyledComponent {
-  const {
-    styles = {},
-    variants = {},
-    styleProps = [],
-    element = 'div'
-  } = config;
+const pipe = (...fns) => value => fns.reduce((acc, fn) => fn(acc), value);
 
-  return styled(element)<BaseComponentProps & P>(
+export function createStyledComponent<P = void, T = void, A = void>(
+  config: StyledComponentConfig<P, T, A>
+): StyledComponent<
+  keyof JSX.IntrinsicElements | React.ComponentType<P>,
+  T | any,
+  React.ComponentType<P & BaseComponentProps>,
+  keyof any
+> {
+  return pipe(
+    createStyledBase,
+    createStyledWithAttributes,
+    applyStyledComponent
+  )(config);
+}
+
+export function createStyledBase<P = void, T = void, A = void>(
+  config: StyledComponentConfig<P, T, A>
+): StyledComponentConfigWithBase<P, T, A> {
+  const { element = 'div' } = config;
+
+  return {
+    ...config,
+    element,
+    component: styled(element)
+  };
+}
+
+export function createStyledWithAttributes<P = void, T = void, A = void>(
+  config: StyledComponentConfigWithBase<P, T, A>
+): StyledComponentConfigWithBase<P, T, A> {
+  return config.hasOwnProperty('attrs') && !!config.attrs
+    ? { ...config, component: config.component.attrs(config.attrs) }
+    : config;
+}
+
+export function applyStyledComponent<P = void, T = void, A = void>({
+  component,
+  styles = {},
+  variants,
+  styleProps = []
+}: StyledComponentConfigWithBase<P, T, A>): AnyStyledComponent {
+  return component(
     styles,
     variant({ variants }),
     compose(
