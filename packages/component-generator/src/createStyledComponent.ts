@@ -1,5 +1,6 @@
 import React from 'react';
-import styled, { AnyStyledComponent, StyledComponent } from 'styled-components';
+import isEmpty from 'lodash.isempty';
+import styled, { StyledComponent } from 'styled-components';
 
 import {
   compose,
@@ -15,20 +16,21 @@ import {
   variant
 } from 'styled-system';
 
-import {
-  BaseComponentProps,
-  StyledComponentConfig,
-  StyledComponentConfigWithBase
-} from './typings';
+import { BaseComponentProps, StyledComponentConfig } from './typings';
 
 const pipe = (...fns) => value => fns.reduce((acc, fn) => fn(acc), value);
 
-export function createStyledComponent<P = void, T = void, A = void>(
-  config: StyledComponentConfig<P, T, A>
+/* eslint-disable @typescript-eslint/no-explicit-any */
+export function createStyledComponent<
+  Props = void,
+  Theme = void,
+  Attributes = void
+>(
+  config: StyledComponentConfig<Props, Theme, Attributes>
 ): StyledComponent<
-  keyof JSX.IntrinsicElements | React.ComponentType<P>,
-  T | any,
-  React.ComponentType<P & BaseComponentProps>,
+  keyof JSX.IntrinsicElements | React.ComponentType<Props>,
+  Theme | any,
+  React.ComponentType<Props & BaseComponentProps>,
   keyof any
 > {
   return pipe(
@@ -38,9 +40,9 @@ export function createStyledComponent<P = void, T = void, A = void>(
   )(config);
 }
 
-export function createStyledBase<P = void, T = void, A = void>(
-  config: StyledComponentConfig<P, T, A>
-): StyledComponentConfigWithBase<P, T, A> {
+export function createStyledBase<Props = void, Theme = void, Attributes = void>(
+  config: StyledComponentConfig<Props, Theme, Attributes>
+): StyledComponentConfig<Props, Theme, Attributes> {
   const { element = 'div' } = config;
 
   return {
@@ -50,20 +52,29 @@ export function createStyledBase<P = void, T = void, A = void>(
   };
 }
 
-export function createStyledWithAttributes<P = void, T = void, A = void>(
-  config: StyledComponentConfigWithBase<P, T, A>
-): StyledComponentConfigWithBase<P, T, A> {
-  return config.hasOwnProperty('attrs') && !!config.attrs
-    ? { ...config, component: config.component.attrs(config.attrs) }
+export function createStyledWithAttributes<
+  Props = void,
+  Theme = void,
+  Attributes = void
+>(
+  config: StyledComponentConfig<Props, Theme, Attributes>
+): StyledComponentConfig<Props, Theme, Attributes> {
+  const { attrs = {} } = config;
+  return !!config.component && config.hasOwnProperty('attrs') && !isEmpty(attrs)
+    ? { ...config, component: config.component.attrs(attrs) }
     : config;
 }
 
-export function applyStyledComponent<P = void, T = void, A = void>({
-  component,
+export function applyStyledComponent<
+  Props = void,
+  Theme = void,
+  Attributes = void
+>({
+  component = styled.div,
   styles = {},
   variants,
   styleProps = []
-}: StyledComponentConfigWithBase<P, T, A>): AnyStyledComponent {
+}: StyledComponentConfig<Props, Theme, Attributes>) {
   return component(
     styles,
     variant({ variants }),
