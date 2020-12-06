@@ -1,34 +1,7 @@
 import React from 'react';
-import styled, { css } from 'styled-components';
+import styled from 'styled-components';
 import { variant, system } from 'styled-system';
 import { createStyledComponent, createBaseComponents } from './src';
-
-const StyledH1 = createStyledComponent({
-  styles: {
-    fontSize: '48px',
-    margin: '0 0 0.25em',
-    lineHeight: 1.5
-  },
-  variants: {
-    primary: {
-      color: 'red'
-    },
-    secondary: {
-      color: 'hotpink'
-    }
-  },
-  element: 'h1'
-});
-
-export function StyledH1Componennt() {
-  return (
-    <>
-      <StyledH1>Hello World</StyledH1>
-      <StyledH1 variant="primary">Hello World</StyledH1>
-      <StyledH1 variant="secondary">Hello World</StyledH1>
-    </>
-  );
-}
 
 const typoConfig = {
   H1: {
@@ -103,7 +76,58 @@ export function GenVariadicH1() {
   );
 }
 
+const H1withVarsAttrs = createStyledComponent({
+  styles: {
+    fontSize: '48px',
+    margin: '0 0 0.25em',
+    lineHeight: 1.5
+  },
+  attrs: () => ({
+    title: 'heading'
+  }),
+  variants: {
+    primary: {
+      color: 'red'
+    },
+    secondary: {
+      color: 'hotpink'
+    }
+  },
+  element: 'h1'
+});
+
+export function H1WithVariantsAttributes() {
+  return (
+    <>
+      <H1withVarsAttrs>Hello World</H1withVarsAttrs>
+      <H1withVarsAttrs variant="primary">Hello World</H1withVarsAttrs>
+      <H1withVarsAttrs variant="secondary">Hello World</H1withVarsAttrs>
+    </>
+  );
+}
+
+const shorthandConfig = {
+  ShortHandH1: {
+    fontSize: '48px',
+    margin: '0 0 0.25em',
+    lineHeight: 1.5
+  }
+};
+
+const { ShortHandH1 } = createBaseComponents<
+  typeof shorthandConfig,
+  any,
+  HTMLHeadElement
+>(TypographyBase, shorthandConfig);
+
+export function Shorthand() {
+  return (
+    <>
+      <ShortHandH1>Hello World</ShortHandH1>
+    </>
+  );
+}
+
 export default {
-  title: 'Generator',
-  component: [StyledH1Componennt]
+  title: 'Generator'
 };

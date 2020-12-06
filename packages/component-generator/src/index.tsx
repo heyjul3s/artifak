@@ -7,9 +7,6 @@ export { createStyledComponent } from './createStyledComponent';
 
 export {
   BaseComponentProps,
-  StyledReactComponent,
   ComponentVariant,
-  CreateStyledComponent,
-  CreateBaseComponentsConfig,
-  Settings
+  StyledComponentConfig
 } from './typings';

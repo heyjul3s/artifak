@@ -1,5 +1,13 @@
-import { StyledComponent, CSSObject } from 'styled-components';
-import { styleFn, ObjectOrArray } from 'styled-system';
+import * as CSS from 'csstype';
+
+import {
+  CSSObject,
+  ThemedStyledFunction,
+  ThemedStyledProps,
+  InterpolationFunction
+} from 'styled-components';
+
+import { styleFn, Scale } from 'styled-system';
 
 import {
   BackgroundProps,
@@ -10,16 +18,9 @@ import {
   PositionProps,
   ShadowProps,
   SpaceProps,
-  TypographyProps
+  TypographyProps,
+  ResponsiveValue
 } from 'styled-system';
-
-/* eslint-disable @typescript-eslint/no-explicit-any */
-export type StyledReactComponent = StyledComponent<
-  keyof JSX.IntrinsicElements | React.ComponentType<any>,
-  any,
-  any,
-  any
->;
 
 export type BaseComponentProps =
   | BackgroundProps
@@ -32,34 +33,40 @@ export type BaseComponentProps =
   | SpaceProps
   | TypographyProps;
 
-export type ComponentVariant = { variant?: string };
+export type ComponentVariant<ThemeType = void> = {
+  variant?: ResponsiveValue<string | number, ThemeType>;
+};
 
-export type StyleValue =
-  | string
-  | number
-  | ObjectOrArray<number | string | symbol>;
+export type Attrs<Props, Attributes extends Partial<Props>, ThemeType> =
+  | ((props: ThemedStyledProps<Props, ThemeType>) => Attributes)
+  | Attributes;
 
-export type CreateStyledComponent = {
-  styles?: CSSObject;
+/* eslint-disable @typescript-eslint/no-explicit-any */
+export type StyledComponentConfig<
+  Props = void,
+  Attributes = void,
+  ThemeType = void
+> = {
+  styles?: CSSObject | TemplateStringsArray | InterpolationFunction<any>;
+  attrs?: Attrs<Props, Attributes, ThemeType>;
   variants?: {
-    [key: string]: Partial<
-      {
-        [key in keyof CSSObject]: StyleValue;
-      }
-    >;
+    [key: string]: StyledSystemCSSObject;
   };
   styleProps?: styleFn[];
   element?: keyof JSX.IntrinsicElements;
+  component?: ThemedStyledFunction<
+    keyof JSX.IntrinsicElements | React.ComponentType<Props>,
+    ThemeType | any,
+    React.ComponentType<Props>,
+    keyof any
+  >;
 };
 
-export interface CreateBaseComponentsConfig {
-  [key: string]: {
-    as?: keyof JSX.IntrinsicElements;
-  } & CSSObject;
-}
+export type CSSObjectWithScale = CSS.Properties<string | number | Scale>;
+export type CSSPseudos = { [K in CSS.Pseudos]?: CSSObjectWithScale };
+export type StyledSystemCSSObject = CSSObjectWithScale & CSSPseudos;
 
-export type Settings<A = void> = {
-  /* eslint-disable @typescript-eslint/no-explicit-any */
-  styles: { [key in keyof any]: string | string[] | number | number[] };
-  attrs?: A;
+export type Settings<Attributes = void> = {
+  styles: StyledSystemCSSObject;
+  attrs?: Attributes;
 };
