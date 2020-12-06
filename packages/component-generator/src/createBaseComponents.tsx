@@ -1,42 +1,58 @@
 import React, { HTMLAttributes } from 'react';
 import { AnyStyledComponent } from 'styled-components';
-import { ComponentVariant, Settings } from './typings';
+import { ComponentVariant, Settings, StyledSystemCSSObject } from './typings';
 
 export function createBaseComponents<
   S,
   P = Record<string, unknown>,
-  A = HTMLDivElement
+  E = HTMLDivElement
 >(
   BaseStyledComponent: AnyStyledComponent,
-  settings: { [key in keyof S]: Settings<HTMLAttributes<A>> }
-): { [key in keyof S]: React.FC<P & ComponentVariant> } {
+  settings:
+    | {
+        [key in keyof S]: Settings<HTMLAttributes<E>>;
+      }
+    | {
+        [key in keyof S]: StyledSystemCSSObject;
+      }
+): { [key in keyof S]: React.ComponentType<P & ComponentVariant> } {
+  const acc = {} as {
+    [key in keyof S]: React.ComponentType<P & ComponentVariant>;
+  };
+
   return !!settings && Object.keys(settings).length >= 1
     ? Object.entries(settings).reduce((acc, entry) => {
         const [prop, setting] = entry;
-        const { styles, attrs } = setting as Settings<HTMLAttributes<A>>;
+        const entrySetting = extractSettings<E>(setting);
 
         if (hasKey(settings, prop)) {
-          acc[prop] = createStyledFunctionComponent<A, P>(
+          acc[prop] = createStyledFunctionComponent<E, P>(
             BaseStyledComponent,
-            styles,
-            attrs
+            entrySetting
           );
 
           acc[prop].displayName = prop;
         }
 
         return acc;
-      }, {} as { [key in keyof S]: React.FC<P & ComponentVariant> })
-    : ({} as { [key in keyof S]: React.FC<P & ComponentVariant> });
+      }, acc)
+    : acc;
 }
 
-export function createStyledFunctionComponent<A, P>(
+export function extractSettings<E>(
+  setting: any
+): StyledSystemCSSObject & HTMLAttributes<E> {
+  return hasKey(setting, 'styles') || hasKey(setting, 'attrs')
+    ? { ...setting.styles, ...setting.attrs }
+    : setting;
+}
+
+export function createStyledFunctionComponent<E, P>(
   BaseStyledComponent: AnyStyledComponent,
-  styles: { [key: string]: string | string[] | number | number[] },
-  attrs: HTMLAttributes<A> = {}
-): React.FC<P> {
+  setting: StyledSystemCSSObject & HTMLAttributes<E>
+): React.ComponentType<P> {
   return props => (
-    <BaseStyledComponent {...styles} {...attrs} {...props}>
+    <BaseStyledComponent {...setting} {...props}>
       {props.children}
     </BaseStyledComponent>
   );
