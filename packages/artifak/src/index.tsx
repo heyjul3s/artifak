@@ -19,3 +19,7 @@ export {
   TypographyBase
 } from '@artifak/typography';
 export { TypographyBaseProps } from '@artifak/typography';
+
+export { Imagery, ImageryBase, ImageryProps } from '@artifak/imagery';
+
+export { media, Media } from '@artifak/media';
