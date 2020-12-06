@@ -3,6 +3,7 @@ node_js:
   - 14.15.1
 
 before_script:
+  - yarn
   - yarn build
 
 script:
