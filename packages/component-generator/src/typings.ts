@@ -1,10 +1,13 @@
+import * as CSS from 'csstype';
+
 import {
   CSSObject,
   ThemedStyledFunction,
   ThemedStyledProps,
   InterpolationFunction
 } from 'styled-components';
-import { styleFn, ObjectOrArray } from 'styled-system';
+
+import { styleFn, Scale } from 'styled-system';
 
 import {
   BackgroundProps,
@@ -15,7 +18,8 @@ import {
   PositionProps,
   ShadowProps,
   SpaceProps,
-  TypographyProps
+  TypographyProps,
+  ResponsiveValue
 } from 'styled-system';
 
 export type BaseComponentProps =
@@ -29,51 +33,40 @@ export type BaseComponentProps =
   | SpaceProps
   | TypographyProps;
 
-export type ComponentVariant = { variant?: string };
+export type ComponentVariant<ThemeType = void> = {
+  variant?: ResponsiveValue<string | number, ThemeType>;
+};
 
-export type StyleValue =
-  | string
-  | number
-  | ObjectOrArray<number | string | symbol>;
+export type Attrs<Props, Attributes extends Partial<Props>, ThemeType> =
+  | ((props: ThemedStyledProps<Props, ThemeType>) => Attributes)
+  | Attributes;
 
-export type Attrs<P, A extends Partial<P>, T> =
-  | ((props: ThemedStyledProps<P, T>) => A)
-  | A;
-
-export type StyledComponentConfig<P = void, A = void, T = void> = {
+/* eslint-disable @typescript-eslint/no-explicit-any */
+export type StyledComponentConfig<
+  Props = void,
+  Attributes = void,
+  ThemeType = void
+> = {
   styles?: CSSObject | TemplateStringsArray | InterpolationFunction<any>;
-  attrs?: Attrs<P, A, T>;
+  attrs?: Attrs<Props, Attributes, ThemeType>;
   variants?: {
-    [key: string]: Partial<
-      {
-        [key in keyof CSSObject]: StyleValue;
-      }
-    >;
+    [key: string]: StyledSystemCSSObject;
   };
   styleProps?: styleFn[];
   element?: keyof JSX.IntrinsicElements;
+  component?: ThemedStyledFunction<
+    keyof JSX.IntrinsicElements | React.ComponentType<Props>,
+    ThemeType | any,
+    React.ComponentType<Props>,
+    keyof any
+  >;
 };
 
-export type StyledComponentConfigWithBase<
-  P = void,
-  A = void,
-  T = void
-> = StyledComponentConfig<P, A, T> & {
-  component: ThemedStyledFunction<any, any, any, any>;
-};
+export type CSSObjectWithScale = CSS.Properties<string | number | Scale>;
+export type CSSPseudos = { [K in CSS.Pseudos]?: CSSObjectWithScale };
+export type StyledSystemCSSObject = CSSObjectWithScale & CSSPseudos;
 
-export interface CreateBaseComponentsConfig {
-  [key: string]: {
-    as?: keyof JSX.IntrinsicElements;
-  } & CSSObject;
-}
-
-export type StyledSystemCSSObject = {
-  [key in keyof any]: string | string[] | number | number[];
-};
-
-export type Settings<A = void> = {
-  /* eslint-disable @typescript-eslint/no-explicit-any */
+export type Settings<Attributes = void> = {
   styles: StyledSystemCSSObject;
-  attrs?: A;
+  attrs?: Attributes;
 };
