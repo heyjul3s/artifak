@@ -4,6 +4,6 @@ import { TypographyBase } from './TypographyBase';
 
 export function createTypographyComponents<S>(
   styles: S
-): { [key in keyof S]: React.FC<TypographyBaseProps> } {
+): { [key in keyof S]: React.ComponentType<TypographyBaseProps> } {
   return createBaseComponents<S, TypographyBaseProps>(TypographyBase, styles);
 }
