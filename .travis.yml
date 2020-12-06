@@ -2,11 +2,9 @@ language: node_js
 node_js:
   - 14.15.1
 
-before_script:
+script:
   - yarn
   - yarn build
-
-script:
   - yarn bundlesize
   - yarn lint
   - yarn test
