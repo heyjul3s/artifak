@@ -60,8 +60,8 @@ export function createBoundaryString(
 const OPERATOR_REGEX = /(?:[(>|<)=)]+)/g;
 const VALUE_REGEX = /((\d{1,}\/\d{1,})|(\d{1,}(r|em)|px|vh|vw))+/g;
 
-export const extractValues = extractByRegex.bind(this, VALUE_REGEX);
-export const extractOperators = extractByRegex.bind(this, OPERATOR_REGEX);
+export const extractValues = extractByRegex.bind(null, VALUE_REGEX);
+export const extractOperators = extractByRegex.bind(null, OPERATOR_REGEX);
 
 export function extractByRegex(REGEX: RegExp, value: string): string[] {
   return isNonEmptyString(value) ? value.match(REGEX) : [];

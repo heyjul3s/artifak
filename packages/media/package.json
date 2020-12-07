@@ -1,7 +1,7 @@
 {
   "name": "@artifak/media",
   "version": "1.0.0",
-  "description": "Artifak media query library",
+  "description": "Artifak media query mixin",
   "keywords": [],
   "author": "Julian Low",
   "license": "MIT",
@@ -9,6 +9,7 @@
   "main": "dist/media.cjs.js",
   "src": "src/index.ts",
   "types": "dist/src/index.d.ts",
+  "sideEffects": false,
   "directories": {
     "src": "src",
     "test": "__tests__"
