@@ -24,7 +24,9 @@
     "lib": "lib",
     "test": "__tests__"
   },
-  "files": ["dist"],
+  "files": [
+    "dist"
+  ],
   "publishConfig": {
     "access": "public"
   },
@@ -46,6 +48,7 @@
     "@artifak/flex": "^1.1.4",
     "@artifak/grid": "^1.1.4",
     "@artifak/imagery": "^1.0.6",
+    "@artifak/media": "^1.0.0",
     "@artifak/typography": "^1.1.5"
   },
   "devDependencies": {
