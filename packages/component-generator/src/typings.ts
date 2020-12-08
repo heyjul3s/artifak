@@ -33,7 +33,7 @@ export type BaseComponentProps =
   | SpaceProps
   | TypographyProps;
 
-export type ComponentVariant<ThemeType = void> = {
+export type Variant<ThemeType = void> = {
   variant?: ResponsiveValue<string | number, ThemeType>;
 };
 

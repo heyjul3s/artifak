@@ -74,7 +74,12 @@ export function applyStyledComponent<
   styles = {},
   variants,
   styleProps = []
-}: StyledComponentConfig<Props, Theme, Attributes>) {
+}: StyledComponentConfig<Props, Theme, Attributes>): StyledComponent<
+  keyof JSX.IntrinsicElements | React.ComponentType<Props>,
+  Theme | any,
+  React.ComponentType<Props & BaseComponentProps>,
+  keyof any
+> {
   return component(
     styles,
     variant({ variants }),

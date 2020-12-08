@@ -5,8 +5,4 @@ export {
 
 export { createStyledComponent } from './createStyledComponent';
 
-export {
-  BaseComponentProps,
-  ComponentVariant,
-  StyledComponentConfig
-} from './typings';
+export { BaseComponentProps, Variant, StyledComponentConfig } from './typings';
