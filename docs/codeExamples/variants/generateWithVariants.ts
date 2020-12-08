@@ -26,5 +26,9 @@ export const generateWithVariants = `
   // "[position]" is a CSS property from styled-system and is included
   // here to demonstrate adding custom CSS properties.
   // Note that the last argument is optional and defaults to a "DIV" element
-  const baseBackground = createStyledComponent<PositionProps>(baseStyles, variants, [position], 'div');
+  const baseBackground = createStyledComponent<PositionProps>({
+    styles: baseStyles, 
+    variants, 
+    styleProps: [position], 
+  });
 `;

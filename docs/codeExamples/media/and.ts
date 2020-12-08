@@ -7,8 +7,11 @@ export const and = `
     margin: 0 auto;
     width: 100%;
 
-    media({ screen, width: '>= 768px' })\`
+    \${media({ 
+      screen, 
+      width: '>= 768px' 
+    })\`
       display: block;
-    \`
+    \`}
   \`;
 `;

@@ -6,8 +6,8 @@ export const min = `
     margin: 0 auto;
     width: 100%;
 
-    media({ width: '>= 768px' })\`
+    \${media({ width: '>= 768px' })\`
       max-width: 680px;
-    \`
+    \`}
   \`;
 `;

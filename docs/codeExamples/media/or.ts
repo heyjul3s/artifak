@@ -7,8 +7,13 @@ export const or = `
     margin: 0 auto;
     width: 100%;
 
-    media({ screen, width: '<= 768px' }, { landscape })\`
+    \${media({ 
+      screen,
+      width: '<= 768px' 
+    }, { 
+      landscape 
+    })\`
       display: block;
-    \`
+    \`}
   \`;
 `;

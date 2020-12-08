@@ -7,8 +7,8 @@ export const max = `
     margin: 0 auto;
     width: 100%;
 
-    media({ width: '<= 768px' })\`
+    \${media({ width: '<= 768px' })\`
       display: block;
-    \`
+    \`}
   \`;
 `;

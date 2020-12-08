@@ -6,9 +6,9 @@ export const minMax = `
     margin: 0 auto;
     width: 100%;
 
-    media({ width: '768px >= width <= 1200px' })\`
+    \${media({ width: '768px >= width <= 1200px' })\`
       max-width: 680px;
       background: red;
-    \`
+    \`}
   \`;
 `;

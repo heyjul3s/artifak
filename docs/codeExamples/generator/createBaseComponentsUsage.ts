@@ -3,29 +3,49 @@ export const createBaseComponentsUsage = `
   import { createStyledComponent, createBaseComponents } from 'artifak';
 
   // Create your base component
-  const BaseComponent = createStyledComponent<PositionProps>(
-    { position: 'relative' }, {}, [position], 'article'
-  );
+  const BaseComponent = createStyledComponent<PositionProps>({
+    styles: { position: 'relative' }
+    styleProps: [position]
+  });
 
   // Define your styles
-  const styles = {
-    Article1: {
-      margin: 0,
+  const config = {
+    Container: {
+      styles: {
+        margin: 0 auto,
+        padding: ['1em', '1.5em 1em'],
+        width: '100%',
+        maxWidth: ['320px', '768px', '996px', '1200px']
+      },
+      attrs: {
+        role: 'region'
+      }
     },
 
-    Article2: {
-      margin: 15px
+    UnpaddedContainer: {
+      styles: {
+        padding: 0
+      },
+      attrs: {
+        role: 'region'
+      }
     },
 
-    Article3: {
-      margin: 15px
+    FlexContainer: {
+      styles: {
+        display: 'flex',
+        padding: ['1em', '1.5em 1em'],
+      }
+      attrs: {
+        role: 'region'
+      }
     }
   };
 
   // And put it all here
   export const {
-    Article1,
-    Article2,
-    Article3
-  } = createBaseComponents<typeof styles>(BaseComponent, styles);
+    Container,
+    UnpaddedContainer,
+    FlexContainer
+  } = createBaseComponents<typeof config>(BaseComponent, config);
 `;
