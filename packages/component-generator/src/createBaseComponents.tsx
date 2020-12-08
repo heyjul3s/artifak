@@ -44,6 +44,7 @@ export function extractSettings<E>(
   setting: Settings<HTMLAttributes<E>> | StyledSystemCSSObject
 ): StyledSystemCSSObject & HTMLAttributes<E>;
 
+/* eslint-disable @typescript-eslint/no-explicit-any */
 export function extractSettings<E>(
   setting: any
 ): StyledSystemCSSObject & HTMLAttributes<E> {
