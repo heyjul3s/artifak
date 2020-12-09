@@ -7,7 +7,7 @@ type Props = {
   list: ListItem[];
   searchable?: boolean;
   keyword?: string;
-  selectItem: (title: string, id: string) => void;
+  selectItem: (title: string, id: string, component: string) => void;
 }
 
 export function OptionsList({ list, searchable = false, keyword = '', selectItem }: Props) {
@@ -17,11 +17,11 @@ export function OptionsList({ list, searchable = false, keyword = '', selectItem
     return (
       <>
         {
-          tempList.map(({ title, id, selected }) => (
+          tempList.map(({ title, id, component, selected }) => (
             <OptionItem
               type="button"
               key={id}
-              onClick={() => selectItem(title, id)}
+              onClick={() => selectItem(title, id, component)}
             >
               <DropdownText>{title}</DropdownText>
               {' '}

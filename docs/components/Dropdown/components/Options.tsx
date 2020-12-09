@@ -5,7 +5,7 @@ import { OptionsList } from './OptionsList';
 
 type Props = {
   list: ListItem[];
-  selectItem: (title: string, id: string) => void;
+  selectItem: (title: string, id: string, component: string) => void;
 }
 
 export function Options({ list, selectItem }: Props) {

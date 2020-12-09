@@ -11,17 +11,20 @@ type Props = {
 type ListItemProp = {
   id: string;
   title: string;
+  component: string;
   selected: boolean;
   key: string;
 };
 
 export function Dropdown({ title = '', list = [] }: Props) {
   const router = useRouter();
-  const [listOpen, setListOpen] = React.useState(false);
-  const [headerTitle, setHeaderTitle] = React.useState('');
+  const [listOpen, setListOpen] = React.useState<boolean>(false);
+  const [headerTitle, setHeaderTitle] = React.useState<string>('');
+  const [page, setPage] = React.useState<string>('');
 
   React.useEffect(() => {
     setHeaderTitle(title);
+
   }, []);
 
   React.useEffect(() => {
@@ -37,7 +40,7 @@ export function Dropdown({ title = '', list = [] }: Props) {
   React.useEffect(() => {
     router.push({
       pathname: '/',
-      query: { content: headerTitle }
+      query: { content: page }
     });
   }, [headerTitle]);
 
@@ -45,8 +48,9 @@ export function Dropdown({ title = '', list = [] }: Props) {
     setListOpen(!listOpen);
   };
 
-  const selectItem = (title, id) => {
+  const selectItem = (title, id, component) => {
     setHeaderTitle(title);
+    setPage(component);
     setListOpen(false);
   };
 
