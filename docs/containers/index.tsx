@@ -8,6 +8,7 @@ import { Imagery } from './Imagery';
 import { Media } from './Media';
 import { Variants } from './Variants';
 import { Customisation } from './Customisation';
+import { GettingStarted } from './GettingStarted/GettingStarted';
 
 export const content = {
   Introduction,
@@ -19,5 +20,6 @@ export const content = {
   Imagery,
   Media,
   Variants,
-  Customisation
+  Customisation,
+  GettingStarted
 };
