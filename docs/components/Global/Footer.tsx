@@ -1,5 +1,5 @@
 import React from 'react';
-import { SmallParagraph } from './Typography';
+import { SmallParagraph } from '../Typography';
 import styled, { css } from 'styled-components';
 import { Container } from './Container';
 

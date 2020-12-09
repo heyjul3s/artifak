@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { Logo } from '../Logo';
+import { Logo } from '../../Logo';
 // import { BrandLink } from '../styled';
 // import { Logo } from '../../Logo';
 
@@ -9,7 +9,7 @@ export function Brand() {
     <BrandLink>
       <Logo />
     </BrandLink>
-  )
+  );
 }
 
 export const BrandLink = styled.div`
@@ -43,4 +43,3 @@ export const BrandLink = styled.div`
 //     }
 //   }
 // `;
-

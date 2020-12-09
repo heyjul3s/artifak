@@ -1,4 +1,4 @@
-import { theme } from '../theme';
+import { theme } from '../../theme';
 import { createBlockComponents } from 'artifak';
 
 const styles = {
