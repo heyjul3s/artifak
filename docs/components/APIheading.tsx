@@ -1,6 +1,6 @@
 import React from 'react';
 import { H3 } from './Typography';
-import { Params } from './Params';
+import { Params } from './Code/Params';
 import { theme } from '../theme';
 
 type Props = {
@@ -17,11 +17,7 @@ export function APIheading({ name, params }: Props) {
         {name}
       </H3>
 
-      {hasParams && (
-        <Params
-          params={params}
-        />
-      )}
+      {hasParams && <Params params={params} />}
     </>
   );
 }

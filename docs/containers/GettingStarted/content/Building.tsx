@@ -1,7 +1,7 @@
 import { H3, Paragraph } from '../../../components/Typography';
-import { Syntax } from '../../../components/Syntax';
+import { Syntax } from '../../../components/Code/Syntax';
 import { theme } from '../../../theme';
-import { buildExample } from '../codeExamples';
+import { buildExample } from '../examples';
 
 export function Building() {
   return (

@@ -1,12 +1,12 @@
-import { ArticleDoc } from '../../components/ArticleDoc';
-import { HR } from '../../components/HR';
+import { Doc } from '../../components/Article';
+import { HR } from '../../components/Global/HR';
 import { Building, Variants, Setup, Installation, Theming } from './content';
 
 export function GettingStarted() {
   return (
-    <ArticleDoc title="Getting Started">
+    <Doc title="Getting Started">
       <GettingStartedContent />
-    </ArticleDoc>
+    </Doc>
   );
 }
 

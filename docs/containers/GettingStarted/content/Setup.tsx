@@ -1,7 +1,7 @@
 import { H3, Paragraph } from '../../../components/Typography';
-import { Syntax } from '../../../components/Syntax';
+import { Syntax } from '../../../components/Code/Syntax';
 import { theme } from '../../../theme';
-import { setupExample } from '../codeExamples';
+import { setupExample } from '../examples';
 
 export function Setup() {
   return (
