@@ -11,6 +11,7 @@
   "dependencies": {
     "artifak": "^1.1.5",
     "csstype": "^3.0.5",
+    "lodash.isplainobject": "^4.0.6",
     "next": "10.0.3",
     "next-seo": "^4.17.0",
     "react": "^16.14.0",
