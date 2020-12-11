@@ -1,8 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
 import { Dropdown } from '../Dropdown/Dropdown';
-import { Brand } from './Brand';
-import { Tagline } from './Tagline';
+import { Brand } from '../Brand';
+import { Tagline } from '../Tagline';
 
 const links = [
   {

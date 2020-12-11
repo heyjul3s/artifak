@@ -1,11 +1,6 @@
-import React from 'react';
 import styled from 'styled-components';
 
-export function NavTop() {
-  return <NavTopContainer />
-}
-
-const NavTopContainer = styled.div`
+export const NavTopContainer = styled.div`
   position: relative;
   width: 100%;
   height: 60px;
@@ -37,6 +32,4 @@ const NavTopContainer = styled.div`
       rgba(241, 94, 34, 1) 8px
     );
   }
-
-`
-
+`;
