@@ -1,4 +1,5 @@
 import React from 'react';
+import { useRouter } from 'next/router';
 import styled from 'styled-components';
 import { Container } from './Container';
 import { HTMLhead, HTMLheadProps } from './HTMLhead';
@@ -17,6 +18,8 @@ export function Layout({
   additionalMetaTags = [],
   children
 }: LayoutProps) {
+  const router = useRouter();
+
   return (
     <>
       <HTMLhead
@@ -28,7 +31,7 @@ export function Layout({
 
       <NavTop />
 
-      <Header />
+      {router.pathname === '/' && <Header />}
 
       <Main>
         <Container pr="1em" pl="1em">

@@ -4,7 +4,6 @@ import { LinkProps } from './typings';
 
 export const Link = styled(AnchorLink)<LinkProps>`
   display: block;
-  font-weight: ${({ hasChildren }) => (!!hasChildren ? '400' : '900')};
 `;
 
 export const LinkItem = styled.div`

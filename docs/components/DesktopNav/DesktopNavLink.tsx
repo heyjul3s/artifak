@@ -10,13 +10,17 @@ import {
 export function DesktopNavLink({ children, link, name }) {
   return (
     <>
-      <Link href={link} hasChildren={!!children}>
+      <Link
+        href={link}
+        hasChildren={!!children}
+        style={!!children ? { pointerEvents: 'none', cursor: 'text' } : {}}
+      >
         {name}
       </Link>
 
       {!!children && (
         <NavContainer>
-          {children.map((child, i) => {
+          {children.map(({ route, name, children }, i) => {
             i += 1;
             return (
               <ChildLinkContainer>
@@ -24,7 +28,11 @@ export function DesktopNavLink({ children, link, name }) {
                   <Counter>
                     <LinkCount>{`0${i}`.slice(-2)}</LinkCount>
                   </Counter>
-                  <DesktopNavLink {...child} />
+                  <DesktopNavLink
+                    link={route}
+                    name={name}
+                    children={children}
+                  />
                 </LinkItem>
               </ChildLinkContainer>
             );

@@ -1,4 +1,3 @@
-import { Introduction } from './Introduction/Introduction';
 import { Block } from './Block/Block';
 import { Grid } from './Grid/Grid';
 import { Typography } from './Typography/Typography';
@@ -11,15 +10,14 @@ import { Customisation } from './Customisation/Customisation';
 import { GettingStarted } from './GettingStarted/GettingStarted';
 
 export const content = {
-  Introduction,
-  Block,
-  Grid,
-  Typography,
-  Flex,
-  Generator,
-  Imagery,
-  Media,
-  Variants,
-  Customisation,
-  GettingStarted
+  block: Block,
+  grid: Grid,
+  typography: Typography,
+  flex: Flex,
+  generator: Generator,
+  imagery: Imagery,
+  media: Media,
+  variants: Variants,
+  customisation: Customisation,
+  ['getting-started']: GettingStarted
 };

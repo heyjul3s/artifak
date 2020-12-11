@@ -11,14 +11,10 @@ export function DesktopNav() {
       <Brand position="flex-start" />
       <Tagline align="left" />
       <NavContainer>
-        {links.map(({ children, component, name }, i) => {
+        {links.map(({ children, route, name }, i) => {
           return (
             <ListItem>
-              <DesktopNavLink
-                children={children}
-                link={component}
-                name={name}
-              />
+              <DesktopNavLink children={children} link={route} name={name} />
             </ListItem>
           );
         })}

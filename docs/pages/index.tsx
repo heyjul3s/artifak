@@ -1,7 +1,10 @@
 import React from 'react';
+import { FlexRow, FlexCol } from 'artifak';
 import { Layout } from '../components/Global/Layout';
 import { useRouter } from 'next/router';
 import { content } from '../containers';
+import { HomePage } from './HomePage/HomePage';
+import { DesktopNav } from '../components/DesktopNav/DesktopNav';
 
 export default function Home() {
   const router = useRouter();
@@ -14,11 +17,24 @@ export default function Home() {
   }, [router.query]);
 
   const PageContent = content[contentType];
-  const Home = content.Introduction;
 
   return (
     <Layout>
-      <>{!!PageContent ? <PageContent /> : <Home />}</>
+      <>
+        <HomePage />
+
+        {!!PageContent && (
+          <FlexRow>
+            <FlexCol columnSize={3}>
+              <DesktopNav />
+            </FlexCol>
+
+            <FlexCol columnSize={9}>
+              <PageContent />
+            </FlexCol>
+          </FlexRow>
+        )}
+      </>
     </Layout>
   );
 }

@@ -10,7 +10,7 @@ import {
   LightweightIcon,
   SimpleIcon
 } from './Icons';
-import { FeaturesGrid, FeatureItem } from './components/';
+import { FeaturesGrid, FeatureItem } from './components';
 
 const IntroductionContent = [
   {
