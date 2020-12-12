@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { AnchorLink } from '../AnchorLink';
+import { AnchorLink } from '../../AnchorLink';
 import { LinkProps } from './typings';
 
 export const Link = styled(AnchorLink)<LinkProps>`

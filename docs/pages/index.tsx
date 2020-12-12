@@ -4,7 +4,7 @@ import { Layout } from '../components/Global/Layout';
 import { useRouter } from 'next/router';
 import { content } from '../containers';
 import { HomePage } from './HomePage/HomePage';
-import { DesktopNav } from '../components/DesktopNav/DesktopNav';
+import { DesktopNav } from '../components/Nav/Desktop/DesktopNav';
 
 export default function Home() {
   const router = useRouter();

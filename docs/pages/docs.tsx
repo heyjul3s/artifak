@@ -3,7 +3,7 @@ import { FlexRow, FlexCol } from 'artifak';
 import { Layout } from '../components/Global/Layout';
 import { useRouter } from 'next/router';
 import { content } from '../containers';
-import { DesktopNav } from '../components/DesktopNav/DesktopNav';
+import { DesktopNav } from '../components/Nav/Desktop/DesktopNav';
 
 export default function Docs() {
   const router = useRouter();
@@ -22,11 +22,11 @@ export default function Docs() {
   return (
     <Layout>
       <FlexRow>
-        <FlexCol columnSize={3}>
+        <FlexCol columnSize={[12, 12, 12, 3]}>
           <DesktopNav />
         </FlexCol>
 
-        <FlexCol columnSize={9}>
+        <FlexCol columnSize={[12, 12, 12, 9]}>
           {!!PageContent && <PageContent />}
           {!PageContent && <p>Page Not Found</p>}
         </FlexCol>

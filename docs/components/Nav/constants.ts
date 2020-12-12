@@ -1,4 +1,4 @@
-import { LinkItems } from './typings';
+import { LinkItems } from './Desktop/typings';
 
 export const links: LinkItems = [
   {
