@@ -1,19 +1,37 @@
-import { LinkItems } from './Desktop/typings';
+import { LinkItems } from './typings';
 
-export const links: LinkItems = [
-  {
+export const links: LinkItems = {
+  Home: {
     route: '/',
     component: 'Home',
     name: 'Home'
   },
-  {
-    route: '/docs?content=getting-started',
-    component: 'GettingStarted',
-    name: 'Getting Started'
+  Usage: {
+    component: 'Usage',
+    name: 'Usage',
+    mobileNavIndex: 0,
+    children: [
+      {
+        route: '/docs?content=getting-started',
+        component: 'GettingStarted',
+        name: 'Getting Started'
+      },
+      {
+        route: '/docs?content=customisation',
+        component: 'Cusomisation',
+        name: 'Cusomisation'
+      },
+      {
+        route: '/docs?content=variants',
+        component: 'Variants',
+        name: 'Variants'
+      }
+    ]
   },
-  {
+  Components: {
     component: 'Components',
     name: 'Components',
+    mobileNavIndex: 1,
     children: [
       {
         route: '/docs?content=block',
@@ -42,9 +60,10 @@ export const links: LinkItems = [
       }
     ]
   },
-  {
+  Utilities: {
     component: 'Utilities',
     name: 'Utilities',
+    mobileNavIndex: 2,
     children: [
       {
         route: '/docs?content=media',
@@ -57,15 +76,5 @@ export const links: LinkItems = [
         name: 'Generator'
       }
     ]
-  },
-  {
-    route: '/docs?content=customisation',
-    component: 'Cusomisation',
-    name: 'Cusomisation'
-  },
-  {
-    route: '/docs?content=variants',
-    component: 'Variants',
-    name: 'Variants'
   }
-];
+};

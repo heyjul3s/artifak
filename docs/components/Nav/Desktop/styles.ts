@@ -50,7 +50,7 @@ export const ChildLinkContainer = styled.li`
       left: 0;
       transform: translateY(-50%);
     }
-  
+
     &::after {
       position: absolute;
       top: 0;
@@ -64,7 +64,7 @@ export const ChildLinkContainer = styled.li`
       &::after {
         height: calc(50% - 0.5em);
       }
-    } 
+    }
   `}
 `;
 

@@ -4,9 +4,12 @@ import { Layout } from '../components/Global/Layout';
 import { useRouter } from 'next/router';
 import { content } from '../containers';
 import { DesktopNav } from '../components/Nav/Desktop/DesktopNav';
+import { MobileNav } from '../components/Nav/Mobile/MobileNav';
+import { useMatchMedia } from '../hooks';
 
 export default function Docs() {
   const router = useRouter();
+  const matchedMobile = useMatchMedia('(hover: none)');
   const [contentQuery, setContentQuery] = React.useState<string>(
     'getting-started'
   );
@@ -21,16 +24,22 @@ export default function Docs() {
 
   return (
     <Layout>
-      <FlexRow>
-        <FlexCol columnSize={[12, 12, 12, 3]}>
-          <DesktopNav />
-        </FlexCol>
+      <>
+        {matchedMobile && <MobileNav />}
 
-        <FlexCol columnSize={[12, 12, 12, 9]}>
-          {!!PageContent && <PageContent />}
-          {!PageContent && <p>Page Not Found</p>}
-        </FlexCol>
-      </FlexRow>
+        <FlexRow>
+          {!matchedMobile && (
+            <FlexCol columnSize={[12, 12, 12, 3]}>
+              <DesktopNav />
+            </FlexCol>
+          )}
+
+          <FlexCol columnSize={matchedMobile ? 12 : [12, 12, 12, 9]}>
+            {!!PageContent && <PageContent />}
+            {!PageContent && <p>Page Not Found</p>}
+          </FlexCol>
+        </FlexRow>
+      </>
     </Layout>
   );
 }
