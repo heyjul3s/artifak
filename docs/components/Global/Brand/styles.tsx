@@ -1,8 +1,7 @@
 import styled from 'styled-components';
-import { BlockBase } from 'artifak';
 import { BrandProps } from './typings';
 
-export const LogoContainer = styled(BlockBase)<BrandProps>`
+export const LogoContainer = styled.div<BrandProps>`
   display: flex;
   justify-content: ${({ position }) => position};
 `;
