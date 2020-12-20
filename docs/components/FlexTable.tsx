@@ -10,7 +10,7 @@ import {
 
 type Props = {
   title?: string;
-  cells: { prop: string; content: string }[];
+  cells: { prop: string; subProp?: string; content: string }[];
 };
 
 export function FlexTable({ title, cells }: Props) {
@@ -39,7 +39,7 @@ export function FlexTable({ title, cells }: Props) {
 export function FlexTableTitle({ title }) {
   return (
     <FlexCol columnSize={12} gutterWidth={0}>
-      <H4>Props</H4>
+      <H4>{title}</H4>
     </FlexCol>
   );
 }
