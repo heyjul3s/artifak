@@ -1,6 +1,15 @@
 import React from 'react';
-import { NavTopContainer } from './styles';
+import { NavTopContainer, NavTopMenu, NavTopLink } from './styles';
 
 export function NavTop() {
-  return <NavTopContainer />;
+  return (
+    <NavTopContainer>
+      <NavTopMenu>
+        <NavTopLink href="https//github.com/heyjul3s/artifak">
+          Github
+        </NavTopLink>
+        <NavTopLink href="/docs">Docs</NavTopLink>
+      </NavTopMenu>
+    </NavTopContainer>
+  );
 }
