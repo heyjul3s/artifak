@@ -4,19 +4,19 @@ import { AnchorLink } from '../../../AnchorLink';
 
 export const NavMenu = styled(motion.div)`
   position: relative;
-`;
-
-export const NavMenuPanel = styled(motion.div)`
-  display: flex;
-  width: 100%;
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
 
   ${({ theme }) => `
     background: ${theme.colors.primary};
   `}
+`;
+
+export const NavMenuPanel = styled(motion.div)`
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 `;
 
 export const MenuTitle = styled.p`
