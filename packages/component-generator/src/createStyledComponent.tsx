@@ -1,6 +1,6 @@
 import React from 'react';
 import isEmpty from 'lodash.isempty';
-import styled, { StyledComponent } from 'styled-components';
+import styled from 'styled-components';
 
 import {
   compose,
@@ -12,39 +12,36 @@ import {
   position,
   shadow,
   space,
-  typography,
-  variant
+  typography
 } from 'styled-system';
 
-import { BaseComponentProps, StyledComponentConfig } from './typings';
+import { StyledComponentConfig } from './typings';
 
 const pipe = (...fns) => value => fns.reduce((acc, fn) => fn(acc), value);
 
 /* eslint-disable @typescript-eslint/no-explicit-any */
 export function createStyledComponent<
-  Props = void,
+  Props extends any,
   Theme = void,
   Attributes = void
->(
-  config: StyledComponentConfig<Props, Theme, Attributes>
-): StyledComponent<
-  keyof JSX.IntrinsicElements | React.ComponentType<Props>,
-  Theme | any,
-  React.ComponentType<Props & BaseComponentProps>,
-  keyof any
-> {
-  return pipe(
+>(config: StyledComponentConfig<Props, Theme, Attributes>): React.FC<Props> {
+  const Styled = pipe(
     createStyledBase,
     createStyledWithAttributes,
     applyStyledComponent
   )(config);
+
+  return props => (
+    <Styled {...props} {...config.styles}>
+      {props.children}
+    </Styled>
+  );
 }
 
 export function createStyledBase<Props = void, Theme = void, Attributes = void>(
   config: StyledComponentConfig<Props, Theme, Attributes>
 ): StyledComponentConfig<Props, Theme, Attributes> {
   const { element = 'div' } = config;
-
   return {
     ...config,
     element,
@@ -71,18 +68,9 @@ export function applyStyledComponent<
   Attributes = void
 >({
   component = styled.div,
-  styles = {},
-  variants,
   styleProps = []
-}: StyledComponentConfig<Props, Theme, Attributes>): StyledComponent<
-  keyof JSX.IntrinsicElements | React.ComponentType<Props>,
-  Theme | any,
-  React.ComponentType<Props & BaseComponentProps>,
-  keyof any
-> {
+}: StyledComponentConfig<Props, Theme, Attributes>) {
   return component(
-    styles,
-    variant({ variants }),
     compose(
       background,
       border,

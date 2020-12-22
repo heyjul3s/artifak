@@ -1,11 +1,6 @@
 import * as CSS from 'csstype';
 
-import {
-  CSSObject,
-  ThemedStyledFunction,
-  ThemedStyledProps,
-  InterpolationFunction
-} from 'styled-components';
+import { ThemedStyledFunction, ThemedStyledProps } from 'styled-components';
 
 import { styleFn, Scale } from 'styled-system';
 
@@ -47,11 +42,8 @@ export type StyledComponentConfig<
   Attributes = void,
   ThemeType = void
 > = {
-  styles?: CSSObject | TemplateStringsArray | InterpolationFunction<any>;
+  styles?: StyledSystemCSSObject;
   attrs?: Attrs<Props, Attributes, ThemeType>;
-  variants?: {
-    [key: string]: StyledSystemCSSObject;
-  };
   styleProps?: styleFn[];
   element?: keyof JSX.IntrinsicElements;
   component?: ThemedStyledFunction<
@@ -66,7 +58,6 @@ export type CSSObjectWithScale = CSS.Properties<string | number | Scale>;
 export type CSSPseudos = { [K in CSS.Pseudos]?: CSSObjectWithScale };
 export type StyledSystemCSSObject = CSSObjectWithScale & CSSPseudos;
 
-export type Settings<Attributes = void> = {
-  styles: StyledSystemCSSObject;
-  attrs?: Attributes;
+export type GenericRecord<Object, Type> = {
+  [key in keyof Object]: Type;
 };
