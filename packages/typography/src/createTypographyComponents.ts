@@ -1,9 +1,18 @@
 import { createBaseComponents } from '@artifak/component-generator';
 import { TypographyBaseProps } from './typings';
-import { TypographyBase } from './TypographyBase';
+import { typographyStyleProps } from './TypographyBase';
 
-export function createTypographyComponents<S>(
-  styles: S
-): { [key in keyof S]: React.ComponentType<TypographyBaseProps> } {
-  return createBaseComponents<S, TypographyBaseProps>(TypographyBase, styles);
+export function createTypographyComponents<
+  Config,
+  Theme = any,
+  Props = Record<string, unknown> & TypographyBaseProps,
+  Element = HTMLDivElement
+>(settings: any) {
+  return createBaseComponents<Config, Theme, Props, Element>({
+    Base: {
+      ...settings.Base,
+      styleProps: [typographyStyleProps, ...settings.Base.styleProps]
+    },
+    ...settings
+  });
 }
