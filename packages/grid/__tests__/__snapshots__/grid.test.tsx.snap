@@ -3,7 +3,7 @@
 exports[`@artifak/grid Grid should render 1`] = `
 <DocumentFragment>
   <div
-    class="sc-gsTCUz dmRtIA"
+    class="sc-gsTCUz GgxUB"
     display="grid"
   >
     <div
@@ -43,7 +43,7 @@ exports[`@artifak/grid Grid should render 1`] = `
 exports[`@artifak/grid Grid should render grid-auto-columns style if no columnSize prop is provided 1`] = `
 <DocumentFragment>
   <div
-    class="sc-gsTCUz ezSWul"
+    class="sc-gsTCUz jxeuwY"
     data-testid="grid"
     display="grid"
   >
@@ -84,7 +84,7 @@ exports[`@artifak/grid Grid should render grid-auto-columns style if no columnSi
 exports[`@artifak/grid Grid should render gridGap style if a value is provided 1`] = `
 <DocumentFragment>
   <div
-    class="sc-gsTCUz bJPZbK"
+    class="sc-gsTCUz eFIKRD"
     data-testid="grid"
     display="grid"
   >
