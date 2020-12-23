@@ -60,5 +60,8 @@
   },
   "dependencies": {
     "lodash.isempty": "^4.4.0"
+  },
+  "resolutions": {
+    "react": ">=17.0.1"
   }
 }
