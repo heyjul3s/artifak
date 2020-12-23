@@ -16,31 +16,34 @@ export function CreateStyledComponentBasicUse() {
   );
 }
 
-const containerConfig = {
-  Base: {
+const containers = {
+  base: {
     styles: {
       width: '100%',
       maxWidth: ['480px', '740px', '900px', '1200px']
+    },
+    styleProps: []
+  },
+
+  components: {
+    FlexContainer: {
+      display: 'flex'
+    },
+
+    Container: {
+      padding: ['1em', '1.5em']
+    },
+
+    UnpaddedContainer: {
+      margin: 0,
+      padding: 0
     }
-  },
-
-  FlexContainer: {
-    display: 'flex'
-  },
-
-  Container: {
-    padding: ['1em', '1.5em']
-  },
-
-  UnpaddedContainer: {
-    margin: 0,
-    padding: 0
   }
 };
 
 const { FlexContainer, Container, UnpaddedContainer } = createBaseComponents<
-  typeof containerConfig
->(containerConfig);
+  typeof containers.components
+>(containers.base, containers.components);
 
 export function BasicUsage() {
   return (

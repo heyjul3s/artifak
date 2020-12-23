@@ -1,7 +1,5 @@
 import * as CSS from 'csstype';
-
 import { ThemedStyledFunction, ThemedStyledProps } from 'styled-components';
-
 import { styleFn, Scale } from 'styled-system';
 
 import {
@@ -16,6 +14,8 @@ import {
   TypographyProps,
   ResponsiveValue
 } from 'styled-system';
+
+export type BaseProps<ThemeType> = BaseComponentProps & Variant<ThemeType>;
 
 export type BaseComponentProps =
   | BackgroundProps
@@ -61,3 +61,25 @@ export type StyledSystemCSSObject = CSSObjectWithScale & CSSPseudos;
 export type GenericRecord<Object, Type> = {
   [key in keyof Object]: Type;
 };
+
+export type Settings = {
+  [key: string]: StyledSystemCSSObject & { as?: keyof JSX.IntrinsicElements };
+};
+
+// export type BaseConfig<Props, ThemeType, Element> = {
+//   base: StyledComponentConfig<
+//     Props & Variant,
+//     ThemeType,
+//     HTMLAttributes<Element>
+//   >;
+// };
+
+// export type Settings<Props, ThemeType, Element> = {
+//   [key: string]:
+//     | StyledSystemCSSObject
+//     | StyledComponentConfig<
+//         Props & Variant,
+//         ThemeType,
+//         HTMLAttributes<Element>
+//       >;
+// };

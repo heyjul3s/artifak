@@ -2,38 +2,33 @@ import React, { HTMLAttributes } from 'react';
 import { createStyledComponent } from './createStyledComponent';
 
 import {
+  Settings,
+  BaseProps,
   GenericRecord,
   StyledComponentConfig,
-  Variant,
-  StyledSystemCSSObject
+  Variant
 } from './typings';
 
 export function createBaseComponents<
   Config = any,
   Theme = any,
-  Props = Record<string, unknown>,
+  Props = {},
   Element = HTMLDivElement
->(settings: {
-  [key: string]:
-    | StyledSystemCSSObject
-    | StyledComponentConfig<Props & Variant, Theme, HTMLAttributes<Element>>;
-}): GenericRecord<Config, React.FC<Props & Variant>> {
-  const acc = {} as GenericRecord<Config, React.FC<Props & Variant>>;
-  const baseSettings = settings.Base as StyledComponentConfig<
-    Props & Variant,
-    Theme,
-    HTMLAttributes<Element>
-  >;
+>(
+  base: StyledComponentConfig<Props, Theme, Element>,
+  settings: Settings
+): GenericRecord<Config, React.FC<Props & BaseProps<Theme> & Variant<Theme>>> {
+  const acc = {} as GenericRecord<Config, React.FC<Props & BaseProps<Theme>>>;
 
-  return !!settings && Object.keys(settings).length >= 1
+  return !!base && !!settings && Object.keys(settings).length >= 1
     ? Object.entries(settings).reduce((acc, entry) => {
         const [prop, setting] = entry;
 
         if (hasKey(settings, prop)) {
           acc[prop] = createStyledComponent({
-            ...baseSettings,
-            styles: { ...baseSettings.styles, ...setting }
-          } as StyledComponentConfig<Props & Variant, Theme, HTMLAttributes<Element>>);
+            ...base,
+            styles: { ...base.styles, ...setting }
+          } as StyledComponentConfig<Props & Variant<Theme>, Theme, HTMLAttributes<Element>>);
 
           acc[prop].displayName = prop;
         }
