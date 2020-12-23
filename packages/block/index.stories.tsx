@@ -4,16 +4,16 @@ export function BlockBaseUsage() {
   return <BlockBase>A Block Base</BlockBase>;
 }
 
-const settings = {
-  Base: {
-    styles: {
-      width: '100%',
-      maxWidth: ['480px', '768px', '1024px', '1200px'],
-      padding: ['1em', '1.5em'],
-      margin: '0 auto'
-    }
-  },
+const base = {
+  styles: {
+    width: '100%',
+    maxWidth: ['480px', '768px', '1024px', '1200px'],
+    padding: ['1em', '1.5em'],
+    margin: '0 auto'
+  }
+};
 
+const components = {
   FlexContainer: {
     display: 'flex'
   },
@@ -23,16 +23,13 @@ const settings = {
   }
 };
 
-const {
-  Base: Container,
-  FlexContainer,
-  UnpaddedContainer
-} = createBlockComponents<typeof settings>(settings);
+const { FlexContainer, UnpaddedContainer } = createBlockComponents<
+  typeof components
+>(base, components);
 
 export function CreateBlocksUsage() {
   return (
     <>
-      <Container>Container</Container>
       <FlexContainer>Flex Container</FlexContainer>
       <UnpaddedContainer>Unpadded Container</UnpaddedContainer>
     </>
