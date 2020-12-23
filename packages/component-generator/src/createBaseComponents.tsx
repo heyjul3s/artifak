@@ -9,6 +9,7 @@ import {
   Variant
 } from './typings';
 
+/* eslint-disable @typescript-eslint/no-explicit-any */
 export function createBaseComponents<
   Config = any,
   Theme = any,
