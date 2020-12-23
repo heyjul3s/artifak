@@ -12,14 +12,20 @@ import {
 /* eslint-disable @typescript-eslint/no-explicit-any */
 export function createBaseComponents<
   Config = any,
-  Theme = any,
+  ThemeType = any,
   Props = Record<string, unknown>,
   Element = HTMLDivElement
 >(
-  base: StyledComponentConfig<Props, Theme, Element>,
+  base: StyledComponentConfig<Props, ThemeType, Element>,
   settings: Settings
-): GenericRecord<Config, React.FC<Props & BaseProps<Theme> & Variant<Theme>>> {
-  const acc = {} as GenericRecord<Config, React.FC<Props & BaseProps<Theme>>>;
+): GenericRecord<
+  Config,
+  React.FC<Props & BaseProps<ThemeType> & Variant<ThemeType>>
+> {
+  const acc = {} as GenericRecord<
+    Config,
+    React.FC<Props & BaseProps<ThemeType>>
+  >;
 
   return !!base && !!settings && Object.keys(settings).length >= 1
     ? Object.entries(settings).reduce((acc, entry) => {
@@ -29,7 +35,7 @@ export function createBaseComponents<
           acc[prop] = createStyledComponent({
             ...base,
             styles: { ...base.styles, ...setting }
-          } as StyledComponentConfig<Props & Variant<Theme>, Theme, HTMLAttributes<Element>>);
+          } as StyledComponentConfig<Props & Variant<ThemeType>, ThemeType, HTMLAttributes<Element>>);
 
           acc[prop].displayName = prop;
         }
