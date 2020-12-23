@@ -1,9 +1,58 @@
-import { createBaseComponents } from '@artifak/component-generator';
+import {
+  GenericRecord,
+  createBaseComponents,
+  Settings,
+  StyledComponentConfig,
+  Variant
+} from '@artifak/component-generator';
+import { styleFn } from 'styled-system';
 import { TypographyBaseProps } from './typings';
-import { TypographyBase } from './TypographyBase';
+import { typographyStyleProps } from './TypographyBase';
 
-export function createTypographyComponents<S>(
-  styles: S
-): { [key in keyof S]: React.ComponentType<TypographyBaseProps> } {
-  return createBaseComponents<S, TypographyBaseProps>(TypographyBase, styles);
+/* eslint-disable @typescript-eslint/no-explicit-any */
+export function createTypographyComponents<
+  Config,
+  ThemeType = any,
+  Props = Record<string, unknown>,
+  Element = HTMLDivElement
+>(
+  base: StyledComponentConfig<Props, ThemeType, Element>,
+  settings: Settings
+): GenericRecord<
+  Config,
+  React.FC<Props & TypographyBaseProps & Variant<ThemeType>>
+> {
+  const { styleProps } = getStyleProps(base);
+
+  return createBaseComponents<
+    Config,
+    ThemeType,
+    Props & TypographyBaseProps,
+    Element
+  >(
+    {
+      ...base,
+      styleProps: [typographyStyleProps, ...(styleProps as styleFn[])]
+    },
+    settings
+  );
+}
+
+/* eslint-disable @typescript-eslint/no-explicit-any */
+export function getStyleProps<
+  ThemeType = any,
+  Props = Record<string, unknown>,
+  Element = HTMLDivElement
+>(
+  base: StyledComponentConfig<Props, ThemeType, Element>
+): StyledComponentConfig<Props, ThemeType, Element> {
+  if (!base || !Object.keys(base).length) {
+    return { styleProps: [] };
+  }
+
+  if (!base.styleProps) {
+    return { ...base, styleProps: [] };
+  }
+
+  return base;
 }

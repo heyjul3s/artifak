@@ -7,7 +7,7 @@ type WindowSize = {
   outerWidth: number;
 };
 
-export function useWindowSize() {
+export function useWindowSize(): WindowSize {
   const [windowSize, setWindowSize] = useState<WindowSize>(getSize());
 
   function getSize() {

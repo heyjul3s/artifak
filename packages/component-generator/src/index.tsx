@@ -1,8 +1,11 @@
-export {
-  createBaseComponents,
-  createStyledFunctionComponent
-} from './createBaseComponents';
-
+export { createBaseComponents } from './createBaseComponents';
 export { createStyledComponent } from './createStyledComponent';
-
-export { BaseComponentProps, Variant, StyledComponentConfig } from './typings';
+export {
+  Attrs,
+  BaseProps,
+  BaseComponentProps,
+  GenericRecord,
+  Settings,
+  StyledComponentConfig,
+  Variant
+} from './typings';

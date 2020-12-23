@@ -3,7 +3,10 @@
 exports[`ImageryBase should render 1`] = `
 <DocumentFragment>
   <img
-    class="sc-bdVaJa hHijb"
+    class="sc-bdfBwQ bQajuQ"
+    display="block"
+    height="auto"
+    width="100%"
   />
 </DocumentFragment>
 `;
@@ -11,7 +14,10 @@ exports[`ImageryBase should render 1`] = `
 exports[`ImageryBase should render styles object-fit and object-position 1`] = `
 <DocumentFragment>
   <img
-    class="sc-bdVaJa hgNDTD"
+    class="sc-bdfBwQ ftRMpI"
+    display="block"
+    height="auto"
+    width="100%"
   />
 </DocumentFragment>
 `;

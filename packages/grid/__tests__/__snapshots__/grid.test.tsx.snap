@@ -3,36 +3,36 @@
 exports[`@artifak/grid Grid should render 1`] = `
 <DocumentFragment>
   <div
-    class="sc-bwzfXH fYwbiX"
+    class="sc-gsTCUz GgxUB"
     display="grid"
   >
     <div
-      class="sc-htpNat KtFsv"
+      class="sc-dlfnbm"
     >
       1
     </div>
     <div
-      class="sc-htpNat KtFsv"
+      class="sc-dlfnbm"
     >
       2
     </div>
     <div
-      class="sc-htpNat KtFsv"
+      class="sc-dlfnbm"
     >
       3
     </div>
     <div
-      class="sc-htpNat KtFsv"
+      class="sc-dlfnbm"
     >
       4
     </div>
     <div
-      class="sc-htpNat KtFsv"
+      class="sc-dlfnbm"
     >
       5
     </div>
     <div
-      class="sc-htpNat KtFsv"
+      class="sc-dlfnbm"
     >
       6
     </div>
@@ -43,37 +43,37 @@ exports[`@artifak/grid Grid should render 1`] = `
 exports[`@artifak/grid Grid should render grid-auto-columns style if no columnSize prop is provided 1`] = `
 <DocumentFragment>
   <div
-    class="sc-bwzfXH QxCAR"
+    class="sc-gsTCUz jxeuwY"
     data-testid="grid"
     display="grid"
   >
     <div
-      class="sc-htpNat KtFsv"
+      class="sc-dlfnbm"
     >
       1
     </div>
     <div
-      class="sc-htpNat KtFsv"
+      class="sc-dlfnbm"
     >
       2
     </div>
     <div
-      class="sc-htpNat KtFsv"
+      class="sc-dlfnbm"
     >
       3
     </div>
     <div
-      class="sc-htpNat KtFsv"
+      class="sc-dlfnbm"
     >
       4
     </div>
     <div
-      class="sc-htpNat KtFsv"
+      class="sc-dlfnbm"
     >
       5
     </div>
     <div
-      class="sc-htpNat KtFsv"
+      class="sc-dlfnbm"
     >
       6
     </div>
@@ -84,37 +84,37 @@ exports[`@artifak/grid Grid should render grid-auto-columns style if no columnSi
 exports[`@artifak/grid Grid should render gridGap style if a value is provided 1`] = `
 <DocumentFragment>
   <div
-    class="sc-bwzfXH jefOZT"
+    class="sc-gsTCUz eFIKRD"
     data-testid="grid"
     display="grid"
   >
     <div
-      class="sc-htpNat KtFsv"
+      class="sc-dlfnbm"
     >
       1
     </div>
     <div
-      class="sc-htpNat KtFsv"
+      class="sc-dlfnbm"
     >
       2
     </div>
     <div
-      class="sc-htpNat KtFsv"
+      class="sc-dlfnbm"
     >
       3
     </div>
     <div
-      class="sc-htpNat KtFsv"
+      class="sc-dlfnbm"
     >
       4
     </div>
     <div
-      class="sc-htpNat KtFsv"
+      class="sc-dlfnbm"
     >
       5
     </div>
     <div
-      class="sc-htpNat KtFsv"
+      class="sc-dlfnbm"
     >
       6
     </div>

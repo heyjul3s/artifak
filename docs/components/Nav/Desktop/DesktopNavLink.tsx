@@ -23,7 +23,7 @@ export function DesktopNavLink({ children, link, name }) {
           {children.map(({ route, name, children }, i) => {
             i += 1;
             return (
-              <ChildLinkContainer>
+              <ChildLinkContainer key={`${name}-${i}`}>
                 <LinkItem>
                   <Counter>
                     <LinkCount>{`0${i}`.slice(-2)}</LinkCount>
