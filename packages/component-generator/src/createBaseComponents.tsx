@@ -12,7 +12,7 @@ import {
 export function createBaseComponents<
   Config = any,
   Theme = any,
-  Props = {},
+  Props = Record<string, unknown>,
   Element = HTMLDivElement
 >(
   base: StyledComponentConfig<Props, Theme, Element>,

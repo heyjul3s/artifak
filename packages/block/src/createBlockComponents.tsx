@@ -1,11 +1,18 @@
-import { createBaseComponents } from '@artifak/component-generator';
+import {
+  createBaseComponents,
+  Settings,
+  StyledComponentConfig
+} from '@artifak/component-generator';
 
 /* eslint-disable @typescript-eslint/no-explicit-any */
 export function createBlockComponents<
   Config,
-  Theme = any,
+  ThemeType = any,
   Props = Record<string, unknown>,
   Element = HTMLDivElement
->(settings) {
-  return createBaseComponents<Config, Theme, Props, Element>(settings);
+>(base: StyledComponentConfig<Props, ThemeType, Element>, settings: Settings) {
+  return createBaseComponents<Config, ThemeType, Props, Element>(
+    base,
+    settings
+  );
 }

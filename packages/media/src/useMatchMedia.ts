@@ -1,6 +1,6 @@
 import { useRef, useState, useCallback, useEffect } from 'react';
 
-export function useMatchMedia(query: string) {
+export function useMatchMedia(query: string): boolean {
   const matchListRef = useRef<MediaQueryList | null>(null);
   const [isMatch, setIsMatch] = useState<boolean>(false);
   const onMediaQueryListEvent = useCallback((e: MediaQueryListEvent) => {

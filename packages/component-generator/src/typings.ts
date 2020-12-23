@@ -58,28 +58,10 @@ export type CSSObjectWithScale = CSS.Properties<string | number | Scale>;
 export type CSSPseudos = { [K in CSS.Pseudos]?: CSSObjectWithScale };
 export type StyledSystemCSSObject = CSSObjectWithScale & CSSPseudos;
 
-export type GenericRecord<Object, Type> = {
-  [key in keyof Object]: Type;
+export type GenericRecord<Dict, Type> = {
+  [key in keyof Dict]: Type;
 };
 
 export type Settings = {
   [key: string]: StyledSystemCSSObject & { as?: keyof JSX.IntrinsicElements };
 };
-
-// export type BaseConfig<Props, ThemeType, Element> = {
-//   base: StyledComponentConfig<
-//     Props & Variant,
-//     ThemeType,
-//     HTMLAttributes<Element>
-//   >;
-// };
-
-// export type Settings<Props, ThemeType, Element> = {
-//   [key: string]:
-//     | StyledSystemCSSObject
-//     | StyledComponentConfig<
-//         Props & Variant,
-//         ThemeType,
-//         HTMLAttributes<Element>
-//       >;
-// };
