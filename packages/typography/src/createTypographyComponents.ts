@@ -5,6 +5,7 @@ import {
   StyledComponentConfig,
   Variant
 } from '@artifak/component-generator';
+import { styleFn } from 'styled-system';
 import { TypographyBaseProps } from './typings';
 import { typographyStyleProps } from './TypographyBase';
 
@@ -31,7 +32,7 @@ export function createTypographyComponents<
   >(
     {
       ...base,
-      styleProps: [typographyStyleProps, ...styleProps]
+      styleProps: [typographyStyleProps, ...(styleProps as styleFn[])]
     },
     settings
   );
@@ -42,7 +43,9 @@ export function getStyleProps<
   ThemeType = any,
   Props = Record<string, unknown>,
   Element = HTMLDivElement
->(base: StyledComponentConfig<Props, ThemeType, Element>) {
+>(
+  base: StyledComponentConfig<Props, ThemeType, Element>
+): StyledComponentConfig<Props, ThemeType, Element> {
   if (!base || !Object.keys(base).length) {
     return { styleProps: [] };
   }
