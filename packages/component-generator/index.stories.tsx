@@ -1,5 +1,5 @@
 import React from 'react';
-import { createStyledComponent, createBaseComponents } from './src';
+import { createStyledComponent, createComponents } from './src';
 
 const Basic = createStyledComponent({
   styles: {
@@ -41,7 +41,7 @@ const containers = {
   }
 };
 
-const { FlexContainer, Container, UnpaddedContainer } = createBaseComponents<
+const { FlexContainer, Container, UnpaddedContainer } = createComponents<
   typeof containers.components
 >(containers.base, containers.components);
 

@@ -74,6 +74,28 @@ export const links: LinkItems = {
         route: '/docs?content=generator',
         component: 'Generator',
         name: 'Generator'
+      },
+      {
+        route: '/docs?content=fluidsizing',
+        component: 'FluidSizing',
+        name: 'Fluid Sizing'
+      }
+    ]
+  },
+  Hooks: {
+    component: 'Hooks',
+    name: 'Hooks',
+    mobileNavIndex: 3,
+    children: [
+      {
+        route: '/docs?content=usematchmedia',
+        component: 'UseMatchMedia',
+        name: 'useMatchMedia'
+      },
+      {
+        route: '/docs?content=usewindowsize',
+        component: 'Usewindowsize',
+        name: 'useWindowSize'
       }
     ]
   }

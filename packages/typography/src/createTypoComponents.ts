@@ -1,6 +1,6 @@
 import {
   GenericRecord,
-  createBaseComponents,
+  createComponents,
   Settings,
   StyledComponentConfig,
   Variant
@@ -10,7 +10,7 @@ import { TypographyBaseProps } from './typings';
 import { typographyStyleProps } from './TypographyBase';
 
 /* eslint-disable @typescript-eslint/no-explicit-any */
-export function createTypographyComponents<
+export function createTypoComponents<
   Config,
   ThemeType = any,
   Props = Record<string, unknown>,
@@ -24,7 +24,7 @@ export function createTypographyComponents<
 > {
   const { styleProps } = getStyleProps(base);
 
-  return createBaseComponents<
+  return createComponents<
     Config,
     ThemeType,
     Props & TypographyBaseProps,

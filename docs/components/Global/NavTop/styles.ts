@@ -4,9 +4,8 @@ import { AnchorLink } from '../../AnchorLink';
 export const NavTopMenu = styled.nav`
   display: flex;
   align-items: center;
-  justify-content: flex-end;
   height: 100%;
-  padding: 0 1.5rem;
+  padding: 0 1.5em;
 `;
 
 export const NavTopLink = styled(AnchorLink)`
@@ -14,12 +13,15 @@ export const NavTopLink = styled(AnchorLink)`
   z-index: 1;
   color: white;
   margin-right: 15px;
+  top: 2px;
 `;
 
 export const NavTopContainer = styled.div`
   position: relative;
   width: 100%;
   height: 60px;
+  display: flex;
+  justify-content: space-between;
 
   ${({ theme }) => `
     background-color: ${theme.colors.primary};

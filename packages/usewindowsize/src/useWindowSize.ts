@@ -1,11 +1,5 @@
 import { useState, useEffect } from 'react';
-
-type WindowSize = {
-  innerHeight: number;
-  innerWidth: number;
-  outerHeight: number;
-  outerWidth: number;
-};
+import { WindowSize } from './typings';
 
 export function useWindowSize(): WindowSize {
   const [windowSize, setWindowSize] = useState<WindowSize>(getSize());

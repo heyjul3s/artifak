@@ -1,5 +1,5 @@
 import {
-  createBaseComponents,
+  createComponents,
   GenericRecord,
   Settings,
   StyledComponentConfig,
@@ -16,8 +16,5 @@ export function createBlockComponents<
   base: StyledComponentConfig<Props, ThemeType, Element>,
   settings: Settings
 ): GenericRecord<Config, React.FC<Props & Variant<ThemeType>>> {
-  return createBaseComponents<Config, ThemeType, Props, Element>(
-    base,
-    settings
-  );
+  return createComponents<Config, ThemeType, Props, Element>(base, settings);
 }

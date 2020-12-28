@@ -1,8 +1,4 @@
-export {
-  createTypographyComponents,
-  getStyleProps
-} from './createTypographyComponents';
+export { createTypoComponents, getStyleProps } from './createTypoComponents';
 export { TypographyBase } from './TypographyBase';
 export { fontWeight } from './fontWeight';
-export { fluidSizing } from './fluidSizing';
 export { TypographyBaseProps } from './typings';

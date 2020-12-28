@@ -26,9 +26,9 @@ export function createStyledComponent<
   Attributes = void
 >(config: StyledComponentConfig<Props, Theme, Attributes>): React.FC<Props> {
   const Styled = pipe(
-    createStyledBase,
-    createStyledWithAttributes,
-    applyStyledComponent
+    createStyledElement,
+    createStyledAttributes,
+    applyStyledProps
   )(config);
 
   return props => (
@@ -38,7 +38,11 @@ export function createStyledComponent<
   );
 }
 
-export function createStyledBase<Props = void, Theme = void, Attributes = void>(
+export function createStyledElement<
+  Props = void,
+  Theme = void,
+  Attributes = void
+>(
   config: StyledComponentConfig<Props, Theme, Attributes>
 ): StyledComponentConfig<Props, Theme, Attributes> {
   const { element = 'div' } = config;
@@ -49,7 +53,7 @@ export function createStyledBase<Props = void, Theme = void, Attributes = void>(
   };
 }
 
-export function createStyledWithAttributes<
+export function createStyledAttributes<
   Props = void,
   Theme = void,
   Attributes = void
@@ -62,7 +66,7 @@ export function createStyledWithAttributes<
     : config;
 }
 
-export function applyStyledComponent<
+export function applyStyledProps<
   Props = void,
   Theme = void,
   Attributes = void

@@ -8,7 +8,7 @@ type WindowSize = {
 };
 
 export function useWindowSize() {
-  let [windowSize, setWindowSize] = useState<WindowSize>(getSize());
+  const [windowSize, setWindowSize] = useState<WindowSize>(getSize());
 
   function getSize() {
     if (typeof window !== 'undefined') {
