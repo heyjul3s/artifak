@@ -27,7 +27,7 @@ export function createComponents<
     React.FC<Props & BaseProps<ThemeType>>
   > & { Base: React.FC<Props & BaseProps<ThemeType> & Variant<ThemeType>> };
 
-  if (!!base) {
+  if (!!base && Object.keys(base).length >= 1) {
     acc.Base = createStyledComponent(base);
   }
 
