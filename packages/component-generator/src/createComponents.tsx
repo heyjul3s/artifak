@@ -27,7 +27,9 @@ export function createComponents<
     React.FC<Props & BaseProps<ThemeType>>
   > & { Base: React.FC<Props & BaseProps<ThemeType> & Variant<ThemeType>> };
 
-  acc.Base = createStyledComponent(base);
+  if (!!base) {
+    acc.Base = createStyledComponent(base);
+  }
 
   return !!base && !!settings && Object.keys(settings).length >= 1
     ? Object.entries(settings).reduce((acc, entry) => {
