@@ -46,10 +46,13 @@
     "@artifak/block": "^1.1.4",
     "@artifak/component-generator": "^1.1.4",
     "@artifak/flex": "^1.1.4",
+    "@artifak/fluidsizing": "^1.0.0",
     "@artifak/grid": "^1.1.4",
     "@artifak/imagery": "^1.0.6",
     "@artifak/media": "^1.0.0",
-    "@artifak/typography": "^1.1.5"
+    "@artifak/typography": "^1.1.5",
+    "@artifak/usematchmedia": "^1.0.0",
+    "@artifak/usewindowsize": "^1.0.0"
   },
   "devDependencies": {
     "@artifak/bundler": "^1.1.3"

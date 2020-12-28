@@ -1,6 +1,6 @@
 import {
   GenericRecord,
-  createBaseComponents,
+  createComponents,
   Settings,
   StyledComponentConfig,
   Variant
@@ -24,7 +24,7 @@ export function createTypographyComponents<
 > {
   const { styleProps } = getStyleProps(base);
 
-  return createBaseComponents<
+  return createComponents<
     Config,
     ThemeType,
     Props & TypographyBaseProps,

@@ -1,6 +1,6 @@
 export {
   createStyledComponent,
-  createBaseComponents
+  createComponents
 } from '@artifak/component-generator';
 
 export { BlockBase, createBlockComponents } from '@artifak/block';
@@ -14,7 +14,6 @@ export { GridBaseProps, GridItemBaseProps } from '@artifak/grid';
 
 export {
   createTypographyComponents,
-  fluidSizing,
   fontWeight,
   TypographyBase
 } from '@artifak/typography';
@@ -51,3 +50,7 @@ export {
   reducedMotion,
   reducedMotionAny
 } from '@artifak/media';
+
+export { fluidSizing } from '@artifak/fluidsizing';
+export { useMatchMedia } from '@artifak/usematchmedia';
+export { useWindowSize } from '@artifak/usewindowsize';

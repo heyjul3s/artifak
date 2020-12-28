@@ -10,7 +10,7 @@ import {
 } from './typings';
 
 /* eslint-disable @typescript-eslint/no-explicit-any */
-export function createBaseComponents<
+export function createComponents<
   Config = any,
   ThemeType = any,
   Props = Record<string, unknown>,
@@ -21,11 +21,13 @@ export function createBaseComponents<
 ): GenericRecord<
   Config,
   React.FC<Props & BaseProps<ThemeType> & Variant<ThemeType>>
-> {
+> & { Base: React.FC<Props & BaseProps<ThemeType> & Variant<ThemeType>> } {
   const acc = {} as GenericRecord<
     Config,
     React.FC<Props & BaseProps<ThemeType>>
-  >;
+  > & { Base: React.FC<Props & BaseProps<ThemeType> & Variant<ThemeType>> };
+
+  acc.Base = createStyledComponent(base);
 
   return !!base && !!settings && Object.keys(settings).length >= 1
     ? Object.entries(settings).reduce((acc, entry) => {

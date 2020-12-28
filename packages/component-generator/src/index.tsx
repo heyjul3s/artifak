@@ -1,4 +1,4 @@
-export { createBaseComponents } from './createBaseComponents';
+export { createComponents } from './createComponents';
 export { createStyledComponent } from './createStyledComponent';
 export {
   Attrs,
