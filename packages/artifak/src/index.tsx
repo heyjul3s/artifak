@@ -13,7 +13,7 @@ export { Grid, GridBase, GridItem, GridItemBase } from '@artifak/grid';
 export { GridBaseProps, GridItemBaseProps } from '@artifak/grid';
 
 export {
-  createTypographyComponents,
+  createTypoComponents,
   fontWeight,
   TypographyBase
 } from '@artifak/typography';
