@@ -26,3 +26,7 @@ Packages can also be installed independently. Simply do `yarn add <package name>
 - @artifak/**flex**
 - @artifak/**component-generator**
 - @artifak/**imagery**
+- @artifak/**media**
+- @artifak/**fluidsizing**
+- @artifak/**usematchmedia**
+- @artifak/**usewindowsize**
