@@ -4,7 +4,6 @@ import { List } from '../../components/List';
 import {
   createTypographComponentsExampleUsage,
   createTypographyComponentsDemo,
-  fluidSizingExampleUsage,
   fontWeightExampleUsage
 } from './examples';
 import { HR } from '../../components/Global/HR';
@@ -52,27 +51,6 @@ export function TypographyContent() {
         normally would...
       </Paragraph>
       <Syntax>{createTypographyComponentsDemo}</Syntax>
-
-      <HR />
-
-      <APIheading
-        name="fluidSizing"
-        params={{
-          minElementSize: 'number',
-          maxElementSize: 'number',
-          minViewportWidth: 'number',
-          maxViewportWidth: 'number'
-        }}
-      />
-      <Paragraph>
-        This function writes a CSS rule that allows for fluid sizing.
-        Essentially, this eliminates the need for media queries as the element
-        will resize in accordance to the viewport constraints that you provide.
-        To use this, specify the minimum size and maximum size of your element
-        and also the minimum and maximum size of the viewport width that you
-        intend to use as constraints. Below is an example of how you may use it.
-      </Paragraph>
-      <Syntax>{fluidSizingExampleUsage}</Syntax>
 
       <HR />
 

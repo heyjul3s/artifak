@@ -8,6 +8,9 @@ import { Media } from './Media/Media';
 import { Variants } from './Variants/Variants';
 import { Customisation } from './Customisation/Customisation';
 import { GettingStarted } from './GettingStarted/GettingStarted';
+import { UseMatchMedia } from './UseMatchMedia/UseMatchMedia';
+import { UseWindowSize } from './UseWindowSize/UseWindowSize';
+import { FluidSizing } from './FluidSizing/FluidSizing';
 
 export const content = {
   block: Block,
@@ -19,5 +22,8 @@ export const content = {
   media: Media,
   variants: Variants,
   customisation: Customisation,
+  usematchmedia: UseMatchMedia,
+  usewindowsize: UseWindowSize,
+  fluidsizing: FluidSizing,
   ['getting-started']: GettingStarted
 };
