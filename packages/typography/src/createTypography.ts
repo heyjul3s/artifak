@@ -10,7 +10,7 @@ import { TypographyBaseProps } from './typings';
 import { typographyStyleProps } from './TypographyBase';
 
 /* eslint-disable @typescript-eslint/no-explicit-any */
-export function createTypoComponents<
+export function createTypography<
   Config,
   ThemeType = any,
   Props = Record<string, unknown>,

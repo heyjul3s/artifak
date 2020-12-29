@@ -63,5 +63,5 @@ export type GenericRecord<Dict, Type> = {
 };
 
 export type Settings = {
-  [key: string]: StyledSystemCSSObject & { as?: keyof JSX.IntrinsicElements };
+  [key: string]: StyledSystemCSSObject & { as?: string };
 };

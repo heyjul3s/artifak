@@ -1,19 +1,35 @@
-import { createBlockComponents } from '../src';
-import { mockBlockStyles } from '../__mocks__/block.mock';
+import { createBlocks } from '../src';
 
 describe('@artifak/block', () => {
-  describe('createBlockComponents - generates Block React components based on styles object argument provided', () => {
+  describe('createBlocks - generates Block React components based on styles object argument provided', () => {
     it('should return the base Typography system component when provided with an invalid argument', () => {
       const expected = {};
-      expect(createBlockComponents({} as any)).toEqual(expected);
-      expect(createBlockComponents(null as any)).toEqual(expected);
-      expect(createBlockComponents(false as any)).toEqual(expected);
-      expect(createBlockComponents(0 as any)).toEqual(expected);
-      expect(createBlockComponents(void 0 as any)).toEqual(expected);
+      expect(createBlocks({} as any, {} as any)).toEqual(expected);
+      expect(createBlocks(null as any, null as any)).toEqual(expected);
+      expect(createBlocks(false as any, false as any)).toEqual(expected);
+      expect(createBlocks(0 as any, 0 as any)).toEqual(expected);
+      expect(createBlocks(void 0 as any, void 0 as any)).toEqual(expected);
     });
 
     it('should create React components', () => {
-      expect(createBlockComponents(mockBlockStyles)).toBeDefined();
+      expect(
+        createBlocks(
+          {
+            styles: {
+              display: 'block'
+            }
+          },
+          {
+            BlockPadSM: {
+              padding: [15]
+            },
+
+            BlockPadMD: {
+              padding: [15, 30]
+            }
+          }
+        )
+      ).toBeDefined();
     });
   });
 });
