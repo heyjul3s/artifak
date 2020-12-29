@@ -1,4 +1,4 @@
-import { BlockBase, createBlockComponents } from './src';
+import { BlockBase, createBlocks } from './src';
 
 export function BlockBaseUsage() {
   return <BlockBase>A Block Base</BlockBase>;
@@ -23,9 +23,10 @@ const components = {
   }
 };
 
-const { FlexContainer, UnpaddedContainer } = createBlockComponents<
-  typeof components
->(base, components);
+const { FlexContainer, UnpaddedContainer } = createBlocks<typeof components>(
+  base,
+  components
+);
 
 export function CreateBlocksUsage() {
   return (

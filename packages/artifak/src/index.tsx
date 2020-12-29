@@ -3,7 +3,7 @@ export {
   createComponents
 } from '@artifak/component-generator';
 
-export { BlockBase, createBlockComponents } from '@artifak/block';
+export { BlockBase, createBlocks } from '@artifak/block';
 export { BlockBaseProps } from '@artifak/block';
 
 export { FlexRow, FlexRowBase, FlexCol, FlexColBase } from '@artifak/flex';
@@ -13,7 +13,7 @@ export { Grid, GridBase, GridItem, GridItemBase } from '@artifak/grid';
 export { GridBaseProps, GridItemBaseProps } from '@artifak/grid';
 
 export {
-  createTypoComponents,
+  createTypography,
   fontWeight,
   TypographyBase
 } from '@artifak/typography';

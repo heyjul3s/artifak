@@ -1,5 +1,5 @@
 import React from 'react';
-import { createTypographyComponents, fluidSizing } from './src';
+import { createTypography } from './src';
 import styled from 'styled-components';
 import { variant } from 'styled-system';
 
@@ -11,7 +11,7 @@ const base = {
 
 const components = {
   H1: {
-    fontSize: fluidSizing(48, 96, 300, 1200),
+    fontSize: [48, 96],
     margin: '0 0 0.25em',
     as: 'h1'
   },
@@ -82,7 +82,7 @@ const {
   SmallLead,
   Paragraph,
   SmallParagraph
-} = createTypographyComponents<typeof components>(base, components);
+} = createTypography<typeof components>(base, components);
 
 const SysH1 = styled(H1)(
   variant({

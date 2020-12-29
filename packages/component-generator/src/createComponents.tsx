@@ -38,7 +38,8 @@ export function createComponents<
         if (hasKey(settings, prop)) {
           acc[prop] = createStyledComponent({
             ...base,
-            styles: { ...base.styles, ...setting }
+            styles: { ...base.styles, ...setting },
+            element: !!setting.as ? setting.as : base.element
           } as StyledComponentConfig<Props & Variant<ThemeType>, ThemeType, HTMLAttributes<Element>>);
 
           acc[prop].displayName = prop;

@@ -7,7 +7,7 @@ import {
 } from '@artifak/component-generator';
 
 /* eslint-disable @typescript-eslint/no-explicit-any */
-export function createBlockComponents<
+export function createBlocks<
   Config,
   ThemeType = any,
   Props = Record<string, unknown>,
