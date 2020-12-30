@@ -1,9 +1,8 @@
 import {
   createComponents,
-  GenericRecord,
+  ComponentsRecord,
   Settings,
-  StyledComponentConfig,
-  Variant
+  StyledComponentConfig
 } from '@artifak/component-generator';
 
 /* eslint-disable @typescript-eslint/no-explicit-any */
@@ -15,6 +14,6 @@ export function createBlocks<
 >(
   base: StyledComponentConfig<Props, ThemeType, Element>,
   settings: Settings<Element>
-): GenericRecord<Config, React.FC<Props & Variant<ThemeType>>> {
+): ComponentsRecord<Config, Props, ThemeType> {
   return createComponents<Config, ThemeType, Props, Element>(base, settings);
 }

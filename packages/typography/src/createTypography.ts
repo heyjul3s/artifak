@@ -1,9 +1,8 @@
 import {
-  GenericRecord,
+  ComponentsRecord,
   createComponents,
   Settings,
-  StyledComponentConfig,
-  Variant
+  StyledComponentConfig
 } from '@artifak/component-generator';
 import { styleFn } from 'styled-system';
 import { TypographyBaseProps } from './typings';
@@ -18,10 +17,7 @@ export function createTypography<
 >(
   base: StyledComponentConfig<Props, ThemeType, Element>,
   settings: Settings<Element>
-): GenericRecord<
-  Config,
-  React.FC<Props & TypographyBaseProps & Variant<ThemeType>>
-> {
+): ComponentsRecord<Config, Props & TypographyBaseProps, ThemeType> {
   const { styleProps } = getStyleProps(base);
 
   return createComponents<
