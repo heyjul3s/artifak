@@ -1,53 +1,72 @@
-import React, { HTMLAttributes } from 'react';
-import { createStyledComponent } from './createStyledComponent';
+import { AllHTMLAttributes } from 'react';
+import { isValidElementType } from 'react-is';
+import isPlainObject from 'lodash.isplainobject';
+import isEmpty from 'lodash.isempty';
+import { createStyledComponent, createFC } from './createStyledComponent';
 
 import {
   Settings,
-  BaseProps,
-  GenericRecord,
   StyledComponentConfig,
-  Variant
+  Variant,
+  ComponentsRecord
 } from './typings';
 
-/* eslint-disable @typescript-eslint/no-explicit-any */
 export function createComponents<
   Config = any,
   ThemeType = any,
   Props = Record<string, unknown>,
   Element = HTMLDivElement
 >(
-  base: StyledComponentConfig<Props, ThemeType, Element>,
-  settings: Settings
-): GenericRecord<
-  Config,
-  React.FC<Props & BaseProps<ThemeType> & Variant<ThemeType>>
-> & { Base: React.FC<Props & BaseProps<ThemeType> & Variant<ThemeType>> } {
-  const acc = {} as GenericRecord<
-    Config,
-    React.FC<Props & BaseProps<ThemeType>>
-  > & { Base: React.FC<Props & BaseProps<ThemeType> & Variant<ThemeType>> };
+  base:
+    | StyledComponentConfig<Props, AllHTMLAttributes<Element>, ThemeType>
+    | React.FC<Props>,
+  settings: Settings<Element>
+): ComponentsRecord<Config, Props, ThemeType> {
+  const dict = createBaseComponent<Config, ThemeType, Props>(base);
+  const isConfigBase = dict.hasOwnProperty('Base');
 
-  if (!!base && Object.keys(base).length >= 1) {
-    acc.Base = createStyledComponent(base);
+  if ((isValidElementType(base) || !isEmpty(base)) && !isEmpty(settings)) {
+    return Object.entries(settings).reduce((dict, entry) => {
+      const [prop, setting] = entry;
+
+      if (hasKey(settings, prop)) {
+        dict[prop] = isConfigBase
+          ? generateComponent<ThemeType, Props, Element>(base, setting)
+          : createFC(base, setting);
+        dict[prop].displayName = prop;
+      }
+      return dict;
+    }, dict);
   }
 
-  return !!base && !!settings && Object.keys(settings).length >= 1
-    ? Object.entries(settings).reduce((acc, entry) => {
-        const [prop, setting] = entry;
+  return dict;
+}
 
-        if (hasKey(settings, prop)) {
-          acc[prop] = createStyledComponent({
-            ...base,
-            styles: { ...base.styles, ...setting },
-            element: !!setting.as ? setting.as : base.element
-          } as StyledComponentConfig<Props & Variant<ThemeType>, ThemeType, HTMLAttributes<Element>>);
+export function createBaseComponent<
+  Config = any,
+  ThemeType = any,
+  Props = Record<string, unknown>
+>(base): ComponentsRecord<Config, Props, ThemeType> {
+  const dict = {} as ComponentsRecord<Config, Props, ThemeType>;
 
-          acc[prop].displayName = prop;
-        }
+  if (isPlainObject(base)) {
+    dict.Base = createStyledComponent(base);
+  }
 
-        return acc;
-      }, acc)
-    : acc;
+  return dict;
+}
+
+export function generateComponent<
+  ThemeType = any,
+  Props = Record<string, unknown>,
+  Element = HTMLDivElement
+>(base, setting) {
+  return createStyledComponent({
+    ...base,
+    styles: { ...base.styles, ...setting },
+    attrs: { ...base.attrs, ...setting.attrs } || {},
+    element: !!setting.as ? setting.as : base.element
+  } as StyledComponentConfig<Props & Variant<ThemeType>, AllHTMLAttributes<Element>, ThemeType>);
 }
 
 /* eslint-disable @typescript-eslint/no-explicit-any */

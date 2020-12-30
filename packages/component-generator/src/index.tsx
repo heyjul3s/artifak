@@ -1,10 +1,13 @@
 export { createComponents } from './createComponents';
-export { createStyledComponent } from './createStyledComponent';
+export {
+  createStyledComponent,
+  extractStylePseudos
+} from './createStyledComponent';
 export {
   Attrs,
   BaseProps,
   BaseComponentProps,
-  GenericRecord,
+  ComponentsRecord,
   Settings,
   StyledComponentConfig,
   Variant

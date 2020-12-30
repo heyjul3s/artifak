@@ -59,7 +59,8 @@
     "styled-components": ">=5.2.1"
   },
   "dependencies": {
-    "lodash.isempty": "^4.4.0"
+    "lodash.isempty": "^4.4.0",
+    "lodash.isplainobject": "^4.0.6"
   },
   "resolutions": {
     "react": ">=17.0.1"
