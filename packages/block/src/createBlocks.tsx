@@ -14,7 +14,7 @@ export function createBlocks<
   Element = HTMLDivElement
 >(
   base: StyledComponentConfig<Props, ThemeType, Element>,
-  settings: Settings
+  settings: Settings<Element>
 ): GenericRecord<Config, React.FC<Props & Variant<ThemeType>>> {
   return createComponents<Config, ThemeType, Props, Element>(base, settings);
 }

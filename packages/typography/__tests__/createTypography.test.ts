@@ -1,5 +1,4 @@
-import { position } from 'styled-system';
-import { createTypography, getStyleProps, fontWeight } from '../src';
+import { createTypography } from '../src';
 
 describe('createTypography - generates typography React components based on styles object argument provided', () => {
   it('should return the base Typography system component when provided with an invalid argument', () => {

@@ -17,7 +17,7 @@ export function createTypography<
   Element = HTMLDivElement
 >(
   base: StyledComponentConfig<Props, ThemeType, Element>,
-  settings: Settings
+  settings: Settings<Element>
 ): GenericRecord<
   Config,
   React.FC<Props & TypographyBaseProps & Variant<ThemeType>>
