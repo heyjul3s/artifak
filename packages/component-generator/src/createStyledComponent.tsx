@@ -1,6 +1,6 @@
 import React from 'react';
 import isEmpty from 'lodash.isempty';
-import styled from 'styled-components';
+import styled, { CSSObject } from 'styled-components';
 
 import {
   compose,
@@ -15,7 +15,7 @@ import {
   typography
 } from 'styled-system';
 
-import { StyledComponentConfig } from './typings';
+import { StyledComponentConfig, StyledSystemCSSObject } from './typings';
 
 const pipe = (...fns) => value => fns.reduce((acc, fn) => fn(acc), value);
 
@@ -25,16 +25,25 @@ export function createStyledComponent<
   Theme = void,
   Attributes = void
 >(config: StyledComponentConfig<Props, Theme, Attributes>): React.FC<Props> {
-  const Styled = pipe(
+  const Styled = createStyled<Props, Theme, Attributes>(config);
+  return createFC<Props>(Styled, config.styles);
+}
+
+export function createStyled<Props = void, Theme = void, Attributes = void>(
+  config: StyledComponentConfig<Props, Theme, Attributes>
+) {
+  return pipe(
     createStyledElement,
     createStyledAttributes,
     applyStyledProps
   )(config);
+}
 
+export function createFC<Props = void>(Component, styles): React.FC<Props> {
   return props => (
-    <Styled {...props} {...config.styles}>
+    <Component {...props} {...styles}>
       {props.children}
-    </Styled>
+    </Component>
   );
 }
 
@@ -72,9 +81,13 @@ export function applyStyledProps<
   Attributes = void
 >({
   component = styled.div,
-  styleProps = []
+  styleProps = [],
+  styles
 }: StyledComponentConfig<Props, Theme, Attributes>) {
+  const pseudoStyles = extractStylePseudos(styles);
+
   return component(
+    pseudoStyles,
     compose(
       background,
       border,
@@ -88,4 +101,16 @@ export function applyStyledProps<
       ...styleProps
     )
   );
+}
+
+export function extractStylePseudos(
+  styles: StyledSystemCSSObject = {}
+): CSSObject {
+  return Object.keys(styles).reduce((acc, key) => {
+    if (key.includes('&:')) {
+      acc[key] = styles[key];
+    }
+
+    return acc;
+  }, {});
 }

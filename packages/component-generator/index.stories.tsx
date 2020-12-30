@@ -55,6 +55,25 @@ export function BasicUsage() {
   );
 }
 
+const {
+  Container: BasicContainer,
+  FlexContainer: BasicFlexContainer,
+  UnpaddedContainer: BasicUnpaddedContainer
+} = createComponents<typeof containers.components>(
+  Basic,
+  containers.components
+);
+
+export function UsageWithSCbase() {
+  return (
+    <>
+      <BasicContainer>Default Container</BasicContainer>
+      <BasicFlexContainer>Flex Container</BasicFlexContainer>
+      <BasicUnpaddedContainer>Unpadded Container</BasicUnpaddedContainer>
+    </>
+  );
+}
+
 export default {
   title: 'Generator'
 };

@@ -1,27 +1,17 @@
 {
-  "name": "@artifak/component-generator",
-  "version": "1.1.4",
-  "description": "Component generator utility for Artifak",
+  "name": "@artifak/text-input",
+  "version": "1.0.0",
+  "description": "Text input components which comprises typeos of text, tel, url, email, search and password.",
+  "keywords": [],
   "author": "Julian Low",
-  "license": "MIT",
-  "sideEffects": false,
-  "keywords": [
-    "react",
-    "react-component",
-    "component",
-    "ui",
-    "flex",
-    "grid",
-    "block",
-    "layout"
-  ],
-  "module": "dist/component-generator.esm.js",
-  "main": "dist/component-generator.cjs.js",
+  "license": "ISC",
+  "main": "dist/text-input.cjs.js",
+  "module": "dist/text-input.esm.js",
   "src": "src/index.tsx",
   "types": "dist/src/index.d.ts",
   "directories": {
-    "test": "__tests__",
-    "src": "src"
+    "src": "src",
+    "test": "__tests__"
   },
   "files": [
     "dist"
@@ -47,22 +37,12 @@
     "@types/react-dom": "^17.0.0",
     "@types/styled-components": "^5.1.7",
     "@types/styled-system": "^5.1.10",
-    "csstype": "^3.0.5",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "styled-components": "^5.2.1",
     "styled-system": "^5.1.5"
   },
-  "peerDependencies": {
-    "react": ">=17.0.1",
-    "react-dom": ">=17.0.1",
-    "styled-components": ">=5.2.1"
-  },
   "dependencies": {
-    "lodash.isempty": "^4.4.0",
-    "lodash.isplainobject": "^4.0.6"
-  },
-  "resolutions": {
-    "react": ">=17.0.1"
+    "@artifak/component-generator": "^1.1.4"
   }
 }

@@ -1,3 +1,4 @@
+import { AllHTMLAttributes } from 'react';
 import * as CSS from 'csstype';
 import { ThemedStyledFunction, ThemedStyledProps } from 'styled-components';
 import { styleFn, Scale } from 'styled-system';
@@ -43,7 +44,7 @@ export type StyledComponentConfig<
   ThemeType = void
 > = {
   styles?: StyledSystemCSSObject;
-  attrs?: Attrs<Props, Attributes, ThemeType>;
+  attrs?: Attributes;
   styleProps?: styleFn[];
   element?: keyof JSX.IntrinsicElements;
   component?: ThemedStyledFunction<
@@ -58,10 +59,15 @@ export type CSSObjectWithScale = CSS.Properties<string | number | Scale>;
 export type CSSPseudos = { [K in CSS.Pseudos]?: CSSObjectWithScale };
 export type StyledSystemCSSObject = CSSObjectWithScale & CSSPseudos;
 
-export type GenericRecord<Dict, Type> = {
-  [key in keyof Dict]: Type;
+export type ComponentsRecord<Dict, Props, ThemeType> = {
+  [key in keyof Dict | 'Base']: React.FC<
+    Props & BaseProps<ThemeType> & Variant<ThemeType>
+  >;
 };
 
-export type Settings = {
-  [key: string]: StyledSystemCSSObject & { as?: string };
+export type Settings<Element = HTMLDivElement> = {
+  [key: string]: StyledSystemCSSObject & {
+    as?: string;
+    attrs?: AllHTMLAttributes<Element>;
+  };
 };
