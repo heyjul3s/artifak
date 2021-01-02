@@ -6,6 +6,7 @@ import { theme } from '../theme';
 type Props = {
   href: string;
   openAsNewTab?: boolean;
+  style?: React.CSSProperties;
   variant?: string;
   children: React.ReactChild | React.ReactChildren;
 };
