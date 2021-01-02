@@ -32,7 +32,7 @@ export function createComponents<
       if (hasKey(settings, prop)) {
         dict[prop] = isConfigBase
           ? generateComponent<ThemeType, Props, Element>(base, setting)
-          : createFC(base, setting);
+          : createFC<Props>(base, setting);
         dict[prop].displayName = prop;
       }
       return dict;
@@ -45,12 +45,17 @@ export function createComponents<
 export function createBaseComponent<
   Config = any,
   ThemeType = any,
-  Props = Record<string, unknown>
+  Props = Record<string, unknown>,
+  Element = HTMLDivElement
 >(base): ComponentsRecord<Config, Props, ThemeType> {
   const dict = {} as ComponentsRecord<Config, Props, ThemeType>;
 
   if (isPlainObject(base)) {
-    dict.Base = createStyledComponent(base);
+    dict.Base = createStyledComponent<
+      Props,
+      ThemeType,
+      AllHTMLAttributes<Element>
+    >(base);
   }
 
   return dict;
@@ -61,12 +66,12 @@ export function generateComponent<
   Props = Record<string, unknown>,
   Element = HTMLDivElement
 >(base, setting) {
-  return createStyledComponent({
+  return createStyledComponent<Props, ThemeType, AllHTMLAttributes<Element>>({
     ...base,
     styles: { ...base.styles, ...setting },
     attrs: { ...base.attrs, ...setting.attrs } || {},
     element: !!setting.as ? setting.as : base.element
-  } as StyledComponentConfig<Props & Variant<ThemeType>, AllHTMLAttributes<Element>, ThemeType>);
+  } as StyledComponentConfig<Props & Variant<ThemeType>, ThemeType, AllHTMLAttributes<Element>>);
 }
 
 /* eslint-disable @typescript-eslint/no-explicit-any */
