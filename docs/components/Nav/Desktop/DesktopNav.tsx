@@ -1,4 +1,5 @@
 import React from 'react';
+import { AnchorLink } from '../../AnchorLink';
 import { Brand } from '../../Global/Brand/Brand';
 import { Tagline } from '../../Global/Tagline/Tagline';
 import { NavContainer, ListItem } from './styles';
@@ -8,7 +9,9 @@ import { links } from '../constants';
 export function DesktopNav() {
   return (
     <aside>
-      <Brand position="flex-start" />
+      <AnchorLink href="/">
+        <Brand position="flex-start" />
+      </AnchorLink>
       <Tagline align="left" />
       <NavContainer>
         {Object.keys(links).map((key, i) => {
