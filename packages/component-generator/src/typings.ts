@@ -60,9 +60,7 @@ export type CSSPseudos = { [K in CSS.Pseudos]?: CSSObjectWithScale };
 export type StyledSystemCSSObject = CSSObjectWithScale & CSSPseudos;
 
 export type ComponentsRecord<Dict, Props, ThemeType> = {
-  [key in keyof Dict | 'Base']: React.FC<
-    Props & BaseProps<ThemeType> & Variant<ThemeType>
-  >;
+  [key in keyof Dict | 'Base']: React.FC<Props & BaseProps<ThemeType>>;
 };
 
 export type Settings<Element = HTMLDivElement> = {
