@@ -1,5 +1,6 @@
 export {
-  createTypographComponentsExampleUsage,
+  createTypographExample,
   createTypographyComponentsDemo
-} from './createTypographyComponents';
+} from './createTypography';
+
 export { fontWeightExampleUsage } from './fontWeight';

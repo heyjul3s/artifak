@@ -2,7 +2,7 @@ import { Paragraph, H4, Strong } from '../../components/Typography';
 import { Syntax, Param, ParamsTable } from '../../components/Code';
 import { FlexTable } from '../../components/FlexTable';
 import {
-  createTypographComponentsExampleUsage,
+  createTypographExample,
   createTypographyComponentsDemo,
   fontWeightExampleUsage
 } from './examples';
@@ -66,9 +66,8 @@ export function TypographyContent() {
     <>
       <Paragraph>
         The typography library offers utilities to help you scaffold your React
-        typography components which include{' '}
-        <Strong>createTypographyComponents</Strong> and a constant{' '}
-        <Strong>fontWeight</Strong>.
+        typography components which include <Strong>createTypography</Strong>{' '}
+        and a constant <Strong>fontWeight</Strong>.
       </Paragraph>
 
       <HR />
@@ -83,10 +82,12 @@ export function TypographyContent() {
 
       <Paragraph>This function helps generate Typography components.</Paragraph>
 
+      <Syntax>{createTypographExample}</Syntax>
+
       <H4>Generics</H4>
 
       <Paragraph>
-        The <Strong>createComponents</Strong> has the following type generics.
+        The <Strong>createTypography</Strong> has the following type generics.
       </Paragraph>
 
       <FlexTable
@@ -130,7 +131,10 @@ export function TypographyContent() {
       <Paragraph>
         <Strong>base</Strong> is what is used as a basis to generate components
         defined in settings. It can accept another component or a configuration
-        object with properties as described by the table below.
+        object with properties as described by the table below. Note that the
+        end result will also include a <Strong>Base</Strong> component if a
+        configuration object is passed as an argument for the{' '}
+        <Strong>base</Strong> parameter and can be used as you see fit.
       </Paragraph>
 
       <ParamsTable APIname={'base'} cells={createBlocksBaseCells} />
@@ -144,9 +148,6 @@ export function TypographyContent() {
         used as a the component name. Properties consists of a Settings object
         comprising of styles with the option of applying an{' '}
         <Strong>attrs</Strong> property and an <Strong>as</Strong> property.
-        Note that the end result will also include a <Strong>Base</Strong>{' '}
-        component if a configuration object is passed as an argument for the{' '}
-        <Strong>base</Strong> parameter.
       </Paragraph>
 
       <ParamsTable APIname={'settings'} cells={createBlocksSettingsCells} />

@@ -4,6 +4,7 @@ import { FlexTable } from '../../components/FlexTable';
 import { HR } from '../../components/Global/HR';
 import { Doc } from '../../components/Article';
 import { APIheading } from '../../components/APIheading';
+import { createComponentsUsage } from './examples';
 
 export function Generator() {
   return (
@@ -31,7 +32,7 @@ const createBlocksBaseCells = [
     name: 'styleProps',
     type: 'styledFn[]',
     defaultValue: '[ ]',
-    content: 'Custom style properties.'
+    content: 'Custom style properties that allows you to define inline styles.'
   },
   {
     name: 'element',
@@ -81,6 +82,10 @@ export function GeneratorContent() {
           settings: 'Settings<Element>'
         }}
       />
+
+      <Syntax>{createComponentsUsage}</Syntax>
+
+      <HR />
 
       <H4>Generics</H4>
 
