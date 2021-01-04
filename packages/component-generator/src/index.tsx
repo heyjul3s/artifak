@@ -9,6 +9,7 @@ export {
   BaseComponentProps,
   ComponentsRecord,
   Settings,
-  StyledComponentConfig,
+  BaseConfig,
+  ScalableCSS,
   Variant
 } from './typings';

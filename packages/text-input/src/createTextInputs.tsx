@@ -3,7 +3,7 @@ import {
   createComponents,
   ComponentsRecord,
   Settings,
-  StyledComponentConfig
+  BaseConfig
 } from '@artifak/component-generator';
 
 /* eslint-disable @typescript-eslint/no-explicit-any */
@@ -13,7 +13,7 @@ export function createTextInputs<
   ThemeType = any,
   Element = HTMLInputElement
 >(
-  base: StyledComponentConfig<Props, ThemeType, AllHTMLAttributes<Element>>,
+  base: BaseConfig<Props, ThemeType, AllHTMLAttributes<Element>>,
   settings: Settings<Element>
 ): ComponentsRecord<Config, Props, ThemeType> {
   return createComponents<Config, ThemeType, Props, Element>(

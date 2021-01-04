@@ -15,7 +15,7 @@ import {
   typography
 } from 'styled-system';
 
-import { StyledComponentConfig, StyledSystemCSSObject } from './typings';
+import { BaseConfig, ScalableCSS } from './typings';
 
 const pipe = (...fns) => value => fns.reduce((acc, fn) => fn(acc), value);
 
@@ -24,13 +24,13 @@ export function createStyledComponent<
   Props extends any,
   Theme = void,
   Attributes = void
->(config: StyledComponentConfig<Props, Theme, Attributes>): React.FC<Props> {
+>(config: BaseConfig<Props, Theme, Attributes>): React.FC<Props> {
   const Styled = createStyled<Props, Theme, Attributes>(config);
   return createFC<Props>(Styled, config.styles);
 }
 
 export function createStyled<Props = void, Theme = void, Attributes = void>(
-  config: StyledComponentConfig<Props, Theme, Attributes>
+  config: BaseConfig<Props, Theme, Attributes>
 ) {
   return pipe(
     createStyledElement,
@@ -52,8 +52,8 @@ export function createStyledElement<
   Theme = void,
   Attributes = void
 >(
-  config: StyledComponentConfig<Props, Theme, Attributes>
-): StyledComponentConfig<Props, Theme, Attributes> {
+  config: BaseConfig<Props, Theme, Attributes>
+): BaseConfig<Props, Theme, Attributes> {
   const { element = 'div' } = config;
   return {
     ...config,
@@ -67,8 +67,8 @@ export function createStyledAttributes<
   Theme = void,
   Attributes = void
 >(
-  config: StyledComponentConfig<Props, Theme, Attributes>
-): StyledComponentConfig<Props, Theme, Attributes> {
+  config: BaseConfig<Props, Theme, Attributes>
+): BaseConfig<Props, Theme, Attributes> {
   const { attrs = {} } = config;
   return !!config.component && config.hasOwnProperty('attrs') && !isEmpty(attrs)
     ? { ...config, component: config.component.attrs(attrs) }
@@ -83,7 +83,7 @@ export function applyStyledProps<
   component = styled.div,
   styleProps = [],
   styles
-}: StyledComponentConfig<Props, Theme, Attributes>) {
+}: BaseConfig<Props, Theme, Attributes>) {
   const pseudoStyles = extractStylePseudos(styles);
 
   return component(
@@ -103,9 +103,7 @@ export function applyStyledProps<
   );
 }
 
-export function extractStylePseudos(
-  styles: StyledSystemCSSObject = {}
-): CSSObject {
+export function extractStylePseudos(styles: ScalableCSS = {}): CSSObject {
   return Object.keys(styles).reduce((acc, key) => {
     if (key.includes('&:')) {
       acc[key] = styles[key];

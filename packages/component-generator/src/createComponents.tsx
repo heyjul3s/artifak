@@ -4,12 +4,7 @@ import isPlainObject from 'lodash.isplainobject';
 import isEmpty from 'lodash.isempty';
 import { createStyledComponent, createFC } from './createStyledComponent';
 
-import {
-  Settings,
-  StyledComponentConfig,
-  Variant,
-  ComponentsRecord
-} from './typings';
+import { Settings, BaseConfig, Variant, ComponentsRecord } from './typings';
 
 export function createComponents<
   Config = any,
@@ -18,7 +13,7 @@ export function createComponents<
   Element = HTMLDivElement
 >(
   base:
-    | StyledComponentConfig<Props, AllHTMLAttributes<Element>, ThemeType>
+    | BaseConfig<Props, AllHTMLAttributes<Element>, ThemeType>
     | React.FC<Props>,
   settings: Settings<Element>
 ): ComponentsRecord<Config, Props, ThemeType> {
@@ -71,7 +66,7 @@ export function generateComponent<
     styles: { ...base.styles, ...setting },
     attrs: { ...base.attrs, ...setting.attrs } || {},
     element: !!setting.as ? setting.as : base.element
-  } as StyledComponentConfig<Props & Variant<ThemeType>, ThemeType, AllHTMLAttributes<Element>>);
+  } as BaseConfig<Props & Variant<ThemeType>, ThemeType, AllHTMLAttributes<Element>>);
 }
 
 /* eslint-disable @typescript-eslint/no-explicit-any */
