@@ -20,12 +20,12 @@ export const links: LinkItems = {
         route: '/docs?content=customisation',
         component: 'Cusomisation',
         name: 'Cusomisation'
-      },
-      {
-        route: '/docs?content=variants',
-        component: 'Variants',
-        name: 'Variants'
       }
+      // {
+      //   route: '/docs?content=variants',
+      //   component: 'Variants',
+      //   name: 'Variants'
+      // }
     ]
   },
   Components: {
@@ -33,11 +33,11 @@ export const links: LinkItems = {
     name: 'Components',
     mobileNavIndex: 1,
     children: [
-      {
-        route: '/docs?content=block',
-        component: 'Block',
-        name: 'Block'
-      },
+      // {
+      //   route: '/docs?content=block',
+      //   component: 'Block',
+      //   name: 'Block'
+      // },
       {
         route: '/docs?content=flex',
         component: 'Flex',
