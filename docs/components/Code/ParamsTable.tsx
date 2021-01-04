@@ -1,9 +1,16 @@
 import React from 'react';
 import { FlexRow, FlexCol } from 'artifak';
 import { H4, Paragraph, SmallParagraph, SmallLead } from '../Typography';
+import { theme } from '../../theme';
 import { useMatchMedia } from '../../hooks';
 
-export function ParamsTable({ APIname, APItypes, cells }) {
+type Props = {
+  APIname: string;
+  APItypes?: string;
+  cells: any;
+};
+
+export function ParamsTable({ APIname, APItypes, cells }: Props) {
   const isMobile = useMatchMedia('(any-hover: none)');
 
   return (
@@ -11,38 +18,29 @@ export function ParamsTable({ APIname, APItypes, cells }) {
       style={{
         marginBottom: '1rem',
         padding: '30px 30px 10px',
-        border: '1px solid black'
+        border: `1px solid ${theme.colors.extraLightGrey}`
       }}
     >
-      <H4 display="inline-block" verticalAlign="middle">
-        {APIname} &nbsp;
-      </H4>
-
-      <SmallParagraph
-        display="inline-block"
-        verticalAlign="middle"
-        mt={'0.5rem'}
-      >
-        {APItypes}
-      </SmallParagraph>
-
-      <hr style={{ marginBottom: '1.5rem' }} />
-
       {!isMobile && (
-        <FlexRow>
-          <FlexCol columnSize={[12, 2]} gutterWidth={0}>
-            <SmallLead>Name</SmallLead>
-          </FlexCol>
-          <FlexCol columnSize={[12, 3]} gutterWidth={0}>
-            <SmallLead>Type</SmallLead>
-          </FlexCol>
-          <FlexCol columnSize={[12, 2]} gutterWidth={0}>
-            <SmallLead>Default</SmallLead>
-          </FlexCol>
-          <FlexCol columnSize={[12, 5]} gutterWidth={0}>
-            <SmallLead>Description</SmallLead>
-          </FlexCol>
-        </FlexRow>
+        <>
+          <FlexRow>
+            <FlexCol columnSize={[12, 2]} gutterWidth={0}>
+              <SmallLead style={{ marginBottom: '0.5rem' }}>Name</SmallLead>
+            </FlexCol>
+            <FlexCol columnSize={[12, 3]} gutterWidth={0}>
+              <SmallLead style={{ marginBottom: '0.5rem' }}>Type</SmallLead>
+            </FlexCol>
+            <FlexCol columnSize={[12, 2]} gutterWidth={0}>
+              <SmallLead style={{ marginBottom: '0.5rem' }}>Default</SmallLead>
+            </FlexCol>
+            <FlexCol columnSize={[12, 5]} gutterWidth={0}>
+              <SmallLead style={{ marginBottom: '0.5rem' }}>
+                Description
+              </SmallLead>
+            </FlexCol>
+          </FlexRow>
+          <hr style={{ marginBottom: '1.5rem' }} />
+        </>
       )}
 
       {cells.map((cell, i) => {

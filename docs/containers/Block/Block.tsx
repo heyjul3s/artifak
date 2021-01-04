@@ -1,13 +1,53 @@
-import { Paragraph, Strong } from '../../components/Typography';
-import { Syntax } from '../../components/Code/Syntax';
+import { Paragraph, Strong, H4 } from '../../components/Typography';
+import { Syntax, Param, ParamsTable } from '../../components/Code';
 import { HR } from '../../components/Global/HR';
-import {
-  BlockBaseUsage,
-  createBlockComponentsExampleUsage,
-  createBlockComponentsDemo
-} from './examples';
+import { BlockBaseUsage } from './examples';
 import { Doc } from '../../components/Article';
 import { APIheading } from '../../components/APIheading';
+import { FlexTable } from '../../components/FlexTable';
+
+const createBlocksBaseCells = [
+  {
+    name: 'styles',
+    type: 'ScaledCSS',
+    defaultValue: '{ }',
+    content:
+      'The styles that you desire to act as a basis for the rest of the components'
+  },
+  {
+    name: 'attrs',
+    type: 'Attributes',
+    defaultValue: '{ }',
+    content: 'Attributes to include and must be received as an object.'
+  },
+  {
+    name: 'styleProps',
+    type: 'styledFn[]',
+    defaultValue: '[ ]',
+    content: 'Custom style properties.'
+  },
+  {
+    name: 'element',
+    type: 'keyof JSX.IntrinsicElements',
+    defaultValue: 'div',
+    content: 'What element to use for the base.'
+  }
+];
+
+const createBlocksSettingsCells = [
+  {
+    name: 'as',
+    type: 'string',
+    defaultValue: 'N/A',
+    content: 'Defines the element to use.'
+  },
+  {
+    name: 'attrs',
+    type: 'HTMLAttributes<E>',
+    defaultValue: 'N/A',
+    content: 'Adds attributes to the component.'
+  }
+];
 
 export function Block() {
   return (
@@ -30,35 +70,93 @@ export function BlockContent() {
       <HR />
 
       <APIheading name="BlockBase" />
+
       <Paragraph>
         BlockBase is the basic block component comprising of several style
         attributes: color, display, layout, typography and space.
       </Paragraph>
+
       <Syntax>{BlockBaseUsage}</Syntax>
 
       <HR />
 
       <APIheading
-        name="createBlockComponents"
+        name="createBlocks"
         params={{
-          styles: 'CSSObject'
+          Base: 'BaseConfig<Props, Attributes, ThemeType>',
+          settings: 'Settings<Element>'
         }}
       />
 
       <Paragraph>
         To generate some components, simply pass in a styles object.
       </Paragraph>
-      <Syntax>{createBlockComponentsExampleUsage}</Syntax>
+
+      <H4>Generics</H4>
+
       <Paragraph>
-        Note that the "as" property will need to be defined in order to render
-        it as the target element you desire. If unspecified, it will default to
-        the{' '}
-        <Strong>
-          <em>DIV</em>
-        </Strong>{' '}
-        element. Generated components can then be imported and used.
+        The <Strong>createComponents</Strong> has the following type generics.
       </Paragraph>
-      <Syntax>{createBlockComponentsDemo}</Syntax>
+
+      <FlexTable
+        cells={[
+          {
+            prop: 'Config',
+            subProp: 'required',
+            content: 'This will require the type of your Components object.'
+          },
+          {
+            prop: 'ThemeType',
+            subProp: 'optional',
+            content: 'Defines the type of Theme if any.'
+          },
+          {
+            prop: 'Props',
+            subProp: 'optional',
+            content: 'Custom properties that may be included.'
+          },
+          {
+            prop: 'Element',
+            subProp: 'optional',
+            content: 'Type for generated element.'
+          }
+        ]}
+      />
+
+      <H4>Parameters</H4>
+
+      <Paragraph>
+        Below are a description of the parameters. Note that the types of the
+        parameters will be relying on the generics that you define.
+      </Paragraph>
+
+      <Param name="base" types="BaseConfig<Props, Attributes, ThemeType>" />
+
+      <hr style={{ marginBottom: '1.5rem' }} />
+
+      <Paragraph>
+        <Strong>base</Strong> is what is used as a basis to generate components
+        defined in settings. It can accept another component or a configuration
+        object with properties as described by the table below.
+      </Paragraph>
+
+      <ParamsTable APIname={'base'} cells={createBlocksBaseCells} />
+
+      <Param name="settings" types="Settings<Element>" />
+
+      <hr style={{ marginBottom: '1.5rem' }} />
+
+      <Paragraph>
+        <Strong>settings</Strong> accepts an object with the named properties
+        used as a the component name. Properties consists of a Settings object
+        comprising of styles with the option of applying an{' '}
+        <Strong>attrs</Strong> property and an <Strong>as</Strong> property.
+        Note that the end result will also include a <Strong>Base</Strong>{' '}
+        component if a configuration object is passed as an argument for the{' '}
+        <Strong>base</Strong> parameter.
+      </Paragraph>
+
+      <ParamsTable APIname={'settings'} cells={createBlocksSettingsCells} />
     </>
   );
 }

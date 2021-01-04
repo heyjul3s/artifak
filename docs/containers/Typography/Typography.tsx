@@ -1,6 +1,6 @@
-import { Paragraph } from '../../components/Typography';
-import { Syntax } from '../../components/Code/Syntax';
-import { List } from '../../components/List';
+import { Paragraph, H4, Strong } from '../../components/Typography';
+import { Syntax, Param, ParamsTable } from '../../components/Code';
+import { FlexTable } from '../../components/FlexTable';
 import {
   createTypographComponentsExampleUsage,
   createTypographyComponentsDemo,
@@ -9,6 +9,49 @@ import {
 import { HR } from '../../components/Global/HR';
 import { Doc } from '../../components/Article';
 import { APIheading } from '../../components/APIheading';
+
+const createBlocksBaseCells = [
+  {
+    name: 'styles',
+    type: 'ScaledCSS',
+    defaultValue: '{ }',
+    content:
+      'The styles that you desire to act as a basis for the rest of the components'
+  },
+  {
+    name: 'attrs',
+    type: 'Attributes',
+    defaultValue: '{ }',
+    content: 'Attributes to include and must be received as an object.'
+  },
+  {
+    name: 'styleProps',
+    type: 'styledFn[]',
+    defaultValue: '[ ]',
+    content: 'Custom style properties.'
+  },
+  {
+    name: 'element',
+    type: 'keyof JSX.IntrinsicElements',
+    defaultValue: 'div',
+    content: 'What element to use for the base.'
+  }
+];
+
+const createBlocksSettingsCells = [
+  {
+    name: 'as',
+    type: 'string',
+    defaultValue: 'N/A',
+    content: 'Defines the element to use.'
+  },
+  {
+    name: 'attrs',
+    type: 'HTMLAttributes<E>',
+    defaultValue: 'N/A',
+    content: 'Adds attributes to the component.'
+  }
+];
 
 export function Typography() {
   return (
@@ -23,43 +66,101 @@ export function TypographyContent() {
     <>
       <Paragraph>
         The typography library offers utilities to help you scaffold your React
-        typography components which include...
+        typography components which include{' '}
+        <Strong>createTypographyComponents</Strong> and a constant{' '}
+        <Strong>fontWeight</Strong>.
       </Paragraph>
-
-      <List
-        data={['createTypographyComponents', 'fluidSizing', 'fontWeight']}
-      />
 
       <HR />
 
       <APIheading
-        name="createTypographyComponents"
-        params={{ styles: 'CSSobject' }}
+        name="createTypography"
+        params={{
+          Base: 'BaseConfig<Props, Attributes, ThemeType>',
+          settings: 'Settings<Element>'
+        }}
       />
-      <Paragraph>
-        As implied, this utility function will generate typography components
-        for you. All that is needed is to pass a styles object to the function
-        with the object keys being the name of what you would like to name your
-        component as. Below is an example.
-      </Paragraph>
-      <Syntax>{createTypographComponentsExampleUsage}</Syntax>
+
+      <Paragraph>This function helps generate Typography components.</Paragraph>
+
+      <H4>Generics</H4>
 
       <Paragraph>
-        Note that it is essential to specify the <strong>"as"</strong> property
-        in your styles object to render the component as the HTML element that
-        is intended. After generating the components, you can use it as you
-        normally would...
+        The <Strong>createComponents</Strong> has the following type generics.
       </Paragraph>
-      <Syntax>{createTypographyComponentsDemo}</Syntax>
+
+      <FlexTable
+        cells={[
+          {
+            prop: 'Config',
+            subProp: 'required',
+            content: 'This will require the type of your Components object.'
+          },
+          {
+            prop: 'ThemeType',
+            subProp: 'optional',
+            content: 'Defines the type of Theme if any.'
+          },
+          {
+            prop: 'Props',
+            subProp: 'optional',
+            content: 'Custom properties that may be included.'
+          },
+          {
+            prop: 'Element',
+            subProp: 'optional',
+            content: 'Type for generated element.'
+          }
+        ]}
+      />
+
+      <HR />
+
+      <H4>Parameters</H4>
+
+      <Paragraph>
+        Below are a description of the parameters. Note that the types of the
+        parameters will be relying on the generics that you define.
+      </Paragraph>
+
+      <Param name="base" types="BaseConfig<Props, Attributes, ThemeType>" />
+
+      <hr style={{ marginBottom: '1.5rem' }} />
+
+      <Paragraph>
+        <Strong>base</Strong> is what is used as a basis to generate components
+        defined in settings. It can accept another component or a configuration
+        object with properties as described by the table below.
+      </Paragraph>
+
+      <ParamsTable APIname={'base'} cells={createBlocksBaseCells} />
+
+      <Param name="settings" types="Settings<Element>" />
+
+      <hr style={{ marginBottom: '1.5rem' }} />
+
+      <Paragraph>
+        <Strong>settings</Strong> accepts an object with the named properties
+        used as a the component name. Properties consists of a Settings object
+        comprising of styles with the option of applying an{' '}
+        <Strong>attrs</Strong> property and an <Strong>as</Strong> property.
+        Note that the end result will also include a <Strong>Base</Strong>{' '}
+        component if a configuration object is passed as an argument for the{' '}
+        <Strong>base</Strong> parameter.
+      </Paragraph>
+
+      <ParamsTable APIname={'settings'} cells={createBlocksSettingsCells} />
 
       <HR />
 
       <APIheading name="fontWeight" />
+
       <Paragraph>
         fontWeight is essentially just a constant. Nothing special here. This is
         just to provide a fully typed and ready-to-use constant for usage and or
         to simply add to your styles theme. Simply import this to use.
       </Paragraph>
+
       <Syntax>{fontWeightExampleUsage}</Syntax>
     </>
   );
