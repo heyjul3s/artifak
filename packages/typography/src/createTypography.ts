@@ -2,7 +2,7 @@ import {
   ComponentsRecord,
   createComponents,
   Settings,
-  StyledComponentConfig
+  BaseConfig
 } from '@artifak/component-generator';
 import { styleFn } from 'styled-system';
 import { TypographyBaseProps } from './typings';
@@ -15,7 +15,7 @@ export function createTypography<
   Props = Record<string, unknown>,
   Element = HTMLDivElement
 >(
-  base: StyledComponentConfig<Props, ThemeType, Element>,
+  base: BaseConfig<Props, ThemeType, Element>,
   settings: Settings<Element>
 ): ComponentsRecord<Config, Props & TypographyBaseProps, ThemeType> {
   const { styleProps } = getStyleProps(base);
@@ -40,8 +40,8 @@ export function getStyleProps<
   Props = Record<string, unknown>,
   Element = HTMLDivElement
 >(
-  base: StyledComponentConfig<Props, ThemeType, Element>
-): StyledComponentConfig<Props, ThemeType, Element> {
+  base: BaseConfig<Props, ThemeType, Element>
+): BaseConfig<Props, ThemeType, Element> {
   if (!base || !Object.keys(base).length) {
     return { styleProps: [] };
   }

@@ -38,12 +38,8 @@ export type Attrs<Props, Attributes extends Partial<Props>, ThemeType> =
   | Attributes;
 
 /* eslint-disable @typescript-eslint/no-explicit-any */
-export type StyledComponentConfig<
-  Props = void,
-  Attributes = void,
-  ThemeType = void
-> = {
-  styles?: StyledSystemCSSObject;
+export type BaseConfig<Props = void, Attributes = void, ThemeType = void> = {
+  styles?: ScalableCSS;
   attrs?: Attributes;
   styleProps?: styleFn[];
   element?: keyof JSX.IntrinsicElements;
@@ -57,14 +53,14 @@ export type StyledComponentConfig<
 
 export type CSSObjectWithScale = CSS.Properties<string | number | Scale>;
 export type CSSPseudos = { [K in CSS.Pseudos]?: CSSObjectWithScale };
-export type StyledSystemCSSObject = CSSObjectWithScale & CSSPseudos;
+export type ScalableCSS = CSSObjectWithScale & CSSPseudos;
 
 export type ComponentsRecord<Dict, Props, ThemeType> = {
   [key in keyof Dict | 'Base']: React.FC<Props & BaseProps<ThemeType>>;
 };
 
 export type Settings<Element = HTMLDivElement> = {
-  [key: string]: StyledSystemCSSObject & {
+  [key: string]: ScalableCSS & {
     as?: string;
     attrs?: AllHTMLAttributes<Element>;
   };
