@@ -1,9 +1,17 @@
 export const setupExample = `
   // For example, let's say we created a new file called Typography
   // and then add the following
-  import { createTypographyComponents } from 'artifak';
+  import { createTypography } from 'artifak';
+  import { theme } from './theme';
 
-  const styles = {
+  const base = {
+    styles: {
+      fontFamily: theme.fonts.primary,
+      marginTop: 0
+    }
+  }
+
+  const config = {
     Heading1: {
       fontSize: ['36px', '42px', '48px']
       lineHeight: 1.4,
@@ -26,9 +34,9 @@ export const setupExample = `
     }
   };
 
-  const { 
-    Heading1, 
-    Heading2, 
-    Paragraph 
+  const {
+    Heading1,
+    Heading2,
+    Paragraph
   } = createTypographyComponents<typeof styles>(styles);
 `;

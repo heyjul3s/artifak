@@ -80,9 +80,16 @@ export function TypographyContent() {
         }}
       />
 
-      <Paragraph>This function helps generate Typography components.</Paragraph>
+      <Paragraph>
+        As opposed to branching off of a single component, this function allows
+        you to generate your Typography components. This way you will have more
+        room to operate in terms of defining the tone of your Typographic
+        elements via variants.
+      </Paragraph>
 
       <Syntax>{createTypographExample}</Syntax>
+
+      <HR />
 
       <H4>Generics</H4>
 
@@ -130,11 +137,8 @@ export function TypographyContent() {
 
       <Paragraph>
         <Strong>base</Strong> is what is used as a basis to generate components
-        defined in settings. It can accept another component or a configuration
-        object with properties as described by the table below. Note that the
-        end result will also include a <Strong>Base</Strong> component if a
-        configuration object is passed as an argument for the{' '}
-        <Strong>base</Strong> parameter and can be used as you see fit.
+        defined in settings. It accepts a configuration object with properties
+        as described by the table below.
       </Paragraph>
 
       <ParamsTable APIname={'base'} cells={createBlocksBaseCells} />

@@ -3,7 +3,7 @@ export const createComponentsUsage = `
   import { createComponents } from 'artifak';
   import { theme } from './theme';
 
-  // # EXAMPLE 1
+  // # EXAMPLE 1 - USING A CONFIGURATION OBJECT AS BASE
   // Note that this is just an example, please use the
   // "button" HTML element whenever possible. In the
   // examples, we will see full usage of the
@@ -19,7 +19,7 @@ export const createComponentsUsage = `
     styleProps: [position],
     attrs: { role: 'button' },
     element: 'div'
-  }
+  };
 
   // Define your component styles
   const config = {
@@ -65,7 +65,7 @@ export const createComponentsUsage = `
   } = createComponents<typeof config, typeof theme>(BaseComponent, config);
 
 
-  // # EXAMPLE 2
+  // # EXAMPLE 2 - USING A COMPONENT AS BASE
   // You can also pass in a component to use as base.
   // For example, let us create a BasicButton component.
 

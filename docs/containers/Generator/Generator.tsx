@@ -64,13 +64,10 @@ export function GeneratorContent() {
         The component-generator library or generator for short, includes a{' '}
         <Strong>createComponents</Strong> utility function to generate some
         simple Styled Components. The objective of this function is to attempt
-        to create consistent style bases for component development and does not
-        cater to detailed, complex, and or single-use cases.
-      </Paragraph>
-
-      <Paragraph>
-        This utility is included to provide some flexibility as sometimes a need
-        for custom style properties may arise.
+        to create consistent style bases for component development and provide
+        some flexibility as sometimes a need for custom style properties may
+        arise. This does not cater to detailed, complex, and or single-use case
+        components that you may require.
       </Paragraph>
 
       <HR />
