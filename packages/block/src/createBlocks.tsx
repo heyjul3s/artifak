@@ -2,7 +2,7 @@ import {
   createComponents,
   ComponentsRecord,
   Settings,
-  StyledComponentConfig
+  BaseConfig
 } from '@artifak/component-generator';
 
 /* eslint-disable @typescript-eslint/no-explicit-any */
@@ -12,7 +12,7 @@ export function createBlocks<
   Props = Record<string, unknown>,
   Element = HTMLDivElement
 >(
-  base: StyledComponentConfig<Props, ThemeType, Element>,
+  base: BaseConfig<Props, ThemeType, Element>,
   settings: Settings<Element>
 ): ComponentsRecord<Config, Props, ThemeType> {
   return createComponents<Config, ThemeType, Props, Element>(base, settings);
