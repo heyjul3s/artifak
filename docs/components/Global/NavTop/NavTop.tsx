@@ -15,7 +15,10 @@ export function NavTop() {
         <ArtifakTypeLogo />
       </AnchorLink>
       <NavTopMenu>
-        <NavTopLink href="https//github.com/heyjul3s/artifak">
+        <NavTopLink
+          href="https://github.com/heyjul3s/artifak"
+          openAsNewTab={true}
+        >
           Github
         </NavTopLink>
         <NavTopLink href="/docs">Docs</NavTopLink>
