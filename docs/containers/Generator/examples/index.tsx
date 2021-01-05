@@ -1,2 +1,2 @@
 export { createStyledComponentUsage } from './createStyledComponentUsage';
-export { createBaseComponentsUsage } from './createBaseComponentsUsage';
+export { createComponentsUsage } from './createComponentsUsage';

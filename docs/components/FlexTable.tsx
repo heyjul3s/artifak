@@ -1,5 +1,6 @@
 import React from 'react';
 import { FlexRow, FlexCol } from 'artifak';
+import { theme } from '../theme';
 
 import {
   H4,
@@ -19,7 +20,7 @@ export function FlexTable({ title, cells }: Props) {
       p={'30px 30px 10px'}
       mb={'1rem'}
       style={{
-        border: '1px solid black'
+        border: `1px solid ${theme.colors.extraLightGrey}`
       }}
     >
       {!!title && <FlexTableTitle title={title} />}

@@ -6,7 +6,7 @@ import { setupExample } from '../examples';
 export function Setup() {
   return (
     <>
-      <H3 color={theme.colors.primary}>Setup Your Components (Optional)</H3>
+      <H3 color={theme.colors.primary}>Setup Your Components</H3>
 
       <Paragraph>
         For greenfield projects, it would usually involve some basic setups to

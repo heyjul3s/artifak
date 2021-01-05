@@ -1,4 +1,4 @@
-import { Paragraph, Strong } from '../components/Typography';
+import { Paragraph, Strong } from '../../components/Typography';
 import { Params } from './Params';
 
 export const ParamsDescription = ({ label = '<props>', params }) => {

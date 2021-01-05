@@ -1,6 +1,6 @@
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
 import coy from 'react-syntax-highlighter/dist/cjs/styles/prism/coy';
-import { Paragraph, Strong } from '../components/Typography';
+import { Paragraph, Strong } from '../../components/Typography';
 
 const customCoy = {
   ...coy,
@@ -36,7 +36,7 @@ export function Syntax({
         fontSize: '1rem',
         overflowX: 'auto',
         WebkitOverflowScrolling: 'touch',
-        padding: '1em',
+        padding: '1em 1em 1em 0',
         margin: '1em 0 2em',
         border: '1px solid rgba(0,0,0,0.1)'
       }}

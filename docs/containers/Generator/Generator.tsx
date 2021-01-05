@@ -1,13 +1,10 @@
-import { Paragraph, Strong } from '../../components/Typography';
-import { Syntax } from '../../components/Code/Syntax';
-import { ParamsTable } from '../../components/Code/ParamsTable';
-import {
-  createStyledComponentUsage,
-  createBaseComponentsUsage
-} from './examples';
+import { Paragraph, Strong, H4 } from '../../components/Typography';
+import { Syntax, ParamsTable, Param } from '../../components/Code';
+import { FlexTable } from '../../components/FlexTable';
 import { HR } from '../../components/Global/HR';
 import { Doc } from '../../components/Article';
 import { APIheading } from '../../components/APIheading';
+import { createComponentsUsage } from './examples';
 
 export function Generator() {
   return (
@@ -17,43 +14,40 @@ export function Generator() {
   );
 }
 
-const createStyledComponentCells = [
+const createBlocksBaseCells = [
   {
-    name: 'attrs',
-    type: 'Attrs<Props, Theme, Attributes>',
+    name: 'styles',
+    type: 'ScaledCSS',
     defaultValue: '{ }',
     content:
-      'This will define attributes that you wish to be added onto the base.'
+      'The styles that you desire to act as a basis for the rest of the components'
+  },
+  {
+    name: 'attrs',
+    type: 'Attributes',
+    defaultValue: '{ }',
+    content: 'Attributes to include and must be received as an object.'
   },
   {
     name: 'styleProps',
-    type: 'styleFn[]',
+    type: 'styledFn[]',
     defaultValue: '[ ]',
-    content:
-      'This will accept any additional Styled System CSS properties that you wish to include.'
-  },
-  {
-    name: 'styles',
-    defaultValue: '{ }',
-    type: 'CSSObject | TemplateStringsArray | InterpolationFunction<any>',
-    content:
-      'Define your styles here. Accepts a CSS object or interpolated string styles.'
+    content: 'Custom style properties that allows you to define inline styles.'
   },
   {
     name: 'element',
     type: 'keyof JSX.IntrinsicElements',
     defaultValue: 'div',
-    content:
-      'Dictate which HTML element you would like to use for this base component.'
+    content: 'What element to use for the base.'
   }
 ];
 
-const createBaseComponentsCells = [
+const createBlocksSettingsCells = [
   {
-    name: 'styles',
-    type: 'StyledSystemCSSObject',
+    name: 'as',
+    type: 'string',
     defaultValue: 'N/A',
-    content: 'Adds styles to the component.'
+    content: 'Defines the element to use.'
   },
   {
     name: 'attrs',
@@ -67,72 +61,96 @@ export function GeneratorContent() {
   return (
     <>
       <Paragraph>
-        The component-generator library or generator for short, comprises of 2
-        utility functions namely <Strong>createStyledComponent</Strong> and
-        &nbsp;
-        <Strong>createBaseComponents</Strong>. The purpose of the Generator is
-        to help setup a base Styled Component loaded with Styled System
-        properties to which is then used to generate components. Usage of the
-        Generator is limited in a sense that it is meant to be used in lieu with
-        simpler, less complex components or in other words, helping in creating
-        primitive building blocks for your application.
-      </Paragraph>
-
-      <Paragraph>
-        As you might have guessed, these are the core functions of the Artifak
-        library. But for the purposes of greater flexibility, these functions
-        have been made available as not all style properties are available right
-        off the bat and you may need the option to further extend the system.
+        The component-generator library or generator for short, includes a{' '}
+        <Strong>createComponents</Strong> utility function to generate some
+        simple Styled Components. The objective of this function is to attempt
+        to create consistent style bases for component development and provide
+        some flexibility as sometimes a need for custom style properties may
+        arise. This does not cater to detailed, complex, and or single-use case
+        components that you may require.
       </Paragraph>
 
       <HR />
 
       <APIheading
-        name="createStyledComponent"
+        name="createComponents"
         params={{
-          config: 'StyledComponentConfig<Props, Theme, Attributes>'
+          Base: 'BaseConfig<Props, Attributes, ThemeType>',
+          settings: 'Settings<Element>'
         }}
       />
 
-      <ParamsTable
-        APIname={'config'}
-        APItypes={'StyledComponentConfig<Props, Theme, Attributes>'}
-        cells={createStyledComponentCells}
-      />
-
-      <Paragraph>
-        The purpose of this utility function is to generate a base styled
-        component which would then be used in createBaseComponents (or not if
-        you don't want to). You can load up on Styled System properties or
-        default attributes here if you wish.
-      </Paragraph>
-
-      <Syntax>{createStyledComponentUsage}</Syntax>
+      <Syntax>{createComponentsUsage}</Syntax>
 
       <HR />
 
-      <APIheading
-        name="createBaseComponents"
-        params={{
-          Base: 'AnyStyledComponent',
-          settings:
-            '{ [key in keyof S]: Settings<HTMLAttributes<E>> | StyledSystemCSSObject }'
-        }}
-      />
-
-      <ParamsTable
-        APIname={'settings'}
-        APItypes={'Settings<HTMLAttributes<E>> | StyledSystemCSSObject'}
-        cells={createBaseComponentsCells}
-      />
+      <H4>Generics</H4>
 
       <Paragraph>
-        createBaseComponents, as implied, would generate a bunch of styled
-        components in accordance to the styles that you provide. This would
-        require a base styled component.
+        The <Strong>createComponents</Strong> has the following type generics.
       </Paragraph>
 
-      <Syntax>{createBaseComponentsUsage}</Syntax>
+      <FlexTable
+        cells={[
+          {
+            prop: 'Config',
+            subProp: 'required',
+            content: 'This will require the type of your Components object.'
+          },
+          {
+            prop: 'ThemeType',
+            subProp: 'optional',
+            content: 'Defines the type of Theme if any.'
+          },
+          {
+            prop: 'Props',
+            subProp: 'optional',
+            content: 'Custom properties that may be included.'
+          },
+          {
+            prop: 'Element',
+            subProp: 'optional',
+            content: 'Type for generated element.'
+          }
+        ]}
+      />
+
+      <HR />
+
+      <H4>Parameters</H4>
+
+      <Paragraph>
+        Below are a description of the parameters. Note that the types of the
+        parameters will be relying on the generics that you define.
+      </Paragraph>
+
+      <Param name="base" types="BaseConfig<Props, Attributes, ThemeType>" />
+
+      <hr style={{ marginBottom: '1.5rem' }} />
+
+      <Paragraph>
+        <Strong>base</Strong> is what is used as a basis to generate components
+        defined in settings. It can accept another component or a configuration
+        object with properties as described by the table below.
+      </Paragraph>
+
+      <ParamsTable APIname={'base'} cells={createBlocksBaseCells} />
+
+      <Param name="settings" types="Settings<Element>" />
+
+      <hr style={{ marginBottom: '1.5rem' }} />
+
+      <Paragraph>
+        <Strong>settings</Strong> accepts an object with the named properties
+        used as a the component name. Properties consists of a Settings object
+        comprising of styles with the option of applying an{' '}
+        <Strong>attrs</Strong> property and an <Strong>as</Strong> property.
+        Note that the end result will also include a <Strong>Base</Strong>{' '}
+        component if a configuration object is passed as an argument for the{' '}
+        <Strong>base</Strong> parameter.
+      </Paragraph>
+
+      <ParamsTable APIname={'settings'} cells={createBlocksSettingsCells} />
     </>
   );
 }

@@ -18,7 +18,8 @@ export function UseMatchMediaContent() {
     <>
       <Paragraph>
         The useMatchMedia hook allows you to perform media queries within your
-        React Component.
+        React Component. This hook can also accept object arguments as per
+        Artifak's Media utility function.
       </Paragraph>
 
       <HR />
