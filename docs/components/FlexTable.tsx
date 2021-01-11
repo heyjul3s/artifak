@@ -30,7 +30,12 @@ export function FlexTable({ title, cells }: Props) {
         cells.map((cell, i) => {
           const { prop, subProp, content } = cell;
           return (
-            <FlexTableCell prop={prop} subProp={subProp} content={content} />
+            <FlexTableCell
+              key={`cell-${prop}-${i}`}
+              prop={prop}
+              subProp={subProp}
+              content={content}
+            />
           );
         })}
     </FlexRow>
