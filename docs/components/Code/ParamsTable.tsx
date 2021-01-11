@@ -47,7 +47,7 @@ export function ParamsTable({ APIname, APItypes, cells }: Props) {
         const { name, type, defaultValue, content } = cell;
 
         return (
-          <>
+          <div key={`param-cell-${name}-${i}`}>
             <FlexRow>
               <FlexCol columnSize={[12, 2]} gutterWidth={0} pb={'1em'}>
                 {isMobile && <SmallLead>Name</SmallLead>}
@@ -76,7 +76,7 @@ export function ParamsTable({ APIname, APItypes, cells }: Props) {
                 <br />
               </>
             )}
-          </>
+          </div>
         );
       })}
     </div>
