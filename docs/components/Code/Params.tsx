@@ -11,7 +11,7 @@ export const Params = ({ params }: any) => {
           const comma = i !== propertyKeys.length - 1 ? ', ' : '';
 
           return (
-            <span>
+            <span key={`param-${key}-${i}`}>
               <Strong>{key}</Strong>
               {`: ${params[key]}${comma}`}
             </span>
