@@ -18,7 +18,8 @@ export function FluidSizingContent() {
     <>
       <Paragraph>
         A fluid sizing utility function that creates a calc value based off of
-        the min and max values provided.
+        the min and max values provided.{' '}
+        <Strong>Values are evaluated in "px"</Strong>.
       </Paragraph>
 
       <HR />
