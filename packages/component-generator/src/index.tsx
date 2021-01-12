@@ -3,6 +3,7 @@ export {
   createStyledComponent,
   extractStylePseudos
 } from './createStyledComponent';
+
 export {
   Attrs,
   BaseProps,

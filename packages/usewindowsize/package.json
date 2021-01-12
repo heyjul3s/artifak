@@ -1,6 +1,6 @@
 {
   "name": "@artifak/usewindowsize",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A React hook that returns the window size on resize.",
   "keywords": [],
   "author": "Julian Low",

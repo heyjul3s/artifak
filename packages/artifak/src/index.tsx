@@ -1,6 +1,11 @@
 export {
   createStyledComponent,
-  createComponents
+  createComponents,
+  Settings,
+  BaseConfig,
+  ScalableCSS,
+  BaseProps,
+  ComponentsRecord
 } from '@artifak/component-generator';
 
 export { BlockBase, createBlocks } from '@artifak/block';
