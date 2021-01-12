@@ -19,7 +19,6 @@ export function FluidSizingContent() {
       <Paragraph>
         A fluid sizing utility function that creates a calc value based off of
         the min and max values provided.{' '}
-        <Strong>Values are evaluated in "px"</Strong>.
       </Paragraph>
 
       <HR />
@@ -30,9 +29,11 @@ export function FluidSizingContent() {
           minElementSize: 'number',
           maxElementSize: 'number',
           minViewportWidth: 'number',
-          maxViewportWidth: 'number'
+          maxViewportWidth: 'number',
+          unit: 'string'
         }}
       />
+
       <Paragraph>
         This function writes a CSS rule that allows for fluid sizing.
         Essentially, this eliminates the need for media queries as the element
@@ -41,6 +42,7 @@ export function FluidSizingContent() {
         and also the minimum and maximum size of the viewport width that you
         intend to use as constraints. Below is an example of how you may use it.
       </Paragraph>
+
       <Syntax>{fluidSizingExampleUsage}</Syntax>
 
       <br />
