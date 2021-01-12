@@ -1,3 +1,36 @@
 # `@artifak/usematchmedia`
 
-A React hook that allows you to perform media queries within your React component. Refer to the **Artifak Fluid Sizing[Artifak](https://artifak.dev/docs?content=usematchmedia)** for more information.
+A React hook that allows you to perform media queries within your React component.
+
+## Installation
+
+### Yarn
+
+```sh
+yarn add @artifak/usematchmedia
+```
+
+### NPM
+
+```sh
+npm install @artifak/usematchmedia
+```
+
+## Usage
+
+```ts
+import { useMatchMedia } from 'artifak';
+import { ExampleMobile } from './ExampleMobile';
+import { ExampleDesktop } from './ExampleDesktop';
+
+export function Nav() {
+  const matchedMobile = useMatchMedia('(hover: none)');
+
+  return (
+    <>
+      {matchedMobile && <ExampleMobile />}
+      {!matchedMobile && <ExampleDesktop />}
+    </>
+  );
+}
+```
