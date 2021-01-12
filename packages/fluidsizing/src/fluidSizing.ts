@@ -10,9 +10,6 @@ export function fluidSizing(
     !!minViewportWidth &&
     !!maxViewportWidth &&
     !!unit
-    ? `calc(
-      ${minElementSize}${unit} + (${maxElementSize} - ${minElementSize}) *
-      ((100vw - ${minViewportWidth}${unit}) / (${maxViewportWidth} - ${minViewportWidth}))
-      )`
+    ? `calc(${minElementSize}${unit} + (${maxElementSize} - ${minElementSize}) * ((100vw - ${minViewportWidth}${unit}) / (${maxViewportWidth} - ${minViewportWidth})))`
     : '';
 }
