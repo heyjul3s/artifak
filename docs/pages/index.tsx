@@ -3,7 +3,7 @@ import { FlexRow, FlexCol } from 'artifak';
 import { Layout } from '../components/Global/Layout';
 import { useRouter } from 'next/router';
 import { content } from '../containers';
-import { HomePage } from './HomePage/HomePage';
+import { HomePage } from '../containers/HomePage/HomePage';
 import { DesktopNav } from '../components/Nav/Desktop/DesktopNav';
 
 export default function Home() {
