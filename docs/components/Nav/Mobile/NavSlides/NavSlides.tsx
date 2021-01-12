@@ -50,12 +50,8 @@ export function NavSlides() {
 
   const onClickLink = (route: string) => (e: React.SyntheticEvent) => {
     e.preventDefault();
-
     setPanelOpen(false);
-
-    setTimeout(() => {
-      router.push(route);
-    }, 200);
+    router.push(route);
   };
 
   const onClickCloseMenu = () => {

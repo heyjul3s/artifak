@@ -19,10 +19,7 @@ export function Navbar() {
       setViewIndex(navIndex);
     } else {
       setPanelOpen(false);
-
-      setTimeout(() => {
-        router.push(links.Home.route);
-      }, 200);
+      router.push(links.Home.route);
     }
   };
 
