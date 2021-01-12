@@ -1,6 +1,6 @@
 {
   "name": "@artifak/text-input",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Text input components which comprises typeos of text, tel, url, email, search and password.",
   "keywords": [],
   "author": "Julian Low",
@@ -43,6 +43,6 @@
     "styled-system": "^5.1.5"
   },
   "dependencies": {
-    "@artifak/component-generator": "^1.1.4"
+    "@artifak/component-generator": "^2.0.0"
   }
 }

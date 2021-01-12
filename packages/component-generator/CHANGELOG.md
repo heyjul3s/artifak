@@ -1,5 +1,15 @@
 # @artifak/component-generator
 
+## 2.0.0
+
+### Major Changes
+
+## Breaking Changes
+
+- createBaseComponents is now createComponents which accepts 2 arguments eg. base and settings.
+- createStyledComponent now accepts a settings object.
+- new typings introduced: BaseConfig, Settings, ScalableCSS, ComponentsRecord.
+
 ## 1.1.4
 
 ### Patch Changes
