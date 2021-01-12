@@ -1,7 +1,6 @@
 import React from 'react';
 import { render } from '@testing-library/react';
 import { ImageryBase } from '../src/ImageryBase';
-import 'jest-styled-components';
 
 describe('ImageryBase', () => {
   it('should render', () => {
@@ -16,7 +15,5 @@ describe('ImageryBase', () => {
     );
 
     expect(asFragment()).toMatchSnapshot();
-    expect(container.firstChild).toHaveStyleRule('object-fit', 'cover');
-    expect(container.firstChild).toHaveStyleRule('object-position', 'center');
   });
 });

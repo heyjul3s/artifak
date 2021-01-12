@@ -12,8 +12,8 @@ const imageStylesConfig = system({
 });
 
 /* eslint-disable @typescript-eslint/no-explicit-any */
-export const ImageryBase = createStyledComponent<Partial<ImageryProps>>(
-  [imageStylesConfig],
-  { display: 'block', width: '100%', height: 'auto' },
-  'img'
-);
+export const ImageryBase = createStyledComponent<Partial<ImageryProps>>({
+  styles: { display: 'block', width: '100%', height: 'auto' },
+  styleProps: [imageStylesConfig],
+  element: 'img'
+});

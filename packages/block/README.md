@@ -1,4 +1,4 @@
-# `@artifak/block`
+# `@artifak/block` (Deprecated from v2.0.0)
 
 Block is a basic block component that acts as a base to your UI components. You can also view the docs
 at [Artifak Block](https://www.artifak.dev/?content=Block).

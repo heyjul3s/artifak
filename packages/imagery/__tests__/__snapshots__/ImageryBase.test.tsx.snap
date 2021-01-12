@@ -2,30 +2,22 @@
 
 exports[`ImageryBase should render 1`] = `
 <DocumentFragment>
-  .c0 {
-  display: block;
-  width: 100%;
-  height: auto;
-}
-
-<img
-    class="c0"
+  <img
+    class="sc-bdfBwQ bQajuQ"
+    display="block"
+    height="auto"
+    width="100%"
   />
 </DocumentFragment>
 `;
 
 exports[`ImageryBase should render styles object-fit and object-position 1`] = `
 <DocumentFragment>
-  .c0 {
-  display: block;
-  width: 100%;
-  height: auto;
-  object-fit: cover;
-  object-position: center;
-}
-
-<img
-    class="c0"
+  <img
+    class="sc-bdfBwQ ftRMpI"
+    display="block"
+    height="auto"
+    width="100%"
   />
 </DocumentFragment>
 `;

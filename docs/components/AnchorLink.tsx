@@ -6,6 +6,7 @@ import { theme } from '../theme';
 type Props = {
   href: string;
   openAsNewTab?: boolean;
+  style?: React.CSSProperties;
   variant?: string;
   children: React.ReactChild | React.ReactChildren;
 };
@@ -24,7 +25,7 @@ export const AnchorLink: React.FC<Props> = ({
   const isDisabled = !!variant ? variant : void 0;
 
   return (
-    <Anchor href={href} variant={isDisabled} {...targetBlank} {...props} as="a">
+    <Anchor href={href} variant={isDisabled} {...targetBlank} {...props}>
       {children}
     </Anchor>
   );

@@ -1,0 +1,36 @@
+{
+  "name": "@artifak/fluidsizing",
+  "version": "1.0.1",
+  "description": "A utility function to compute fluid sizing based on max and min inputs for CSS styles.",
+  "keywords": [],
+  "author": "Julian Low",
+  "license": "ISC",
+  "main": "dist/fluidsizing.cjs.js",
+  "module": "dist/fluidsizing.esm.js",
+  "src": "src/index.ts",
+  "directories": {
+    "src": "src",
+    "test": "__tests__"
+  },
+  "files": [
+    "dist"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/heyjul3s/artifak.git"
+  },
+  "scripts": {
+    "build": "rimraf dist && builder",
+    "test": "echo \"Error: run tests from root\" && exit 1"
+  },
+  "bugs": {
+    "url": "https://github.com/heyjul3s/artifak/issues"
+  },
+  "homepage": "https://github.com/heyjul3s/artifak#readme",
+  "devDependencies": {
+    "@artifak/bundler": "^1.1.3"
+  }
+}

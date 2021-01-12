@@ -1,5 +1,6 @@
 import React from 'react';
 import { FlexRow, FlexCol } from 'artifak';
+import { theme } from '../theme';
 
 import {
   H4,
@@ -8,23 +9,33 @@ import {
   SmallParagraph
 } from '../components/Typography';
 
-export function FlexTable({ title, cells }) {
+type Props = {
+  title?: string;
+  cells: { prop: string; subProp?: string; content: string }[];
+};
+
+export function FlexTable({ title, cells }: Props) {
   return (
     <FlexRow
       p={'30px 30px 10px'}
       mb={'1rem'}
       style={{
-        border: '1px solid black'
+        border: `1px solid ${theme.colors.extraLightGrey}`
       }}
     >
-      <FlexTableTitle title={title} />
+      {!!title && <FlexTableTitle title={title} />}
 
       {!!cells &&
         cells.length &&
         cells.map((cell, i) => {
           const { prop, subProp, content } = cell;
           return (
-            <FlexTableCell prop={prop} subProp={subProp} content={content} />
+            <FlexTableCell
+              key={`cell-${prop}-${i}`}
+              prop={prop}
+              subProp={subProp}
+              content={content}
+            />
           );
         })}
     </FlexRow>
@@ -34,7 +45,7 @@ export function FlexTable({ title, cells }) {
 export function FlexTableTitle({ title }) {
   return (
     <FlexCol columnSize={12} gutterWidth={0}>
-      <H4>Props</H4>
+      <H4>{title}</H4>
     </FlexCol>
   );
 }

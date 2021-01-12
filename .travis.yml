@@ -1,6 +1,9 @@
 language: node_js
 node_js:
-  - 12
+  - 14.15.1
+
+install:
+  - yarn
 
 before_script:
   - yarn build

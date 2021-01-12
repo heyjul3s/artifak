@@ -1,8 +1,16 @@
+export { createComponents } from './createComponents';
 export {
-  createBaseComponents,
-  createStyledFunctionComponent
-} from './createBaseComponents';
+  createStyledComponent,
+  extractStylePseudos
+} from './createStyledComponent';
 
-export { createStyledComponent } from './createStyledComponent';
-
-export { BaseComponentProps, StyledReactComponent } from './typings';
+export {
+  Attrs,
+  BaseProps,
+  BaseComponentProps,
+  ComponentsRecord,
+  Settings,
+  BaseConfig,
+  ScalableCSS,
+  Variant
+} from './typings';
