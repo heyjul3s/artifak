@@ -1,4 +1,4 @@
-import { Paragraph, Strong } from '../../components/Typography';
+import { Paragraph } from '../../components/Typography';
 import { Syntax } from '../../components/Code/Syntax';
 import { HR } from '../../components/Global/HR';
 import { Doc } from '../../components/Article';
@@ -30,7 +30,7 @@ export function FluidSizingContent() {
           maxElementSize: 'number',
           minViewportWidth: 'number',
           maxViewportWidth: 'number',
-          unit: 'string'
+          unit: `em | rem | px`
         }}
       />
 
