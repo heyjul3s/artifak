@@ -1,5 +1,20 @@
 # @artifak/typography
 
+## 2.0.0
+
+### Major Changes
+
+## Breaking Changes
+
+-createTypographyComponents is now createTypography and accepts 2 arguments namely base and settings.
+
+- fluidSizing has been removed from Typography and is now an independent package.
+
+### Patch Changes
+
+- Updated dependencies [undefined]
+  - @artifak/component-generator@2.0.0
+
 ## 1.1.5
 
 ### Patch Changes

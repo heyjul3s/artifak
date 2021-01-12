@@ -1,5 +1,30 @@
 # artifak
 
+## 2.0.0
+
+### Major Changes
+
+- New breaking API changes for Generator package
+- New breaking API changes to Typography package
+- Moved fluidSizing as independent package from typography package
+- Additional useMatchMedia hook for media queries
+- Additional useWindowSize hook for querying window sizes
+- Additional Media package utility for media queries
+
+### Patch Changes
+
+- Updated dependencies [undefined]
+  - @artifak/component-generator@2.0.0
+  - @artifak/typography@2.0.0
+  - @artifak/fluidsizing@1.0.1
+  - @artifak/media@1.0.1
+  - @artifak/usematchmedia@1.0.1
+  - @artifak/usewindowsize@1.0.1
+  - @artifak/block@1.1.5
+  - @artifak/flex@1.1.5
+  - @artifak/grid@1.1.5
+  - @artifak/imagery@1.0.7
+
 ## 1.1.5
 
 ### Patch Changes

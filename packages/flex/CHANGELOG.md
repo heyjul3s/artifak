@@ -1,5 +1,12 @@
 # @artifak/flex
 
+## 1.1.5
+
+### Patch Changes
+
+- Updated dependencies [undefined]
+  - @artifak/component-generator@2.0.0
+
 ## 1.1.4
 
 ### Patch Changes

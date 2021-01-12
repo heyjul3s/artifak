@@ -1,6 +1,6 @@
 {
   "name": "@artifak/imagery",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "A basic primitive, styled image component ",
   "keywords": [
     "react",
@@ -55,6 +55,6 @@
     "styled-components": ">=5.2.1"
   },
   "dependencies": {
-    "@artifak/component-generator": "^1.1.4"
+    "@artifak/component-generator": "^2.0.0"
   }
 }
