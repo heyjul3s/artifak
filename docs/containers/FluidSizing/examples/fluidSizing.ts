@@ -4,6 +4,7 @@ export const fluidSizingExampleUsage = `
 
   export const LargeLeadText = styled.p\`
     color: hotpink;
-    font-size: fluidSizing(20, 48, 300, 1200);
+    font-size: \${fluidSizing(20, 48, 300, 1200)};
+    padding-bottom: \${fluidSizing(10, 15, 300, 1200)}
   \`;
 `;

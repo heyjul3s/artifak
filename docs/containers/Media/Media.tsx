@@ -24,7 +24,8 @@ export function MediaContent() {
         are currently newer media queries that we can specify now. Therefore, a
         media query mixin is included with Artifak to help in regards to this.
         At its current incarnation, the mixin only supports "and" and "or" media
-        query operators. The "not" operator is not supported yet.
+        query operators. The "not" operator is not supported but maybe so in the
+        future.
       </Paragraph>
 
       <HR />
