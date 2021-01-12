@@ -30,7 +30,9 @@ export const MenuTitle = styled.p`
   `}
 `;
 
-export const NavLink = styled(AnchorLink)`
+export const NavLink = styled(AnchorLink)<{
+  onClick: (e: React.SyntheticEvent) => void;
+}>`
   margin: 0 auto;
   width: auto;
   font-size: 1.25rem;
