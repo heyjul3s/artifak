@@ -20,20 +20,21 @@ npm install @artifak/fluidsizing
 
 Below are the parameters and the following an example of usage.
 
-| Arguments        | Type   |
-| ---------------- | ------ |
-| minElementSize   | number |
-| maxElementSize   | number |
-| minViewportWidth | number |
-| maxViewportWidth | number |
+| Arguments        | Type                  |
+| ---------------- | --------------------- |
+| minElementSize   | number                |
+| maxElementSize   | number                |
+| minViewportWidth | number                |
+| maxViewportWidth | number                |
+| unit             | 'em' \| 'px' \| 'rem' |
 
 ```ts
 import { fluidSizing } from '@artifak/fluidsizing';
 import styled from 'styled-components';
 
 const Paragraph = styled.p`
-  font-size: ${fluidSizing(16, 96, 300, 1200)};
-  line-height: ${fluidSizing(1.4, 1.6, 300, 1200)};
-  padding-bottom: ${fluidSizing(10, 15, 300, 1200)};
+  font-size: ${fluidSizing(16, 96, 300, 1200, 'px')};
+  line-height: ${fluidSizing(1.4, 1.6, 300, 1200, 'rem')};
+  padding-bottom: ${fluidSizing(10, 15, 300, 1200, 'px')};
 `;
 ```
