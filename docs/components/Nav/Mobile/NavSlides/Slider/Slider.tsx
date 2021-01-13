@@ -151,8 +151,8 @@ export function Slider({
         animate={{ x: `${-100 * viewIndex}%` }}
         transition={{
           x: {
-            duration: 0.15,
-            stiffness: 10,
+            duration: 0.4,
+            stiffness: 2000,
             damping: 400
           },
           ...slideContainerTransition
