@@ -6,11 +6,11 @@ import { Section } from '../../../components/Section';
 import { SectionTitle } from '../../../components/SectionTitle';
 
 const modules = [
-  {
-    name: '@artifak/block',
-    content:
-      'Provides a basic building block suited for creation of container elements.'
-  },
+  // {
+  //   name: '@artifak/block',
+  //   content:
+  //     'Provides a basic building block suited for creation of container elements.'
+  // },
   {
     name: '@artifak/grid',
     content:
@@ -40,6 +40,21 @@ const modules = [
     name: '@artifak/media',
     content:
       'A Styled Component media query mixin with "AND" and "OR" support along with some newer supported media queries.'
+  },
+  {
+    name: '@artifak/fluidsizing',
+    content:
+      'Renders a calc style rule based off of provided min and max values instead of using media queries.'
+  },
+  {
+    name: '@artifak/usematchmedia',
+    content:
+      'A match media hook that enables media queries in your React components.'
+  },
+  {
+    name: '@artifak/usewindowsize',
+    content:
+      'A window size hook that returns the size of the window which includes inner and outer dimensions.'
   }
 ];
 
