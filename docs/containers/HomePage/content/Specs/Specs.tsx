@@ -14,11 +14,11 @@ export function Specs() {
 
       <SpecContainer columnLength={[1, 2]}>
         <SpecCol>
-          <Spec title="R 1.1.5" content="MIT Licence" />
-          <Spec title="Node" content=">= 14.15.0" />
+          <Spec title="R 2.0.0" content="MIT Licence" />
+          <Spec title="Node" content=">= 14.15.1" />
           <Spec
             title="Size"
-            content={['Minified 4.7kb', 'Minified and Gzipped 1.5kb']}
+            content={['Minified 48.7kb', 'Minified and Gzipped 9kb']}
           />
         </SpecCol>
 
@@ -26,9 +26,9 @@ export function Specs() {
           <Spec
             title="Peer Dependencies"
             content={[
-              'react >= 16.11.0',
-              'typescript >= 4.0.0',
-              'styled-components >= 4.4.1',
+              'react >= 17.0.1',
+              'typescript >= 4.1.2',
+              'styled-components >= 5.2.1',
               'styled-system >= 5.1.5'
             ]}
           />
