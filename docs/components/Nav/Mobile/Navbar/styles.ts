@@ -24,6 +24,7 @@ export const NavCategoryButton = styled.button`
   outline: none;
   appearance: none;
   background: transparent;
+  cursor: pointer;
 
   ${({ theme }) => `
     color: ${theme.colors.primary};
