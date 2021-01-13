@@ -37,6 +37,7 @@ export const NavLink = styled(AnchorLink)<{
   width: auto;
   font-size: 1.25rem;
   margin-bottom: 1em;
+  cursor: pointer;
 
   ${({ theme }) => `
     color: ${theme.colors.white};
@@ -47,10 +48,10 @@ export const CloseButtonContainer = styled(motion.div)`
   position: absolute;
   width: 30px;
   height: 30px;
-  background: white;
+  border: 1px solid white;
   border-radius: 50%;
   top: 1em;
-  right: 1em;
+  left: calc(50vw - 30px);
   padding: 0.5em;
   z-index: 1;
 `;
