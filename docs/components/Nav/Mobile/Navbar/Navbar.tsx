@@ -30,16 +30,15 @@ export function Navbar() {
         const Icon = Icons[`${links[key].name}Icon`];
 
         return (
-          <NavCategory key={`${key}-button`}>
+          <NavCategory
+            key={`${key}-button`}
+            onClick={onClickNavCategory(
+              links[key].name,
+              links[key].mobileNavIndex
+            )}
+          >
             {!!Icon && <Icon />}
-            <NavCategoryButton
-              onClick={onClickNavCategory(
-                links[key].name,
-                links[key].mobileNavIndex
-              )}
-            >
-              {links[key].name}
-            </NavCategoryButton>
+            <NavCategoryButton>{links[key].name}</NavCategoryButton>
           </NavCategory>
         );
       })}

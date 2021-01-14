@@ -18,7 +18,7 @@ export const NavMenuContainer = styled.div`
   `}
 `;
 
-export const NavCategoryButton = styled.button`
+export const NavCategoryButton = styled.a`
   font-size: 0.6rem;
   border: none;
   outline: none;
@@ -37,4 +37,5 @@ export const NavCategory = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  cursor: pointer;
 `;
