@@ -16,13 +16,13 @@ export const NavTopLink = styled(AnchorLink)`
   top: 2px;
 `;
 
-export const NavTopContainer = styled.div`
+export const NavTopContainer = styled.div<{ panelOpen: boolean }>`
   position: relative;
   width: 100%;
   height: 60px;
   display: flex;
   justify-content: space-between;
-  z-index: 2;
+  z-index: 1;
 
   ${({ theme }) => `
     background-color: ${theme.colors.primary};

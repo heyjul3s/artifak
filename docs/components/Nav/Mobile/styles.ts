@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const NavContainer = styled.div<{ panelOpen: boolean }>`
+export const NavContainer = styled.div`
   position: fixed;
   top: 0;
   left: 0;
