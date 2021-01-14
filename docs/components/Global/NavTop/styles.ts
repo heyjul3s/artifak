@@ -22,7 +22,7 @@ export const NavTopContainer = styled.div<{ panelOpen: boolean }>`
   height: 60px;
   display: flex;
   justify-content: space-between;
-  z-index: 1;
+  z-index: ${({ panelOpen }) => (!!panelOpen ? '1' : '2')};
 
   ${({ theme }) => `
     background-color: ${theme.colors.primary};
