@@ -22,6 +22,7 @@ export const NavTopContainer = styled.div`
   height: 60px;
   display: flex;
   justify-content: space-between;
+  z-index: 2;
 
   ${({ theme }) => `
     background-color: ${theme.colors.primary};

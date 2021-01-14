@@ -1,4 +1,5 @@
 import React from 'react';
+import { useRouter } from 'next/router';
 import { FlexRow, FlexCol } from 'artifak';
 import { Container } from '../Container';
 import {
@@ -9,11 +10,13 @@ import {
 } from './styles';
 
 export function Footer() {
+  const router = useRouter();
+  const isHome = router.route === '/';
   const currentYear = new Date().getFullYear();
 
   return (
     <Container pr={`1em`} pl={`1em`}>
-      <StyledFooter>
+      <StyledFooter isHome={isHome}>
         <FlexRow justifyContent="center">
           <FlexCol columnSize={[12, 6]} pl={0}>
             <FooterBrandText>

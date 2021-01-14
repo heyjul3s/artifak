@@ -20,7 +20,7 @@ export function MobileNav() {
         setViewIndex
       }}
     >
-      <NavContainer>
+      <NavContainer panelOpen={panelOpen}>
         <NavSlides />
         <Navbar />
       </NavContainer>
