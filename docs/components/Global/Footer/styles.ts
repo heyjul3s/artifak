@@ -36,14 +36,14 @@ export const FooterCopyright = styled.p`
   `}
 `;
 
-export const StyledFooter = styled.footer`
-  ${({ theme }) => css`
+export const StyledFooter = styled.footer<{ isHome: boolean }>`
+  ${({ theme, isHome }) => css`
     padding: 2em 0;
     border-top: 1px solid ${theme.colors.primary};
     font-family: ${theme.fontFamily.heading};
 
     @media (hover: none) {
-      padding: 2em 0 90px;
+      padding: ${isHome ? '2em 0' : '2em 0 90px'};
     }
   `}
 `;

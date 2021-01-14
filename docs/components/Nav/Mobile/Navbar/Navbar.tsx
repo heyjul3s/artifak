@@ -13,6 +13,7 @@ export function Navbar() {
     e: React.SyntheticEvent
   ) => {
     e.preventDefault();
+    e.stopPropagation();
 
     if (navOption !== 'Home') {
       setPanelOpen(true);

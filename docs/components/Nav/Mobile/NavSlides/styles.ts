@@ -51,7 +51,7 @@ export const CloseButtonContainer = styled(motion.div)`
   border: 1px solid white;
   border-radius: 50%;
   top: 1em;
-  left: calc(50vw - 30px);
+  left: calc(50vw - 20px);
   padding: 0.5em;
   z-index: 1;
 `;
