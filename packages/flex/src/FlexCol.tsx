@@ -34,8 +34,10 @@ export function setColumnSizing(
   columnSize: number | number[]
 ): string | string[] {
   return Array.isArray(columnSize) && columnSize.length > 1
-    ? columnSize.map(size => `${size * baseColumnWidth}%`)
-    : `${(columnSize as number) * baseColumnWidth}%`;
+    ? columnSize.map(
+        size => `${parseNumberToTwoDecimals(size * baseColumnWidth)}%`
+      )
+    : `${parseNumberToTwoDecimals((columnSize as number) * baseColumnWidth)}%`;
 }
 
 export function setColumnOffset(
@@ -59,6 +61,10 @@ export function setGutterWidth(
   return Array.isArray(gutterWidth) && gutterWidth.length > 1
     ? gutterWidth.map(width => `${width / 2}em`)
     : `${(gutterWidth as number) / 2}em`;
+}
+
+export function parseNumberToTwoDecimals(value: number) {
+  return `${parseFloat(String(value)).toFixed(2)}`;
 }
 
 export function isNumber(val: number): boolean {
