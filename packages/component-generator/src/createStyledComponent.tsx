@@ -24,13 +24,13 @@ export function createStyledComponent<
   Props extends any,
   Theme = void,
   Attributes = void
->(config: BaseConfig<Props, Theme, Attributes>): React.FC<Props> {
+>(config: BaseConfig<Props, Attributes, Theme>): React.FC<Props> {
   const Styled = createStyled<Props, Theme, Attributes>(config);
   return createFC<Props>(Styled, config.styles);
 }
 
 export function createStyled<Props = void, Theme = void, Attributes = void>(
-  config: BaseConfig<Props, Theme, Attributes>
+  config: BaseConfig<Props, Attributes, Theme>
 ) {
   return pipe(
     createStyledElement,
@@ -39,7 +39,10 @@ export function createStyled<Props = void, Theme = void, Attributes = void>(
   )(config);
 }
 
-export function createFC<Props = void>(Component, styles): React.FC<Props> {
+export function createFC<Props = void>(
+  Component: React.FC<Props>,
+  styles: ScalableCSS | undefined
+): React.FC<Props> {
   return props => (
     <Component {...props} {...styles}>
       {props.children}
@@ -52,8 +55,8 @@ export function createStyledElement<
   Theme = void,
   Attributes = void
 >(
-  config: BaseConfig<Props, Theme, Attributes>
-): BaseConfig<Props, Theme, Attributes> {
+  config: BaseConfig<Props, Attributes, Theme>
+): BaseConfig<Props, Attributes, Theme> {
   const { element = 'div' } = config;
   return {
     ...config,
@@ -67,8 +70,8 @@ export function createStyledAttributes<
   Theme = void,
   Attributes = void
 >(
-  config: BaseConfig<Props, Theme, Attributes>
-): BaseConfig<Props, Theme, Attributes> {
+  config: BaseConfig<Props, Attributes, Theme>
+): BaseConfig<Props, Attributes, Theme> {
   const { attrs = {} } = config;
   return !!config.component && config.hasOwnProperty('attrs') && !isEmpty(attrs)
     ? { ...config, component: config.component.attrs(attrs) }
@@ -83,7 +86,7 @@ export function applyStyledProps<
   component = styled.div,
   styleProps = [],
   styles
-}: BaseConfig<Props, Theme, Attributes>) {
+}: BaseConfig<Props, Attributes, Theme>) {
   const pseudoStyles = extractStylePseudos(styles);
 
   return component(
