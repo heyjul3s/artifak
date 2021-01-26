@@ -1,11 +1,11 @@
 export { media } from './media';
 export { mediaBounds } from './mediaBoundaries';
-export { Media } from './typings';
-export { MediaBoundaries } from './mediaBoundaries';
-export { MediaInputQueries } from './mediaInput';
-export { MediaTypes } from './mediaTypes';
-export { MediaAccessibilityQueries } from './mediaAccessibilty';
-export { MediaDisplayQueries } from './mediaDisplay';
+export type { Media, MediaQueries } from './typings';
+export type { MediaBoundaries } from './mediaBoundaries';
+export type { MediaInputQueries } from './mediaInput';
+export type { MediaTypes } from './mediaTypes';
+export type { MediaAccessibilityQueries } from './mediaAccessibilty';
+export type { MediaDisplayQueries } from './mediaDisplay';
 
 export {
   all,
