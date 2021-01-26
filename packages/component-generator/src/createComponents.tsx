@@ -3,7 +3,6 @@ import { isValidElementType } from 'react-is';
 import isPlainObject from 'lodash.isplainobject';
 import isEmpty from 'lodash.isempty';
 import { createStyledComponent, createFC } from './createStyledComponent';
-
 import { Settings, BaseConfig, Variant, ComponentsRecord } from './typings';
 
 /* eslint-disable @typescript-eslint/no-explicit-any */
@@ -29,7 +28,7 @@ export function createComponents<
         dict[prop] = isConfigBase
           ? generateComponent<ThemeType, Props, Element>(
               base as BaseConfig<Props, AllHTMLAttributes<Element>, ThemeType>,
-              setting
+              setting as Settings<Element>
             )
           : createFC<Props>(base as React.FC<Props>, setting);
         dict[prop].displayName = prop;
@@ -70,7 +69,7 @@ export function generateComponent<
   Element = HTMLDivElement
 >(
   base: BaseConfig<Props, AllHTMLAttributes<Element>, ThemeType>,
-  setting: ScalableCSS | undefined
+  setting: Settings<Element>
 ) {
   return createStyledComponent<Props, ThemeType, AllHTMLAttributes<Element>>({
     ...base,
