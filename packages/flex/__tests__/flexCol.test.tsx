@@ -5,6 +5,7 @@ import {
   setColumnSizing,
   setColumnOffset,
   setGutterWidth,
+  parseNumberToTwoDecimals,
   FlexCol
 } from '../src/FlexCol';
 
@@ -40,13 +41,13 @@ describe('FlexCol', () => {
   describe('setColumnSizing', () => {
     it('should return a string percentage value when provided with a number value as arg', () => {
       const baseColumn = 8.3;
-      const expected = '33.2%';
+      const expected = '33.20%';
       expect(setColumnSizing(baseColumn, 4)).toEqual(expected);
     });
 
     it('should return an array of string percentage values when provided with an array of number column sizings', () => {
       const baseColumn = 8.3;
-      const expected = ['99.60000000000001%', '49.800000000000004%'];
+      const expected = ['99.60%', '49.80%'];
       expect(setColumnSizing(baseColumn, [12, 6])).toEqual(expected);
     });
   });
@@ -74,6 +75,12 @@ describe('FlexCol', () => {
     it('should return an array of string em values when provided with an array of numbers', () => {
       const expected = ['0.5em', '1em'];
       expect(setGutterWidth([1, 2])).toEqual(expected);
+    });
+  });
+
+  describe('parseNumberToTwoDecimals', () => {
+    it('should return a string number with only 2 decimal places', () => {
+      expect(parseNumberToTwoDecimals(5 * 1.3326)).toEqual('6.66');
     });
   });
 
