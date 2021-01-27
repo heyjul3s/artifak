@@ -1,10 +1,9 @@
-import { createBlockComponents } from 'artifak';
+import styled from 'styled-components';
 
-const styles = {
-  Section: {
-    marginBottom: ['1.5em', '5em'],
-    as: 'section'
+export const Section = styled.section`
+  margin-bottom: 1.5em;
+
+  @media (min-width: 576px) {
+    margin-bottom: 5em;
   }
-};
-
-export const { Section } = createBlockComponents<typeof styles>(styles);
+`;

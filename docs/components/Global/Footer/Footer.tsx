@@ -15,7 +15,7 @@ export function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <Container pr={`1em`} pl={`1em`}>
+    <Container>
       <StyledFooter isHome={isHome}>
         <FlexRow justifyContent="center">
           <FlexCol columnSize={[12, 6]} pl={0}>
