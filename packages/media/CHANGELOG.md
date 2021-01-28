@@ -1,5 +1,11 @@
 # @artifak/media
 
+## 1.0.2
+
+### Patch Changes
+
+- Fix mediaBounds regex to include px units
+
 ## 1.0.1
 
 ### Patch Changes
