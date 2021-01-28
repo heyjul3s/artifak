@@ -1,5 +1,11 @@
 # @artifak/component-generator
 
+## 2.0.1
+
+### Patch Changes
+
+- Fix typings for createComponents and createStyledComponent
+
 ## 2.0.0
 
 ### Major Changes

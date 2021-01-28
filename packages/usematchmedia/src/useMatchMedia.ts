@@ -8,9 +8,14 @@ export function useMatchMedia(query: string): boolean {
   }, []);
 
   useEffect(() => {
-    matchListRef.current = window.matchMedia(query);
-    matchListRef.current.addEventListener('change', onMediaQueryListEvent);
-    setIsMatch(matchListRef.current.matches);
+    if (!!window?.matchMedia) {
+      matchListRef.current = window.matchMedia(query);
+      matchListRef.current.addEventListener('change', onMediaQueryListEvent);
+      setIsMatch(matchListRef.current.matches);
+    } else {
+      console.error('Error: typeof "window" is undefined.');
+      setIsMatch(false);
+    }
 
     return function unmountUseMatchMedia() {
       if (matchListRef.current) {

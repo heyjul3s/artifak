@@ -1,6 +1,6 @@
 export { media } from './media';
 export { mediaBounds } from './mediaBoundaries';
-export { Media } from './typings';
+export { Media, MediaQueries } from './typings';
 export { MediaBoundaries } from './mediaBoundaries';
 export { MediaInputQueries } from './mediaInput';
 export { MediaTypes } from './mediaTypes';
