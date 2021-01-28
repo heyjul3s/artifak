@@ -15,6 +15,9 @@ export const FlexCol = React.forwardRef((props: any, ref) => {
       flexBasis={columnSizing}
       pl={gutterWidth}
       pr={gutterWidth}
+      style={{
+        boxSizing: 'border-box'
+      }}
       ref={ref}
       {...props}
     >
