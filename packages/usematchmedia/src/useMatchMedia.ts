@@ -8,7 +8,7 @@ export function useMatchMedia(query: string): boolean {
   }, []);
 
   useEffect(() => {
-    if (!!window) {
+    if (!!window?.matchMedia) {
       matchListRef.current = window.matchMedia(query);
       matchListRef.current.addEventListener('change', onMediaQueryListEvent);
       setIsMatch(matchListRef.current.matches);
