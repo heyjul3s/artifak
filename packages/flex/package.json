@@ -1,6 +1,6 @@
 {
   "name": "@artifak/flex",
-  "version": "1.1.6",
+  "version": "1.1.7",
   "description": "A styled-component Flex grid component for your layout needs.",
   "keywords": [
     "react",

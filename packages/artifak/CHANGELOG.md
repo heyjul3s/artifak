@@ -1,5 +1,13 @@
 # artifak
 
+## 2.0.2
+
+### Patch Changes
+
+- Fix missing style for FlexCol
+- Updated dependencies [undefined]
+  - @artifak/flex@1.1.7
+
 ## 2.0.1
 
 ### Patch Changes
