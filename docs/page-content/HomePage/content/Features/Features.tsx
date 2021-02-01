@@ -1,7 +1,6 @@
 import React from 'react';
-import { Paragraph } from '../../../../components/Typography';
-import { Section } from '../../../../components/Section';
-import { SectionTitle } from '../../../../components/SectionTitle';
+import { Paragraph, Section, SectionTitle } from '@components';
+
 import {
   BuildIcon,
   ModularIcon,
@@ -10,6 +9,7 @@ import {
   LightweightIcon,
   SimpleIcon
 } from '../../../../assets';
+
 import { FeaturesGrid, FeatureItem } from './components';
 
 const IntroductionContent = [

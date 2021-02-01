@@ -1,7 +1,6 @@
 import React from 'react';
 import { FlexRow, FlexCol } from 'artifak';
-import { H2, Paragraph } from '../../../components/Typography';
-import { SectionTitle } from '../../../components/SectionTitle';
+import { Paragraph, SectionTitle } from '@components';
 
 export function About() {
   return (

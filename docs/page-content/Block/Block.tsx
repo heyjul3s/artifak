@@ -1,10 +1,17 @@
-import { Paragraph, Strong, H4 } from '../../components/Typography';
-import { Syntax, Param, ParamsTable } from '../../components/Code';
-import { HR } from '../../components/Global/HR';
+import {
+  Paragraph,
+  Strong,
+  H4,
+  HR,
+  Syntax,
+  Param,
+  ParamsTable,
+  Doc,
+  APIheading,
+  FlexTable
+} from '@components';
+
 import { BlockBaseUsage } from './examples';
-import { Doc } from '../../components/Article';
-import { APIheading } from '../../components/APIheading';
-import { FlexTable } from '../../components/FlexTable';
 
 const createBlocksBaseCells = [
   {

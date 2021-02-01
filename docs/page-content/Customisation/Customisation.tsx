@@ -1,8 +1,5 @@
-import { Paragraph, Strong } from '../../components/Typography';
-import { Syntax } from '../../components/Code/Syntax';
+import { Paragraph, Syntax, Doc, ArticleSubSectionTitle } from '@components';
 import { systemExtensionUsage } from './examples';
-import { Doc } from '../../components/Article';
-import { ArticleSubSectionTitle } from '../../components/Article/ArticleSubSectionTitle';
 
 export function Customisation() {
   return (

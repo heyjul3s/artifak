@@ -1,9 +1,16 @@
-import { Paragraph, Strong, H4 } from '../../components/Typography';
-import { Syntax, ParamsTable, Param } from '../../components/Code';
-import { FlexTable } from '../../components/FlexTable';
-import { HR } from '../../components/Global/HR';
-import { Doc } from '../../components/Article';
-import { APIheading } from '../../components/APIheading';
+import {
+  Paragraph,
+  Strong,
+  H4,
+  Syntax,
+  ParamsTable,
+  Param,
+  FlexTable,
+  HR,
+  Doc,
+  APIheading
+} from '@components';
+
 import { createComponentsUsage } from './examples';
 
 export function Generator() {
