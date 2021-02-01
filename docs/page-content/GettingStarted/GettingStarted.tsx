@@ -1,5 +1,4 @@
-import { Doc } from '../../components/Article';
-import { HR } from '../../components/Global/HR';
+import { Doc, HR } from '@components';
 import { Building, Variants, Setup, Installation, Theming } from './content';
 
 export function GettingStarted() {

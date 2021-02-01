@@ -1,9 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { Grid, GridItem } from 'artifak';
-import { H2, Paragraph } from '../../../components/Typography';
-import { Section } from '../../../components/Section';
-import { SectionTitle } from '../../../components/SectionTitle';
+import { Paragraph, Section, SectionTitle } from '@components';
 
 const modules = [
   // {

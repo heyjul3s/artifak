@@ -1,7 +1,5 @@
 import React from 'react';
-import { Paragraph } from '../../../../components/Typography';
-import { Section } from '../../../../components/Section';
-import { SectionTitle } from '../../../../components/SectionTitle';
+import { Paragraph, Section, SectionTitle } from '@components';
 import { Spec, SpecCol, SpecContainer } from './components';
 
 export function Specs() {

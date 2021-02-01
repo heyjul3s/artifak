@@ -1,7 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { Paragraph } from '../../../components/Typography';
-import { Syntax } from '../../../components/Code/Syntax';
+import { Paragraph, Syntax } from '@components';
 
 export function Installation() {
   return <InstallationInstructions />;

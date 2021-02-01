@@ -1,14 +1,17 @@
-import { Paragraph } from '../../components/Typography';
-import { Syntax } from '../../components/Code/Syntax';
+import {
+  Paragraph,
+  Doc,
+  ArticleSubSectionTitle,
+  APIheading,
+  Syntax,
+  HR
+} from '@components';
+
 import {
   generateWithVariants,
   addingVariantsStyledSystem,
   addingVariantsStyledComponents
 } from './examples';
-import { Doc } from '../../components/Article';
-import { ArticleSubSectionTitle } from '../../components/Article/ArticleSubSectionTitle';
-import { APIheading } from '../../components/APIheading';
-import { HR } from '../../components/Global/HR';
 
 export function Variants() {
   return (

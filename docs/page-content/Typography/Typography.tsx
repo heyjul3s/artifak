@@ -1,14 +1,21 @@
-import { Paragraph, H4, Strong } from '../../components/Typography';
-import { Syntax, Param, ParamsTable } from '../../components/Code';
-import { FlexTable } from '../../components/FlexTable';
+import {
+  Paragraph,
+  H4,
+  Strong,
+  Syntax,
+  Param,
+  ParamsTable,
+  FlexTable,
+  HR,
+  Doc,
+  APIheading
+} from '@components';
+
 import {
   createTypographExample,
   createTypographyComponentsDemo,
   fontWeightExampleUsage
 } from './examples';
-import { HR } from '../../components/Global/HR';
-import { Doc } from '../../components/Article';
-import { APIheading } from '../../components/APIheading';
 
 const createBlocksBaseCells = [
   {

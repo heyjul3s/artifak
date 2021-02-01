@@ -1,10 +1,9 @@
 import React from 'react';
 import { FlexRow, FlexCol } from 'artifak';
-import { Layout } from '../components/Global/Layout';
+import { Layout, DesktopNav } from '@components';
 import { useRouter } from 'next/router';
-import { content } from '../page-content';
-import { HomePage } from '../page-content/HomePage/HomePage';
-import { DesktopNav } from '../components/Nav/Desktop/DesktopNav';
+import { content } from '@page-content';
+import { HomePage } from '@page-content/HomePage/HomePage';
 
 export default function Home() {
   const router = useRouter();

@@ -1,13 +1,9 @@
-import { Paragraph } from '../../components/Typography';
-import { Syntax } from '../../components/Code/Syntax';
-import { HR } from '../../components/Global/HR';
-import { Doc } from '../../components/Article';
-import { APIheading } from '../../components/APIheading';
+import { HR, Doc, Paragraph, Syntax, APIheading } from '@components';
 import { fluidSizingExampleUsage } from './examples';
 
 export function FluidSizing() {
   return (
-    <Doc title="useMatchMedia">
+    <Doc title="fluidSizing">
       <FluidSizingContent />
     </Doc>
   );

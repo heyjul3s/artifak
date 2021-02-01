@@ -1,11 +1,15 @@
-import { Paragraph, Strong } from '../../components/Typography';
-import { Syntax } from '../../components/Code/Syntax';
+import {
+  Paragraph,
+  Strong,
+  ArticleSubSectionTitle,
+  HR,
+  Doc,
+  APIheading,
+  FlexTable,
+  Syntax
+} from '@components';
+
 import { min, max, minMax, and, or, single } from './examples';
-import { ArticleSubSectionTitle } from '../../components/Article/ArticleSubSectionTitle';
-import { HR } from '../../components/Global/HR';
-import { Doc } from '../../components/Article';
-import { APIheading } from '../../components/APIheading';
-import { FlexTable } from '../../components/FlexTable';
 
 export function Media() {
   return (

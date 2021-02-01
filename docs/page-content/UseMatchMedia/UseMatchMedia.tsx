@@ -1,8 +1,4 @@
-import { Paragraph, Strong } from '../../components/Typography';
-import { Syntax } from '../../components/Code/Syntax';
-import { HR } from '../../components/Global/HR';
-import { Doc } from '../../components/Article';
-import { APIheading } from '../../components/APIheading';
+import { Paragraph, Doc, HR, APIheading, Syntax } from '@components';
 import { useMatchMediaExampleUsage } from './examples';
 
 export function UseMatchMedia() {

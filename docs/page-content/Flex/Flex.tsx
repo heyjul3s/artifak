@@ -1,5 +1,13 @@
-import { Paragraph, Strong } from '../../components/Typography';
-import { Syntax } from '../../components/Code/Syntax';
+import {
+  Paragraph,
+  Strong,
+  HR,
+  Doc,
+  Syntax,
+  APIheading,
+  FlexTable,
+  ArticleSubSectionTitle
+} from '@components';
 
 import {
   FlexColumnSizingDemo,
@@ -13,13 +21,6 @@ import {
   CustomColDemo,
   customColUsage
 } from './examples';
-
-import { HR } from '../../components/Global/HR';
-
-import { Doc } from '../../components/Article';
-import { APIheading } from '../../components/APIheading';
-import { FlexTable } from '../../components/FlexTable';
-import { ArticleSubSectionTitle } from '../../components/Article/ArticleSubSectionTitle';
 
 export function Flex() {
   return (

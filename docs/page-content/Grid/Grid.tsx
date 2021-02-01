@@ -1,5 +1,14 @@
-import { Paragraph, Strong } from '../../components/Typography';
-import { Syntax } from '../../components/Code/Syntax';
+import {
+  Paragraph,
+  Strong,
+  Syntax,
+  HR,
+  FlexTable,
+  Doc,
+  APIheading,
+  ArticleSubSectionTitle
+} from '@components';
+
 import {
   columnWidthExample,
   columnWidthMqExample,
@@ -10,11 +19,6 @@ import {
   ColumnLengthDemo,
   ColumnLengthMqDemo
 } from './examples';
-import { HR } from '../../components/Global/HR';
-import { FlexTable } from '../../components/FlexTable';
-import { Doc } from '../../components/Article';
-import { APIheading } from '../../components/APIheading';
-import { ArticleSubSectionTitle } from '../../components/Article/ArticleSubSectionTitle';
 
 export function Grid() {
   return (

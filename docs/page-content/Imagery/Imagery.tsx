@@ -1,9 +1,6 @@
-import { Paragraph, Strong } from '../../components/Typography';
+import { Paragraph, Strong, HR, Doc, APIheading } from '@components';
 import { Syntax } from '../../components/Code/Syntax';
 import { ImageryUsage, ImageryBaseUsage } from './examples';
-import { HR } from '../../components/Global/HR';
-import { Doc } from '../../components/Article';
-import { APIheading } from '../../components/APIheading';
 
 export function Imagery() {
   return (
