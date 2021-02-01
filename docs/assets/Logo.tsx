@@ -1,7 +1,5 @@
 import React from 'react';
 import { theme } from '../theme';
-// import { LogoProps } from './typings';
-// import { SVGlogo } from './styles';
 
 export function Logo() {
   return (
