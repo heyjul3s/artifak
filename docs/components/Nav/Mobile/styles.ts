@@ -8,9 +8,14 @@ export const NavContainer = styled.div<{ panelOpen: boolean }>`
   pointer-events: ${({ panelOpen }) => (!!panelOpen ? 'auto' : 'none')};
 `;
 
-export const SVGwrapper = styled.svg`
+export const NavbarIconWrapper = styled.svg`
   display: block;
   width: 26px;
   height: 26px;
   padding-bottom: 5px;
+
+  > svg {
+    width: 100%;
+    height: 100%;
+  }
 `;

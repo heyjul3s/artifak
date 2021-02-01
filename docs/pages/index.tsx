@@ -2,8 +2,8 @@ import React from 'react';
 import { FlexRow, FlexCol } from 'artifak';
 import { Layout } from '../components/Global/Layout';
 import { useRouter } from 'next/router';
-import { content } from '../containers';
-import { HomePage } from '../containers/HomePage/HomePage';
+import { content } from '../page-content';
+import { HomePage } from '../page-content/HomePage/HomePage';
 import { DesktopNav } from '../components/Nav/Desktop/DesktopNav';
 
 export default function Home() {

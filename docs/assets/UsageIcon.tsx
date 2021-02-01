@@ -1,17 +1,34 @@
-import { SVGwrapper } from '../styles';
+import React from 'react';
+import { theme } from '../theme';
+// import { SVGwrapper } from '../styles';
 
 export function UsageIcon() {
   return (
-    <SVGwrapper
+    <svg
       version="1.1"
       id="Layer_1"
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 100 100"
     >
       <style type="text/css">
-        {`.st0{fill:none;stroke:#F15E22;stroke-width:2.2329;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
-        .st1{fill:#F15E22;}
-        .st2{fill:none;stroke:#F15E22;stroke-width:2.2329;stroke-miterlimit:10;}`}
+        {`
+          .st0{
+            fill:none;
+            stroke: ${theme.colors.primary};
+            stroke-width:2.2329;
+            stroke-linecap:round;
+            stroke-linejoin:round;
+            stroke-miterlimit:10;
+          }
+
+          .st1{fill: ${theme.colors.primary};}
+
+          .st2{
+            fill:none;
+            stroke: ${theme.colors.primary};
+            stroke-width:2.2329;
+            stroke-miterlimit:10;
+          }`}
       </style>
       <g>
         <polygon
@@ -43,6 +60,6 @@ export function UsageIcon() {
         <line className="st2" x1="42" y1="79.8" x2="80.1" y2="79.8" />
         <line className="st2" x1="22.9" y1="87.3" x2="81.3" y2="87.3" />
       </g>
-    </SVGwrapper>
+    </svg>
   );
 }

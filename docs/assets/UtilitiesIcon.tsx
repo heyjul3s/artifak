@@ -1,19 +1,49 @@
-import { SVGwrapper } from '../styles';
-import { theme } from '../../../../theme';
+import React from 'react';
+import { theme } from '../theme';
+// import { SVGwrapper } from '../styles';
 
 export function UtilitiesIcon() {
   return (
-    <SVGwrapper
+    <svg
       id="Layer_1"
       data-name="Layer 1"
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 100 100"
     >
       <style type="text/css">
-        {`.st0{fill:none;stroke:#F15E22;stroke-width:1.8694;stroke-miterlimit:10;}
-          .st1{fill:none;stroke:#F15E22;stroke-width:1.8694;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
-	        .st2{fill:#FFFFFF;stroke:#F15E22;stroke-width:1.804;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
-          .st3{fill:none;stroke:#F15E22;stroke-width:1.804;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
+        {`
+          .st0{
+            fill:none;
+            stroke: ${theme.colors.primary};
+            stroke-width:1.8694;
+            stroke-miterlimit:10;
+          }
+
+          .st1{
+            fill:none;
+            stroke: ${theme.colors.primary};
+            stroke-width:1.8694;
+            stroke-linecap:round;
+            stroke-linejoin:round;
+            stroke-miterlimit:10;
+          }
+	        .st2{
+            fill: ${theme.colors.white};
+            stroke: ${theme.colors.primary};
+            stroke-width:1.804;
+            stroke-linecap:round;
+            stroke-linejoin:round;
+            stroke-miterlimit:10;
+          }
+
+          .st3{
+            fill:none;
+            stroke: ${theme.colors.primary};
+            stroke-width:1.804;
+            stroke-linecap:round;
+            stroke-linejoin:round;
+            stroke-miterlimit:10;
+          }
         `}
       </style>
       <g>
@@ -37,6 +67,6 @@ export function UtilitiesIcon() {
           <line className="st3" x1="74.8" y1="60.1" x2="74.8" y2="89.4" />
         </g>
       </g>
-    </SVGwrapper>
+    </svg>
   );
 }

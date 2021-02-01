@@ -9,7 +9,7 @@ import {
   TSIcon,
   LightweightIcon,
   SimpleIcon
-} from './Icons';
+} from '../../../../assets';
 import { FeaturesGrid, FeatureItem } from './components';
 
 const IntroductionContent = [

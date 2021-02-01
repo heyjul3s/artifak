@@ -9,7 +9,7 @@
     "deploy": "yarn build && yarn export"
   },
   "dependencies": {
-    "artifak": "1.1.5",
+    "artifak": "2.0.2",
     "csstype": "^3.0.6",
     "framer-motion": "^3.2.1",
     "lodash.isplainobject": "^4.0.6",
