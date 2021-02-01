@@ -1,3 +1,6 @@
+import React from 'react';
+import { theme } from '../theme';
+
 export function CloseIcon() {
   return (
     <svg
@@ -15,7 +18,7 @@ export function CloseIcon() {
       c3.8,3.8,3.8,9.9,0,13.7C92.7,96.2,90.3,97.1,87.8,97.1z"
             style={{
               fill: 'transparent',
-              stroke: '#fff',
+              stroke: `${theme.colors.white}`,
               strokeLinecap: 'round',
               strokeLinejoin: 'round',
               strokeWidth: '3.2px'
@@ -28,7 +31,7 @@ export function CloseIcon() {
       c3.8,3.8,3.8,9.9,0,13.7L19.2,94.3C17.3,96.2,14.8,97.1,12.3,97.1z"
             style={{
               fill: 'transparent',
-              stroke: '#fff',
+              stroke: `${theme.colors.white}`,
               strokeLinecap: 'round',
               strokeLinejoin: 'round',
               strokeWidth: '3.2px'

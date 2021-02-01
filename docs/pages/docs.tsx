@@ -2,7 +2,7 @@ import React from 'react';
 import { FlexRow, FlexCol } from 'artifak';
 import { Layout } from '../components/Global/Layout';
 import { useRouter } from 'next/router';
-import { content } from '../containers';
+import { content } from '../page-content';
 import { DesktopNav } from '../components/Nav/Desktop/DesktopNav';
 import { MobileNav } from '../components/Nav/Mobile/MobileNav';
 import { useMatchMedia } from '../hooks';

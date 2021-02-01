@@ -1,9 +1,9 @@
 import React from 'react';
-import { SVGwrapper } from '../styles';
+import { theme } from '../theme';
 
 export function ComponentsIcon() {
   return (
-    <SVGwrapper
+    <svg
       version="1.1"
       id="Layer_1"
       xmlns="http://www.w3.org/2000/svg"
@@ -12,7 +12,14 @@ export function ComponentsIcon() {
       viewBox="0 0 100 100"
     >
       <style type="text/css">
-        {`.st0{fill:#FFFFFF;stroke:#F15E22;stroke-width:2.3472;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}`}
+        {`.st0{
+          fill: ${theme.colors.white};
+          stroke: ${theme.colors.primary};
+          stroke-width:2.3472;
+          stroke-linecap:round;
+          stroke-linejoin:round;
+          stroke-miterlimit:10;
+        }`}
       </style>
       <g>
         <polygon className="st0" points="50,98.2 9.1,74.2 9.1,23.7 50,47.7 	" />
@@ -25,6 +32,6 @@ export function ComponentsIcon() {
           points="25.9,39.2 50,26.3 74.1,39.2 50,53.4 	"
         />
       </g>
-    </SVGwrapper>
+    </svg>
   );
 }

@@ -1,8 +1,9 @@
-import { SVGwrapper } from '../styles';
+import React from 'react';
+import { theme } from '../theme';
 
 export function HomeIcon() {
   return (
-    <SVGwrapper
+    <svg
       version="1.1"
       id="Layer_1"
       xmlns="http://www.w3.org/2000/svg"
@@ -10,8 +11,20 @@ export function HomeIcon() {
     >
       <style type="text/css">
         {`
-          .st0{fill:none;stroke:#F15E22;stroke-width:1.9492;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
-	        .st1{fill:none;stroke:#F15E22;stroke-width:1.9492;stroke-miterlimit:10;}
+          .st0{
+            fill:none;
+            stroke:${theme.colors.primary};
+            stroke-width:1.9492;
+            stroke-linecap:round;
+            stroke-linejoin:round;
+            stroke-miterlimit:10;
+          }
+	        .st1{
+            fill:none;
+            stroke:${theme.colors.primary};
+            stroke-width:1.9492;
+            stroke-miterlimit:10;
+          }
         `}
       </style>
       <g>
@@ -27,6 +40,6 @@ export function HomeIcon() {
         />
         <circle className="st0" cx="50.5" cy="65.8" r="13.6" />
       </g>
-    </SVGwrapper>
+    </svg>
   );
 }
