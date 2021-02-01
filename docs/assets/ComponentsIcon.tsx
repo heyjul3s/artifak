@@ -1,6 +1,5 @@
 import React from 'react';
 import { theme } from '../theme';
-// import { SVGwrapper } from '../styles';
 
 export function ComponentsIcon() {
   return (
