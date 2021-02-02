@@ -5,7 +5,7 @@ export const Params = ({ params }: any) => {
 
   return (
     <>
-      <Paragraph display="inline-block">
+      <Paragraph display="inline-block" m={0}>
         (
         {propertyKeys.map((key, i) => {
           const comma = i !== propertyKeys.length - 1 ? ', ' : '';

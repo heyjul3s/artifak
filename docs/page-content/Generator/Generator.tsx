@@ -11,7 +11,7 @@ import {
   APIheading
 } from '@components';
 
-import { createComponentsUsage } from './examples';
+import { createComponentsUsage, createStyledComponentUsage } from './examples';
 
 export function Generator() {
   return (
@@ -76,9 +76,7 @@ export function GeneratorContent() {
         arise. This does not cater to detailed, complex, and or single-use case
         components that you may require.
       </Paragraph>
-
       <HR />
-
       <APIheading
         name="createComponents"
         params={{
@@ -156,8 +154,57 @@ export function GeneratorContent() {
         component if a configuration object is passed as an argument for the{' '}
         <Strong>base</Strong> parameter.
       </Paragraph>
-
       <ParamsTable APIname={'settings'} cells={createBlocksSettingsCells} />
+      <APIheading
+        name="createStyledComponent"
+        params={{
+          Base: 'BaseConfig<Props, Attributes, ThemeType>'
+        }}
+      />
+
+      <Syntax>{createStyledComponentUsage}</Syntax>
+
+      <HR />
+
+      <H4>Generics</H4>
+
+      <Paragraph>
+        Much like createComponents, the <Strong>createStyledComponent</Strong>{' '}
+        function also has its own generic types.
+      </Paragraph>
+
+      <FlexTable
+        cells={[
+          {
+            prop: 'Props',
+            subProp: 'optional',
+            content: 'Custom properties that may be included.'
+          },
+          {
+            prop: 'ThemeType',
+            subProp: 'optional',
+            content: 'Defines the type of Theme if any.'
+          },
+          {
+            prop: 'Attributes',
+            subProp: 'optional',
+            content: 'Type for generated element.'
+          }
+        ]}
+      />
+
+      <HR />
+
+      <H4>Parameters</H4>
+
+      <Paragraph>
+        The <Strong>base</Strong> parameter for createStyledComponent is of the
+        same type used in createComponents.
+      </Paragraph>
+
+      <Param name="base" types="BaseConfig<Props, Attributes, ThemeType>" />
+
+      <ParamsTable APIname={'base'} cells={createBlocksBaseCells} />
     </>
   );
 }

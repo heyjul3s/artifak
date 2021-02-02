@@ -13,7 +13,7 @@ export function APIheading({ name, params }: Props) {
 
   return (
     <>
-      <H3 color={theme.colors.primary} mb={!hasParams ? '0.5em' : '0.25em'}>
+      <H3 color={theme.colors.primary} m={!hasParams ? '0 0 0.5em' : '0'}>
         {name}
       </H3>
 

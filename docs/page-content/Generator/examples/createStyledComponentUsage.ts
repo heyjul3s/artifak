@@ -1,18 +1,16 @@
 export const createStyledComponentUsage = `
+  import { HTMLAttributes } from 'react';
   import { position, PositionProps } from 'styled-system';
+  import { theme } from './theme';
 
-  // A basic example
-  const StyledArticle = createStyledComponent<PositionProps>({
+  type CardProps = {
+    isHidden: boolean;
+  } & PositionProps;
+
+  const StyledArticle = createStyledComponent<CardProps, typeof theme, HTMLAttributes<HTMLDivElement>>({
     styles: { position: 'relative' },
+    attrs: { title: 'Hello World' },
     styledProps: [position],
     element: 'article'
   });
-
-  // If you need to add attributes, you can do it like so
-  // By default, element is set as "DIV"
-  const StyledButton = createStyledComponent<PositionProps>({
-    attrs: ({ role }) => ({ role: role || 'button' })
-    styles: { position: 'relative' },
-    styledProps: [position],
-  })
 `;
