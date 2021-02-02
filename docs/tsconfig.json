@@ -21,6 +21,15 @@
   "exclude": ["node_modules"],
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
   "compilerOptions": {
+    "baseUrl": "./",
+    "paths": {
+      "@components": ["./components"],
+      "@page-content": ["./page-content"],
+      "@assets": ["./assets"],
+      "@public": ["./public"],
+      "@pages": ["./pages"],
+      "@theme": ["./theme"]
+    },
     "lib": ["dom", "dom.iterable", "esnext"],
     "noEmit": true,
     "isolatedModules": true,
