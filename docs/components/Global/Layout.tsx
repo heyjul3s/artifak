@@ -34,7 +34,12 @@ export function Layout({
       {router.pathname === '/' && <Header />}
 
       <Main>
-        <Container pr="1em" pl="1em">
+        <Container
+          style={{
+            paddingRight: '1em',
+            paddingLeft: '1em'
+          }}
+        >
           {children}
         </Container>
       </Main>

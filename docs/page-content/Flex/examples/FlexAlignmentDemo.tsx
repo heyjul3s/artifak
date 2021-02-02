@@ -6,11 +6,11 @@ export function FlexAlignmentDemo() {
   return (
     <>
       <FlexRow justifyContent={['flex-start', 'center']} alignItems="center">
-        <FlexCol columnSize={[12, 6, 4]} totalColumns={16}>
+        <FlexCol columnSize={[12, 6, 4]}>
           <Block1 />
         </FlexCol>
 
-        <FlexCol columnSize={[12, 6, 4]} totalColumns={16}>
+        <FlexCol columnSize={[12, 6, 4]}>
           <Block2 />
         </FlexCol>
       </FlexRow>
