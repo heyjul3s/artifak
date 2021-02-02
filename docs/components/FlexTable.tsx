@@ -54,12 +54,14 @@ export function FlexTableCell({ prop, subProp, content }) {
   return (
     <>
       <FlexCol columnSize={[12, 5, 4]} gutterWidth={0}>
-        <SmallLead mb={'0.15rem'}>{prop}</SmallLead>
-        <SmallParagraph>{subProp}</SmallParagraph>
+        <SmallLead mt={0} mb={'0.15rem'}>
+          {prop}
+        </SmallLead>
+        <SmallParagraph mt={0}>{subProp}</SmallParagraph>
       </FlexCol>
 
       <FlexCol columnSize={[12, 7, 8]} gutterWidth={0}>
-        <Paragraph>{content}</Paragraph>
+        <Paragraph mt={0}>{content}</Paragraph>
       </FlexCol>
     </>
   );

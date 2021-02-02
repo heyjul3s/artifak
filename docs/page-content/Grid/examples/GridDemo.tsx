@@ -9,6 +9,8 @@ export function ColumnWidthDemo() {
       <GridItemBlock />
       <GridItemBlock />
       <GridItemBlock />
+      <GridItemBlock />
+      <GridItemBlock />
     </Grid>
   );
 }
@@ -16,6 +18,10 @@ export function ColumnWidthDemo() {
 export function ColumnWidthMqDemo() {
   return (
     <Grid columnWidth={['80px', '120px']} pb={'1em'}>
+      <GridItemBlock />
+      <GridItemBlock />
+      <GridItemBlock />
+      <GridItemBlock />
       <GridItemBlock />
       <GridItemBlock />
       <GridItemBlock />

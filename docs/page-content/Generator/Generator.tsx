@@ -154,7 +154,11 @@ export function GeneratorContent() {
         component if a configuration object is passed as an argument for the{' '}
         <Strong>base</Strong> parameter.
       </Paragraph>
+
       <ParamsTable APIname={'settings'} cells={createBlocksSettingsCells} />
+
+      <HR />
+
       <APIheading
         name="createStyledComponent"
         params={{

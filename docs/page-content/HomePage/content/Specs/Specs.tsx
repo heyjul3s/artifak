@@ -25,7 +25,7 @@ export function Specs() {
             title="Peer Dependencies"
             content={[
               'react >= 17.0.1',
-              'typescript >= 4.1.2',
+              'typescript >= 4.1.3',
               'styled-components >= 5.2.1',
               'styled-system >= 5.1.5'
             ]}
