@@ -12,7 +12,7 @@ import {
 } from './styles';
 
 import { Slider } from './Slider/Slider';
-import { CloseIcon } from '../icons';
+import { CloseIcon } from '../../../../assets';
 
 const navMenuVariants = {
   open: {
