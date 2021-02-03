@@ -8,7 +8,7 @@ type Props = {
 export function Param({ name, types }: Props) {
   return (
     <>
-      <H4 display="inline-block" verticalAlign="middle">
+      <H4 display="inline-block" verticalAlign="middle" mb={0}>
         {name} &nbsp;
       </H4>
 

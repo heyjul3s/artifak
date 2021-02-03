@@ -53,45 +53,79 @@
   dependencies:
     cross-fetch "3.0.6"
 
-"@artifak/block@^1.1.4":
-  version "1.1.4"
-  resolved "https://registry.yarnpkg.com/@artifak/block/-/block-1.1.4.tgz#b4a031dfa28de7eb135bfb2ca4980ca50350e301"
-  integrity sha512-VFk/EsMNIZNjFzQT74CJwBM0aRze/7LcWkTbBF36bXpNvI7QbuGT8pB20snUBS3u/xdDoj+NAcYuoyzq+kRNWA==
-  dependencies:
-    "@artifak/component-generator" "^1.1.4"
-
-"@artifak/component-generator@^1.1.4":
-  version "1.1.4"
-  resolved "https://registry.yarnpkg.com/@artifak/component-generator/-/component-generator-1.1.4.tgz#57756de580650c47da1bf9124b8210b70a15dba3"
-  integrity sha512-FH4V6u6kYMgs6cfW9zX5EJIbW8qRQnFSfh/8ruNdh5TeYmgU6PVdUAf+HRa5eDCbBchlxmmoxtqLzmlcsZs/AA==
-
-"@artifak/flex@^1.1.4":
-  version "1.1.4"
-  resolved "https://registry.yarnpkg.com/@artifak/flex/-/flex-1.1.4.tgz#b682fb4e94966ccd54cddc3b4914b876ce216496"
-  integrity sha512-uzejhf3abyjn8jmAuZ78/t3/qxuv5rmKHREpyhGBPGIfC5r97pb+VCavHaHMkmYluZjY5DZOWE8cgN0gNbYuAw==
-  dependencies:
-    "@artifak/component-generator" "^1.1.4"
-
-"@artifak/grid@^1.1.4":
-  version "1.1.4"
-  resolved "https://registry.yarnpkg.com/@artifak/grid/-/grid-1.1.4.tgz#bb955857ce255e9afbe7cdb04cb665fad39663f0"
-  integrity sha512-Qo9DLvP9TPqT7sSGVAWoXXMaZqVViy/KnkMjVYITEDho2Nhx1MnLwqc8bYzMmEUDV8OtVvJrju0VjNTimVqDAw==
-  dependencies:
-    "@artifak/component-generator" "^1.1.4"
-
-"@artifak/imagery@^1.0.6":
-  version "1.0.6"
-  resolved "https://registry.yarnpkg.com/@artifak/imagery/-/imagery-1.0.6.tgz#8d9f24cff84f82e626fc0963872e3fe6fb46789a"
-  integrity sha512-VXbjMI+mUKasypb3kCakKYFjKNbSWKb/zPo9kRU9pN4TlPtHTkldpus6itUsayl20gvek2PXA7l3out7/U8VKw==
-  dependencies:
-    "@artifak/component-generator" "^1.1.4"
-
-"@artifak/typography@^1.1.5":
+"@artifak/block@^1.1.5":
   version "1.1.5"
-  resolved "https://registry.yarnpkg.com/@artifak/typography/-/typography-1.1.5.tgz#60c14422b9b61d974c9b8885749b52014e3ab193"
-  integrity sha512-83Zb6UiJ01e4PhGTRFRJn/eoSVqfg3Dd1pmgPmNjuottk8c8m/xE43J71V+WxUxdndcy1nqjUURI97WpqDQe+Q==
+  resolved "https://registry.yarnpkg.com/@artifak/block/-/block-1.1.5.tgz#d57906699db06b7d93e3a75e5c2640a249dca7fb"
+  integrity sha512-JNeuzV4unYh+49gHhipMjurzaNhS9XxZ4XP3OsbFgjiEX1w8Vohwhts9rAQ+HcG0aVAk0UT5fJyiutkKKROssQ==
   dependencies:
-    "@artifak/component-generator" "^1.1.4"
+    "@artifak/component-generator" "^2.0.0"
+
+"@artifak/component-generator@^2.0.0":
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/@artifak/component-generator/-/component-generator-2.0.0.tgz#bc02066cf0c8ce7af1f6928fa463955273b202c7"
+  integrity sha512-5nSEjLdETmJibAfEF4r0nb1PvXYcIwSedwFj4hdMZE2tkxKDCjqhGozjug2wxpke0zFrvaNdTAY8a41UxcYZmQ==
+  dependencies:
+    lodash.isempty "^4.4.0"
+    lodash.isplainobject "^4.0.6"
+
+"@artifak/component-generator@^2.0.1":
+  version "2.0.1"
+  resolved "https://registry.yarnpkg.com/@artifak/component-generator/-/component-generator-2.0.1.tgz#85d827aef83df450a107db855fa298c9279e9c8e"
+  integrity sha512-UI7DYhaeZv+fz+kvAa0WwCCDk9Oz4FbLfbEWMGFMoB135wbeQenTdk/LbZJGCtYM2QwYorBQNUI+V6kfARltPw==
+  dependencies:
+    lodash.isempty "^4.4.0"
+    lodash.isplainobject "^4.0.6"
+
+"@artifak/flex@^1.1.7":
+  version "1.1.7"
+  resolved "https://registry.yarnpkg.com/@artifak/flex/-/flex-1.1.7.tgz#825e8d0976b2e358a199b450363c9bf672b87dd6"
+  integrity sha512-NSt6zuP+idR/Vd/drM5nDb9LpVelXpoAYo0Z5Pc74PQ0EHIZGd7z3PZSU+4Thy+U10B+YKNtAnvNNomKw9kAGQ==
+  dependencies:
+    "@artifak/component-generator" "^2.0.1"
+
+"@artifak/fluidsizing@^1.0.1":
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/@artifak/fluidsizing/-/fluidsizing-1.0.1.tgz#de3f5d704231b3976ff8a5ee91e068bb9984344d"
+  integrity sha512-sb0WC6JaZvXlrUDrhn7NKhM01t1ir8hjEkpvY1FtwAieRxdaCKnNFgukT5JiYLkpFipwd0hFrYhmpsrl5qBVMg==
+
+"@artifak/grid@^1.1.5":
+  version "1.1.5"
+  resolved "https://registry.yarnpkg.com/@artifak/grid/-/grid-1.1.5.tgz#2b24339eb739cc7d1ab258c02648f67b443d0e54"
+  integrity sha512-XxcUd2Z5oq2WCRtyC1cQH2eRbYuXp2FJRGUHRFj3N62cId06pWguF+/e3lG8JTRbm+pvpzts2goBlUYxWF4qsA==
+  dependencies:
+    "@artifak/component-generator" "^2.0.0"
+
+"@artifak/imagery@^1.0.7":
+  version "1.0.7"
+  resolved "https://registry.yarnpkg.com/@artifak/imagery/-/imagery-1.0.7.tgz#6f15e69003240644d867844f19d024831c337ab2"
+  integrity sha512-FktBzIqke56F38gc3emRJF/LHh8Zjg84/2qbtfBbpo36+2Md+BKHjbi9AJbHg1009yGOJewufvHwAyTqkVgDrQ==
+  dependencies:
+    "@artifak/component-generator" "^2.0.0"
+
+"@artifak/media@^1.0.2":
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/@artifak/media/-/media-1.0.2.tgz#9e2d154175875671260c21d271895cb7c9d24a05"
+  integrity sha512-a5tzbDqafgv5ahqWGaVcKyeJCa+7y9vRHZ229vkIYGKBgchDzmfa8Wk5bmtF3ul7Gj03WTADwkoWpGwC0av8ow==
+  dependencies:
+    lodash.isempty "^4.4.0"
+    lodash.isplainobject "^4.0.6"
+
+"@artifak/typography@^2.0.0":
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/@artifak/typography/-/typography-2.0.0.tgz#57c77780216b6fae25ae9fd66904ddd0063b5e68"
+  integrity sha512-zFRDm0gLyaz6MRZOyHqWB6RWVChE7pDdtnsEkgVNWzobvb5rWz8ceSW0KIKM4K/QwRvv0To7Z2P4ZbRjDjUrLA==
+  dependencies:
+    "@artifak/component-generator" "^2.0.0"
+
+"@artifak/usematchmedia@^1.0.2":
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/@artifak/usematchmedia/-/usematchmedia-1.0.2.tgz#7f64c4dd529cd0f19e0e34989995b68299ea52da"
+  integrity sha512-Wd6a4+Cshn2hWIr1yrcvSURCg+3z3y2PLKtbtLF/DqIw2w/aeuoT/r19kG6BJGc5zUiWjSzPhG5skNovZFKNag==
+
+"@artifak/usewindowsize@^1.0.2":
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/@artifak/usewindowsize/-/usewindowsize-1.0.2.tgz#517662a4ac27eb128d2e8c74e8f488337453c904"
+  integrity sha512-yC0JRMIF3gSCaXLHqg48s2ljs052eyaeWAfRKucN/CTEw8AB608aibtHt2/Qde76lGQfEZ70cZwhoWK8RGgWnQ==
 
 "@babel/code-frame@7.12.11":
   version "7.12.11"
@@ -303,10 +337,10 @@
     "@formatjs/ecma402-abstract" "1.5.1"
     tslib "^2.0.1"
 
-"@formatjs/intl@1.6.1":
-  version "1.6.1"
-  resolved "https://registry.yarnpkg.com/@formatjs/intl/-/intl-1.6.1.tgz#6f6de1650136feb48c475409e7d77769ae851934"
-  integrity sha512-911RCkqyZuwbihUT98qBfVNsEmukdf5Y4DIVqAx+BGIyyPNUeS+JXpKx6M8awXx2L9UbeTHKKhjJbNzZlVFO+w==
+"@formatjs/intl@1.6.3":
+  version "1.6.3"
+  resolved "https://registry.yarnpkg.com/@formatjs/intl/-/intl-1.6.3.tgz#11586982ae2d5b701ec0d0c0ca9d912639d5e062"
+  integrity sha512-5ucEdE0jZrZvqLOFXTix1y1ShHzQAod20QjUTF84suASZxxZyIQ8tpM8w9cGbSRcC+wBh7Y/1NyTV7KO+/ItqA==
   dependencies:
     "@formatjs/ecma402-abstract" "1.5.1"
     "@formatjs/intl-datetimeformat" "3.2.4"
@@ -314,8 +348,8 @@
     "@formatjs/intl-listformat" "5.0.4"
     "@formatjs/intl-relativetimeformat" "8.0.3"
     fast-memoize "^2.5.2"
-    intl-messageformat "9.4.3"
-    intl-messageformat-parser "6.1.3"
+    intl-messageformat "9.4.5"
+    intl-messageformat-parser "6.3.0"
     tslib "^2.0.1"
 
 "@hapi/accept@5.0.1":
@@ -497,10 +531,10 @@
   resolved "https://registry.yarnpkg.com/@types/json-schema/-/json-schema-7.0.6.tgz#f4c7ec43e81b319a9815115031709f26987891f0"
   integrity sha512-3c+yGKvVP5Y9TYBEibGNR+kLtijnj7mYrXRg+WpFb2X9xm04g/DXYkfg4hmzJQosc9snFNUPkbYIhu+KAm6jJw==
 
-"@types/node@^14.14.20":
-  version "14.14.20"
-  resolved "https://registry.yarnpkg.com/@types/node/-/node-14.14.20.tgz#f7974863edd21d1f8a494a73e8e2b3658615c340"
-  integrity sha512-Y93R97Ouif9JEOWPIUyU+eyIdyRqQR0I8Ez1dzku4hDx34NWh4HbtIc3WNzwB1Y9ULvNGeu5B8h8bVL5cAk4/A==
+"@types/node@^14.14.22":
+  version "14.14.22"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-14.14.22.tgz#0d29f382472c4ccf3bd96ff0ce47daf5b7b84b18"
+  integrity sha512-g+f/qj/cNcqKkc3tFqlXOYjrmZA+jNBiDzbP3kH+B+otKFqAdPgVTGP1IeKRdMml/aE69as5S4FqtxAbl+LaMw==
 
 "@types/prop-types@*":
   version "15.7.3"
@@ -865,17 +899,21 @@ array-unique@^0.3.2:
   resolved "https://registry.yarnpkg.com/array-unique/-/array-unique-0.3.2.tgz#a894b75d4bc4f6cd679ef3244a9fd8f46ae2d428"
   integrity sha1-qJS3XUvE9s1nnvMkSp/Y9Gri1Cg=
 
-artifak@^1.1.5:
-  version "1.1.5"
-  resolved "https://registry.yarnpkg.com/artifak/-/artifak-1.1.5.tgz#844d1d493a62b29f3c86b3596dfebbb7f60c69cc"
-  integrity sha512-TXAxGZ4z4Of4Z+mw1BoQSP1YXDQHZns0227GJQZ0kzgg1Wt7ilhvhhCJ0RHXvB4JLFpAfrBz7hSuf3jGyo97WQ==
+artifak@2.0.2:
+  version "2.0.2"
+  resolved "https://registry.yarnpkg.com/artifak/-/artifak-2.0.2.tgz#00b3aaad7a098a6c94a300ef63569f8c390c6211"
+  integrity sha512-vwF9HB9DqMy5Tn3XeMU3SfWBPWR6p7/2+PCn0h1DZ+04XIzrJMpxp+qyaC82uG1VrYWT1ZHoKB0T8fRGqpeexA==
   dependencies:
-    "@artifak/block" "^1.1.4"
-    "@artifak/component-generator" "^1.1.4"
-    "@artifak/flex" "^1.1.4"
-    "@artifak/grid" "^1.1.4"
-    "@artifak/imagery" "^1.0.6"
-    "@artifak/typography" "^1.1.5"
+    "@artifak/block" "^1.1.5"
+    "@artifak/component-generator" "^2.0.1"
+    "@artifak/flex" "^1.1.7"
+    "@artifak/fluidsizing" "^1.0.1"
+    "@artifak/grid" "^1.1.5"
+    "@artifak/imagery" "^1.0.7"
+    "@artifak/media" "^1.0.2"
+    "@artifak/typography" "^2.0.0"
+    "@artifak/usematchmedia" "^1.0.2"
+    "@artifak/usewindowsize" "^1.0.2"
 
 asn1.js@^5.2.0:
   version "5.4.1"
@@ -1225,15 +1263,10 @@ camelize@^1.0.0:
   resolved "https://registry.yarnpkg.com/camelize/-/camelize-1.0.0.tgz#164a5483e630fa4321e5af07020e531831b2609b"
   integrity sha1-FkpUg+Yw+kMh5a8HAg5TGDGyYJs=
 
-caniuse-lite@^1.0.30001093, caniuse-lite@^1.0.30001113:
-  version "1.0.30001146"
-  resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30001146.tgz#c61fcb1474520c1462913689201fb292ba6f447c"
-  integrity sha512-VAy5RHDfTJhpxnDdp2n40GPPLp3KqNrXz1QqFv4J64HvArKs8nuNMOWkB3ICOaBTU/Aj4rYAo/ytdQDDFF/Pug==
-
-caniuse-lite@^1.0.30001154:
-  version "1.0.30001165"
-  resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30001165.tgz#32955490d2f60290bb186bb754f2981917fa744f"
-  integrity sha512-8cEsSMwXfx7lWSUMA2s08z9dIgsnR5NAqjXP23stdsU3AUWkCr/rr4s4OFtHXn5XXr6+7kam3QFVoYyXNPdJPA==
+caniuse-lite@^1.0.30001093, caniuse-lite@^1.0.30001113, caniuse-lite@^1.0.30001154:
+  version "1.0.30001181"
+  resolved "https://registry.npmjs.org/caniuse-lite/-/caniuse-lite-1.0.30001181.tgz"
+  integrity sha512-m5ul/ARCX50JB8BSNM+oiPmQrR5UmngaQ3QThTTp5HcIIQGP/nPBs82BYLE+tigzm3VW+F4BJIhUyaVtEweelQ==
 
 chalk@2.4.2, chalk@^2.0.0, chalk@^2.4.2:
   version "2.4.2"
@@ -2522,21 +2555,21 @@ ini@~1.3.0:
   resolved "https://registry.yarnpkg.com/ini/-/ini-1.3.8.tgz#a29da425b48806f34767a4efce397269af28432c"
   integrity sha512-JV/yugV2uzW5iMRSiZAyDtQd+nxtUnjeLt0acNdw98kKLrvuRVyB80tsREOE7yvGVgalhZ6RNXCmEHkUKBKxew==
 
-intl-messageformat-parser@6.1.3:
-  version "6.1.3"
-  resolved "https://registry.yarnpkg.com/intl-messageformat-parser/-/intl-messageformat-parser-6.1.3.tgz#c333850f66d686eca5c9d87eff1ad46f8721b64d"
-  integrity sha512-rQTtrVTFy/Z6Lg0ieHkkhdFfi/47BKv1P9+wMWlKWaAxpdDP0FIsp2LRyLPpIVKTwUfL3xf26QT25d69cSkZgQ==
+intl-messageformat-parser@6.3.0:
+  version "6.3.0"
+  resolved "https://registry.yarnpkg.com/intl-messageformat-parser/-/intl-messageformat-parser-6.3.0.tgz#66082dbd78c2001e91febe7651d5354789a30a65"
+  integrity sha512-MsvPa0tOzeGxvB7g7w7mdl1aEEeiQyAt74iX/E36bgOICrXKHu7arAizAXPk/nUu/z/XwKhEpDgbA45ADSkvXg==
   dependencies:
     "@formatjs/ecma402-abstract" "1.5.1"
     tslib "^2.0.1"
 
-intl-messageformat@9.4.3:
-  version "9.4.3"
-  resolved "https://registry.yarnpkg.com/intl-messageformat/-/intl-messageformat-9.4.3.tgz#c769923deced44b4c13ad35f84333a20c4f2bf38"
-  integrity sha512-vTn8gCY5EvHYCYha22QcX4zMSYxkIT8r+3vXeUtvb2udicb7Z+0Ev9p/8hHzcvyrMJk0HPADnkNLVsx8EUfRkg==
+intl-messageformat@9.4.5:
+  version "9.4.5"
+  resolved "https://registry.yarnpkg.com/intl-messageformat/-/intl-messageformat-9.4.5.tgz#ae8135ad58c332e1aa975f9852a6e6bdac9ef158"
+  integrity sha512-jfNoWQ5dy9YVxdVoGBvT1TNVs8xbdJolgj9eiC9saGxV4xU88HFCIK2/i1BdIAJdzRPY10WJjAMuUh3F3LKuTA==
   dependencies:
     fast-memoize "^2.5.2"
-    intl-messageformat-parser "6.1.3"
+    intl-messageformat-parser "6.3.0"
     tslib "^2.0.1"
 
 is-accessor-descriptor@^0.1.6:
@@ -2851,6 +2884,11 @@ lodash.assign@^4.2.0:
   version "4.2.0"
   resolved "https://registry.yarnpkg.com/lodash.assign/-/lodash.assign-4.2.0.tgz#0d99f3ccd7a6d261d19bdaeb9245005d285808e7"
   integrity sha1-DZnzzNem0mHRm9rrkkUAXShYCOc=
+
+lodash.isempty@^4.4.0:
+  version "4.4.0"
+  resolved "https://registry.yarnpkg.com/lodash.isempty/-/lodash.isempty-4.4.0.tgz#6f86cbedd8be4ec987be9aaf33c9684db1b31e7e"
+  integrity sha1-b4bL7di+TsmHvpqvM8loTbGzHn4=
 
 lodash.isplainobject@^4.0.6:
   version "4.0.6"
@@ -3763,21 +3801,21 @@ react-dom@^17.0.1:
     object-assign "^4.1.1"
     scheduler "^0.20.1"
 
-react-intl@^5.10.16:
-  version "5.10.16"
-  resolved "https://registry.yarnpkg.com/react-intl/-/react-intl-5.10.16.tgz#2ccde74acd26cbe4f9e6e42765048a7f2f40e645"
-  integrity sha512-Cp0p9MGGWYNsl3hamJcrRqKid2HZun4MsdIlHV9fdmYVoLOII1+YynH6UBBwLuDlrLi8JrSniH1G1pqUlwQZMw==
+react-intl@^5.10.18:
+  version "5.10.18"
+  resolved "https://registry.yarnpkg.com/react-intl/-/react-intl-5.10.18.tgz#75b2e8e02d0226579224a54105c64cada508e590"
+  integrity sha512-vf4MbASGDGrZkC1fuvnY3BWTIsllT341Em3ggYiEdUvxUpJcvEcDsXxEpDphoj8PWab9bNQwx7YQs0hOfKUy1Q==
   dependencies:
     "@formatjs/ecma402-abstract" "1.5.1"
-    "@formatjs/intl" "1.6.1"
+    "@formatjs/intl" "1.6.3"
     "@formatjs/intl-displaynames" "4.0.4"
     "@formatjs/intl-listformat" "5.0.4"
     "@formatjs/intl-relativetimeformat" "8.0.3"
     "@types/hoist-non-react-statics" "^3.3.1"
     fast-memoize "^2.5.2"
     hoist-non-react-statics "^3.3.2"
-    intl-messageformat "9.4.3"
-    intl-messageformat-parser "6.1.3"
+    intl-messageformat "9.4.5"
+    intl-messageformat-parser "6.3.0"
     shallow-equal "^1.2.1"
     tslib "^2.0.1"
 

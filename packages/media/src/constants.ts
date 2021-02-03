@@ -2,6 +2,7 @@ import { mediaInputQueries } from './mediaInput';
 import { mediaTypeQueries } from './mediaTypes';
 import { mediaAccessibilityQueries } from './mediaAccessibilty';
 import { mediaDisplayQueries } from './mediaDisplay';
+import { MediaQueries } from './typings';
 
 export const {
   all,
@@ -29,7 +30,7 @@ export const {
   lightColorScheme,
   reducedMotion,
   reducedMotionAny
-} = {
+}: MediaQueries = {
   ...mediaInputQueries,
   ...mediaTypeQueries,
   ...mediaAccessibilityQueries,

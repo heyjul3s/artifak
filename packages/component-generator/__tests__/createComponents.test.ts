@@ -1,3 +1,4 @@
+import styled from 'styled-components';
 import { createComponents } from '../src';
 
 describe('createComponents - creates styled components based on provided config', () => {
@@ -7,7 +8,7 @@ describe('createComponents - creates styled components based on provided config'
     expect(SystemComponent).toEqual(expected);
   });
 
-  it('should create React components', () => {
+  it('should create React components when passed a configuration object as base', () => {
     const SystemComponent = createComponents(
       { element: 'div' },
       {
@@ -17,6 +18,24 @@ describe('createComponents - creates styled components based on provided config'
         }
       }
     );
+
+    expect(SystemComponent).toBeDefined();
+  });
+
+  it('should create React components when passed a Styled Component as base', () => {
+    const TestComponent = styled.div`
+      display: block;
+      width: 100%;
+      margin: auto;
+    `;
+
+    const SystemComponent = createComponents(TestComponent, {
+      Container: {
+        padding: ['0 15px'],
+        as: 'h1'
+      }
+    });
+
     expect(SystemComponent).toBeDefined();
   });
 });

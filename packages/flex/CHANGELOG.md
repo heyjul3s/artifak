@@ -1,5 +1,20 @@
 # @artifak/flex
 
+## 1.1.7
+
+### Patch Changes
+
+- Fix missing style for FlexCol
+
+## 1.1.6
+
+### Patch Changes
+
+- Fix flex basis for FlexCol
+- Force calculated width output to only 2 decimal places
+- Updated dependencies [undefined]
+  - @artifak/component-generator@2.0.1
+
 ## 1.1.5
 
 ### Patch Changes

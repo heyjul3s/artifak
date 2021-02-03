@@ -9,7 +9,7 @@ type Props = {
 export function SectionTitle({ title }: Props) {
   return (
     <StyledSectionTitle>
-      <SectionTitleH2 mb={0}>{title}</SectionTitleH2>
+      <SectionTitleH2>{title}</SectionTitleH2>
     </StyledSectionTitle>
   );
 }
@@ -37,8 +37,8 @@ const StyledSectionTitle = styled.div`
       margin-left: 1em;
     }
 
-    > ${H2} {
-      color: ${theme.colors.primary};
+    & > h2 {
+      margin: 0;
     }
   `}
 `;

@@ -1,5 +1,29 @@
 # artifak
 
+## 2.0.2
+
+### Patch Changes
+
+- Fix missing style for FlexCol
+- Updated dependencies [undefined]
+  - @artifak/flex@1.1.7
+
+## 2.0.1
+
+### Patch Changes
+
+- Fix flex basis for FlexCol
+- Correct width output for Flex
+- Fix Media regex to include px units
+- Add window check for useMatchMedia
+- Typings fix for Generator
+- Updated dependencies [undefined]
+  - @artifak/component-generator@2.0.1
+  - @artifak/flex@1.1.6
+  - @artifak/media@1.0.2
+  - @artifak/usematchmedia@1.0.2
+  - @artifak/usewindowsize@1.0.2
+
 ## 2.0.0
 
 ### Major Changes

@@ -2,8 +2,9 @@ import { useContext } from 'react';
 import { useRouter } from 'next/router';
 import { links } from '../../constants';
 import { MobileNavContext } from '../context';
-import * as Icons from '../icons';
+import * as Icons from '../../../../assets';
 import { NavMenuContainer, NavCategoryButton, NavCategory } from './styles';
+import { NavbarIconWrapper } from '../styles';
 
 export function Navbar() {
   const router = useRouter();
@@ -37,7 +38,11 @@ export function Navbar() {
               links[key].mobileNavIndex
             )}
           >
-            {!!Icon && <Icon />}
+            {!!Icon && (
+              <NavbarIconWrapper>
+                <Icon />
+              </NavbarIconWrapper>
+            )}
             <NavCategoryButton>{links[key].name}</NavCategoryButton>
           </NavCategory>
         );
