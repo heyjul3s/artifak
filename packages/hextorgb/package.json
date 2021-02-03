@@ -1,0 +1,33 @@
+{
+  "name": "@artifak/hextorgb",
+  "version": "1.0.0",
+  "description": "Utility function to convert style hex colour codes to RGB or RGBA strings.",
+  "keywords": [],
+  "author": "Julian Low",
+  "license": "MIT",
+  "sideEffects": false,
+  "main": "dist/hextorgb.cjs.js",
+  "module": "dist/hextorgb.esm.js",
+  "src": "src/index.ts",
+  "directories": {
+    "lib": "src",
+    "test": "__tests__"
+  },
+  "files": [
+    "dist"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/heyjul3s/artifak.git"
+  },
+  "scripts": {
+    "test": "echo \"Error: run tests from root\" && exit 1"
+  },
+  "bugs": {
+    "url": "https://github.com/heyjul3s/artifak/issues"
+  },
+  "homepage": "https://github.com/heyjul3s/artifak#readme"
+}
