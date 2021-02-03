@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import { AnchorLink } from '../../AnchorLink';
 
 export const HeaderContainer = styled.header`
-  padding: 2em 0 0;
+  padding: 2em 1em 0;
 
   ${({ theme }) => `
     @media(min-width: ${theme.breakpoints[0]}) {
