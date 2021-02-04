@@ -2,6 +2,7 @@ import {
   hexToRGBA,
   hexToRGB,
   splitHexToRGB,
+  formatHexValue,
   expandShorthandHex,
   isValidHex
 } from '../src/hextorgb';
@@ -52,6 +53,18 @@ describe('@artifak/hextorgb', () => {
 
     it('returns NULL when provided non-hexadecimal colour value string', () => {
       expect(splitHexToRGB('Lorem Ipsum Dolor Sit Amet')).toEqual(null);
+    });
+  });
+
+  describe('formatHexValue', () => {
+    it('returns UNDEFINED when provided non-hexadecimal colour value string', () => {
+      expect(formatHexValue('Lorem Ipsum Dolor Sit Amet')).toEqual(void 0);
+    });
+
+    it('returns an array of split hexadecimal color values when provided a hexadecimal colour value string', () => {
+      expect(formatHexValue('#DF3EA1')?.toString()).toEqual(
+        ['#DF3EA1', 'DF', '3E', 'A1'].toString()
+      );
     });
   });
 
