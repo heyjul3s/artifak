@@ -38,10 +38,7 @@ export function splitHexToRGB(hex: string): RegExpExecArray | null {
 
 export function expandShorthandHex(hex: string): string {
   const SHORTHAND_REGEX = /^#?([a-f\d])([a-f\d])([a-f\d])$/i;
-  return hex.replace(
-    SHORTHAND_REGEX,
-    (match, r, g, b) => r + r + g + g + b + b
-  );
+  return hex.replace(SHORTHAND_REGEX, (_, r, g, b) => r + r + g + g + b + b);
 }
 
 export function isValidHex(hex: string): boolean {
