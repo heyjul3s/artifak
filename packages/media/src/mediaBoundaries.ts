@@ -33,7 +33,7 @@ export function mediaBounds(
 ): string | string[] {
   if (!!query && Object.keys(query).length) {
     const [key, value] = Object.entries(query)[0];
-    return createBoundaryString(key, value);
+    return createBoundaryString(key, value as string);
   }
 
   return '';
@@ -63,6 +63,13 @@ const VALUE_REGEX = /((\d{1,}\/\d{1,})|(\d{1,}(rem|em|px|vh|vw)))+/g;
 export const extractValues = extractByRegex.bind(null, VALUE_REGEX);
 export const extractOperators = extractByRegex.bind(null, OPERATOR_REGEX);
 
-export function extractByRegex(REGEX: RegExp, value: string): string[] {
-  return isNonEmptyString(value) ? value.match(REGEX) : [];
+export function extractByRegex(
+  REGEX: RegExp,
+  value: string
+): RegExpMatchArray | string[] {
+  if (!isNonEmptyString(value)) {
+    return [];
+  }
+
+  return value.match(REGEX) || [];
 }
