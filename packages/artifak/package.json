@@ -21,7 +21,7 @@
   "src": "src/index.tsx",
   "types": "dist/index.d.ts",
   "directories": {
-    "lib": "lib",
+    "src": "src",
     "test": "__tests__"
   },
   "files": [

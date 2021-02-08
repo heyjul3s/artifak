@@ -24,6 +24,7 @@
     "url": "git+https://github.com/heyjul3s/artifak.git"
   },
   "scripts": {
+    "build": "rimraf dist && builder",
     "test": "echo \"Error: run tests from root\" && exit 1"
   },
   "bugs": {
