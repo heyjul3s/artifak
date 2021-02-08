@@ -1,17 +1,17 @@
 {
-  "name": "@artifak/hextorgb",
+  "name": "@artifak/pxtoem",
   "version": "1.0.0",
-  "description": "Utility function to convert style hex colour codes to RGB or RGBA strings.",
+  "description": "Now I’m the model of a modern major general / The venerated Virginian veteran whose men are all / Lining up, to put me up on a pedestal / Writin’ letters to relatives / Embellishin’ my elegance and eloquence / But the elephant is in the room / The truth is in ya face when ya hear the British cannons go / BOOM",
   "keywords": [],
-  "author": "Julian Low",
-  "license": "MIT",
+  "author": "heyjul3s <julian.cy.low@gmail.com>",
+  "license": "ISC",
   "sideEffects": false,
-  "main": "dist/hextorgb.cjs.js",
-  "module": "dist/hextorgb.esm.js",
+  "module": "dist/pxtoem.esm.js",
+  "main": "dist/pxtoem.cjs.js",
   "src": "src/index.ts",
   "types": "dist/src/index.d.ts",
   "directories": {
-    "lib": "src",
+    "src": "src",
     "test": "__tests__"
   },
   "files": [
