@@ -5,13 +5,17 @@
   "keywords": [],
   "author": "heyjul3s <julian.cy.low@gmail.com>",
   "license": "ISC",
-  "main": "lib/pxtoem.js",
+  "sideEffects": false,
+  "module": "dist/pxtoem.esm.js",
+  "main": "dist/pxtoem.cjs.js",
+  "src": "src/index.ts",
+  "types": "dist/src/index.d.ts",
   "directories": {
-    "lib": "lib",
+    "src": "src",
     "test": "__tests__"
   },
   "files": [
-    "lib"
+    "dist"
   ],
   "publishConfig": {
     "access": "public"

@@ -9,6 +9,7 @@
   "main": "dist/hextorgb.cjs.js",
   "module": "dist/hextorgb.esm.js",
   "src": "src/index.ts",
+  "types": "dist/src/index.d.ts",
   "directories": {
     "lib": "src",
     "test": "__tests__"
