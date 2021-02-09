@@ -1,1 +1,5 @@
-export { pxToEm } from '../src/pxtoem';
+export {
+  pxToEm,
+  getPxNumericValue,
+  extractPxNumericValue
+} from '../src/pxtoem';
