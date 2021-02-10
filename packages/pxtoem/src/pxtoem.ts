@@ -1,10 +1,12 @@
+import { isString } from '@annexe/isstring';
+
 export function pxToEm(size: number | string, baseSize = 16): string {
   const pxValue = getPxNumericValue(size);
   return `${pxValue / baseSize}em`;
 }
 
 export function getPxNumericValue(size: number | string): number {
-  if (Object.prototype.toString.call(size) === '[object String]') {
+  if (isString(size)) {
     return extractPxNumericValue(size as string);
   }
 

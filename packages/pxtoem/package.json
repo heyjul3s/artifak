@@ -34,5 +34,8 @@
   "homepage": "https://github.com/heyjul3s/artifak#readme",
   "devDependencies": {
     "@artifak/bundler": "^1.1.3"
+  },
+  "dependencies": {
+    "@annexe/isstring": "^0.1.0"
   }
 }

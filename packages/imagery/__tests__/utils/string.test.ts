@@ -1,20 +1,6 @@
 import * as utils from '../../src/utils/string';
 
 describe('string', () => {
-  describe('isString', () => {
-    it('should return FALSE when provided with a non-string type value', () => {
-      expect(utils.isString({} as any)).toBe(false);
-      expect(utils.isString(void 0 as any)).toBe(false);
-      expect(utils.isString(null as any)).toBe(false);
-      expect(utils.isString(false as any)).toBe(false);
-      expect(utils.isString(NaN as any)).toBe(false);
-    });
-
-    it('isString', () => {
-      expect(utils.isString('1')).toBe(true);
-    });
-  });
-
   describe('isNonEmptyString', () => {
     it('should return FALSE when provided with a non-string argument', () => {
       expect(utils.isNonEmptyString({} as any)).toBe(false);
