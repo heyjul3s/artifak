@@ -12,6 +12,10 @@ describe('@artifak/pxtoem', () => {
     expect(pxToEm(NaN as any)).toEqual('0em');
   });
 
+  it('returns a string of "0em" when provided with Infinity as value', () => {
+    expect(pxToEm(Infinity)).toEqual('0em');
+  });
+
   it('returns a string EM value of 3 when provided a numeric value of "48"', () => {
     expect(pxToEm(48)).toEqual('3em');
   });
