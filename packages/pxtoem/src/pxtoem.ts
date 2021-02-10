@@ -10,7 +10,7 @@ export function getPxNumericValue(size: number | string): number {
     return extractPxNumericValue(size as string);
   }
 
-  if (!!size) {
+  if (!!size && isFinite(size as number)) {
     return size as number;
   }
 
