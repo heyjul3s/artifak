@@ -66,7 +66,7 @@ export function setGutterWidth(
     : `${(gutterWidth as number) / 2}em`;
 }
 
-export function parseNumberToTwoDecimals(value: number) {
+export function parseNumberToTwoDecimals(value: number): string {
   return `${parseFloat(String(value)).toFixed(2)}`;
 }
 
