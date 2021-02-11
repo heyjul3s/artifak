@@ -70,7 +70,7 @@ export function generateComponent<
 >(
   base: BaseConfig<Props, AllHTMLAttributes<Element>, ThemeType>,
   setting: Settings<Element>
-) {
+): React.FC<Props> {
   return createStyledComponent<Props, ThemeType, AllHTMLAttributes<Element>>({
     ...base,
     styles: { ...base.styles, ...setting },

@@ -31,7 +31,7 @@ export function createStyledComponent<
 
 export function createStyled<Props = void, Theme = void, Attributes = void>(
   config: BaseConfig<Props, Attributes, Theme>
-) {
+): React.FC<Props> {
   return pipe(
     createStyledElement,
     createStyledAttributes,
