@@ -11,6 +11,10 @@ import { GettingStarted } from './GettingStarted/GettingStarted';
 import { UseMatchMedia } from './UseMatchMedia/UseMatchMedia';
 import { UseWindowSize } from './UseWindowSize/UseWindowSize';
 import { FluidSizing } from './FluidSizing/FluidSizing';
+import { HexToRGB } from './HexToRGB/HexToRGB';
+import { HexToRGBA } from './HexToRGBA/HexToRGBA';
+import { PxToEm } from './PxToEm/PxToEm';
+import { PxToRem } from './PxToRem/PxToRem';
 
 export const content = {
   block: Block,
@@ -25,5 +29,9 @@ export const content = {
   usematchmedia: UseMatchMedia,
   usewindowsize: UseWindowSize,
   fluidsizing: FluidSizing,
-  ['getting-started']: GettingStarted
+  ['getting-started']: GettingStarted,
+  hextorgb: HexToRGB,
+  hextorgba: HexToRGBA,
+  pxtoem: PxToEm,
+  pxtorem: PxToRem
 };
