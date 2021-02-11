@@ -1,6 +1,6 @@
 import {
-  hexToRGBA,
   hexToRGB,
+  getRGBvalues,
   splitHexToRGB,
   formatHexValue,
   expandShorthandHex,
@@ -68,9 +68,9 @@ describe('@artifak/hextorgb', () => {
     });
   });
 
-  describe('hexToRGB', () => {
+  describe('getRGBvalues', () => {
     it('returns an object with RGB values', () => {
-      expect(hexToRGB('#DF3EA1')).toMatchObject({
+      expect(getRGBvalues('#DF3EA1')).toMatchObject({
         r: 223,
         g: 62,
         b: 161
@@ -78,23 +78,23 @@ describe('@artifak/hextorgb', () => {
     });
 
     it('returns UNDEFINED with invalid hex string values', () => {
-      expect(hexToRGB('Hello World')).toEqual(void 0);
+      expect(getRGBvalues('Hello World')).toEqual(void 0);
     });
   });
 
-  describe('hexToRGBA', () => {
-    it('returns a string RGBA value with valid hex and alpha values', () => {
-      expect(hexToRGBA('#DF3EA1', 0.5)).toEqual('rgba(223, 62, 161, 0.5)');
-      expect(hexToRGBA('#df3ea1', 0.5)).toEqual('rgba(223, 62, 161, 0.5)');
+  describe('hexToRGB', () => {
+    it('returns a string RGB value with valid hex and alpha values', () => {
+      expect(hexToRGB('#DF3EA1')).toEqual('rgb(223, 62, 161)');
+      expect(hexToRGB('#df3ea1')).toEqual('rgb(223, 62, 161)');
     });
 
     it('returns a string RGBA value with valid hex and default alpha values', () => {
-      expect(hexToRGBA('#DF3EA1')).toEqual('rgba(223, 62, 161, 1)');
-      expect(hexToRGBA('#df3ea1')).toEqual('rgba(223, 62, 161, 1)');
+      expect(hexToRGB('#DF3EA1')).toEqual('rgb(223, 62, 161)');
+      expect(hexToRGB('#df3ea1')).toEqual('rgb(223, 62, 161)');
     });
 
     it('returns UNDEFINED with invalid non-hexadecimal color string value', () => {
-      expect(hexToRGBA('Lorem Ipsum Dolor Sit Amet', 0.5)).toEqual(void 0);
+      expect(hexToRGB('Lorem Ipsum Dolor Sit Amet')).toEqual(void 0);
     });
   });
 });
