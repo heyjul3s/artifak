@@ -1,14 +1,14 @@
 import { RGBColor } from './typings';
 
-export function hexToRGBA(hex: string, alpha = 1): string | void {
-  const color = hexToRGB(hex);
+export function hexToRGB(hex: string): string | void {
+  const color = getRGBvalues(hex);
 
   if (!!color) {
-    return `rgba(${color.r}, ${color.g}, ${color.b}, ${alpha})`;
+    return `rgb(${color.r}, ${color.g}, ${color.b})`;
   }
 }
 
-export function hexToRGB(hex: string): RGBColor | void {
+export function getRGBvalues(hex: string): RGBColor | void {
   const hexValue = formatHexValue(hex);
 
   if (!!hexValue) {

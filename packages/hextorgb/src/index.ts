@@ -1,2 +1,2 @@
-export { hexToRGB, hexToRGBA } from './hextorgb';
+export { hexToRGB, getRGBvalues } from './hextorgb';
 export { RGBColor } from './typings';
