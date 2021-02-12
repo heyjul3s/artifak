@@ -79,6 +79,26 @@ export const links: LinkItems = {
         route: '/docs?content=fluidsizing',
         component: 'FluidSizing',
         name: 'Fluid Sizing'
+      },
+      {
+        route: '/docs?content=hextorgb',
+        component: 'HexToRGB',
+        name: 'Hex To RGB'
+      },
+      {
+        route: '/docs?content=hextorgba',
+        component: 'HexToRGBA',
+        name: 'Hex To RGBA'
+      },
+      {
+        route: '/docs?content=pxtoem',
+        component: 'PxToEm',
+        name: 'Px To Em'
+      },
+      {
+        route: '/docs?content=pxtorem',
+        component: 'PxToRem',
+        name: 'Px To Rem'
       }
     ]
   },

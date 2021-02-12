@@ -1,8 +1,7 @@
 import React from 'react';
-import { FlexRow, FlexCol } from 'artifak';
-import { H4, Paragraph, SmallParagraph, SmallLead } from '../Typography';
+import { FlexRow, FlexCol, useMatchMedia } from 'artifak';
+import { Paragraph, SmallParagraph, SmallLead } from '../Typography';
 import { theme } from '../../theme';
-import { useMatchMedia } from '../../hooks';
 
 type Props = {
   APIname: string;

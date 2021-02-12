@@ -51,6 +51,7 @@ const headings = {
 const text = {
   base: {
     styles: {
+      marginTop: 0,
       lineHeight: 1.45
     }
   },
