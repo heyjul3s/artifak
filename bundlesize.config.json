@@ -28,6 +28,15 @@
       "path": "./packages/hextorgb/dist/*.js"
     },
     {
+      "path": "./packages/hextorgba/dist/*.js"
+    },
+    {
+      "path": "./packages/pxtoem/dist/*.js"
+    },
+    {
+      "path": "./packages/pxtorem/dist/*.js"
+    },
+    {
       "path": "./packages/usematchmedia/dist/*.js"
     },
     {
