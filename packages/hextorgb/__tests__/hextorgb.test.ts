@@ -1,6 +1,6 @@
 import {
   hexToRGB,
-  getRGBvalues,
+  getHexToRGBvalues,
   splitHexToRGB,
   formatHexValue,
   expandShorthandHex,
@@ -70,7 +70,7 @@ describe('@artifak/hextorgb', () => {
 
   describe('getRGBvalues', () => {
     it('returns an object with RGB values', () => {
-      expect(getRGBvalues('#DF3EA1')).toMatchObject({
+      expect(getHexToRGBvalues('#DF3EA1')).toMatchObject({
         r: 223,
         g: 62,
         b: 161
@@ -78,7 +78,7 @@ describe('@artifak/hextorgb', () => {
     });
 
     it('returns UNDEFINED with invalid hex string values', () => {
-      expect(getRGBvalues('Hello World')).toEqual(void 0);
+      expect(getHexToRGBvalues('Hello World')).toEqual(void 0);
     });
   });
 

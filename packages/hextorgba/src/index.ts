@@ -1,2 +1,2 @@
 export { hexToRGBA } from './hextorgba';
-export { getRGBvalues } from '@artifak/hextorgb';
+export { getHexColorRGBvalues } from '@artifak/hextorgb';

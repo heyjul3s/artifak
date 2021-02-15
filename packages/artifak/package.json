@@ -48,8 +48,12 @@
     "@artifak/flex": "^1.1.7",
     "@artifak/fluidsizing": "^1.0.1",
     "@artifak/grid": "^1.1.5",
+    "@artifak/hextorgb": "^1.0.0",
+    "@artifak/hextorgba": "^1.0.0",
     "@artifak/imagery": "^1.0.7",
     "@artifak/media": "^1.0.2",
+    "@artifak/pxtoem": "^1.0.0",
+    "@artifak/pxtorem": "^1.0.0",
     "@artifak/typography": "^2.0.0",
     "@artifak/usematchmedia": "^1.0.2",
     "@artifak/usewindowsize": "^1.0.2"
