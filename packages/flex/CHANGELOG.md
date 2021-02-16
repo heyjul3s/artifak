@@ -1,5 +1,13 @@
 # @artifak/flex
 
+## 1.1.8
+
+### Patch Changes
+
+- Added return type for parseNumberToTwoDecimals
+- Updated dependencies [undefined]
+  - @artifak/component-generator@2.0.2
+
 ## 1.1.7
 
 ### Patch Changes

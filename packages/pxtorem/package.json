@@ -1,0 +1,45 @@
+{
+  "name": "@artifak/pxtorem",
+  "version": "1.0.0",
+  "description": "A utility function to convert PX values to REM.",
+  "keywords": [
+    "px",
+    "rem",
+    "utilities"
+  ],
+  "author": "Julian Low",
+  "sideEffects": false,
+  "license": "MIT",
+  "module": "dist/pxtorem.esm.js",
+  "main": "dist/pxtorem.cjs.js",
+  "src": "src/index.ts",
+  "types": "dist/src/index.d.ts",
+  "directories": {
+    "src": "src",
+    "test": "__tests__"
+  },
+  "files": [
+    "dist"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/heyjul3s/artifak.git"
+  },
+  "scripts": {
+    "build": "rimraf dist && builder",
+    "test": "echo \"Error: run tests from root\" && exit 1"
+  },
+  "bugs": {
+    "url": "https://github.com/heyjul3s/artifak/issues"
+  },
+  "homepage": "https://github.com/heyjul3s/artifak#readme",
+  "dependencies": {
+    "@artifak/pxtoem": "^1.0.0"
+  },
+  "devDependencies": {
+    "@artifak/bundler": "^1.1.3"
+  }
+}

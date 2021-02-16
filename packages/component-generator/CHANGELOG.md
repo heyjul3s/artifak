@@ -1,5 +1,11 @@
 # @artifak/component-generator
 
+## 2.0.2
+
+### Patch Changes
+
+- Added return types for generateComponent and createStyled
+
 ## 2.0.1
 
 ### Patch Changes

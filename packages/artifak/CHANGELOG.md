@@ -1,5 +1,25 @@
 # artifak
 
+## 2.1.0
+
+### Minor Changes
+
+- Added new hexToRGB, hexToRGBA, pxToEm and pxToRem utilities
+
+### Patch Changes
+
+- update Media typings: extractByRegex to return RegExpMatchArray or string array
+- update typings for FlexCol
+- update typings for Generator
+- Updated dependencies [undefined]
+  - @artifak/component-generator@2.0.2
+  - @artifak/flex@1.1.8
+  - @artifak/hextorgb@1.0.0
+  - @artifak/hextorgba@1.0.0
+  - @artifak/media@1.0.3
+  - @artifak/pxtoem@1.0.0
+  - @artifak/pxtorem@1.0.0
+
 ## 2.0.2
 
 ### Patch Changes

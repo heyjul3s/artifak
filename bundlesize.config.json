@@ -4,9 +4,6 @@
       "path": "./packages/artifak/dist/*.js"
     },
     {
-      "path": "./packages/block/dist/*.js"
-    },
-    {
       "path": "./packages/component-generator/dist/*.js"
     },
     {
@@ -20,6 +17,30 @@
     },
     {
       "path": "./packages/typography/dist/*.js"
+    },
+    {
+      "path": "./packages/media/dist/*.js"
+    },
+    {
+      "path": "./packages/fluidsizing/dist/*.js"
+    },
+    {
+      "path": "./packages/hextorgb/dist/*.js"
+    },
+    {
+      "path": "./packages/hextorgba/dist/*.js"
+    },
+    {
+      "path": "./packages/pxtoem/dist/*.js"
+    },
+    {
+      "path": "./packages/pxtorem/dist/*.js"
+    },
+    {
+      "path": "./packages/usematchmedia/dist/*.js"
+    },
+    {
+      "path": "./packages/usewindowsize/dist/*.js"
     }
   ]
 }

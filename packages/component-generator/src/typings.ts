@@ -61,7 +61,7 @@ export type ComponentsRecord<Dict, Props, ThemeType> = {
 
 export type Settings<Element = HTMLDivElement> = {
   [key: string]: ScalableCSS & {
-    as?: string;
+    as?: keyof JSX.IntrinsicElements;
     attrs?: AllHTMLAttributes<Element>;
   };
 };
