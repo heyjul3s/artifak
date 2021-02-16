@@ -1,5 +1,12 @@
 # @artifak/media
 
+## 1.0.3
+
+### Patch Changes
+
+- Fix typings for extractByRegex
+- Replace isString check with @annexe/isstring
+
 ## 1.0.2
 
 ### Patch Changes
