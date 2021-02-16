@@ -57,6 +57,6 @@
     "styled-components": ">=5.2.1"
   },
   "dependencies": {
-    "@artifak/component-generator": "^2.0.1"
+    "@artifak/component-generator": "^2.0.2"
   }
 }

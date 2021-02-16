@@ -56,6 +56,6 @@
   },
   "dependencies": {
     "@annexe/isstring": "^0.1.0",
-    "@artifak/component-generator": "^2.0.1"
+    "@artifak/component-generator": "^2.0.2"
   }
 }

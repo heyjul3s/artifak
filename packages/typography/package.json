@@ -51,7 +51,7 @@
     "styled-system": "^5.1.5"
   },
   "dependencies": {
-    "@artifak/component-generator": "^2.0.1"
+    "@artifak/component-generator": "^2.0.2"
   },
   "peerDependencies": {
     "react": ">=17.0.1",
