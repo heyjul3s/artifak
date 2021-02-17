@@ -1,5 +1,18 @@
 # @artifak/component-generator
 
+## 2.0.3
+
+### Patch Changes
+
+- Minor package typings update
+- 6f08e4c: New hexToRGB, hexToRGBA, pxToEm and pxToRem utilities
+
+## 2.0.2
+
+### Patch Changes
+
+- Added return types for generateComponent and createStyled
+
 ## 2.0.1
 
 ### Patch Changes
