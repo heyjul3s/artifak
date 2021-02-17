@@ -1,5 +1,12 @@
 # @artifak/typography
 
+## 2.0.1
+
+### Patch Changes
+
+- Updated dependencies [6f08e4c]
+  - @artifak/component-generator@2.0.3
+
 ## 2.0.0
 
 ### Major Changes

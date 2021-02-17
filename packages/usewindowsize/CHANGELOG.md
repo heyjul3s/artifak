@@ -1,5 +1,11 @@
 # @artifak/usewindowsize
 
+## 1.0.3
+
+### Patch Changes
+
+- Version bump to fix deployment
+
 ## 1.0.2
 
 ### Patch Changes
