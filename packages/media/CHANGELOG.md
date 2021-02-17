@@ -1,5 +1,11 @@
 # @artifak/media
 
+## 1.0.4
+
+### Patch Changes
+
+- Minor typings update
+
 ## 1.0.3
 
 ### Patch Changes

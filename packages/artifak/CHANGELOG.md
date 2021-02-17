@@ -1,5 +1,25 @@
 # artifak
 
+## 2.1.1
+
+### Patch Changes
+
+- 6f08e4c: New hexToRGB, hexToRGBA, pxToEm and pxToRem utilities
+- Updated dependencies [6f08e4c]
+  - @artifak/block@1.1.6
+  - @artifak/component-generator@2.0.3
+  - @artifak/flex@1.1.9
+  - @artifak/grid@1.1.6
+  - @artifak/hextorgb@1.0.1
+  - @artifak/hextorgba@1.0.1
+  - @artifak/imagery@1.0.8
+  - @artifak/media@1.0.4
+  - @artifak/pxtoem@1.0.1
+  - @artifak/pxtorem@1.0.1
+  - @artifak/typography@2.0.1
+  - @artifak/usematchmedia@1.0.3
+  - @artifak/usewindowsize@1.0.3
+
 ## 2.1.0
 
 ### Minor Changes

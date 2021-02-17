@@ -1,6 +1,6 @@
 {
   "name": "@artifak/hextorgba",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Utility function to convert style hex colour codes to RGBA string.",
   "keywords": [
     "color",
@@ -41,6 +41,6 @@
     "@artifak/bundler": "^1.1.3"
   },
   "dependencies": {
-    "@artifak/hextorgb": "^1.0.0"
+    "@artifak/hextorgb": "^1.0.1"
   }
 }

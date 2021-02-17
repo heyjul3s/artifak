@@ -1,5 +1,14 @@
 # @artifak/flex
 
+## 1.1.9
+
+### Patch Changes
+
+- Minor typings update
+- 6f08e4c: New hexToRGB, hexToRGBA, pxToEm and pxToRem utilities
+- Updated dependencies [6f08e4c]
+  - @artifak/component-generator@2.0.3
+
 ## 1.1.8
 
 ### Patch Changes
