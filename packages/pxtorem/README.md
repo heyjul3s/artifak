@@ -1,11 +1,31 @@
 # `@artifak/pxtorem`
 
-> TODO: description
+A utility function to convert px values to rem.
+
+## Installation
+
+### Yarn
+
+```sh
+yarn add @artifak/pxtorem
+```
+
+### NPM
+
+```sh
+npm install @artifak/pxtorem
+```
 
 ## Usage
 
-```
-const pxtorem = require('@artifak/pxtorem');
+```ts
+import { pxToRem } from 'artifak';
+import styled from 'styled-components';
 
-// TODO: DEMONSTRATE API
+export const Container = styled.div`
+  margin: 0 auto;
+  width: 100%;
+  background: #000;
+  font-size: ${pxToRem('48px')};
+`;
 ```
