@@ -1,6 +1,6 @@
 {
   "name": "@artifak/hextorgb",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Utility function to convert style hex colour codes to RGB string.",
   "keywords": [
     "color",
@@ -38,6 +38,6 @@
   },
   "homepage": "https://github.com/heyjul3s/artifak#readme",
   "devDependencies": {
-    "@artifak/bundler": "^1.1.3"
+    "@artifak/bundler": "^1.1.4"
   }
 }
