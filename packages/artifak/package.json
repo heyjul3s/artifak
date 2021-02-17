@@ -43,20 +43,20 @@
     "url": "https://github.com/heyjul3s/artifak/issues"
   },
   "dependencies": {
-    "@artifak/block": "^1.1.6",
+    "@artifak/block": "^1.1.5",
     "@artifak/component-generator": "^2.0.3",
-    "@artifak/flex": "^1.1.9",
-    "@artifak/fluidsizing": "^1.0.0",
-    "@artifak/grid": "^1.1.6",
+    "@artifak/flex": "^1.1.7",
+    "@artifak/fluidsizing": "^1.0.1",
+    "@artifak/grid": "^1.1.5",
     "@artifak/hextorgb": "^1.0.1",
     "@artifak/hextorgba": "^1.0.1",
-    "@artifak/imagery": "^1.0.8",
-    "@artifak/media": "^1.0.4",
+    "@artifak/imagery": "^1.0.7",
+    "@artifak/media": "^1.0.2",
     "@artifak/pxtoem": "^1.0.1",
     "@artifak/pxtorem": "^1.0.1",
-    "@artifak/typography": "^2.0.1",
-    "@artifak/usematchmedia": "^1.0.3",
-    "@artifak/usewindowsize": "^1.0.3"
+    "@artifak/typography": "^2.0.0",
+    "@artifak/usematchmedia": "^1.0.2",
+    "@artifak/usewindowsize": "^1.0.2"
   },
   "devDependencies": {
     "@artifak/bundler": "^1.1.3"
