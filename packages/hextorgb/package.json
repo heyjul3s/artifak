@@ -38,6 +38,6 @@
   },
   "homepage": "https://github.com/heyjul3s/artifak#readme",
   "devDependencies": {
-    "@artifak/bundler": "^1.1.3"
+    "@artifak/bundler": "^1.1.4"
   }
 }

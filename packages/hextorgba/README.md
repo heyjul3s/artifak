@@ -7,13 +7,13 @@ A utility function to convert hexadecimal colour values to RGBA string.
 ### Yarn
 
 ```sh
-yarn add @artifak/hextorgb
+yarn add @artifak/hextorgba
 ```
 
 ### NPM
 
 ```sh
-npm install @artifak/hextorgb
+npm install @artifak/hextorgba
 ```
 
 ## Usage

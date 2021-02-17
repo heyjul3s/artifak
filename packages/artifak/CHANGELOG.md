@@ -1,44 +1,11 @@
 # artifak
 
-## 2.1.1
-
-### Patch Changes
-
-- 6f08e4c: New hexToRGB, hexToRGBA, pxToEm and pxToRem utilities
-- Updated dependencies [6f08e4c]
-  - @artifak/block@1.1.6
-  - @artifak/component-generator@2.0.3
-  - @artifak/flex@1.1.9
-  - @artifak/grid@1.1.6
-  - @artifak/hextorgb@1.0.1
-  - @artifak/hextorgba@1.0.1
-  - @artifak/imagery@1.0.8
-  - @artifak/media@1.0.4
-  - @artifak/pxtoem@1.0.1
-  - @artifak/pxtorem@1.0.1
-  - @artifak/typography@2.0.1
-  - @artifak/usematchmedia@1.0.3
-  - @artifak/usewindowsize@1.0.3
-
 ## 2.1.0
 
 ### Minor Changes
 
-- Added new hexToRGB, hexToRGBA, pxToEm and pxToRem utilities
-
-### Patch Changes
-
-- update Media typings: extractByRegex to return RegExpMatchArray or string array
-- update typings for FlexCol
-- update typings for Generator
-- Updated dependencies [undefined]
-  - @artifak/component-generator@2.0.2
-  - @artifak/flex@1.1.8
-  - @artifak/hextorgb@1.0.0
-  - @artifak/hextorgba@1.0.0
-  - @artifak/media@1.0.3
-  - @artifak/pxtoem@1.0.0
-  - @artifak/pxtorem@1.0.0
+- New hexToRGB, hexToRGBA, pxToEm and pxToRem utilities
+- Typings update for Media, Flex and Generator
 
 ## 2.0.2
 

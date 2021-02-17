@@ -1,5 +1,11 @@
 # @artifak/bundler
 
+## 1.1.4
+
+### Patch Changes
+
+- Dependency updates
+
 ## 1.1.3
 
 ### Patch Changes

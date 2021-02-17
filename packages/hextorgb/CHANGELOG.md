@@ -4,8 +4,4 @@
 
 ### Patch Changes
 
-- 6f08e4c: New hexToRGB utilities
-
-## 1.0.0
-
-- Added new hexToRGB utility function.
+- New hexToRGB utilities
