@@ -44,7 +44,7 @@
   },
   "dependencies": {
     "@artifak/block": "^1.1.5",
-    "@artifak/component-generator": "^2.0.3",
+    "@artifak/component-generator": "^2.0.1",
     "@artifak/flex": "^1.1.7",
     "@artifak/fluidsizing": "^1.0.1",
     "@artifak/grid": "^1.1.5",
