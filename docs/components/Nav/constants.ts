@@ -79,7 +79,7 @@ export const links: LinkItems = {
         route: '/docs?content=fluidsizing',
         component: 'FluidSizing',
         name: 'Fluid Sizing'
-      }
+      },
       {
         route: '/docs?content=hextorgb',
         component: 'HexToRGB',
