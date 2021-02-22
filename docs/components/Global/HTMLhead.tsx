@@ -73,6 +73,10 @@ export const HTMLhead: React.FC<HTMLheadProps> = ({
         href="/favicon-16x16.png"
       />
       <link rel="manifest" href="/manifest.json" />
+      <meta
+        name="google-site-verification"
+        content="6szmnbKJy65DIAoCqpbWi3hXnLgTkppfsPx0ISMMM04"
+      ></meta>
     </Head>
 
     <DefaultSeo
