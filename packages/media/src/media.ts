@@ -36,7 +36,7 @@ export function createQueryArray(queries: Partial<Media> = {}): string {
         boundaryTypes.hasOwnProperty(key)
           ? acc.concat(mediaBounds({ [key]: queries[key] }))
           : acc.concat(formatQueryValue(queries[key])),
-      []
+      [] as string[]
     )
     .join(' and ');
 }

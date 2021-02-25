@@ -9,16 +9,16 @@
     "deploy": "yarn build && yarn export"
   },
   "dependencies": {
-    "artifak": "2.0.2",
+    "artifak": "2.1.0",
     "csstype": "^3.0.6",
-    "framer-motion": "^3.2.1",
+    "framer-motion": "^3.3.0",
     "lodash.isplainobject": "^4.0.6",
-    "next": "10.0.5",
-    "next-seo": "^4.17.0",
+    "next": "10.0.7",
+    "next-seo": "^4.19.0",
     "react": "^17.0.1",
     "react-custom-scrollbars": "^4.2.1",
     "react-dom": "^17.0.1",
-    "react-intl": "^5.10.18",
+    "react-intl": "^5.12.3",
     "react-markings": "^1.3.0",
     "react-spring": "^8.0.27",
     "react-syntax-highlighter": "^15.4.3",
@@ -27,12 +27,12 @@
     "styled-system": "^5.1.5"
   },
   "devDependencies": {
-    "@types/node": "^14.14.22",
-    "@types/react": "^17.0.0",
+    "@types/node": "^14.14.28",
+    "@types/react": "^17.0.2",
     "@types/styled-components": "^5.1.7",
     "@types/styled-system": "^5.1.10",
     "babel-plugin-styled-components": "^1.12.0",
-    "typescript": "^4.1.3"
+    "typescript": "^4.1.5"
   },
   "license": "ISC"
 }

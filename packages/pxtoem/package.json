@@ -1,0 +1,45 @@
+{
+  "name": "@artifak/pxtoem",
+  "version": "1.0.1",
+  "description": "A utility function to convert PX values to EM.",
+  "keywords": [
+    "px",
+    "em",
+    "utilities"
+  ],
+  "author": "Julian Low",
+  "license": "MIT",
+  "sideEffects": false,
+  "module": "dist/pxtoem.esm.js",
+  "main": "dist/pxtoem.cjs.js",
+  "src": "src/index.ts",
+  "types": "dist/src/index.d.ts",
+  "directories": {
+    "src": "src",
+    "test": "__tests__"
+  },
+  "files": [
+    "dist"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/heyjul3s/artifak.git"
+  },
+  "scripts": {
+    "build": "rimraf dist && builder",
+    "test": "echo \"Error: run tests from root\" && exit 1"
+  },
+  "bugs": {
+    "url": "https://github.com/heyjul3s/artifak/issues"
+  },
+  "homepage": "https://github.com/heyjul3s/artifak#readme",
+  "devDependencies": {
+    "@artifak/bundler": "^1.1.4"
+  },
+  "dependencies": {
+    "@annexe/isstring": "^0.1.0"
+  }
+}

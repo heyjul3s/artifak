@@ -1,5 +1,12 @@
 # artifak
 
+## 2.1.0
+
+### Minor Changes
+
+- New hexToRGB, hexToRGBA, pxToEm and pxToRem utilities
+- Typings update for Media, Flex and Generator
+
 ## 2.0.2
 
 ### Patch Changes

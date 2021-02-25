@@ -1,6 +1,6 @@
 {
   "name": "@artifak/block",
-  "version": "1.1.5",
+  "version": "1.1.6",
   "description": "Basic React component primitive for handling spacing",
   "author": "Julian Low",
   "homepage": "https://github.com/heyjul3s/artifak#readme",
@@ -43,7 +43,7 @@
   },
   "devDependencies": {
     "@artifak/bundler": "^1.1.3",
-    "@types/react": "^17.0.0",
+    "@types/react": "^17.0.1",
     "@types/react-dom": "^17.0.0",
     "@types/styled-components": "^5.1.7",
     "@types/styled-system": "^5.1.10",
@@ -58,6 +58,6 @@
     "styled-components": ">=5.2.1"
   },
   "dependencies": {
-    "@artifak/component-generator": "^2.0.0"
+    "@artifak/component-generator": "^2.0.3"
   }
 }

@@ -59,3 +59,7 @@ export {
 export { fluidSizing } from '@artifak/fluidsizing';
 export { useMatchMedia } from '@artifak/usematchmedia';
 export { useWindowSize } from '@artifak/usewindowsize';
+export { hexToRGB, getHexColorRGBvalues } from '@artifak/hextorgb';
+export { hexToRGBA } from '@artifak/hextorgba';
+export { pxToEm } from '@artifak/pxtoem';
+export { pxToRem } from '@artifak/pxtorem';
