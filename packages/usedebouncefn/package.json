@@ -1,0 +1,44 @@
+{
+  "name": "@artifak/usedebouncefn",
+  "version": "1.0.0",
+  "description": "Now I’m the model of a modern major general / The venerated Virginian veteran whose men are all / Lining up, to put me up on a pedestal / Writin’ letters to relatives / Embellishin’ my elegance and eloquence / But the elephant is in the room / The truth is in ya face when ya hear the British cannons go / BOOM",
+  "keywords": [],
+  "author": "Julian Low",
+  "license": "MIT",
+  "sideEffects": false,
+  "main": "dist/usedebouncefn.cjs.js",
+  "module": "dist/usedebouncefn.esm.js",
+  "src": "src/index.ts",
+  "types": "dist/src/index.d.ts",
+  "directories": {
+    "src": "src",
+    "test": "__tests__"
+  },
+  "files": [
+    "dist"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/heyjul3s/artifak.git"
+  },
+  "scripts": {
+    "build": "rimraf dist && builder",
+    "test": "echo \"Error: run tests from root\" && exit 1"
+  },
+  "bugs": {
+    "url": "https://github.com/heyjul3s/artifak/issues"
+  },
+  "homepage": "https://github.com/heyjul3s/artifak#readme",
+  "devDependencies": {
+    "@artifak/bundler": "^1.1.4",
+    "@types/lodash.debounce": "^4.0.6"
+  },
+  "dependencies": {
+    "lodash.debounce": "^4.0.8",
+    "react-async-hook": "^3.6.2",
+    "use-constant": "^1.1.0"
+  }
+}
