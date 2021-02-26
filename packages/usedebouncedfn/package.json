@@ -1,13 +1,13 @@
 {
-  "name": "@artifak/usedebouncefn",
+  "name": "@artifak/usedebouncedfn",
   "version": "1.0.0",
-  "description": "Now I’m the model of a modern major general / The venerated Virginian veteran whose men are all / Lining up, to put me up on a pedestal / Writin’ letters to relatives / Embellishin’ my elegance and eloquence / But the elephant is in the room / The truth is in ya face when ya hear the British cannons go / BOOM",
+  "description": "A React hook to debounce functions or callbacks.",
   "keywords": [],
   "author": "Julian Low",
   "license": "MIT",
   "sideEffects": false,
-  "main": "dist/usedebouncefn.cjs.js",
-  "module": "dist/usedebouncefn.esm.js",
+  "main": "dist/usedebouncedfn.cjs.js",
+  "module": "dist/usedebouncedfn.esm.js",
   "src": "src/index.ts",
   "types": "dist/src/index.d.ts",
   "directories": {
