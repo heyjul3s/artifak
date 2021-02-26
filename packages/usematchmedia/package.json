@@ -4,7 +4,7 @@
   "description": "A React hook for matching media queries.",
   "keywords": [],
   "author": "Julian Low",
-  "license": "ISC",
+  "license": "MIT",
   "sideEffects": false,
   "main": "dist/usematchmedia.cjs.js",
   "module": "dist/usematchmedia.esm.js",
