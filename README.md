@@ -32,3 +32,7 @@ Packages can also be installed independently. Simply do `yarn add <package name>
 - @artifak/**fluidsizing**
 - @artifak/**usematchmedia**
 - @artifak/**usewindowsize**
+- @artifak/**hextorgb**
+- @artifak/**hextorgba**
+- @artifak/**pxtoem**
+- @artifak/**pxtorem**
