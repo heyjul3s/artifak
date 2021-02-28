@@ -1,5 +1,5 @@
 {
-  "name": "@artifak/usepreviousvalue",
+  "name": "@artifak/useprevious",
   "version": "1.0.0",
   "description": "A React hook to get previous value.",
   "keywords": [
@@ -12,8 +12,8 @@
   "author": "Julian Low",
   "license": "MIT",
   "sideEffects": false,
-  "main": "dist/usepreviousvalue.cjs.js",
-  "module": "dist/usepreviousvalue.esm.js",
+  "main": "dist/useprevious.cjs.js",
+  "module": "dist/useprevious.esm.js",
   "src": "src/index.ts",
   "types": "dist/src/index.d.ts",
   "directories": {
