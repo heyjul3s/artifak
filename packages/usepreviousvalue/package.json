@@ -2,7 +2,13 @@
   "name": "@artifak/usepreviousvalue",
   "version": "1.0.0",
   "description": "A React hook to get previous value.",
-  "keywords": [],
+  "keywords": [
+    "usePreviousValue",
+    "usePrevious",
+    "state",
+    "hooks",
+    "react"
+  ],
   "author": "Julian Low",
   "license": "MIT",
   "sideEffects": false,
