@@ -1,0 +1,48 @@
+{
+  "name": "@artifak/usedebouncedfn",
+  "version": "1.0.0",
+  "description": "A React hook to debounce functions or callbacks.",
+  "keywords": [
+    "react",
+    "debounce",
+    "hooks"
+  ],
+  "author": "Julian Low",
+  "license": "MIT",
+  "sideEffects": false,
+  "main": "dist/usedebouncedfn.cjs.js",
+  "module": "dist/usedebouncedfn.esm.js",
+  "src": "src/index.ts",
+  "types": "dist/src/index.d.ts",
+  "directories": {
+    "src": "src",
+    "test": "__tests__"
+  },
+  "files": [
+    "dist"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/heyjul3s/artifak.git"
+  },
+  "scripts": {
+    "build": "rimraf dist && builder",
+    "test": "echo \"Error: run tests from root\" && exit 1"
+  },
+  "bugs": {
+    "url": "https://github.com/heyjul3s/artifak/issues"
+  },
+  "homepage": "https://github.com/heyjul3s/artifak#readme",
+  "devDependencies": {
+    "@artifak/bundler": "^1.1.4",
+    "@types/lodash.debounce": "^4.0.6"
+  },
+  "dependencies": {
+    "lodash.debounce": "^4.0.8",
+    "react-async-hook": "^3.6.2",
+    "use-constant": "^1.1.0"
+  }
+}
