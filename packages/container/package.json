@@ -1,0 +1,52 @@
+{
+  "name": "@artifak/container",
+  "version": "1.0.0",
+  "description": "A basic React container component",
+  "keywords": [
+    "react",
+    "react-component",
+    "component",
+    "ui",
+    "container",
+    "grid",
+    "block",
+    "layout"
+  ],
+  "author": "Julian Low",
+  "license": "MIT",
+  "sideEffects": false,
+  "main": "dist/container.cjs.js",
+  "module": "dist/container.esm.js",
+  "src": "src/index.tsx",
+  "types": "dist/src/index.d.ts",
+  "directories": {
+    "test": "__tests__",
+    "src": "src"
+  },
+  "files": [
+    "dist"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/heyjul3s/artifak.git"
+  },
+  "scripts": {
+    "build": "rimraf dist && builder",
+    "test": "echo \"Error: run tests from root\" && exit 1"
+  },
+  "bugs": {
+    "url": "https://github.com/heyjul3s/artifak/issues"
+  },
+  "homepage": "https://github.com/heyjul3s/artifak#readme",
+  "devDependencies": {
+    "@artifak/bundler": "^1.1.4"
+  },
+  "peerDependencies": {
+    "react": ">=17.0.1",
+    "react-dom": ">=17.0.1",
+    "styled-components": ">=5.2.1"
+  }
+}
