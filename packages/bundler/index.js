@@ -65,6 +65,11 @@ const formatOptions = [
     esModule: true
   },
   {
+    file: `dist/${fileName}.esm.min.js`,
+    format: 'esm',
+    esModule: true
+  },
+  {
     file: `dist/${fileName}.umd.js`,
     format: 'umd',
     esModule: false
