@@ -1,0 +1,27 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`@artifak/container renders 1`] = `
+<DocumentFragment>
+  <div
+    class="sc-bdfBwQ eaQfTv"
+    width="100%"
+  >
+    <p>
+      Hello World
+    </p>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`@artifak/container renders 2`] = `
+<DocumentFragment>
+  <div
+    class="sc-bdfBwQ lmFeAU"
+    width="100%"
+  >
+    <p>
+      Hello World
+    </p>
+  </div>
+</DocumentFragment>
+`;
