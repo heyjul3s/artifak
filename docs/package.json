@@ -11,7 +11,7 @@
   "dependencies": {
     "artifak": "2.1.0",
     "csstype": "^3.0.6",
-    "framer-motion": "^3.3.0",
+    "framer-motion": "^3.5.2",
     "lodash.isplainobject": "^4.0.6",
     "next": "10.0.7",
     "next-seo": "^4.19.0",
