@@ -10,7 +10,7 @@
   },
   "dependencies": {
     "artifak": "2.1.0",
-    "csstype": "^3.0.6",
+    "csstype": "^3.0.7",
     "framer-motion": "^3.3.0",
     "lodash.isplainobject": "^4.0.6",
     "next": "10.0.7",
