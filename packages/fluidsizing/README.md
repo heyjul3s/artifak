@@ -1,6 +1,6 @@
 # `@artifak/fluidsizing`
 
-A utility function that computes a fluid sizing value based on the min and max values provided.
+A utility function that computes a fluid sizing value based on the min and max values provided, eliminating the need for specifying width based media queries. Alternatively, docs can be found at [Artifak Fluid Sizing](https://www.artifak.dev/?content=Typography).
 
 ## Installation
 

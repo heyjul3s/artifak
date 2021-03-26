@@ -1,7 +1,7 @@
 # `@artifak/component-generator`
 
 Component Generator library to generate similar components based off of styles and or attributes you provide. You can also view the docs
-at [Artifak Typography](https://www.artifak.dev/?content=Generator).
+at [Artifak Generator](https://www.artifak.dev/?content=Generator).
 
 ## Installation
 
@@ -19,82 +19,122 @@ npm install @artifak/component-generator
 
 ## Usage
 
-### createStyledComponent
+### createComponents
 
-To generate your components, simply define a config object consisting of styles/attributes with the key as your component name. Note that you **must** define the `as` property in order to have it render as the HTML tag that you desire. In the example below, we've defined a component called `H1` to render as an `h1` HTML tag. We've also defined the fontSize in an array that matches the media query widths.
-
-| Arguments | Type   |
-| --------- | ------ |
-| config    | object |
+This generates components based on the config provided. Below a usage example with full configuration applied.
 
 ```ts
-import { createStyledComponent } from '@artifak/component-generator';
-import { system } from 'styled-system';
+import { position, PositionProps } from 'styled-system';
+  import { createComponents } from 'artifak';
+  import { theme } from './theme';
 
-const styles = {
-  fontSize: [16, 36, 96],
-  margin: 0,
-  as: 'h1'
-};
+  // # EXAMPLE 1 - USING A CONFIGURATION OBJECT AS BASE
+  // Note that this is just an example, please use the
+  // "button" HTML element whenever possible. In the
+  // examples, we will see full usage of the
+  // createComponents function.
 
-const variants = {
-  primary: {
-    color: 'red'
-  },
-  secondary: {
-    color: 'blue'
-  }
-};
+  const base = {
+    styles: {
+      display: 'block',
+      padding: ['1em', '1.5em 1em'],
+      width: '100%',
+      fontSize: ['1rem', '1.2rem']
+    },
+    styleProps: [position],
+    attrs: { role: 'button' },
+    element: 'div'
+  };
 
-const styleProps = [
-  system({
-    textTransform: true
-  })
-];
+  // Define your component styles
+  const config = {
+    TextButton: {
+      background: transparent,
+      border: 'none',
+      '&:hover': {
+        color: theme.colors.primary
+      },
+      attrs: { name: 'text-button' },
+      as: 'span'
+    },
 
-const element = 'h1';
+    FilledButton: {
+      margin: '0 auto',
+      padding: ['1.2em 1em', '1.5em 1.2em'],
+      background: theme.colors.primary
+      '&:hover': {
+        background: theme.colors.secondary
+      },
+      attrs: { name: 'filled-button' }
+    },
 
-const H1 = createStyledComponent<typeof config>({
-  styles,
-  variants,
-  styleProps,
-  element
-});
+    OutlinedButton: {
+      background: transparent,
+      border: 1px solid black,
+      padding: 0,
+      '&:hover': {
+        borderColor: theme.colors.primary
+      },
+      attrs: { name: 'outlined-button' }
+    }
+  };
+
+  // Invoke and destructure for usage. Since a configuration object
+  // is provided, you will also get the base as a component.
+  // You can rename it as use as a base for something else if desired.
+  export const {
+    Base: ButtonBase,
+    FilledButton,
+    OutlinedButton,
+    TextButton
+  } = createComponents<typeof config, typeof theme>(BaseComponent, config);
+
+
+  // # EXAMPLE 2 - USING A COMPONENT AS BASE
+  // You can also pass in a component to use as base.
+  // For example, let us create a BasicButton component.
+
+  const BasicButton = styled('div')(
+    {
+      display: 'block',
+      padding: ['1em', '1.5em 1em'],
+      width: '100%',
+      fontSize: ['1rem', '1.2rem']
+    }
+  );
+
+  // Invoke and call like Example 1. Here we will reuse the
+  // config constant we previously defined in Example 1.
+  // Note that passing a component as base will not yield
+  // a Base component in the results.
+  export const {
+    FilledButton,
+    OutlinedButton,
+    TextButton
+  } = createComponents<typeof config, typeof theme>(BasicButton, config);
 ```
 
-### createBaseComponents
+### createStyledComponent
 
-createBaseComponents will require a base Styled Component to generate your desired components. This is used to conveniently generate similar components. For creating the base component, you can use createStyledComponent.
-
-| Arguments | Type   |
-| --------- | ------ |
-| styles    | object |
+Creates a single styled component based on the configuration that you provide.
 
 ```ts
-import {
-  createStyledComponent,
-  createBaseComponents
-} from '@artifak/component-generator';
+import { HTMLAttributes } from 'react';
+import { position, PositionProps } from 'styled-system';
+import { theme } from './theme';
 
-const baseComponentConfig = {
-  styles: {
-    display: 'block',
-    margin: '0 auto'
-  }
-};
+type CardProps = {
+  isHidden: boolean;
+} & PositionProps;
 
-const BaseComponent = createStyledComponent<typeof baseComponentConfig>();
-
-const typeSettings = {
-  H1: {
-    styles: {
-      fontSize: [16, 17, 19, 21],
-      lineHeight: 1.5,
-      marginTop: 0,
-      as: 'h1'
-    }
-  }
-};
-
-const { H1 } = createBaseComponents<typeof typeSettings>(typeSettings);
+const StyledArticle = createStyledComponent<
+  CardProps,
+  typeof theme,
+  HTMLAttributes<HTMLDivElement>
+>({
+  styles: { position: 'relative' },
+  attrs: { title: 'Hello World' },
+  styledProps: [position],
+  element: 'article'
+});
 ```
