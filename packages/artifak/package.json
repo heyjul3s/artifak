@@ -56,6 +56,7 @@
     "@artifak/pxtorem": "^1.0.1",
     "@artifak/text-input": "^1.0.2",
     "@artifak/typography": "^2.0.0",
+    "@artifak/useclickaway": "^1.0.0",
     "@artifak/usedebouncedfn": "^1.0.0",
     "@artifak/usematchmedia": "^1.0.2",
     "@artifak/usewindowsize": "^1.0.2"
