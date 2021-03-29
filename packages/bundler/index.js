@@ -46,7 +46,6 @@ const baseOutputOptions = {
     'styled-components': 'StyledComponents',
     'styled-system': 'StyledSystem'
   },
-  sourcemap: true,
   exports: 'named'
 };
 
