@@ -1,0 +1,42 @@
+{
+  "name": "@artifak/useclickaway",
+  "version": "1.0.0",
+  "description": "A hook to handle click events when not occurring on targeted element.",
+  "keywords": [],
+  "author": "Julian Low",
+  "license": "MIT",
+  "sideEffects": false,
+  "main": "dist/useclickaway.cjs.js",
+  "module": "dist/useclickaway.esm.js",
+  "src": "src/index.ts",
+  "types": "dist/src/index.d.ts",
+  "directories": {
+    "src": "src",
+    "test": "__tests__"
+  },
+  "files": [
+    "dist"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/heyjul3s/artifak.git"
+  },
+  "scripts": {
+    "build": "rimraf dist && builder",
+    "test": "echo \"Error: run tests from root\" && exit 1"
+  },
+  "bugs": {
+    "url": "https://github.com/heyjul3s/artifak/issues"
+  },
+  "homepage": "https://github.com/heyjul3s/artifak#readme",
+  "devDependencies": {
+    "@artifak/bundler": "^1.1.4"
+  },
+  "peerDependencies": {
+    "react": ">=17.0.1",
+    "react-dom": ">=17.0.1"
+  }
+}
