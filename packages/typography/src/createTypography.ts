@@ -13,7 +13,7 @@ export function createTypography<
   Config,
   ThemeType = any,
   Props = Record<string, unknown>,
-  Element = HTMLDivElement
+  Element = HTMLHeadingElement | HTMLParagraphElement | HTMLElement
 >(
   base: BaseConfig<Props, ThemeType, Element>,
   settings: Settings<Element>
@@ -38,7 +38,7 @@ export function createTypography<
 export function getStyleProps<
   ThemeType = any,
   Props = Record<string, unknown>,
-  Element = HTMLDivElement
+  Element = HTMLHeadingElement | HTMLParagraphElement | HTMLElement
 >(
   base: BaseConfig<Props, ThemeType, Element>
 ): BaseConfig<Props, ThemeType, Element> {
