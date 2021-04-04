@@ -29,9 +29,11 @@ Packages can also be installed independently. Simply do `yarn add <package name>
 - @artifak/**flex**
 - @artifak/**text-input**
 - @artifak/**component-generator**
+- @artifak/**text-input**
 - @artifak/**imagery**
 - @artifak/**media**
 - @artifak/**fluidsizing**
+- @artifak/**useclickaway**
 - @artifak/**usematchmedia**
 - @artifak/**usewindowsize**
 - @artifak/**usedebouncedfn**
