@@ -13,61 +13,60 @@ const components = {
   H1: {
     fontSize: [48, 96],
     margin: '0 0 0.25em',
-    as: 'h1'
+    as: 'h1' as keyof JSX.IntrinsicElements
   },
 
   H2: {
     fontSize: [37, 39, 41, 43],
     marginTop: 0,
-    as: 'h2'
+    as: 'h2' as keyof JSX.IntrinsicElements
   },
 
   H3: {
     fontSize: [27, 28, 30, 32],
-    as: 'h3'
+    as: 'h3' as keyof JSX.IntrinsicElements
   },
 
   H4: {
     fontSize: [18, 20, 22, 24],
-
     marginTop: 0,
-    as: 'h4'
+    as: 'h4' as keyof JSX.IntrinsicElements
   },
 
   H5: {
     fontSize: [16, 17, 19, 21],
     marginTop: 0,
-    as: 'h5'
+    as: 'h5' as keyof JSX.IntrinsicElements
   },
 
   H6: {
     fontSize: [16, 17, 19, 21],
     marginTop: 0,
-    as: 'h6'
+    as: 'h6' as keyof JSX.IntrinsicElements
   },
 
   LargeLead: {
     fontSize: [18, 20, 22, 24],
     marginTop: 0,
-    as: 'p'
+    as: 'p' as keyof JSX.IntrinsicElements
   },
 
   SmallLead: {
     fontSize: [17, 18, 19, 21],
-    as: 'p'
+    as: 'p' as keyof JSX.IntrinsicElements
   },
 
   Paragraph: {
     fontSize: [16, 20],
     fontWeight: 300,
     marginTop: 0,
-    as: 'p'
+    as: 'p' as keyof JSX.IntrinsicElements
   },
 
   SmallParagraph: {
     fontSize: [12, 14],
     marginTop: 0,
-    as: 'p'
+    as: 'p' as keyof JSX.IntrinsicElements
   }
 };
 
