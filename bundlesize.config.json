@@ -7,6 +7,9 @@
       "path": "./packages/component-generator/dist/*.js"
     },
     {
+      "path": "./packages/container/dist/*.js"
+    },
+    {
       "path": "./packages/flex/dist/*.js"
     },
     {
@@ -14,6 +17,9 @@
     },
     {
       "path": "./packages/imagery/dist/*.js"
+    },
+    {
+      "path": "./packages/text-input/dist/*.js"
     },
     {
       "path": "./packages/typography/dist/*.js"
@@ -41,6 +47,12 @@
     },
     {
       "path": "./packages/usewindowsize/dist/*.js"
+    },
+    {
+      "path": "./packages/usedebouncedfn/dist/*.js"
+    },
+    {
+      "path": "./packages/useclickaway/dist/*.js"
     }
   ]
 }
