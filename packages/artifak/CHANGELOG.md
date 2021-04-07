@@ -1,5 +1,24 @@
 # artifak
 
+## 2.1.1
+
+### Patch Changes
+
+- New hooks: useClickAway, useDebouncedFn
+  New Container component
+  New Text Input utility
+  Bundle size reduction
+- Updated dependencies [undefined]
+  - @artifak/component-generator@2.0.4
+  - @artifak/container@1.0.1
+  - @artifak/fluidsizing@1.0.2
+  - @artifak/text-input@1.0.3
+  - @artifak/typography@2.0.2
+  - @artifak/useclickaway@1.0.1
+  - @artifak/usedebouncedfn@1.0.1
+  - @artifak/usematchmedia@1.0.4
+  - @artifak/usewindowsize@1.0.4
+
 ## 2.1.0
 
 ### Minor Changes

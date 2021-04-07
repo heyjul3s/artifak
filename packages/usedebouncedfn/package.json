@@ -1,16 +1,21 @@
 {
-  "name": "@artifak/usematchmedia",
-  "version": "1.0.4",
-  "description": "A React hook for matching media queries.",
-  "keywords": [],
+  "name": "@artifak/usedebouncedfn",
+  "version": "1.0.1",
+  "description": "A React hook to debounce functions or callbacks.",
+  "keywords": [
+    "react",
+    "debounce",
+    "hooks"
+  ],
   "author": "Julian Low",
   "license": "MIT",
   "sideEffects": false,
-  "main": "dist/usematchmedia.cjs.js",
-  "module": "dist/usematchmedia.esm.js",
+  "main": "dist/usedebouncedfn.cjs.js",
+  "module": "dist/usedebouncedfn.esm.js",
   "src": "src/index.ts",
+  "types": "dist/src/index.d.ts",
   "directories": {
-    "lib": "src",
+    "src": "src",
     "test": "__tests__"
   },
   "files": [
@@ -33,13 +38,11 @@
   "homepage": "https://github.com/heyjul3s/artifak#readme",
   "devDependencies": {
     "@artifak/bundler": "^1.1.5",
-    "@types/react": "^17.0.1",
-    "@types/react-dom": "^17.0.0",
-    "react": "^17.0.1",
-    "react-dom": "^17.0.1"
+    "@types/lodash.debounce": "^4.0.6"
   },
-  "peerDependencies": {
-    "react": ">=17.0.1",
-    "react-dom": ">=17.0.1"
+  "dependencies": {
+    "lodash.debounce": "^4.0.8",
+    "react-async-hook": "^3.6.2",
+    "use-constant": "^1.1.0"
   }
 }

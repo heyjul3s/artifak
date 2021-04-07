@@ -46,7 +46,6 @@ const baseOutputOptions = {
     'styled-components': 'StyledComponents',
     'styled-system': 'StyledSystem'
   },
-  sourcemap: true,
   exports: 'named'
 };
 
@@ -61,6 +60,11 @@ const formatOptions = [
   },
   {
     file: `dist/${fileName}.esm.js`,
+    format: 'esm',
+    esModule: true
+  },
+  {
+    file: `dist/${fileName}.esm.min.js`,
     format: 'esm',
     esModule: true
   },

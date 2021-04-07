@@ -23,12 +23,21 @@ npm install artifak
 
 Packages can also be installed independently. Simply do `yarn add <package name>` or `npm install <package name>` to add them to your list of dependencies. Below is a list of available packages.
 
+- @artifak/**container**
 - @artifak/**grid**
 - @artifak/**typography**
 - @artifak/**flex**
+- @artifak/**text-input**
 - @artifak/**component-generator**
+- @artifak/**text-input**
 - @artifak/**imagery**
 - @artifak/**media**
 - @artifak/**fluidsizing**
+- @artifak/**useclickaway**
 - @artifak/**usematchmedia**
 - @artifak/**usewindowsize**
+- @artifak/**usedebouncedfn**
+- @artifak/**hextorgb**
+- @artifak/**hextorgba**
+- @artifak/**pxtoem**
+- @artifak/**pxtorem**

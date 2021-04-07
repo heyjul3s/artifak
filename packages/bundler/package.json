@@ -1,6 +1,6 @@
 {
   "name": "@artifak/bundler",
-  "version": "1.1.4",
+  "version": "1.1.5",
   "description": "Artifak package bundler",
   "author": "Julian Low",
   "homepage": "https://github.com/heyjul3s/artifak#readme",
@@ -31,7 +31,7 @@
     "@rollup/plugin-node-resolve": "^11.2.0",
     "rollup": "^2.39.0",
     "rollup-plugin-terser": "^7.0.2",
-    "rollup-plugin-typescript2": "^0.29.0",
+    "rollup-plugin-typescript2": "^0.30.0",
     "typescript": "^4.1.5",
     "typescript-plugin-styled-components": "^1.4.4"
   }

@@ -1,16 +1,17 @@
 {
-  "name": "@artifak/usematchmedia",
-  "version": "1.0.4",
-  "description": "A React hook for matching media queries.",
+  "name": "@artifak/useclickaway",
+  "version": "1.0.1",
+  "description": "A hook to handle click events when not occurring on targeted element.",
   "keywords": [],
   "author": "Julian Low",
   "license": "MIT",
   "sideEffects": false,
-  "main": "dist/usematchmedia.cjs.js",
-  "module": "dist/usematchmedia.esm.js",
+  "main": "dist/useclickaway.cjs.js",
+  "module": "dist/useclickaway.esm.js",
   "src": "src/index.ts",
+  "types": "dist/src/index.d.ts",
   "directories": {
-    "lib": "src",
+    "src": "src",
     "test": "__tests__"
   },
   "files": [
@@ -32,11 +33,7 @@
   },
   "homepage": "https://github.com/heyjul3s/artifak#readme",
   "devDependencies": {
-    "@artifak/bundler": "^1.1.5",
-    "@types/react": "^17.0.1",
-    "@types/react-dom": "^17.0.0",
-    "react": "^17.0.1",
-    "react-dom": "^17.0.1"
+    "@artifak/bundler": "^1.1.5"
   },
   "peerDependencies": {
     "react": ">=17.0.1",

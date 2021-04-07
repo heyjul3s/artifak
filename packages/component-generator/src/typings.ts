@@ -44,7 +44,7 @@ export type BaseConfig<Props = void, Attributes = void, ThemeType = void> = {
   styleProps?: styleFn[];
   element?: keyof JSX.IntrinsicElements;
   component?: ThemedStyledFunction<
-    keyof JSX.IntrinsicElements | React.ComponentType<Props>,
+    keyof JSX.IntrinsicElements,
     ThemeType | any,
     React.ComponentType<Props>,
     keyof any

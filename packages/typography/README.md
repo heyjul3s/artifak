@@ -21,24 +21,62 @@ npm install @artifak/typography
 
 ### createTypography
 
-To generate your typography components, simply define a styles object with the key as your component name. Note that you **must** define the `as` property in order to have it render as the HTML tag that you desire. In the example below, we've defined a component called `H1` to render as an `h1` HTML tag. We've also defined the fontSize in an array that matches the media query widths.
-
-| Arguments | Type   |
-| --------- | ------ |
-| styles    | object |
+Generates your typography components.
 
 ```ts
-import { createTypography } from '@artifak/typography';
+import { createTypographyComponents, fontWeight } from 'artifak';
+import { theme } from '../theme';
 
-const typeStyles = {
-  H1: {
-    fontSize: [16, 36, 96],
-    margin: 0,
-    as: 'h1'
+const base = {
+  styles: {
+    color: theme.colors.text,
+    fontFamily: theme.fontFamily.arial
   }
 };
 
-const { H1 } = createTypography<typeof typeStyles>(typeStyles);
+const components = {
+  H1: {
+    fontSize: [48, 96],
+    margin: '0 0 0.25em',
+    lineHeight: 1.15,
+    as: 'h1'
+  },
+
+  H2: {
+    fontSize: [37, 39, 41, 43],
+    lineHeight: 1.45,
+    as: 'h2'
+  },
+
+  H3: {
+    fontSize: [27, 28, 30, 32],
+    lineHeight: 1.45,
+    as: 'h3'
+  },
+
+  H4: {
+    fontSize: [18, 20, 22, 24],
+    lineHeight: 1.45,
+    as: 'h4'
+  },
+
+  H5: {
+    fontSize: [16, 17, 19, 21],
+    lineHeight: 1.45,
+    as: 'h5'
+  },
+
+  H6: {
+    fontSize: [16, 17, 19, 21],
+    lineHeight: 1.45,
+    as: 'h6'
+  }
+};
+
+export const { H1, H2, H3, H4, H5, H6 } = createTypography<
+  typeof components,
+  typeof theme
+>(base, components);
 ```
 
 Other than helping you generate new typography components, it also contains other utility functions as well to help you in styling.

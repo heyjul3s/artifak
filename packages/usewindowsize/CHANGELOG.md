@@ -1,5 +1,11 @@
 # @artifak/usewindowsize
 
+## 1.0.4
+
+### Patch Changes
+
+- Simplify window existence check
+
 ## 1.0.3
 
 ### Patch Changes

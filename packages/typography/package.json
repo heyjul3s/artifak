@@ -1,6 +1,6 @@
 {
   "name": "@artifak/typography",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "description": "Typography utilities to assist in scaffolding your React project's Typography components",
   "keywords": [
     "react",
@@ -39,7 +39,7 @@
   },
   "homepage": "https://github.com/heyjul3s/artifak#readme",
   "devDependencies": {
-    "@artifak/bundler": "^1.1.3",
+    "@artifak/bundler": "^1.1.5",
     "@types/react": "^17.0.1",
     "@types/react-dom": "^17.0.0",
     "@types/styled-components": "^5.1.7",
@@ -51,7 +51,7 @@
     "styled-system": "^5.1.5"
   },
   "dependencies": {
-    "@artifak/component-generator": "^2.0.3"
+    "@artifak/component-generator": "^2.0.4"
   },
   "peerDependencies": {
     "react": ">=17.0.1",

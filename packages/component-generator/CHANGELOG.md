@@ -1,5 +1,12 @@
 # @artifak/component-generator
 
+## 2.0.4
+
+### Patch Changes
+
+- Minor typings update
+- README update
+
 ## 2.0.3
 
 ### Patch Changes

@@ -1,5 +1,13 @@
 # @artifak/text-input
 
+## 1.0.3
+
+### Patch Changes
+
+- New Text Input utility
+- Updated dependencies [undefined]
+  - @artifak/component-generator@2.0.4
+
 ## 1.0.2
 
 ### Patch Changes

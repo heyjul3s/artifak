@@ -8,14 +8,15 @@ export {
   ComponentsRecord
 } from '@artifak/component-generator';
 
-export { BlockBase, createBlocks } from '@artifak/block';
-export { BlockBaseProps } from '@artifak/block';
+export { Container } from '@artifak/container';
 
 export { FlexRow, FlexRowBase, FlexCol, FlexColBase } from '@artifak/flex';
 export { FlexRowBaseProps, FlexColBaseProps } from '@artifak/flex';
 
 export { Grid, GridBase, GridItem, GridItemBase } from '@artifak/grid';
 export { GridBaseProps, GridItemBaseProps } from '@artifak/grid';
+
+export { createTextInputs } from '@artifak/text-input';
 
 export {
   createTypography,
@@ -59,6 +60,8 @@ export {
 export { fluidSizing } from '@artifak/fluidsizing';
 export { useMatchMedia } from '@artifak/usematchmedia';
 export { useWindowSize } from '@artifak/usewindowsize';
+export { useClickAway } from '@artifak/useclickaway';
+export { useDebouncedFn } from '@artifak/usedebouncedfn';
 export { hexToRGB, getHexColorRGBvalues } from '@artifak/hextorgb';
 export { hexToRGBA } from '@artifak/hextorgba';
 export { pxToEm } from '@artifak/pxtoem';
