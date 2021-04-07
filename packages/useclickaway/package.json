@@ -1,6 +1,6 @@
 {
   "name": "@artifak/useclickaway",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A hook to handle click events when not occurring on targeted element.",
   "keywords": [],
   "author": "Julian Low",
@@ -33,7 +33,7 @@
   },
   "homepage": "https://github.com/heyjul3s/artifak#readme",
   "devDependencies": {
-    "@artifak/bundler": "^1.1.4"
+    "@artifak/bundler": "^1.1.5"
   },
   "peerDependencies": {
     "react": ">=17.0.1",

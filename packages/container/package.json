@@ -1,6 +1,6 @@
 {
   "name": "@artifak/container",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A basic React container component",
   "keywords": [
     "react",
@@ -42,7 +42,7 @@
   },
   "homepage": "https://github.com/heyjul3s/artifak#readme",
   "devDependencies": {
-    "@artifak/bundler": "^1.1.4"
+    "@artifak/bundler": "^1.1.5"
   },
   "peerDependencies": {
     "react": ">=17.0.1",
@@ -50,6 +50,6 @@
     "styled-components": ">=5.2.1"
   },
   "dependencies": {
-    "@artifak/component-generator": "^2.0.3"
+    "@artifak/component-generator": "^2.0.4"
   }
 }

@@ -1,5 +1,11 @@
 # @artifak/bundler
 
+## 1.1.5
+
+### Patch Changes
+
+- Remove source maps for bundle size reduction
+
 ## 1.1.4
 
 ### Patch Changes
