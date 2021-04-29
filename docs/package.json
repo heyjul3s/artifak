@@ -13,7 +13,7 @@
     "csstype": "^3.0.6",
     "framer-motion": "^3.5.2",
     "lodash.isplainobject": "^4.0.6",
-    "next": "10.0.7",
+    "next": "10.2.0",
     "next-seo": "^4.20.0",
     "react": "^17.0.1",
     "react-custom-scrollbars": "^4.2.1",
