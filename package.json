@@ -60,7 +60,7 @@
     "typescript": "^4.1.5"
   },
   "dependencies": {
-    "@changesets/cli": "^2.14.1"
+    "@changesets/cli": "^2.20.0"
   },
   "resolutions": {
     "react": ">=17.0.1",
